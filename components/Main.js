@@ -3,8 +3,59 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
 import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
+import fetch from 'isomorphic-unfetch';
 
 class Main extends React.Component {
+  constructor() {
+    super();
+
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      submitted: false
+    }
+  }
+    handleSubmit = (e) => {
+      e.preventDefault();
+      console.log('submit')
+
+      let data = {
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.message
+      }
+
+      console.log('data: ', data);
+      
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+       body: JSON.stringify(data)
+      }).then((res)=> {
+        console.log('Email received. Processing...')
+        if(res.status===200) {
+          alert('Email sent successfully!')
+          this.setState({
+                          submitted: true, 
+                          name: '', 
+                          email: '', 
+                          message: ''
+                        })
+        } else {
+          alert('Please try again!')
+        }
+      })
+    }
+
+    
+
   render() {
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
@@ -45,23 +96,23 @@ class Main extends React.Component {
           {close}
         </article>
 
-        {/* <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+        <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
           <form method="post" action="#">
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" onChange={(e)=>{this.setState({ name: e.target.value}, ()=> console.log(this.state.name))}} />
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input type="text" name="email" id="email" onChange={(e)=>{this.setState({ email: e.target.value}, console.log(this.state.email))}} />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea name="message" id="message" rows="4" onChange={(e)=>{this.setState({ message: e.target.value}, ()=> console.log(this.state.message))}}></textarea>
             </div>
             <ul className="actions">
-              <li><input type="submit" value="Send Message" className="special" /></li>
+              <li><input type="submit" value="Send Message" className="special" onClick={this.handleSubmit} /></li>
               <li><input type="reset" value="Reset" /></li>
             </ul>
           </form>
@@ -77,7 +128,7 @@ class Main extends React.Component {
             </a></li>
           </ul>
           {close}
-        </article> */}
+        </article>
 
       </div>
     )
