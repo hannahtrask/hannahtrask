@@ -74,6 +74,8 @@
 					'padding #{_duration(intro)} ease',
 					'opacity #{_duration(article)} ease-in-out'
 				));
+
+				
 				@include vendor('transition-delay', '0.25s');
 				padding: 3rem 2rem;
 				max-height: 40rem;
@@ -90,6 +92,7 @@
 				font-size: 0.8rem;
 				line-height: 2;
 			}
+
 		}
 
 		nav {
@@ -178,7 +181,8 @@
 
 		@include breakpoint(medium) {
 			.content {
-				p {
+				.mobile {
+					display: none;
 					br {
 						display: none;
 					}
@@ -186,7 +190,23 @@
 			}
 		}
 
+		@include breakpoint(medium) {
+			nav {
+				ul {
+					width: 90vw;
+					display: flex;
+					justify-content: space-around;
+				}
+			}
+		}
+
 		@include breakpoint(small) {
+
+			.content {
+				p {
+					display: none;
+				}
+			}
 			> * {
 				margin-top: 2rem;
 
@@ -232,7 +252,7 @@
 				ul {
 					@include vendor('flex-direction', 'column');
 					min-width: 10rem;
-					max-width: 100%;
+					width: 100%;
 
 					li {
 						border-left: 0;
