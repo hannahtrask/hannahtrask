@@ -96,7 +96,8 @@ class Main extends React.Component {
         </article>
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2>Catch me on any of these socials or shoot me an email at <strong>hello@hannahtrask.com!</strong></h2>
+          <h2>Contact</h2>
+          <p>Catch me on any of these socials or shoot me an email at <strong>hello@hannahtrask.com!</strong></p>
           {/* <h2 className="major">Contact</h2>
           <form method="post" action="#">
             <div className="field half first">
