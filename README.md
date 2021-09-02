@@ -6,12 +6,12 @@
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hannahtrask&layout=compact&theme=jolly)](https://github.com/hannahtrask/github-readme-stats)
 
 ## About me
-I'm a web developer, content creator, and outdoor enthusiast. I'm passionate about a lot of things on top of web development: local activism, skiing, spending time with my friends, and whitewater boating.
+I'm a web developer, word content creator, and outdoor enthusiast. I'm passionate about a lot of things on top of web development: local activism, skiing, spending time with my friends, and whitewater boating.
 
-### Skills - generally in order of how often I use them.
+### Skills
 * Shopify/Liquid/Ecommerce
-* HTML5/CSS3
-* Javascript/JQuery/React/Next
+* HTML5/CSS3/Javascript
+* AngularJS/JQuery/React/Next
 * Sass/Bootstrap/Materialize
 * Node.js
 * Headless CMS/RESTfulAPI
