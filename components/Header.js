@@ -16,10 +16,10 @@ const Header = (props) => (
         </div>
         <nav>
             <ul>
-                <li><a href="#" onClick={() => {props.onOpenArticle('intro')}}>["about"]</a></li>
-                <li><a href="#" onClick={() => {props.onOpenArticle('work')}}>["dev"]</a></li>
-                <li><a href="#" onClick={() => {props.onOpenArticle('about')}}>["words"]</a></li>
-                <li><a href="#" onClick={() => {props.onOpenArticle('contact')}}>["contact"]</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('intro')}}>.about()</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('work')}}>.dev()</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('about')}}>.words()</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('contact')}}>.contact()</a></li>
             </ul>
         </nav>
     </header>

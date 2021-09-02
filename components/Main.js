@@ -67,7 +67,7 @@ class Main extends React.Component {
           <span className="image main"><img src="/static/images/IMG_0355.jpg" alt="" /></span>
           <p>	I believe in{' '}
 							<strong>simple, clean designs and programs</strong>. Creative
-							alternatives and interesting, eye catching, fun UI is my objective. The
+							alternatives and interesting, eye catching, fun user interfaces are my objective. The
 							internet is a space where all walks of life can connect— from our
 							couch to the other side of the world. Connections fuel the human
 							experience, and I am here to <strong>bridge the gap</strong>{' '}
