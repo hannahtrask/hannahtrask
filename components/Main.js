@@ -73,7 +73,7 @@ class Main extends React.Component {
 							experience, and I am here to <strong>bridge the gap</strong>{' '}
 							between the digital and the concrete.</p>
           <p>	I'm consider myself a Jane of many trades, capable of accomplishing a wide breadth of tasks for my clients.{' '}
-							Need someone to <strong>interface with customers</strong> and <strong>manage communications</strong> because you're busy running your business? Or maybe you need <strong>to update your digital platform</strong>? Perhaps you <strong>need writen content and copy</strong> for your website. Whatever it is, let's chat and get creative.</p>
+							Need someone to <strong>interface with customers</strong> and <strong>manage communications</strong> because you're busy running your business? Or maybe you need <strong>to update your digital platform</strong>? Perhaps you <strong>need written content and copy</strong> for your website. Whatever it is, let's chat and get creative.</p>
           <p><strong>Let's work together!</strong></p>
           {close}
         </article>
