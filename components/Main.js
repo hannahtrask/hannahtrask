@@ -116,13 +116,13 @@ class Main extends React.Component {
             </ul>
           </form>
           <ul className="icons">
-            <li><a href="#https://www.linkedin.com/in/hannahtrask">
+            <li><a href="#https://www.linkedin.com/in/hannahtrask" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
             </a></li>
-            <li><a href="https://www.facebook.com/hannah123banana/">
+            <li><a href="https://www.facebook.com/hannah123banana/" target="_blank">
               <FontAwesomeIcon icon={faFacebook} />
             </a></li>
-            <li><a href="https://github.com/hannahtrask">
+            <li><a href="https://github.com/hannahtrask" target="_blank">
               <FontAwesomeIcon icon={faGithub} />
             </a></li>
           </ul>
