@@ -15,24 +15,34 @@ class Main extends React.Component {
 
         <article id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Intro</h2>
-          <span className="image main"><img src="/static/images/pic01.jpg" alt="" /></span>
-          <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+          <span className="image main"><img src="/static/images/IMG_0355.jpg" alt="" /></span>
+          <p>	And I believe in{' '}
+							<strong>simple, clean designs and programs</strong>. Creative
+							alternatives and interesting, eye catching, fun UI is my objective. The
+							internet is a space where all walks of life can connect— from our
+							couch to the other side of the world. Connections fuel the human
+							experience, and I am here to <strong>bridge the gap</strong>{' '}
+							between the digital and the concrete.</p>
+          <p>	I'm consider myself a Jane of many trades, capable of accomplishing a wide breadth of tasks for my clients.{' '}
+							Need someone to <strong>communicate with customers</strong> because you're busy running your business? Or maybe you need <strong>to update your digital platform?</strong> Perhaps you <strong>need writen content and copy</strong> for your website. Whatever it is, let's chat and get creative.</p>
+          <p><strong>Let's  work together!</strong></p>
           {close}
         </article>
 
         <article id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Work</h2>
-          <span className="image main"><img src="/static/images/pic02.jpg" alt="" /></span>
-          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+          <h2 className="major">Development</h2>
+          <span className="image main"><img src="/static/images/bikology.jpg" alt="" /></span>
+          <p>My work varies in scope quite a bit. Currently I am working with a <strong>tech startup in the boutique mountain bike industry.</strong></p>
+          <p><strong>Bikology</strong> is a team of dedicated bike experts who have a vision for the future of how the bike industry handles custom bike building and retail. Bikology provides an end-to-end service for cyclists to design, build, and purchase what they view as their ideal bicycle through an on-demand visual bike builder. The flagship product is an on-demand visual bike building software. This software demands a wide breadth of knowledge and willingness to learn— from trigonometry to bike part compatibility. Our team works together united under a shared love of epic mountain biking and single track trails.</p>
+          <p>For Bikology, I am assigned tasks which I complete using a variety of technologies including <strong>AngularJS, MongoDB, Express, Node.js,</strong> and others using an <strong>Agile</strong> approach. Right now, I am <strong>building a Content Management System that is integrated in Bikology's existing platform</strong> for future User Generated Content.</p>
           {close}
         </article>
 
         <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">About</h2>
-          <span className="image main"><img src="/static/images/pic03.jpg" alt="" /></span>
-          <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+          <h2 className="major">Writing</h2>
+          <p>I received a Bachelor's degree in English from the <strong>University of Vermont</strong> in 2015. As someone who has always appreciated the nuances of words, I find myself writing for fun often. Find my creative writing <a href="https://medium.com/@hannahtrask"><strong>Medium page here</strong></a> and check out the opinion pieces I have written for the Jackson Hole News and Guide <a href="https://www.jhnewsandguide.com/opinion/guest_shot/anger-bubbles-up-but-kindness-is-a-radical-act/article_880f4be1-f0dd-5044-a21c-84fe1cd5383f.html"><strong>here</strong></a>, <a href="https://www.jhnewsandguide.com/opinion/guest_shot/jackson-hole-restaurant-pro-i-am-a-server-not-a-servant/article_b45bc7a5-e3d7-5db4-9863-0f0caaa82b66.html"><strong>here</strong></a>, and <a href="https://www.jhnewsandguide.com/opinion/guest_shot/jackson-is-no-neverland-when-it-comes-to-covid/article_1c75725f-8a58-54f1-9fdf-d0e127527acf.html"><strong>here</strong>.</a></p>
+          <p>As a seasoned writer, I have found that <strong>empathy</strong> is the key ingredient to creating content for the client. If you're looking for high quality work quickly, I'm your girl. As a lifelong reader and writer, I can competently create short blurbs to longer form essay-style text. My skillset includes but isn't limited to <strong>MLA, Chicago Style, AP Formats</strong>, <strong>social media posts</strong>, and <strong>event advertisements and descriptions</strong>.</p>
+          <span className="image main"><img src="/static/images/annie-spratt-credit.jpg" alt="Photo courtesy of Annie Spratt on unsplash" /></span>
           {close}
         </article>
 
