@@ -96,7 +96,8 @@ class Main extends React.Component {
         </article>
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Contact</h2>
+          <h2>Catch me on any of these socials or shoot me an email at <strong>hello@hannahtrask.com!</strong></h2>
+          {/* <h2 className="major">Contact</h2>
           <form method="post" action="#">
             <div className="field half first">
               <label htmlFor="name">Name</label>
@@ -114,7 +115,7 @@ class Main extends React.Component {
               <li><input type="submit" value="Send Message" className="special" onClick={this.handleSubmit} /></li>
               <li><input type="reset" value="Reset" /></li>
             </ul>
-          </form>
+          </form> */}
           <ul className="icons">
             <li><a href="#https://www.linkedin.com/in/hannahtrask" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} />
