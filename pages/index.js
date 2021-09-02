@@ -74,6 +74,7 @@ class IndexPage extends React.Component {
                     <Head>
                         <title>Hannah Catherine Trask</title>
                         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i" rel="stylesheet" />
+                        <link rel="shortcut icon" type="image/x-icon" href="../static/images/triangle.ico"/>
                     </Head>
 
                     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
