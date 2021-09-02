@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
 import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
-import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 
 class Main extends React.Component {
@@ -25,7 +24,7 @@ class Main extends React.Component {
 							between the digital and the concrete.</p>
           <p>	I'm consider myself a Jane of many trades, capable of accomplishing a wide breadth of tasks for my clients.{' '}
 							Need someone to <strong>communicate with customers</strong> because you're busy running your business? Or maybe you need <strong>to update your digital platform?</strong> Perhaps you <strong>need writen content and copy</strong> for your website. Whatever it is, let's chat and get creative.</p>
-          <p><strong>Let's  work together!</strong></p>
+          <p><strong>Let's work together!</strong></p>
           {close}
         </article>
 
