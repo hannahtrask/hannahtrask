@@ -1,6 +1,6 @@
 export default (req, res) => {
-  if(req.body) {
-    console.log(req.body)
+  if(req.method === 'POST') {
+    console.log('got here')
   } else {
     return null
   }

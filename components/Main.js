@@ -21,7 +21,6 @@ class Main extends React.Component {
   }
     handleSubmit = (e) => {
       e.preventDefault();
-      console.log('submit')
 
       let data = {
         name: this.state.name,
