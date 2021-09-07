@@ -3,6 +3,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faLinkedin from '@fortawesome/fontawesome-free-brands/faLinkedin'
 import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
+import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
 import fetch from 'isomorphic-unfetch';
 
 class Main extends React.Component {
@@ -127,6 +128,11 @@ class Main extends React.Component {
             <li><a href="https://github.com/hannahtrask" target="_blank">
               <FontAwesomeIcon icon={faGithub} />
             </a></li>
+            <li>
+              <a href="https://www.instagram.com/hannah___catherine" target="_blank">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+            </li>
           </ul>
           {close}
         </article>
