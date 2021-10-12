@@ -11,7 +11,7 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
                 <h1>Hannah Catherine Trask</h1>
-                <p>Simple, clean code. Thoughtful, empathetic copywriting.<br /><span className="mobile">Creative alternatives.<br />Charismatic and effective communication.<br />Bridging the gap between the digital and the concrete,<br />I am a whitewater raft guide turned professional web developer, writer, and professional assistant.</span></p>
+                <p>Simple, clean code. Thoughtful, empathetic writing.<br /><span className="mobile">Creative alternatives.<br />Charismatic and effective communication.<br />Bridging the gap between the digital and the concrete,<br />I am a whitewater raft guide turned professional web developer, writer, and professional assistant.</span></p>
             </div>
         </div>
         <nav>
