@@ -5,9 +5,6 @@
 ![Hannah's github stats](https://github-readme-stats.vercel.app/api?username=hannahtrask&theme=jolly&show_icons=true)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=hannahtrask&layout=compact&theme=jolly)](https://github.com/hannahtrask/github-readme-stats)
 
-## About me
-I'm a web developer, word content creator, and outdoor enthusiast. I'm passionate about a lot of things on top of web development: local activism, mountain biking, skiing, spending time with my friends, and whitewater boating.
-
 ### Skills
 * Shopify/Liquid/Ecommerce
 * HTML5/CSS3/Javascript
@@ -22,7 +19,3 @@ I'm a web developer, word content creator, and outdoor enthusiast. I'm passionat
 
 * [LinkedIn](https://www.linkedin.com/in/hannahtrask/)
 * [Portfolio Site](https://www.hannahtrask.dev/)
-
-### And check out my resume..
-
-[Resume](https://drive.google.com/file/d/1APmdKq9KA8P3-v1u9tkh7VBXr6Tulfg6/view?usp=sharing)
