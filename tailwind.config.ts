@@ -15,9 +15,17 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: ["sunset", "light", "dark", "retro", "aqua", "cupcake"],
+    themes: [
+      "sunset",
+      "light",
+      "dark",
+      "retro",
+      "aqua",
+      "cupcake",
+      "valentine",
+    ],
   },
 };
 
