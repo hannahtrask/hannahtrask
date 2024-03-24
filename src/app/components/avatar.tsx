@@ -1,22 +1,15 @@
-'use client'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+"use client";
+import Image from "next/image";
 
-export function Avatar({ id, alt }) {
-// todo get framer working
+interface AvatarProps {
+  id: string;
+  alt: string;
+}
+
+export function Avatar({ id, alt }: AvatarProps) {
   return (
-      <>
-        <motion.div
-          drag
-          dragConstraints={{
-            top: -50,
-            left: -50,
-            right: 50,
-            bottom: 50,
-          }}
-        >
-          <Image src={`/assets/${id}.png`} alt={alt} width="64" height="64"/>
-        </motion.div>
-      </>
-  )
+    <>
+      <Image src={`/assets/${id}.png`} alt={alt} width="64" height="64" />
+    </>
+  );
 }
