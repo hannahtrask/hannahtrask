@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import "./global.css";
+import { cormorant, raleway } from "./fonts";
 import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "HannaH",
+  title: "hannah catherine",
   description: "A look into how I see the world. Let me create for you.",
 };
 
@@ -16,8 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="valentine">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <>
+      <html lang="en">
+        <body className={`${cormorant.variable} ${raleway.variable}`}>
+          {children}
+        </body>
+      </html>
+    </>
   );
 }

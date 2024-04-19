@@ -1,32 +1,24 @@
-import { Avatar } from "@/app/components/avatar";
-import { Timeline } from "@/app/components/timeline";
-import { ThemePicker } from "@/app/components/theme-picker";
+import Image from "next/image";
+import avatar from "../../public/assets/profile-foto.png";
 
 export default function Home() {
   return (
     <main>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="diff aspect-[16/9]">
-          <div className="diff-item-1">
-            <div className="bg-primary text-primary-content align-text-right text-9xl font-black grid place-content-center">
-              HANNAH CATHERINE IS A CREATIVE
-              <div className="text-xs grid ml-4">
-                those that have tried, know it
-              </div>
-            </div>
-          </div>
-          <div className="diff-item-2">
-            <div className="bg-base-200 text-9xl font-black grid place-content-center">
-              HANNAH CATHERINE IS A WEB DEVELOPER
-              <div className="text-xs grid ml-4">
-                console.log(&apos;Hello, World!&apos;);
-              </div>
-            </div>
-          </div>
-          <div className="diff-resizer p-10"></div>
+      <div className="intro-title">
+        <div className="slide-in-left">
+          <h1>Hey, I&apos;m Hannah!</h1>
+          <p>I&apos;m a software engineer.</p>
+          <h6>(among other things)</h6>
+        </div>
+        <div className="slide-in-right">
+          <Image
+            src={avatar}
+            alt="absolutely ripping a backside turn"
+            width={300}
+            height={300}
+          />
         </div>
       </div>
-      <ThemePicker />
     </main>
   );
 }
