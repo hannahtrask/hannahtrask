@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import avatar from "../../public/assets/profile-foto.png";
+import Socials from "@/components/Socials";
 
 export default function Home() {
   return (
@@ -19,6 +21,7 @@ export default function Home() {
           />
         </div>
       </div>
+      <Socials />
     </main>
   );
 }
