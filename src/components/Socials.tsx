@@ -1,6 +1,4 @@
 import {
-  InstagramIcon,
-  InstagramShareIcon,
   LinkedinIcon,
   LinkedinShareButton,
   PinterestIcon,
@@ -16,11 +14,6 @@ export default function Socials() {
       <LinkedinShareButton url={"https://www.linkedin.com/in/hannahtrask/"}>
         <LinkedinIcon size={32} round />
       </LinkedinShareButton>
-      <InstagramShareButton
-        url={"https://www.instagram.com/hannah_____catherine/"}
-      >
-        <InstagramIcon size={32} round />
-      </InstagramShareButton>
       <WhatsappShareButton url={"https://wa.link/cmibd5"}>
         <WhatsappIcon size={32} round />
       </WhatsappShareButton>
