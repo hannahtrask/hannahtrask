@@ -1,11 +1,5 @@
 html {
   background-color: plum;
-}
-
-body {
-  padding: 100px 20px 60px;
-  max-width: 50vw;
-  margin: 0 auto;
   font-family: var(--font-raleway);
 }
 
@@ -18,27 +12,40 @@ h6 {
   font-family: var(--font-cormorant);
 }
 
+.main-body {
+  padding: 100px 20px 60px;
+  max-width: 50vw;
+  margin: 0 auto;
+}
+
 .intro-title {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
+.socials {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .slide-in-left {
-  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  -webkit-animation: slide-in-left 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
-  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .slide-in-right {
-  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  -webkit-animation: slide-in-right 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
-  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .swing-right-fwd {
-  -webkit-animation: swing-right-fwd 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: swing-right-fwd 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: swing-right-fwd 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: swing-right-fwd 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /**
