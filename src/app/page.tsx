@@ -2,6 +2,7 @@
 import Image from "next/image";
 import avatar from "../../public/assets/profile-foto.png";
 import Socials from "@/components/Socials";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
             />
           </div>
         </div>
+        <Contact />
       </div>
       <Socials />
     </main>
