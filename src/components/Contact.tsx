@@ -3,7 +3,7 @@
 import { FC } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
-import { TextInput } from "@mantine/core";
+import {Button, TextInput} from "@mantine/core";
 
 export type FormData = {
   name: string;
@@ -23,15 +23,14 @@ const Contact: FC = () => {
       <div>
         <TextInput
           label="Name"
-          placeholder="Your name or business"
+          placeholder="your name or business"
           {...register("name", { required: true })}
         />
       </div>
       <div>
         <TextInput
           label="Email"
-          error="Invalid email"
-          defaultValue="hello!gmail.com"
+          placeholder="hello@gmail.com"
           {...register("email", { required: true })}
         />
       </div>
@@ -42,8 +41,8 @@ const Contact: FC = () => {
           {...register("message", { required: true })}
         />
       </div>
-      <div>
-        <button>Submit</button>
+      <div style={{ marginTop: '1rem' }}>
+        <Button>Submit</Button>
       </div>
     </form>
   );
