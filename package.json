@@ -9,10 +9,15 @@
     "lint": "next lint && prettier . --write"
   },
   "dependencies": {
+    "@mantine/core": "^7.8.0",
+    "@mantine/hooks": "^7.8.0",
+    "@types/nodemailer": "^6.4.14",
     "next": "14.1.0",
     "next-share": "^0.27.0",
+    "nodemailer": "^6.9.13",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.51.3"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -24,6 +29,9 @@
     "eslint-config-next": "^14.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "^1.14.4",
+    "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.2.5",
     "typescript": "^5"
   }
