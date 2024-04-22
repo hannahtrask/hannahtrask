@@ -12,6 +12,10 @@ h6 {
   font-family: var(--font-cormorant);
 }
 
+.label {
+  font-family: var(--font-cormorant);
+}
+
 .main-body {
   padding: 100px 20px 60px;
   max-width: 50vw;
@@ -28,6 +32,12 @@ h6 {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slide-in-left {

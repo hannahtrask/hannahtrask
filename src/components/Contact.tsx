@@ -1,9 +1,9 @@
 "use client";
 
-import React, { FC, FormEventHandler } from "react";
+import React, { FC } from "react";
 import { Form, useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
-import { TextInput } from "react-hook-form-mantine";
+import { Textarea, TextInput } from "react-hook-form-mantine";
 import { Button } from "@mantine/core";
 import { DevTool } from "@hookform/devtools";
 
@@ -14,7 +14,7 @@ export type FormData = {
 };
 
 const Contact: FC = () => {
-  const { register, handleSubmit } = useForm<FormData>();
+  const { register } = useForm<FormData>();
   const { control } = useForm<FormData>({
     defaultValues: {
       name: "",
@@ -30,7 +30,7 @@ const Contact: FC = () => {
   return (
     <>
       <Form onSubmit={(e) => onSubmit(e.data)} control={control}>
-        <div style={{ padding: ".5rem 0" }}>
+        <div className="label" style={{ padding: ".5rem 0" }}>
           <TextInput
             label="Name"
             placeholder="your name or business"
@@ -38,7 +38,7 @@ const Contact: FC = () => {
             {...register("name", { required: true })}
           />
         </div>
-        <div style={{ padding: ".5rem 0" }}>
+        <div className="label" style={{ padding: ".5rem 0" }}>
           <TextInput
             label="Email"
             placeholder="hello@gmail.com"
@@ -46,8 +46,8 @@ const Contact: FC = () => {
             {...register("email", { required: true })}
           />
         </div>
-        <div style={{ padding: ".5rem 0" }}>
-          <TextInput
+        <div className="label" style={{ padding: ".5rem 0" }}>
+          <Textarea
             label="Message"
             placeholder="what would you like to chat about?"
             control={control}

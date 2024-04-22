@@ -36,10 +36,10 @@ export default function Home() {
       </div>
       <div className="contact-me">
         <Socials />
-        <Modal opened={opened} onClose={close} title="GET IN TOUCH">
+        <Modal size="xl" opened={opened} onClose={close} title="GET IN TOUCH">
           <Contact />
         </Modal>
-        <Button fullWidth variant="light" color="grape" onClick={open}>
+        <Button variant="light" color="grape" onClick={open}>
           send me an email
         </Button>
       </div>
