@@ -1,9 +1,11 @@
 "use client";
 
-import { FC } from "react";
-import { useForm } from "react-hook-form";
+import React, { FC, FormEventHandler } from "react";
+import { Form, useForm } from "react-hook-form";
 import { sendEmail } from "@/utils/send-email";
-import {Button, TextInput} from "@mantine/core";
+import { TextInput } from "react-hook-form-mantine";
+import { Button } from "@mantine/core";
+import { DevTool } from "@hookform/devtools";
 
 export type FormData = {
   name: string;
@@ -13,38 +15,53 @@ export type FormData = {
 
 const Contact: FC = () => {
   const { register, handleSubmit } = useForm<FormData>();
+  const { control } = useForm<FormData>({
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  });
 
   function onSubmit(data: FormData) {
     sendEmail(data);
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <TextInput
-          label="Name"
-          placeholder="your name or business"
-          {...register("name", { required: true })}
-        />
-      </div>
-      <div>
-        <TextInput
-          label="Email"
-          placeholder="hello@gmail.com"
-          {...register("email", { required: true })}
-        />
-      </div>
-      <div>
-        <TextInput
-          label="Message"
-          placeholder="what would you like to chat about?"
-          {...register("message", { required: true })}
-        />
-      </div>
-      <div style={{ marginTop: '1rem' }}>
-        <Button>Submit</Button>
-      </div>
-    </form>
+    <>
+      <Form onSubmit={(e) => onSubmit(e.data)} control={control}>
+        <div style={{ padding: ".5rem 0" }}>
+          <TextInput
+            label="Name"
+            placeholder="your name or business"
+            control={control}
+            {...register("name", { required: true })}
+          />
+        </div>
+        <div style={{ padding: ".5rem 0" }}>
+          <TextInput
+            label="Email"
+            placeholder="hello@gmail.com"
+            control={control}
+            {...register("email", { required: true })}
+          />
+        </div>
+        <div style={{ padding: ".5rem 0" }}>
+          <TextInput
+            label="Message"
+            placeholder="what would you like to chat about?"
+            control={control}
+            {...register("message", { required: true })}
+          />
+        </div>
+        <div style={{ marginTop: "1rem" }}>
+          <Button fullWidth variant="light" color="grape" type="submit">
+            Submit
+          </Button>
+        </div>
+      </Form>
+      <DevTool control={control} />
+    </>
   );
 };
 
