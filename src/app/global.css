@@ -1,3 +1,8 @@
+/**
+ * ----------------------------------------
+ * globals
+ * ----------------------------------------
+ */
 html {
   background-color: #f4dbf4;
   font-family: var(--font-raleway);
@@ -12,6 +17,11 @@ h6 {
   font-family: var(--font-cormorant);
 }
 
+/**
+ * ----------------------------------------
+ * specifics
+ * ----------------------------------------
+ */
 .label {
   font-family: var(--font-cormorant);
 }
@@ -28,6 +38,13 @@ h6 {
   align-items: center;
 }
 
+@media (max-width: 400px) {
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 .socials {
   display: flex;
   align-items: flex-start;
@@ -40,6 +57,11 @@ h6 {
   align-items: center;
 }
 
+/**
+ * ----------------------------------------
+ * animations
+ * ----------------------------------------
+ */
 .slide-in-left {
   -webkit-animation: slide-in-left 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
@@ -60,7 +82,7 @@ h6 {
 
 /**
  * ----------------------------------------
- * keyframe animations
+ * keyframes
  * ----------------------------------------
  */
 @-webkit-keyframes slide-in-left {

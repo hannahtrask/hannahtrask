@@ -30,6 +30,7 @@ export default function Home() {
               alt="absolutely ripping a backside turn"
               width={300}
               height={300}
+              className="profile-image"
             />
           </div>
         </div>
