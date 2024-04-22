@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./global.css";
 import { cormorant, raleway } from "./fonts";
 import React from "react";
+import "@mantine/core/styles.css";
+import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { theme } from "../../theme";
 
 export const metadata: Metadata = {
   title: "hannah catherine",
@@ -16,8 +19,17 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
+        <head>
+          <ColorSchemeScript />
+          <link rel="shortcut icon" href="/favicon.svg" />
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+          />
+          <title>hannah catherine trask</title>
+        </head>
         <body className={`${cormorant.variable} ${raleway.variable}`}>
-          {children}
+          <MantineProvider theme={theme}>{children}</MantineProvider>
         </body>
       </html>
     </>

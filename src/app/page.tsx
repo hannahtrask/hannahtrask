@@ -3,10 +3,20 @@ import Image from "next/image";
 import avatar from "../../public/assets/profile-foto.png";
 import Socials from "@/components/Socials";
 import Contact from "@/components/Contact";
+import { theme } from "../../theme";
+import { useDisclosure } from "@mantine/hooks";
+import { Button, Modal } from "@mantine/core";
 
 export default function Home() {
+  const [opened, { open, close }] = useDisclosure(false);
+
   return (
-    <main>
+    <main
+      style={{
+        // @ts-ignore theme colors are defined
+        backgroundColor: theme.colors.plum[1],
+      }}
+    >
       <div className="main-body">
         <div className="intro-title">
           <div className="slide-in-left">
@@ -23,9 +33,16 @@ export default function Home() {
             />
           </div>
         </div>
-        <Contact />
       </div>
-      <Socials />
+      <div className="contact-me">
+        <Socials />
+        <Modal opened={opened} onClose={close} title="GET IN TOUCH">
+          <Contact />
+        </Modal>
+        <Button fullWidth variant="light" color="grape" onClick={open}>
+          send me an email
+        </Button>
+      </div>
     </main>
   );
 }

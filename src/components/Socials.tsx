@@ -7,10 +7,10 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from "next-share";
-import React from "react";
+import React, { FC } from "react";
 import Link from "next/link";
 
-export default function Socials() {
+const Socials: FC = () => {
   return (
     <div className="socials">
       <LinkedinShareButton
@@ -41,4 +41,6 @@ export default function Socials() {
       </Link>
     </div>
   );
-}
+};
+
+export default Socials;
