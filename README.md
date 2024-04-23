@@ -13,12 +13,15 @@ const hannahCatherineTrask = {
     "Java",
     "Liquid",
   ],
-  spokenLanguages: [
-    "English - Native",
-    "Spanish - Conversational",
-    "French - Beginner",
-  ],
-  hobbies: true,
+  spokenLanguages: {
+      English: "Native",
+      Spanish: "Conversational",
+      French: "Beginner"
+  },
+  hobbies: {
+      doIHaveThem: true,
+      askMeAboutThem: "please"
+  },
 };
 ```
 
