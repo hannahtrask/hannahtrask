@@ -1,6 +1,5 @@
 import { Footer } from "@/components/footer/Footer";
 import { Intro } from "@/components/intro/Intro";
-import { Carousel } from "@/components/carousel/carousel";
 import { ContactButton } from "@/components/contact/contact-button";
 
 export default function Home() {
