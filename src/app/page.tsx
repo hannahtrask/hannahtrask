@@ -1,7 +1,9 @@
 "use client";
 import Contact from "@/components/Contact";
+import profile from "../../public/assets/profile-foto.png";
 import { useDisclosure } from "@mantine/hooks";
 import { Button, Modal } from "@mantine/core";
+import Image from "next/image";
 
 export default function Home() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -23,7 +25,6 @@ export default function Home() {
             Contact me via email, LinkedIn, or Instagram.
           </p>
           <div>
-            {/*<Socials />*/}
             <Modal
               size="xl"
               opened={opened}
@@ -36,7 +37,7 @@ export default function Home() {
               style={{
                 border: `.5px solid #000`,
                 color: `#000`,
-                fontWeight: "300",
+                fontWeight: `300`,
                 backgroundColor: `#fff`,
               }}
               onClick={open}
@@ -46,11 +47,32 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="intro">
+        <div>
+          <h1>Who am I?</h1>
+          <p>
+            Hey, I’m Hannah. I’m a software engineer, content writer, and
+            blogger, among other things. I’m a world traveler, language lover,
+            jeweler, software engineer.. you name it. I thrive in environments
+            where my projects are ever-changing, and I LOVE learning new things.
+          </p>
+        </div>
+        <Image
+          src={profile}
+          alt="photo of me"
+          width={300}
+          height={300}
+          style={{ margin: `1rem` }}
+        />
+      </div>
+      {/*  INTEGRATE CONTENTFUL FOR IMAGES */}
+      {/*<div className="image-carousel">*/}
+      {/*  <Paper shadow="sm" p="xl" radius="sm" />*/}
+      {/*  <Paper shadow="sm" p="xl" radius="sm" />*/}
+      {/*  <Paper shadow="sm" p="xl" radius="sm" />*/}
+      {/*  <Paper shadow="sm" p="xl" radius="sm" />*/}
+      {/*</div>*/}
 
-      {/*  IMAGE CAROUSEL */}
-
-      {/*  WHO AM I BIO AND PHOTO */}
-      <div>hey</div>
       {/*>*/}
       {/*  <div className="main-body">*/}
       {/*    <div className="intro-title">*/}
