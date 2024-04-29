@@ -6,10 +6,14 @@ import { useDisclosure } from "@mantine/hooks";
 export function ContactButton() {
   const [opened, { open, close }] = useDisclosure(false);
 
+  const onSubmit = () => {
+    close();
+  };
+
   return (
     <div>
       <Modal size="xl" opened={opened} onClose={close} title="GET IN TOUCH">
-        <Contact />
+        <Contact onSent={onSubmit} />
       </Modal>
       <Button
         style={{

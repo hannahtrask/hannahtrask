@@ -13,7 +13,11 @@ export type FormData = {
   message: string;
 };
 
-const Contact: FC = () => {
+interface ContactProps {
+  onSent: () => void;
+}
+
+const Contact: FC<ContactProps> = ({ onSent }) => {
   const { register } = useForm<FormData>();
   const { control } = useForm<FormData>({
     defaultValues: {
@@ -25,6 +29,7 @@ const Contact: FC = () => {
 
   function onSubmit(data: FormData) {
     sendEmail(data);
+    onSent();
   }
 
   return (

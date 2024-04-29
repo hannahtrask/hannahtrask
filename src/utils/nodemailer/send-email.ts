@@ -9,7 +9,9 @@ export function sendEmail(data: FormData) {
   })
     .then((res) => res.json())
     .then((response) => {
-      alert(response.message);
+      // this console is fine
+      // eslint-disable-next-line
+      console.info(response.message);
     })
     .catch((err) => {
       console.error(`Failed to send message: ${err}`);
