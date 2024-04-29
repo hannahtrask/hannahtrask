@@ -1,9 +1,5 @@
 "use client";
-import Image from "next/image";
-import avatar from "../../public/assets/profile-foto.png";
-import Socials from "@/components/Socials";
 import Contact from "@/components/Contact";
-import { theme } from "../../theme";
 import { useDisclosure } from "@mantine/hooks";
 import { Button, Modal } from "@mantine/core";
 
@@ -11,39 +7,69 @@ export default function Home() {
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
-    <main
-      style={{
-        // @ts-ignore theme colors are defined
-        backgroundColor: theme.colors.plum[1],
-      }}
-    >
-      <div className="main-body">
-        <div className="intro-title">
-          <div className="slide-in-left">
-            <h1>Hey, I&apos;m Hannah!</h1>
-            <p>I&apos;m a software engineer.</p>
-            <h6>(among other things)</h6>
-          </div>
-          <div className="slide-in-right">
-            <Image
-              src={avatar}
-              alt="absolutely ripping a backside turn"
-              width={300}
-              height={300}
-              className="profile-image"
-            />
+    <main>
+      <div className="header">
+        <div className="intro-splash">
+          <p>HANNAH</p>
+          <p>DESIGNS</p>
+          <p>BLOGS</p>
+          <p>ENGINEERS</p>
+          <p>DEVELOPS</p>
+        </div>
+        <div className="intro-paragraph">
+          <p>
+            I’m a software engineer, among other things. Need copy? Need a
+            Shopify store? Want to talk about a project and see if we’d vibe?
+            Contact me via email, LinkedIn, or Instagram.
+          </p>
+          <div>
+            {/*<Socials />*/}
+            <Modal
+              size="xl"
+              opened={opened}
+              onClose={close}
+              title="GET IN TOUCH"
+            >
+              <Contact />
+            </Modal>
+            <Button
+              style={{
+                border: `.5px solid #000`,
+                color: `#000`,
+                fontWeight: "300",
+                backgroundColor: `#fff`,
+              }}
+              onClick={open}
+            >
+              Get In Touch
+            </Button>
           </div>
         </div>
       </div>
-      <div className="contact-me">
-        <Socials />
-        <Modal size="xl" opened={opened} onClose={close} title="GET IN TOUCH">
-          <Contact />
-        </Modal>
-        <Button variant="light" color="grape" onClick={open}>
-          send me an email
-        </Button>
-      </div>
+
+      {/*  IMAGE CAROUSEL */}
+
+      {/*  WHO AM I BIO AND PHOTO */}
+      <div>hey</div>
+      {/*>*/}
+      {/*  <div className="main-body">*/}
+      {/*    <div className="intro-title">*/}
+      {/*      <div className="slide-in-left">*/}
+      {/*        <h1>Hey, I&apos;m Hannah!</h1>*/}
+      {/*        <p>I&apos;m a software engineer.</p>*/}
+      {/*        <h6>(among other things)</h6>*/}
+      {/*      </div>*/}
+      {/*      <div className="slide-in-right">*/}
+      {/*        <Image*/}
+      {/*          src={avatar}*/}
+      {/*          alt="absolutely ripping a backside turn"*/}
+      {/*          width={300}*/}
+      {/*          height={300}*/}
+      {/*          className="profile-image"*/}
+      {/*        />*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
     </main>
   );
 }

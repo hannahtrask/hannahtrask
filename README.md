@@ -14,13 +14,13 @@ const hannahCatherineTrask = {
     "Liquid",
   ],
   spokenLanguages: {
-      English: "Native",
-      Spanish: "Conversational",
-      French: "Beginner"
+    English: "Native",
+    Spanish: "Conversational",
+    French: "Beginner",
   },
   hobbies: {
-      doIHaveThem: true,
-      askMeAboutThem: "please"
+    doIHaveThem: true,
+    askMeAboutThem: "please",
   },
 };
 ```

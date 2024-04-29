@@ -17,4 +17,5 @@ export const theme = createTheme({
       "#842884",
     ],
   },
+  defaultRadius: "lg",
 });

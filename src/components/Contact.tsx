@@ -55,7 +55,16 @@ const Contact: FC = () => {
           />
         </div>
         <div style={{ marginTop: "1rem" }}>
-          <Button fullWidth variant="light" color="grape" type="submit">
+          <Button
+            fullWidth
+            style={{
+              border: `.5px solid #000`,
+              color: `#000`,
+              fontWeight: "300",
+              backgroundColor: `#fff`,
+            }}
+            type="submit"
+          >
             Submit
           </Button>
         </div>
