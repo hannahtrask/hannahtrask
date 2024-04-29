@@ -2,7 +2,7 @@
 
 import React, { FC } from "react";
 import { Form, useForm } from "react-hook-form";
-import { sendEmail } from "@/utils/send-email";
+import { sendEmail } from "@/utils/nodemailer/send-email";
 import { Textarea, TextInput } from "react-hook-form-mantine";
 import { Button } from "@mantine/core";
 import { DevTool } from "@hookform/devtools";

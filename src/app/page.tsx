@@ -1,13 +1,9 @@
-"use client";
-import Contact from "@/components/plop-anywhere/Contact";
-import { useDisclosure } from "@mantine/hooks";
-import { Button, Modal } from "@mantine/core";
 import { Footer } from "@/components/footer/Footer";
 import { Intro } from "@/components/intro/Intro";
+import { Carousel } from "@/components/carousel/carousel";
+import { ContactButton } from "@/components/contact/contact-button";
 
 export default function Home() {
-  const [opened, { open, close }] = useDisclosure(false);
-
   return (
     <>
       <main>
@@ -25,36 +21,10 @@ export default function Home() {
               Shopify store? Want to talk about a project and see if we’d vibe?
               Contact me via email, LinkedIn, or Instagram.
             </p>
-            <div>
-              <Modal
-                size="xl"
-                opened={opened}
-                onClose={close}
-                title="GET IN TOUCH"
-              >
-                <Contact />
-              </Modal>
-              <Button
-                style={{
-                  border: `.5px solid #000`,
-                  color: `#000`,
-                  fontWeight: `300`,
-                  backgroundColor: `#fff`,
-                }}
-                onClick={open}
-              >
-                Get In Touch
-              </Button>
-            </div>
+            <ContactButton />
           </div>
         </div>
-        {/*  INTEGRATE CONTENTFUL FOR IMAGES */}
-        {/*<div className="image-carousel">*/}
-        {/*  <Paper shadow="sm" p="xl" radius="sm" />*/}
-        {/*  <Paper shadow="sm" p="xl" radius="sm" />*/}
-        {/*  <Paper shadow="sm" p="xl" radius="sm" />*/}
-        {/*  <Paper shadow="sm" p="xl" radius="sm" />*/}
-        {/*</div>*/}
+        {/*<Carousel />*/}
       </main>
       <Intro />
       <Footer />
