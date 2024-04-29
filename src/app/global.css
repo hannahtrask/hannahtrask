@@ -62,30 +62,6 @@ h6 {
   }
 }
 
-.intro {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-  background-color: #fdfdfd;
-  color: black;
-  width: 100vw;
-  div {
-    width: 300px;
-    line-height: 1.25rem;
-    h1 {
-      color: #daa8dd;
-      font-size: 2rem;
-    }
-    p {
-      font-size: 0.9rem;
-      margin-left: 0.5rem;
-    }
-  }
-}
-
 .image-carousel {
   display: flex;
   justify-content: space-between;

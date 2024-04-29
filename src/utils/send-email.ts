@@ -1,4 +1,4 @@
-import { FormData } from "@/components/Contact";
+import { FormData } from "@/components/plop-anywhere/Contact";
 
 export function sendEmail(data: FormData) {
   const endpoint = "/api/email";
