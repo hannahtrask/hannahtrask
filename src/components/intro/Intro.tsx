@@ -25,6 +25,7 @@ export function Intro() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
+        viewport={{ once: true }}
       >
         <h1>Who am I?</h1>
         <p>

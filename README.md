@@ -41,6 +41,5 @@ and what I have done already. This project uses:
 
 I've got a lot of things I want to do to improve this page. Here's a little list so you can get an idea of what I'm thinking.
 
-- popup when the email is sent. not an alert!
-- disable contact submit button while email is being sent
 - dial in the theme
+- https://calendly.com/hannahcatherine/30min CALENDLY INTEGRATION!

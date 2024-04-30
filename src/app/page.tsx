@@ -1,6 +1,7 @@
 import { Footer } from "@/components/footer/Footer";
 import { Intro } from "@/components/intro/Intro";
 import { ContactButton } from "@/components/contact/contact-button";
+import { Calendly } from "@/components/calendly/Calendly";
 
 export default function Home() {
   return (
@@ -16,9 +17,11 @@ export default function Home() {
           </div>
           <div className="intro-paragraph">
             <p>
-              I’m a software engineer, among other things. Need copy? Need a
-              Shopify store? Want to talk about a project and see if we’d vibe?
-              Contact me via email, LinkedIn, or Instagram.
+              I’m a software engineer and web developer (among other things).
+              <br />
+              <br />
+              Need copy? Need a Shopify store? Struggling with some pesky apps
+              or plugins and just need an experienced hand?
             </p>
             <ContactButton />
           </div>
@@ -26,6 +29,7 @@ export default function Home() {
         {/*<Carousel />*/}
       </main>
       <Intro />
+      <Calendly />
       <Footer />
     </>
   );

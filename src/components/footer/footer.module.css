@@ -15,6 +15,17 @@
   }
 }
 
+.text {
+  color: white;
+  font-size: 0.75rem;
+  width: 20vw;
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    width: 90vw;
+  }
+}
+
 .links {
   @media (max-width: $mantine-breakpoint-xs) {
     margin-top: var(--mantine-spacing-md);
