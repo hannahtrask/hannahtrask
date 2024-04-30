@@ -14,22 +14,26 @@ main {
   align-items: center;
   justify-content: space-evenly;
   background: hsla(24, 86%, 78%, 1);
+
   background: radial-gradient(
     circle,
     hsla(24, 86%, 78%, 1) 0%,
-    hsla(10, 79%, 75%, 1) 100%
+    hsla(297, 44%, 76%, 1) 100%
   );
+
   background: -moz-radial-gradient(
     circle,
     hsla(24, 86%, 78%, 1) 0%,
-    hsla(10, 79%, 75%, 1) 100%
+    hsla(297, 44%, 76%, 1) 100%
   );
+
   background: -webkit-radial-gradient(
     circle,
     hsla(24, 86%, 78%, 1) 0%,
-    hsla(10, 79%, 75%, 1) 100%
+    hsla(297, 44%, 76%, 1) 100%
   );
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7BC95", endColorstr="#F29F8F", GradientType=1 );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7BC95", endColorstr="#DAA8DD", GradientType=1 );
   color: white;
 }
 
