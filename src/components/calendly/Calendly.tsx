@@ -14,7 +14,7 @@ export function Calendly() {
       >
         <InlineWidget
           url="https://calendly.com/hannahcatherine/30min"
-          styles={{ height: "700px" }}
+          styles={{ height: "800px" }}
         />
       </motion.div>
     </div>
