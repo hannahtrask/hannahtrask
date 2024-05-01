@@ -12,7 +12,7 @@ export default function Home() {
           <div className="intro-splash">
             <p>HANNAH</p>
             <p>DEVELOPS</p>
-            <p>BLOGS</p>
+            <p>WRITES</p>
             <p>DESIGNS</p>
           </div>
           <div className="intro-paragraph">
