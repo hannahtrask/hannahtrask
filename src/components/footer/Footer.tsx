@@ -10,7 +10,6 @@ export function Footer() {
     <div className={classes.footer}>
       <Container className={classes.inner}>
         <Image src={logo} alt="logo" width={200} />
-        <p className={classes.text}>I&apos;m looking forward to meeting you!</p>
         <Group
           gap={0}
           className={classes.links}

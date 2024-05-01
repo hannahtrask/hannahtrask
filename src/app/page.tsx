@@ -2,6 +2,7 @@ import { Footer } from "@/components/footer/Footer";
 import { Intro } from "@/components/intro/Intro";
 import { ContactButton } from "@/components/contact/contact-button";
 import { Calendly } from "@/components/calendly/Calendly";
+// import { Portfolio } from "@/components/portfolio/Portfolio";
 
 export default function Home() {
   return (
@@ -10,10 +11,9 @@ export default function Home() {
         <div className="header">
           <div className="intro-splash">
             <p>HANNAH</p>
-            <p>DESIGNS</p>
-            <p>BLOGS</p>
-            <p>ENGINEERS</p>
             <p>DEVELOPS</p>
+            <p>BLOGS</p>
+            <p>DESIGNS</p>
           </div>
           <div className="intro-paragraph">
             <p>
@@ -26,9 +26,9 @@ export default function Home() {
             <ContactButton />
           </div>
         </div>
-        {/*<Carousel />*/}
       </main>
       <Intro />
+      {/*<Portfolio />*/}
       <Calendly />
       <Footer />
     </>
