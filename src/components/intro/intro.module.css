@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 3rem;
   background-color: #fdfdfd;
   color: black;
