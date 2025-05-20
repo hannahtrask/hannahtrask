@@ -37,7 +37,7 @@ export default function Header() {
                     isScrolled ? "text-forest-800 dark:text-white" : "text-white"
                 }`}
             >
-              Adventure Portfolio
+              Hannah Catherine Trask
             </Link>
 
             {/* Desktop Navigation */}

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
             <div>
-              <h3 className="font-playfair text-xl mb-2">Adventure Portfolio</h3>
+              <h3 className="font-playfair text-xl mb-2">Hannah Catherine Trask</h3>
               <p className="text-gray-300 text-sm max-w-xs">
                 Creating digital experiences with the same passion I bring to exploring the outdoors.
               </p>
@@ -15,7 +15,6 @@ export default function Footer() {
 
             <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-16">
               <div>
-                <h4 className="text-sm font-medium mb-4 tracking-wide">Explore</h4>
                 <ul className="space-y-3">
                   <li>
                     <Link href="/" className="text-gray-300 hover:text-white text-sm flex items-center">
@@ -39,7 +38,6 @@ export default function Footer() {
               </div>
 
               <div>
-                <h4 className="text-sm font-medium mb-4 tracking-wide">Connect</h4>
                 <div className="flex space-x-4">
                   <Link href="https://github.com" className="text-gray-300 hover:text-white">
                     <Github size={18} />
@@ -60,7 +58,7 @@ export default function Footer() {
 
           <div className="mt-16 pt-8 border-t border-forest-800">
             <p className="text-gray-500 text-xs">
-              © {new Date().getFullYear()} Adventure Portfolio. All rights reserved.
+              © {new Date().getFullYear()} Sun & Sagebrush LLC. All rights reserved.
             </p>
           </div>
         </div>
