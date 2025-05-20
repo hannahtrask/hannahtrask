@@ -18,7 +18,7 @@ export const projects: Project[] = [
     title: "E-Commerce Website Redesign",
     summary: "Complete redesign of an outdated online store, resulting in 40% increase in conversions.",
     description:
-      "This project involved a complete overhaul of an established e-commerce site that was struggling with poor user experience and declining sales. I redesigned the entire user interface with a focus on mobile responsiveness, streamlined the checkout process, and implemented modern design principles to showcase products more effectively.",
+        "This project involved a complete overhaul of an established e-commerce site that was struggling with poor user experience and declining sales. I redesigned the entire user interface with a focus on mobile responsiveness, streamlined the checkout process, and implemented modern design principles to showcase products more effectively.",
     coverImage: "/placeholder.svg?height=600&width=800",
     beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
     afterImage: "/placeholder.svg?height=400&width=600&text=After",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     title: "Fitness Tracking Application",
     summary: "Mobile-first web app for fitness enthusiasts to track workouts and nutrition.",
     description:
-      "Developed a comprehensive fitness tracking application that allows users to log workouts, track nutrition, and monitor progress over time. The app features a clean, intuitive interface with data visualizations to help users understand their fitness journey.",
+        "Developed a comprehensive fitness tracking application that allows users to log workouts, track nutrition, and monitor progress over time. The app features a clean, intuitive interface with data visualizations to help users understand their fitness journey.",
     coverImage: "/placeholder.svg?height=600&width=800",
     beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
     afterImage: "/placeholder.svg?height=400&width=600&text=After",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     title: "Real Estate Platform",
     summary: "Modern property listing platform with advanced search and virtual tours.",
     description:
-      "Created a comprehensive real estate platform that connects buyers, sellers, and agents. The platform features advanced property search, virtual tours, and integrated messaging. The clean, modern design focuses on showcasing properties while providing all necessary information in an easily digestible format.",
+        "Created a comprehensive real estate platform that connects buyers, sellers, and agents. The platform features advanced property search, virtual tours, and integrated messaging. The clean, modern design focuses on showcasing properties while providing all necessary information in an easily digestible format.",
     coverImage: "/placeholder.svg?height=600&width=800",
     beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
     afterImage: "/placeholder.svg?height=400&width=600&text=After",

@@ -20,8 +20,8 @@ const config = {
     extend: {
       fontFamily: {
         playfair: ["var(--font-playfair)"],
-        inter: ["var(--font-inter)"],
-        sans: ["var(--font-inter)"],
+        montserrat: ["var(--font-montserrat)"],
+        sans: ["var(--font-montserrat)"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -57,6 +57,19 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        forest: {
+          50: "#f3f8f3",
+          100: "#e7f1e7",
+          200: "#d0e3d0",
+          300: "#aacfaa",
+          400: "#7db47d",
+          500: "#5a9a5a",
+          600: "#447c44",
+          700: "#376337",
+          800: "#2d4f2d",
+          900: "#264126",
+          950: "#132313",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,11 +78,13 @@ const config = {
       },
       keyframes: {
         "accordion-down": {
+          // @ts-ignore
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
+          // @ts-ignore
           to: { height: 0 },
         },
       },

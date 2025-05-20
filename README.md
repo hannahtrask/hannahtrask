@@ -1,1 +1,2 @@
 # hannahtrask
+npm i
