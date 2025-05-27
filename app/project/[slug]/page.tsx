@@ -54,7 +54,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   {project.technologies.map((tech) => (
                       <span
                           key={tech}
-                          className="px-4 py-1.5 bg-forest-50 text-forest-800 text-xs tracking-wide flex items-center"
+                          className="px-4 py-1.5 bg-desert-50 text-desert-800 text-xs tracking-wide flex items-center"
                       >
                     <Mountain className="h-3 w-3 mr-2" />
                         {tech}
@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
                 <div className="flex flex-wrap gap-4">
                   {project.liveUrl && (
-                      <Button asChild variant="outline" className="border-forest-300 text-forest-800">
+                      <Button asChild variant="outline" className="border-desert-300 text-desert-800">
                         <a
                             href={project.liveUrl}
                             target="_blank"
@@ -78,7 +78,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   )}
 
                   {project.githubUrl && (
-                      <Button variant="outline" asChild className="border-forest-300 text-forest-800">
+                      <Button variant="outline" asChild className="border-desert-300 text-desert-800">
                         <a
                             href={project.githubUrl}
                             target="_blank"
@@ -93,34 +93,34 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </div>
               </div>
 
-              <section className="mb-20">
-                <h2 className="text-2xl font-light mb-12 tracking-wide text-forest-800">The Transformation</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                  <div className="space-y-4">
-                    <div className="relative w-full h-[350px] overflow-hidden">
-                      <Image src={project.beforeImage || "/placeholder.svg"} alt="Before" fill className="object-cover" />
-                      <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent">
-                        <span className="text-white font-light">Before</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="relative w-full h-[350px] overflow-hidden">
-                      <Image src={project.afterImage || "/placeholder.svg"} alt="After" fill className="object-cover" />
-                      <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent">
-                        <span className="text-white font-light">After</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+              {/*<section className="mb-20">*/}
+              {/*  <h2 className="text-2xl font-light mb-12 tracking-wide text-desert-800">The Transformation</h2>*/}
+              {/*  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">*/}
+              {/*    <div className="space-y-4">*/}
+              {/*      <div className="relative w-full h-[350px] overflow-hidden">*/}
+              {/*        <Image src={project.beforeImage || "/placeholder.svg"} alt="Before" fill className="object-cover" />*/}
+              {/*        <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent">*/}
+              {/*          <span className="text-white font-light">Before</span>*/}
+              {/*        </div>*/}
+              {/*      </div>*/}
+              {/*    </div>*/}
+              {/*    <div className="space-y-4">*/}
+              {/*      <div className="relative w-full h-[350px] overflow-hidden">*/}
+              {/*        <Image src={project.afterImage || "/placeholder.svg"} alt="After" fill className="object-cover" />*/}
+              {/*        <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent">*/}
+              {/*          <span className="text-white font-light">After</span>*/}
+              {/*        </div>*/}
+              {/*      </div>*/}
+              {/*    </div>*/}
+              {/*  </div>*/}
+              {/*</section>*/}
 
               <section>
-                <h2 className="text-2xl font-light mb-12 tracking-wide text-forest-800">Project Highlights</h2>
+                <h2 className="text-2xl font-light mb-12 tracking-wide text-desert-800">Project Highlights</h2>
                 <ul className="space-y-6">
                   {project.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start">
-                    <span className="flex-shrink-0 w-6 h-6 border border-forest-300 flex items-center justify-center mr-4 mt-0.5 text-sm text-forest-800">
+                    <span className="flex-shrink-0 w-6 h-6 border border-desert-300 flex items-center justify-center mr-4 mt-0.5 text-sm text-desert-800">
                       {index + 1}
                     </span>
                         <p className="text-gray-800 font-light">{highlight}</p>

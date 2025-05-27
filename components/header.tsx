@@ -34,7 +34,7 @@ export default function Header() {
             <Link
                 href="/"
                 className={`text-2xl font-playfair tracking-wide transition-colors ${
-                    isScrolled ? "text-forest-800 dark:text-white" : "text-white"
+                    isScrolled ? "text-desert-800 dark:text-white" : "text-white"
                 }`}
             >
               Hannah Catherine Trask
