@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
-      <footer className="py-16 px-4 md:px-8 bg-forest-900 text-white">
+      <footer className="py-16 px-4 md:px-8 bg-desert-400 text-white">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
             <div>
@@ -56,8 +56,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-16 pt-8 border-t border-forest-800">
-            <p className="text-gray-500 text-xs">
+          <div className="mt-16 pt-8 border-t border-desert-900">
+            <p className="text-gray-50 text-xs">
               © {new Date().getFullYear()} Sun & Sagebrush LLC. All rights reserved.
             </p>
           </div>
