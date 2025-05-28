@@ -13,13 +13,13 @@ export default function AboutPage() {
   return (
     <div className='pt-24'>
       {/* Hero Section */}
-      <div className='relative h-[60vh] w-full flex items-center'>
+      <div className='relative h-[70vh] w-full flex items-center'>
         <div className='absolute inset-0 z-0'>
           <Image
             src='/about-me-cover.jpg'
             alt='A view of the Colorado River in the Grand Canyon.'
             fill
-            objectPosition='center top'
+            objectPosition='center bottom'
             priority
             className='object-cover'
           />
@@ -28,10 +28,10 @@ export default function AboutPage() {
 
         <div className='container mx-auto px-4 relative z-10'>
           <div className='max-w-3xl'>
-            <h1 className='text-4xl md:text-5xl font-light text-white drop-shadow-md mb-6 tracking-tight'>
+            <h1 className='text-4xl md:text-5xl font-playfair font-light text-white drop-shadow-md mb-6 tracking-tight'>
               About Me
             </h1>
-            <p className='text-xl text-gray-100 leading-relaxed drop-shadow-md font-light'>
+            <p className='text-lg text-gray-100 leading-relaxed drop-shadow-md font-light'>
               Where creativity meets the web, and life in the real world fuels
               innovation.
             </p>
@@ -131,8 +131,8 @@ export default function AboutPage() {
                 <p className='text-gray-600 font-light leading-relaxed'>
                   I have four+ years of full time professional experience in web
                   development. I have a strong understanding of how the web
-                  works and the best, most efficient and effective way to
-                  implement them.
+                  works and know how to find the best way to implement solutions
+                  tailored to you.
                 </p>
               </div>
 
@@ -145,8 +145,9 @@ export default function AboutPage() {
                 </h3>
                 <p className='text-gray-600 font-light leading-relaxed'>
                   Every project starts with understanding what your goals are. I
-                  communicate often to ensure that the final product not only
-                  looks great but also meets your specific needs.
+                  communicate early and often to ensure that the final product
+                  not only looks great but also meets your specific needs and
+                  objectives.
                 </p>
               </div>
 
@@ -207,7 +208,7 @@ export default function AboutPage() {
 
                   <div className='flex flex-wrap gap-4'>
                     <Link href='/contact'>
-                      <Button className='bg-desert-600 hover:bg-desert-700 text-white'>
+                      <Button className='bg-desert-500 hover:bg-desert-700 text-white'>
                         Let's Work Together
                         <ArrowRight className='ml-2 h-4 w-4' />
                       </Button>

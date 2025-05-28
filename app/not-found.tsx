@@ -12,16 +12,6 @@ export default function NotFound() {
           fill
           className='object-cover'
         />
-        <div className='absolute inset-0 bg-black/50'>
-          Photo by{' '}
-          <a href='https://unsplash.com/@akh_artwork?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>
-            Anneal K Hardcastle
-          </a>{' '}
-          on{' '}
-          <a href='https://unsplash.com/photos/a-rocky-hillside-covered-in-lots-of-green-and-white-plants-hdmEZZHYdk0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>
-            Unsplash
-          </a>
-        </div>
       </div>
 
       <div className='container mx-auto px-4 relative z-10 text-center'>
