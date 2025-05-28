@@ -17,7 +17,7 @@ export default function NotFound() {
                 <p className="text-gray-200 mb-12 max-w-md mx-auto font-light">
                     Looks like you've taken a wrong turn somewhere. This page doesn't exist or has been moved.
                 </p>
-                <Button asChild variant="outline" className="border-white text-white hover:bg-white/20">
+                <Button asChild variant="outline" className="border-white text-desert-900 hover:bg-desert-100">
                     <Link href="/">Return to Base Camp</Link>
                 </Button>
             </div>
