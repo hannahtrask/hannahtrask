@@ -16,14 +16,14 @@ export default function AboutPage() {
       <div className='relative h-[60vh] w-full flex items-center'>
         <div className='absolute inset-0 z-0'>
           <Image
-            src='/desert-roadtrip.jpg'
-            alt='A westfalia driving through a beautiful desert landscape.'
+            src='/about-me-cover.jpg'
+            alt='A view of the Colorado River in the Grand Canyon.'
             fill
-            objectPosition='center bottom'
+            objectPosition='center top'
             priority
             className='object-cover'
           />
-          <div className='absolute inset-0 bg-black/50 backdrop-blur-[1px]'></div>
+          <div className='absolute inset-0 bg-black/50 backdrop-blur-[.5px]'></div>
         </div>
 
         <div className='container mx-auto px-4 relative z-10'>
