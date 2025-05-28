@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowLeft, Mail, MapPin, Clock } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Mail, MapPin, Clock } from 'lucide-react'
 import ContactForm from '@/components/contact-form'
 
 export const metadata = {
