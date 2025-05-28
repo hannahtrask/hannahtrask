@@ -13,10 +13,6 @@ const contactSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
-    // Debug: Check if API key is loaded
-    console.log('API Key exists:', !!process.env.RESEND_API_KEY)
-    console.log('API Key starts with:', process.env.RESEND_API_KEY?.substring(0, 5))
-
     const body = await request.json()
 
     // Validate the request body
