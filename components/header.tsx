@@ -76,6 +76,7 @@ export default function Header() {
             </Link>
             <ModeToggle isScrolled={isScrolled} />
             <Button
+              asChild
               variant={isScrolled ? 'outline' : 'secondary'}
               className={
                 isScrolled
@@ -83,7 +84,7 @@ export default function Header() {
                   : 'bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30'
               }
             >
-              Let's Talk
+              <Link href='/contact'>Let's Talk</Link>
             </Button>
           </nav>
 
@@ -125,10 +126,13 @@ export default function Header() {
             </Link>
             <div className='px-4'>
               <Button
+                asChild
                 variant='outline'
                 className='w-full border-desert-300 text-desert-800 dark:border-gray-700 dark:text-white'
               >
-                Let's Talk
+                <Link href='/contact' onClick={() => setIsMenuOpen(false)}>
+                  Let's Talk
+                </Link>
               </Button>
             </div>
           </nav>
