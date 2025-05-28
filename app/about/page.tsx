@@ -52,19 +52,18 @@ export default function AboutPage() {
                     with a passion for crafting and honing beautiful and
                     functional digital experiences. I&apos;ve always been drawn
                     to the way web development is like a puzzle with multiple
-                    solutions. Finding the one that works best for your needs is
-                    part of the work.
+                    solutions.
                   </p>
 
                   <p className='text-lg leading-relaxed font-light text-gray-700 max-w-3xl'>
                     In my web development and design work, I specialize in
                     working with{' '}
                     <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
-                      outdoor industry
+                      outdoor industry brands
                     </span>
                     ,{' '}
                     <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
-                      e-commerce
+                      e-commerce websites
                     </span>
                     ,{' '}
                     <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
@@ -108,12 +107,11 @@ export default function AboutPage() {
                     now home in Jackson Wyoming. You can probably find me on the
                     whitewater on the Snake River, riding single-track downhill
                     trails on my mountain bike on Teton Pass, or climbing in the
-                    gym or on any of the local rock climbing crags. These daily
-                    adventures aren&apos;t just hobbies to me; they're
-                    fundamental to my experience of life. They fuel my
-                    creativity and teach me that the best solutions often come
-                    from stepping away from the screen and finding inspiration
-                    in the world around me.
+                    gym or on any of the local crags. These daily adventures
+                    aren&apos;t just hobbies to me; they're fundamental to my
+                    experience of life. They fuel my creativity and show me that
+                    the best solutions often come from stepping away from the
+                    screen and finding inspiration in the natural world.
                   </p>
                 </div>
               </div>
@@ -162,7 +160,7 @@ export default function AboutPage() {
                   My love for adventure means I understand when it&apos;s time
                   to focus and get into a flow state. Working together
                   we&apos;ll make a plan and I&apos;ll get the job done for you
-                  and on time, no matter what.
+                  well and on time, no matter what.
                 </p>
               </div>
             </div>

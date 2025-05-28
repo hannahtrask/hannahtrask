@@ -39,7 +39,7 @@ export default function Header() {
               isScrolled ? 'text-desert-800 dark:text-white' : 'text-white'
             }`}
           >
-            Hannah Catherine Trask
+            Hannah Trask | Web Developer
           </Link>
 
           {/* Desktop Navigation */}
