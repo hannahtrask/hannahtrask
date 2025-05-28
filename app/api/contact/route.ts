@@ -13,6 +13,10 @@ const contactSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    // Debug: Check if API key is loaded
+    console.log('API Key exists:', !!process.env.RESEND_API_KEY)
+    console.log('API Key starts with:', process.env.RESEND_API_KEY?.substring(0, 5))
+
     const body = await request.json()
 
     // Validate the request body
@@ -20,7 +24,7 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'Contact Form <noreply@hannahtrask.dev>', // You'll need to configure this domain
+      from: 'Contact Form <onboarding@resend.dev>', // Using Resend's test domain for now
       to: ['sunandsagebrushllc@gmail.com'],
       subject: `New Contact Form Submission: ${validatedData.subject}`,
       html: `
@@ -70,8 +74,9 @@ This email was sent from your website contact form.
 
     if (error) {
       console.error('Resend error:', error)
+      console.error('Full error details:', JSON.stringify(error, null, 2))
       return NextResponse.json(
-        { error: 'Failed to send email. Please try again.' },
+        { error: 'Failed to send email. Please try again.', details: error },
         { status: 500 }
       )
     }
