@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import { ArrowLeft, ExternalLink, Mountain } from "lucide-react"
 import { projects } from "@/lib/data"
 import { Button } from "@/components/ui/button"
-import { Github } from "lucide-react"
+import { GitHubIcon } from "@/components/ui/social-icons"
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -86,7 +86,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             className="inline-flex items-center"
                         >
                           View Code
-                          <Github className="ml-2 h-4 w-4" />
+                          <GitHubIcon size={16} className="ml-2" />
                         </a>
                       </Button>
                   )}

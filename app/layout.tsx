@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
       <html lang="en" suppressHydrationWarning>
-      <body className={`${playfair.variable} ${montserrat.variable} min-h-screen font-sans`}>
+      <body className={`${playfair.variable} ${montserrat.variable} min-h-screen font-montserrat`}>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
         <div className="flex flex-col min-h-screen">
           <Header />

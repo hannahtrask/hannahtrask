@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Github, Linkedin, Twitter, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
+import { GitHubIcon, LinkedInIcon } from "@/components/ui/social-icons"
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
             <div>
-              <h3 className="font-playfair text-xl mb-2">Hannah Catherine Trask</h3>
+              <h3 className="font-montserrat text-xl mb-2">Hannah Catherine Trask</h3>
               <p className="text-gray-300 text-sm max-w-xs">
                 Creating digital experiences with the same passion I bring to exploring the outdoors.
               </p>
@@ -39,16 +40,12 @@ export default function Footer() {
 
               <div>
                 <div className="flex space-x-4">
-                  <Link href="https://github.com" className="text-gray-300 hover:text-white">
-                    <Github size={18} />
+                  <Link href="https://github.com/hannahtrask" className="text-gray-300 hover:text-white">
+                    <GitHubIcon size={18} />
                     <span className="sr-only">GitHub</span>
                   </Link>
-                  <Link href="https://twitter.com" className="text-gray-300 hover:text-white">
-                    <Twitter size={18} />
-                    <span className="sr-only">Twitter</span>
-                  </Link>
-                  <Link href="https://linkedin.com" className="text-gray-300 hover:text-white">
-                    <Linkedin size={18} />
+                  <Link href="https://www.linkedin.com/in/hannahtrask/" className="text-gray-300 hover:text-white">
+                    <LinkedInIcon size={18} />
                     <span className="sr-only">LinkedIn</span>
                   </Link>
                 </div>

@@ -46,7 +46,7 @@ export default function Header() {
                   href="/"
                   className={`text-sm tracking-wide transition-colors ${
                       isScrolled
-                          ? "text-gray-800 hover:text-forest-600 dark:text-gray-300 dark:hover:text-white"
+                          ? "text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white"
                           : "text-white/80 hover:text-white"
                   }`}
               >
@@ -56,7 +56,7 @@ export default function Header() {
                   href="/about"
                   className={`text-sm tracking-wide transition-colors ${
                       isScrolled
-                          ? "text-gray-800 hover:text-forest-600 dark:text-gray-300 dark:hover:text-white"
+                          ? "text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white"
                           : "text-white/80 hover:text-white"
                   }`}
               >
@@ -66,7 +66,7 @@ export default function Header() {
                   href="/contact"
                   className={`text-sm tracking-wide transition-colors ${
                       isScrolled
-                          ? "text-gray-800 hover:text-forest-600 dark:text-gray-300 dark:hover:text-white"
+                          ? "text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white"
                           : "text-white/80 hover:text-white"
                   }`}
               >

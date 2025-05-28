@@ -18,7 +18,7 @@ export default function Home() {
                         <h1 className="text-5xl md:text-6xl font-light mb-6 tracking-tight text-white drop-shadow-md">
                             Crafting <span className="font-normal italic">seamless</span> web experiences
                         </h1>
-                        <p className="text-xl text-gray-100 leading-relaxed mb-8 drop-shadow-md">
+                        <p className="text-lg text-gray-100 leading-relaxed mb-8 drop-shadow-md">
                             Transforming ideas into exceptional web experiences. Fueled by a love for wild places and big ideas.
                         </p>
                         <Link
