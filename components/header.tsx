@@ -77,7 +77,7 @@ export default function Header() {
                   variant={isScrolled ? "outline" : "secondary"}
                   className={
                     isScrolled
-                        ? "border-forest-300 text-forest-800"
+                        ? "border-desert-300 text-desert-800"
                         : "bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30"
                   }
               >
@@ -102,21 +102,21 @@ export default function Header() {
               <nav className="md:hidden py-6 space-y-6 mt-4 bg-white dark:bg-gray-900 rounded-md shadow-lg">
                 <Link
                     href="/"
-                    className="block px-4 text-gray-800 hover:text-forest-600 dark:text-gray-300 dark:hover:text-white text-sm tracking-wide"
+                    className="block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-sm tracking-wide"
                     onClick={() => setIsMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
                     href="/about"
-                    className="block px-4 text-gray-800 hover:text-forest-600 dark:text-gray-300 dark:hover:text-white text-sm tracking-wide"
+                    className="block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-sm tracking-wide"
                     onClick={() => setIsMenuOpen(false)}
                 >
                   About
                 </Link>
                 <Link
                     href="/contact"
-                    className="block px-4 text-gray-800 hover:text-forest-600 dark:text-gray-300 dark:hover:text-white text-sm tracking-wide"
+                    className="block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-sm tracking-wide"
                     onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
@@ -124,7 +124,7 @@ export default function Header() {
                 <div className="px-4">
                   <Button
                       variant="outline"
-                      className="w-full border-forest-300 text-forest-800 dark:border-gray-700 dark:text-white"
+                      className="w-full border-desert-300 text-desert-800 dark:border-gray-700 dark:text-white"
                   >
                     Let's Talk
                   </Button>

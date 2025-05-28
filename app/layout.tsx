@@ -19,6 +19,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Creative Web Developer | Adventure Enthusiast",
   description: "Showcasing my work as a freelance web developer with a passion for the outdoors",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({

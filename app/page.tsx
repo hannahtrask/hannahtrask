@@ -53,9 +53,9 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <div className="p-6">
-                                        <h3 className="text-xl font-light mb-2 text-[#2d3c35]">{project.title}</h3>
-                                        <p className="text-gray-600 mb-4 line-clamp-2 text-sm">{project.summary}</p>
-                                        <div className="flex items-center text-[#5a7561] text-sm font-light">
+                                        <h3 className="text-xl font-light mb-2 text-desert-900">{project.title}</h3>
+                                        <p className="text-desert-600 mb-4 line-clamp-2 text-sm">{project.summary}</p>
+                                        <div className="flex items-center text-desert-600 text-sm font-light">
                                             View Project{" "}
                                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                         </div>
