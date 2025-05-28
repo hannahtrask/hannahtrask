@@ -33,9 +33,9 @@ export default function Home() {
             </div>
 
             {/* Projects Section */}
-            <section id="projects" className="py-24 bg-[#f8f7f4]">
+            <section id="projects" className="py-10 bg-[#f8f7f4]">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-light mb-16 tracking-wide text-[#2d3c35]">Featured Work</h2>
+                    <h2 className="text-3xl font-playfair font-light mb-16 tracking-wide text-[#2d3c35]">Featured Work</h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                         {projects.map((project) => (

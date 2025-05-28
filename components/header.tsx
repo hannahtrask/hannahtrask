@@ -33,7 +33,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link
                 href="/"
-                className={`text-2xl font-playfair tracking-wide transition-colors ${
+                className={`text-2xl font-playfair font-semibold tracking-wide transition-colors ${
                     isScrolled ? "text-desert-800 dark:text-white" : "text-white"
                 }`}
             >
