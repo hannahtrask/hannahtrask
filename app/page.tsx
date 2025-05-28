@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
-import { projects } from '@/lib/data';
+import Link from 'next/link'
+import Image from 'next/image'
+import { ArrowRight } from 'lucide-react'
+import { projects } from '@/lib/data'
 
 export default function Home() {
   return (
@@ -87,5 +87,5 @@ export default function Home() {
         </div>
       </section>
     </>
-  );
+  )
 }

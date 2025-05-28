@@ -1,15 +1,15 @@
 export interface Project {
-  slug: string;
-  title: string;
-  summary: string;
-  description: string;
-  coverImage: string;
-  beforeImage?: string;
-  afterImage?: string;
-  technologies: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  highlights: string[];
+  slug: string
+  title: string
+  summary: string
+  description: string
+  coverImage: string
+  beforeImage?: string
+  afterImage?: string
+  technologies: string[]
+  liveUrl?: string
+  githubUrl?: string
+  highlights: string[]
 }
 
 export const projects: Project[] = [
@@ -72,4 +72,4 @@ export const projects: Project[] = [
   //     "Designed a responsive interface that works seamlessly on all devices",
   //   ],
   // },
-];
+]

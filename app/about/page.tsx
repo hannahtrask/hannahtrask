@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight, Mountain, Code, Heart } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowRight, Mountain, Code, Heart } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export const metadata = {
   title: 'About | Hannah Catherine Trask',
   description:
     'Learn more about Hannah, a creative web developer with a passion for the outdoors and crafting beautiful digital experiences.',
-};
+}
 
 export default function AboutPage() {
   return (
@@ -220,5 +220,5 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

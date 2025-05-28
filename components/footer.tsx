@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { MapPin } from 'lucide-react';
-import { GitHubIcon, LinkedInIcon } from '@/components/ui/social-icons';
+import Link from 'next/link'
+import { MapPin } from 'lucide-react'
+import { GitHubIcon, LinkedInIcon } from '@/components/ui/social-icons'
 
 export default function Footer() {
   return (
@@ -79,5 +79,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

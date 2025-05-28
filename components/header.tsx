@@ -1,27 +1,27 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ModeToggle } from './mode-toggle';
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { Menu, X } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { ModeToggle } from './mode-toggle'
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsScrolled(true);
+        setIsScrolled(true)
       } else {
-        setIsScrolled(false);
+        setIsScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <header
@@ -135,5 +135,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  );
+  )
 }

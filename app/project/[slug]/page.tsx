@@ -1,22 +1,22 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import { ArrowLeft, ExternalLink, Mountain } from 'lucide-react';
-import { projects } from '@/lib/data';
-import { Button } from '@/components/ui/button';
-import { GitHubIcon } from '@/components/ui/social-icons';
+import Image from 'next/image'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { ArrowLeft, ExternalLink, Mountain } from 'lucide-react'
+import { projects } from '@/lib/data'
+import { Button } from '@/components/ui/button'
+import { GitHubIcon } from '@/components/ui/social-icons'
 
 export async function generateStaticParams() {
   return projects.map(project => ({
     slug: project.slug,
-  }));
+  }))
 }
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projects.find(p => p.slug === params.slug);
+  const project = projects.find(p => p.slug === params.slug)
 
   if (!project) {
-    notFound();
+    notFound()
   }
 
   return (
@@ -149,5 +149,5 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
