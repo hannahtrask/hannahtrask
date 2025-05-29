@@ -11,31 +11,28 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className='pt-24'>
+    <div className='min-h-screen'>
       {/* Hero Section */}
-      <div className='relative h-[70vh] w-full flex items-center'>
+      <div className='relative h-[60vh] w-full flex items-center'>
         <div className='absolute inset-0 z-0'>
           <Image
-            src='/about-me-cover.jpg'
+            src='/roadtrip.jpg'
             alt='A view of the Colorado River in the Grand Canyon.'
             fill
-            objectPosition='center bottom'
             priority
             className='object-cover'
           />
           <div className='absolute inset-0 bg-black/50 backdrop-blur-[.5px]'></div>
         </div>
 
-        <div className='container mx-auto px-4 relative z-10'>
-          <div className='max-w-3xl'>
-            <h1 className='text-4xl md:text-5xl font-playfair font-light text-white drop-shadow-md mb-6 tracking-tight'>
-              About Me
-            </h1>
-            <p className='text-lg text-gray-100 leading-relaxed drop-shadow-md font-light'>
-              Where creativity meets the web, and life in the real world fuels
-              innovation.
-            </p>
-          </div>
+        <div className='container mx-auto px-4 relative z-10 text-center'>
+          <h1 className='text-5xl md:text-6xl font-playfair font-light text-white mb-6'>
+            About Me
+          </h1>
+          <p className='text-xl text-gray-200 mb-8 max-w-2xl mx-auto font-light leading-relaxed'>
+            Where creativity meets the web, and life in the real world fuels
+            innovation.
+          </p>
         </div>
       </div>
 

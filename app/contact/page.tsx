@@ -15,7 +15,7 @@ export default function ContactPage() {
       <div className='relative h-[60vh] w-full flex items-center'>
         <div className='absolute inset-0 z-0'>
           <Image
-            src='/me-bike.jpg'
+            src='/map.jpg'
             alt='Hannah on a mountain bike in Bend Oregon.'
             fill
             priority
