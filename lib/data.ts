@@ -10,66 +10,81 @@ export interface Project {
   liveUrl?: string
   githubUrl?: string
   highlights: string[]
+  category:
+    | 'thoughtful lifestyle brands'
+    | 'small e-commerce businesses'
+    | 'creative studios'
+    | 'values-driven teams'
+  primaryTechnology?: string
 }
 
 export const projects: Project[] = [
-  // {
-  //   slug: 'video-editing-website-redesign',
-  //   title: 'Video Editor Website Redesign',
-  //   summary:
-  //     'Redesign of a freelance video editors online presence; improving SEO, layout, color scheme, typography, and responsiveness.',
-  //   description:
-  //     'This project involved a complete overhaul of an established e-commerce site that was struggling with poor user experience and low search visibility. I redesigned the entire user interface focusing on mobile responsiveness, improved navigation, and applied modern design principles to showcase products more effectively. Additionally, I optimized on-page SEO by updating title tags, meta descriptions, and header tags, conducted keyword research, and fixed technical SEO issues such as site speed and broken links. These improvements led to a significant increase in organic traffic, higher search rankings, and a better overall user experience.',
-  //   coverImage: '/client-wyld-lark.jpg?height=600&width=800',
-  //   // beforeImage: "/client-wyld-lark.jpg?height=400&width=600&text=Before",
-  //   // afterImage: "/client-wyld-lark.jpg?height=400&width=600&text=After",
-  //   technologies: ['WordPress', 'SiteGround', 'Elementor', 'Yoast SEO'],
-  //   liveUrl: 'https://wyldlark.com/',
-  //   highlights: [
-  //     'Redesigned product pages using Elementor with improved imagery and clearer information architecture',
-  //     'Implemented a streamlined 2-step checkout process, reducing cart abandonment by 35%',
-  //     'Created a fully responsive design optimized for mobile and desktop devices',
-  //     'Optimized SEO using Yoast: updated title tags, meta descriptions, and implemented keyword strategies',
-  //     'Improved site speed and fixed technical SEO issues, enhancing user experience and search rankings',
-  //     'Enhanced navigation and integrated advanced filtering and search functionality',
-  //   ],
-  // },
-  // {
-  //   slug: "fitness-app",
-  //   title: "Fitness Tracking Application",
-  //   summary: "Mobile-first web app for fitness enthusiasts to track workouts and nutrition.",
-  //   description:
-  //       "Developed a comprehensive fitness tracking application that allows users to log workouts, track nutrition, and monitor progress over time. The app features a clean, intuitive interface with data visualizations to help users understand their fitness journey.",
-  //   coverImage: "/placeholder.svg?height=600&width=800",
-  //   beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
-  //   afterImage: "/placeholder.svg?height=400&width=600&text=After",
-  //   technologies: ["React", "Node.js", "Express", "MongoDB", "Chart.js"],
-  //   liveUrl: "https://example.com",
-  //   githubUrl: "https://github.com",
-  //   highlights: [
-  //     "Built custom workout planning tools with drag-and-drop functionality",
-  //     "Implemented nutrition tracking with barcode scanning capability",
-  //     "Created interactive progress charts and goal-setting features",
-  //     "Designed a notification system to keep users motivated",
-  //   ],
-  // },
-  // {
-  //   slug: "real-estate-platform",
-  //   title: "Real Estate Platform",
-  //   summary: "Modern property listing platform with advanced search and virtual tours.",
-  //   description:
-  //       "Created a comprehensive real estate platform that connects buyers, sellers, and agents. The platform features advanced property search, virtual tours, and integrated messaging. The clean, modern design focuses on showcasing properties while providing all necessary information in an easily digestible format.",
-  //   coverImage: "/placeholder.svg?height=600&width=800",
-  //   beforeImage: "/placeholder.svg?height=400&width=600&text=Before",
-  //   afterImage: "/placeholder.svg?height=400&width=600&text=After",
-  //   technologies: ["Next.js", "PostgreSQL", "Google Maps API", "AWS S3"],
-  //   liveUrl: "https://example.com",
-  //   githubUrl: "https://github.com",
-  //   highlights: [
-  //     "Implemented advanced search with filters for location, price, amenities, and more",
-  //     "Created interactive map view with property clustering",
-  //     "Built 360° virtual tour functionality for property listings",
-  //     "Designed a responsive interface that works seamlessly on all devices",
-  //   ],
-  // },
+  {
+    slug: 'mountain-wellness-retreat',
+    title: 'Mountain Wellness Retreat',
+    summary: 'A serene wellness retreat website showcasing mindful living and outdoor experiences.',
+    description: 'Created a peaceful, nature-inspired website for a wellness retreat center focused on mindful living and outdoor experiences. The design emphasizes tranquility and connection with nature while providing easy booking and information access.',
+    coverImage: '/placeholder.svg?height=600&width=800',
+    technologies: ['WordPress', 'Elementor', 'WooCommerce', 'Yoast SEO'],
+    primaryTechnology: 'WordPress',
+    liveUrl: 'https://example.com',
+    category: 'thoughtful lifestyle brands',
+    highlights: [
+      'Designed a calming, nature-inspired interface that reflects the retreat\'s values',
+      'Integrated booking system for retreat sessions and workshops',
+      'Optimized for mobile users seeking outdoor experiences',
+      'Implemented SEO strategies for wellness and outdoor keywords',
+    ],
+  },
+  {
+    slug: 'artisan-coffee-shop',
+    title: 'Artisan Coffee E-commerce',
+    summary: 'Small batch coffee roaster\'s online store with subscription services.',
+    description: 'Built a warm, inviting e-commerce platform for a local coffee roaster, featuring subscription services, detailed product information, and a blog about coffee culture and sustainability.',
+    coverImage: '/placeholder.svg?height=600&width=800',
+    technologies: ['Shopify', 'Liquid', 'Shopify Plus', 'Klaviyo'],
+    primaryTechnology: 'Shopify',
+    liveUrl: 'https://example.com',
+    category: 'small e-commerce businesses',
+    highlights: [
+      'Custom Shopify theme with subscription functionality',
+      'Integrated inventory management for small batch roasting',
+      'Email marketing automation for customer retention',
+      'Mobile-optimized checkout process',
+    ],
+  },
+  {
+    slug: 'adventure-photography-studio',
+    title: 'Adventure Photography Studio',
+    summary: 'Portfolio website for outdoor photographers showcasing adventure stories.',
+    description: 'Designed a stunning portfolio website for adventure photographers, featuring immersive galleries, client testimonials, and booking systems for outdoor photography sessions.',
+    coverImage: '/placeholder.svg?height=600&width=800',
+    technologies: ['WordPress', 'Custom Theme', 'Lightbox Gallery', 'Contact Form 7'],
+    primaryTechnology: 'WordPress',
+    liveUrl: 'https://example.com',
+    category: 'creative studios',
+    highlights: [
+      'Custom WordPress theme optimized for high-resolution photography',
+      'Immersive gallery experiences with lightbox functionality',
+      'Client booking system for outdoor photography sessions',
+      'SEO optimization for local photography searches',
+    ],
+  },
+  {
+    slug: 'sustainable-consulting-firm',
+    title: 'Sustainable Business Consulting',
+    summary: 'Professional website for environmental consulting firm focused on sustainability.',
+    description: 'Created a professional, trust-building website for a sustainability consulting firm, emphasizing their expertise in environmental solutions and corporate responsibility.',
+    coverImage: '/placeholder.svg?height=600&width=800',
+    technologies: ['WordPress', 'Elementor Pro', 'Gravity Forms', 'Yoast SEO'],
+    primaryTechnology: 'WordPress',
+    liveUrl: 'https://example.com',
+    category: 'values-driven teams',
+    highlights: [
+      'Professional design that builds trust and credibility',
+      'Case study showcase highlighting environmental impact',
+      'Lead generation forms for consulting inquiries',
+      'Content strategy focused on sustainability expertise',
+    ],
+  },
 ]

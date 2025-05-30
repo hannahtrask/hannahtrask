@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { projects } from '@/lib/data'
+import AnimatedProjectsSection from '@/components/animated-projects-section'
 
 export default function Home() {
   return (
@@ -40,54 +40,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Projects Section */}
-      {projects.length > 0 && (
-        <section id='projects' className='py-10 bg-[#f8f7f4]'>
-          <div className='container mx-auto px-4'>
-            <h2 className='text-3xl font-playfair font-light mb-16 tracking-wide text-[#2d3c35]'>
-              Featured Work
-            </h2>
-
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
-              {projects.map(project => (
-                <Link
-                  href={`/project/${project.slug}`}
-                  key={project.slug}
-                  className='group'
-                >
-                  <div className='overflow-hidden transition-all duration-500 hover:-translate-y-1 bg-white border border-gray-200'>
-                    <div className='relative h-80 w-full overflow-hidden'>
-                      <Image
-                        src={project.coverImage || '/placeholder.svg'}
-                        alt={project.title}
-                        fill
-                        className='object-cover transition-transform duration-700 group-hover:scale-105'
-                      />
-                      <div className='absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent'>
-                        <span className='text-xs text-white uppercase tracking-wider'>
-                          {project.technologies[0]}
-                        </span>
-                      </div>
-                    </div>
-                    <div className='p-6'>
-                      <h3 className='text-xl font-light mb-2 text-desert-900'>
-                        {project.title}
-                      </h3>
-                      <p className='text-desert-600 mb-4 line-clamp-2 text-sm'>
-                        {project.summary}
-                      </p>
-                      <div className='flex items-center text-desert-600 text-sm font-light'>
-                        View Project{' '}
-                        <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover:translate-x-1' />
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Animated Projects Section */}
+      <AnimatedProjectsSection />
     </>
   )
 }

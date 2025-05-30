@@ -56,19 +56,19 @@ export default function AboutPage() {
                     In my web development and design work, I specialize in
                     working with{' '}
                     <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
-                      outdoor industry brands
+                      thoughtful lifestyle brands
                     </span>
                     ,{' '}
                     <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
-                      e-commerce websites
+                      small e-commerce businesses
                     </span>
                     ,{' '}
                     <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
-                      adventure travel companies
+                      creative studios
                     </span>
                     , and{' '}
                     <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
-                      travel bloggers
+                      values-driven teams
                     </span>
                     .
                   </p>
