@@ -2,7 +2,6 @@ import {
   siWordpress,
   siShopify,
   siWoocommerce,
-  siGravityforms,
   siReact,
   siNextdotjs,
   siTailwindcss,
@@ -25,7 +24,7 @@ const technologyIcons: Record<string, any> = {
   WordPress: siWordpress,
   Shopify: siShopify,
   WooCommerce: siWoocommerce,
-  'Gravity Forms': siGravityforms,
+
   React: siReact,
   'Next.js': siNextdotjs,
   'Tailwind CSS': siTailwindcss,
@@ -58,7 +57,7 @@ const technologyColors: Record<string, string> = {
   WooCommerce: '#96588A',
   'Yoast SEO': '#A4286A',
   Klaviyo: '#FF6900',
-  'Gravity Forms': '#1E73BE',
+
   React: '#61DAFB',
   'Next.js': '#000000',
   'Tailwind CSS': '#06B6D4',
