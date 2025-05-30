@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import AnimatedProjectsSection from '@/components/animated-projects-section'
+import ProjectsSection from '@/components/projects-section'
 
 export default function Home() {
   return (
@@ -40,8 +40,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Animated Projects Section */}
-      <AnimatedProjectsSection />
+      {/* Projects Section */}
+      <ProjectsSection />
     </>
   )
 }
