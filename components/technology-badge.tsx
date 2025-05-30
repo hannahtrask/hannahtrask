@@ -92,7 +92,8 @@ export default function TechnologyBadge({
   }
 
   const variantClasses = {
-    default: 'bg-desert-50 text-desert-700 border border-desert-200',
+    default:
+      'bg-desert-50 dark:bg-desert-800 text-desert-700 dark:text-desert-200 border border-desert-200 dark:border-desert-600',
     primary:
       'bg-white/25 backdrop-blur-md text-white border border-white/40 shadow-lg',
     overlay:

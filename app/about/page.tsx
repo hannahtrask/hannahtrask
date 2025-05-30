@@ -37,14 +37,14 @@ export default function AboutPage() {
       </div>
 
       {/* Main Content */}
-      <div className='bg-[#f8f7f4] topo-pattern'>
+      <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
         <div className='container mx-auto px-4 py-16'>
           <div className='max-w-4xl mx-auto'>
             {/* Introduction Section */}
-            <div className='bg-white p-8 md:p-12 shadow-sm mb-16'>
+            <div className='bg-white dark:bg-desert-800 p-8 md:p-12 shadow-sm mb-16'>
               <div className='grid grid-cols-1 lg:grid-cols-3 gap-12 items-start'>
                 <div className='lg:col-span-2'>
-                  <p className='text-xl leading-relaxed mb-8 font-light text-gray-800'>
+                  <p className='text-xl leading-relaxed mb-8 font-light text-gray-800 dark:text-gray-200'>
                     Hey! I&apos;m Hannah, and I&apos;m a creative web developer
                     with a passion for crafting and honing beautiful and
                     functional digital experiences. I&apos;ve always been drawn
@@ -52,22 +52,22 @@ export default function AboutPage() {
                     solutions.
                   </p>
 
-                  <p className='text-lg leading-relaxed font-light text-gray-700 max-w-3xl'>
+                  <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300 max-w-3xl'>
                     In my web development and design work, I specialize in
                     working with{' '}
-                    <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
+                    <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
                       thoughtful lifestyle brands
                     </span>
                     ,{' '}
-                    <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
+                    <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
                       small e-commerce businesses
                     </span>
                     ,{' '}
-                    <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
+                    <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
                       creative studios
                     </span>
                     , and{' '}
-                    <span className='font-medium text-desert-700 bg-desert-50 px-2 py-1 rounded'>
+                    <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
                       values-driven teams
                     </span>
                     .
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className='lg:col-span-2 lg:order-2'>
-                  <p className='text-lg leading-relaxed font-light text-gray-700'>
+                  <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300'>
                     When I&apos;m not at work, you&apos;ll find me exploring my
                     now home in Jackson Wyoming. You can probably find me on the
                     whitewater on the Snake River, riding single-track downhill
@@ -116,14 +116,14 @@ export default function AboutPage() {
 
             {/* Skills & Approach Section */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
-              <div className='bg-white p-8 shadow-sm text-center'>
-                <div className='w-16 h-16 bg-desert-100 rounded-full flex items-center justify-center mx-auto mb-6'>
-                  <Code className='h-8 w-8 text-desert-600' />
+              <div className='bg-white dark:bg-desert-800 p-8 shadow-sm text-center'>
+                <div className='w-16 h-16 bg-desert-100 dark:bg-desert-700 rounded-full flex items-center justify-center mx-auto mb-6'>
+                  <Code className='h-8 w-8 text-desert-600 dark:text-desert-300' />
                 </div>
-                <h3 className='text-xl font-light mb-4 text-desert-800'>
+                <h3 className='text-xl font-light mb-4 text-desert-800 dark:text-desert-100'>
                   Technical Experience
                 </h3>
-                <p className='text-gray-600 font-light leading-relaxed'>
+                <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
                   I have four+ years of full time professional experience in web
                   development. I have a strong understanding of how the web
                   works and know how to find the best way to implement solutions
@@ -131,14 +131,14 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className='bg-white p-8 shadow-sm text-center'>
-                <div className='w-16 h-16 bg-desert-100 rounded-full flex items-center justify-center mx-auto mb-6'>
-                  <Heart className='h-8 w-8 text-desert-600' />
+              <div className='bg-white dark:bg-desert-800 p-8 shadow-sm text-center'>
+                <div className='w-16 h-16 bg-desert-100 dark:bg-desert-700 rounded-full flex items-center justify-center mx-auto mb-6'>
+                  <Heart className='h-8 w-8 text-desert-600 dark:text-desert-300' />
                 </div>
-                <h3 className='text-xl font-light mb-4 text-desert-800'>
+                <h3 className='text-xl font-light mb-4 text-desert-800 dark:text-desert-100'>
                   You-Centered Work
                 </h3>
-                <p className='text-gray-600 font-light leading-relaxed'>
+                <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
                   Every project starts with understanding what your goals are. I
                   communicate early and often to ensure that the final product
                   not only looks great but also meets your specific needs and
@@ -146,14 +146,14 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className='bg-white p-8 shadow-sm text-center'>
-                <div className='w-16 h-16 bg-desert-100 rounded-full flex items-center justify-center mx-auto mb-6'>
-                  <Mountain className='h-8 w-8 text-desert-600' />
+              <div className='bg-white dark:bg-desert-800 p-8 shadow-sm text-center'>
+                <div className='w-16 h-16 bg-desert-100 dark:bg-desert-700 rounded-full flex items-center justify-center mx-auto mb-6'>
+                  <Mountain className='h-8 w-8 text-desert-600 dark:text-desert-300' />
                 </div>
-                <h3 className='text-xl font-light mb-4 text-desert-800'>
+                <h3 className='text-xl font-light mb-4 text-desert-800 dark:text-desert-100'>
                   Adventure Inspired
                 </h3>
-                <p className='text-gray-600 font-light leading-relaxed'>
+                <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
                   My love for adventure means I understand when it&apos;s time
                   to focus and get into a flow state. Working together
                   we&apos;ll make a plan and I&apos;ll get the job done for you
@@ -163,7 +163,7 @@ export default function AboutPage() {
             </div>
 
             {/* Personal Philosophy Section */}
-            <div className='bg-desert-50 p-8 md:p-12 border border-desert-200'>
+            <div className='bg-desert-50 dark:bg-desert-800 p-8 md:p-12 border border-desert-200 dark:border-desert-600'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
                 <div className='relative h-96 w-full overflow-hidden rounded-sm group'>
                   <Image
@@ -177,11 +177,11 @@ export default function AboutPage() {
                 </div>
 
                 <div>
-                  <h2 className='text-2xl font-light mb-8 tracking-wide text-desert-800'>
+                  <h2 className='text-2xl font-light mb-8 tracking-wide text-desert-800 dark:text-desert-100'>
                     Beyond the Code
                   </h2>
 
-                  <p className='text-gray-700 font-light leading-relaxed mb-6'>
+                  <p className='text-gray-700 dark:text-gray-300 font-light leading-relaxed mb-6'>
                     I discovered the magic of being challenged outside at a
                     young age, and it has directly influenced how I move around
                     in the world. The patience required for a long climb, the
@@ -191,13 +191,13 @@ export default function AboutPage() {
                     design decisions.
                   </p>
 
-                  <p className='text-gray-700 font-light leading-relaxed mb-8'>
+                  <p className='text-gray-700 dark:text-gray-300 font-light leading-relaxed mb-8'>
                     I believe that the best digital experiences are like the
                     best outdoor adventures: they're well-planned, beautifully
                     executed, and leave you feeling inspired and accomplished.
                   </p>
 
-                  <p className='text-gray-700 font-light leading-relaxed mb-8'>
+                  <p className='text-gray-700 dark:text-gray-300 font-light leading-relaxed mb-8'>
                     Sound like a good fit? Let's chat!
                   </p>
 

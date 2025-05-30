@@ -50,7 +50,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     >
       <div
         ref={cardRef}
-        className='relative h-[70vh] overflow-hidden bg-white shadow-lg group cursor-pointer'
+        className='relative h-[70vh] overflow-hidden bg-white dark:bg-desert-800 shadow-lg group cursor-pointer'
       >
         {/* Parallax Background Image */}
         <motion.div
@@ -188,10 +188,10 @@ function ParallaxCategorySection({
       className='mb-20'
     >
       <div className='mb-12 text-center'>
-        <h3 className='text-3xl md:text-4xl font-playfair font-light mb-4 text-desert-800'>
+        <h3 className='text-3xl md:text-4xl font-playfair font-light mb-4 text-desert-800 dark:text-desert-100'>
           {categoryDisplayNames[category]}
         </h3>
-        <p className='text-desert-600 max-w-2xl mx-auto leading-relaxed'>
+        <p className='text-desert-600 dark:text-desert-300 max-w-2xl mx-auto leading-relaxed'>
           {categoryDescriptions[category]}
         </p>
       </div>
@@ -221,7 +221,7 @@ export default function ProjectsSection() {
   )
 
   return (
-    <section id='projects' className='py-20 bg-[#f8f7f4]'>
+    <section id='projects' className='py-20 bg-[#f8f7f4] dark:bg-desert-900'>
       <div className='container mx-auto px-4'>
         <motion.div
           ref={sectionRef}
@@ -232,24 +232,24 @@ export default function ProjectsSection() {
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           className='text-center mb-20'
         >
-          <h2 className='text-5xl md:text-6xl font-playfair font-light mb-8 tracking-wide text-desert-800'>
+          <h2 className='text-5xl md:text-6xl font-playfair font-light mb-8 tracking-wide text-desert-800 dark:text-desert-100'>
             Featured Clients
           </h2>
-          <p className='text-xl text-desert-600 max-w-4xl mx-auto leading-relaxed'>
+          <p className='text-xl text-desert-600 dark:text-desert-300 max-w-4xl mx-auto leading-relaxed'>
             I specialize in creating and buffing up websites for{' '}
-            <span className='font-medium text-desert-700 bg-desert-50 px-3 py-1 rounded-full'>
+            <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-800 px-3 py-1 rounded-full'>
               thoughtful lifestyle brands
             </span>
             ,{' '}
-            <span className='font-medium text-desert-700 bg-desert-50 px-3 py-1 rounded-full'>
+            <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-800 px-3 py-1 rounded-full'>
               small e-commerce businesses
             </span>
             ,{' '}
-            <span className='font-medium text-desert-700 bg-desert-50 px-3 py-1 rounded-full'>
+            <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-800 px-3 py-1 rounded-full'>
               creative studios & individuals
             </span>
             , and{' '}
-            <span className='font-medium text-desert-700 bg-desert-50 px-3 py-1 rounded-full'>
+            <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-800 px-3 py-1 rounded-full'>
               values-driven teams
             </span>
             . Mostly, I love working with clients who are passionate about what

@@ -91,13 +91,13 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='bg-white p-8 md:p-12 shadow-sm'>
+    <div className='bg-white dark:bg-desert-800 p-8 md:p-12 shadow-sm'>
       <div className='max-w-2xl mx-auto'>
         <div className='text-center mb-8'>
-          <h2 className='text-3xl font-playfair font-light text-desert-800 mb-4'>
+          <h2 className='text-3xl font-playfair font-light text-desert-800 dark:text-desert-100 mb-4'>
             Let's Start a Conversation
           </h2>
-          <p className='text-gray-600 font-light leading-relaxed'>
+          <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
             Ready to bring your vision to life? I'd love to hear about your
             project and explore how we can work together to create something
             amazing.
@@ -112,7 +112,7 @@ export default function ContactForm() {
                 name='name'
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className='text-desert-700 font-medium'>
+                    <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
                       Name
                     </FormLabel>
                     <FormControl>
@@ -132,7 +132,7 @@ export default function ContactForm() {
                 name='email'
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className='text-desert-700 font-medium'>
+                    <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
                       Email
                     </FormLabel>
                     <FormControl>
@@ -154,7 +154,7 @@ export default function ContactForm() {
               name='subject'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className='text-desert-700 font-medium'>
+                  <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
                     Subject
                   </FormLabel>
                   <FormControl>
@@ -174,7 +174,7 @@ export default function ContactForm() {
               name='message'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className='text-desert-700 font-medium'>
+                  <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
                     Message
                   </FormLabel>
                   <FormControl>

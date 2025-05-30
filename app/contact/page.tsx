@@ -37,45 +37,45 @@ export default function ContactPage() {
       </div>
 
       {/* Main Content */}
-      <div className='bg-[#f8f7f4] topo-pattern'>
+      <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
         <div className='container mx-auto px-4 py-16'>
           <div className='max-w-6xl mx-auto'>
             {/* Contact Information Cards */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
-              <div className='bg-white p-6 shadow-sm text-center'>
-                <div className='w-12 h-12 bg-desert-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                  <Mail className='h-6 w-6 text-desert-600' />
+              <div className='bg-white dark:bg-desert-800 p-6 shadow-sm text-center'>
+                <div className='w-12 h-12 bg-desert-100 dark:bg-desert-700 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <Mail className='h-6 w-6 text-desert-600 dark:text-desert-300' />
                 </div>
-                <h3 className='font-playfair text-lg text-desert-800 mb-2'>
+                <h3 className='font-playfair text-lg text-desert-800 dark:text-desert-100 mb-2'>
                   Email
                 </h3>
-                <p className='text-gray-600 text-sm'>
+                <p className='text-gray-600 dark:text-gray-300 text-sm'>
                   sunandsagebrushllc@gmail.com
                 </p>
               </div>
 
-              <div className='bg-white p-6 shadow-sm text-center'>
-                <div className='w-12 h-12 bg-desert-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                  <MapPin className='h-6 w-6 text-desert-600' />
+              <div className='bg-white dark:bg-desert-800 p-6 shadow-sm text-center'>
+                <div className='w-12 h-12 bg-desert-100 dark:bg-desert-700 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <MapPin className='h-6 w-6 text-desert-600 dark:text-desert-300' />
                 </div>
-                <h3 className='font-playfair text-lg text-desert-800 mb-2'>
+                <h3 className='font-playfair text-lg text-desert-800 dark:text-desert-100 mb-2'>
                   Location
                 </h3>
-                <p className='text-gray-600 text-sm'>
+                <p className='text-gray-600 dark:text-gray-300 text-sm'>
                   Remote & On-site
                   <br />
                   Jackson, Wyoming
                 </p>
               </div>
 
-              <div className='bg-white p-6 shadow-sm text-center'>
-                <div className='w-12 h-12 bg-desert-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-                  <Clock className='h-6 w-6 text-desert-600' />
+              <div className='bg-white dark:bg-desert-800 p-6 shadow-sm text-center'>
+                <div className='w-12 h-12 bg-desert-100 dark:bg-desert-700 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <Clock className='h-6 w-6 text-desert-600 dark:text-desert-300' />
                 </div>
-                <h3 className='font-playfair text-lg text-desert-800 mb-2'>
+                <h3 className='font-playfair text-lg text-desert-800 dark:text-desert-100 mb-2'>
                   Response Time
                 </h3>
-                <p className='text-gray-600 text-sm'>
+                <p className='text-gray-600 dark:text-gray-300 text-sm'>
                   Usually within 24 hours
                   <br />
                   Monday - Friday
@@ -99,9 +99,14 @@ export default function ContactPage() {
                       Initial Consultation
                     </h3>
                     <p className='text-gray-600 font-light leading-relaxed text-sm'>
-                      We'll discuss your project goals, timeline, and
-                      requirements. I'll provide insights and recommendations
-                      based on your needs.
+                      We&apos;ll talk about your goals and what you need.
+                      <br />
+                      Style changes? Design recommendations? Is your SEO not up
+                      to snuff? Do you need to implement a technical Shopify App
+                      into your online store? Are you migrating from Squarespace
+                      to Wordpress? Anything web or website, we can chat in this
+                      free call. I&apos;ll provide some insight and
+                      recommendations, and then I&apos;ll get to work.
                     </p>
                   </div>
 
@@ -110,8 +115,12 @@ export default function ContactPage() {
                       Project Proposal
                     </h3>
                     <p className='text-gray-600 font-light leading-relaxed text-sm'>
-                      You'll receive a detailed proposal outlining the scope,
-                      timeline, and investment for your project.
+                      This doesn&apos;t need to be a call, but it can be!
+                      I&apos;ll send you a proposal with a detailed breakdown of
+                      the project, including timelines, deliverables, and
+                      estimated cost. This is a no commitment proposal, so no
+                      stress if you decide it&apos;s not a good fit or if you
+                      need to change the scope of the project.
                     </p>
                   </div>
 
@@ -120,8 +129,11 @@ export default function ContactPage() {
                       Collaborative Process
                     </h3>
                     <p className='text-gray-600 font-light leading-relaxed text-sm'>
-                      Throughout development, you'll have regular updates and
-                      opportunities to provide feedback and direction.
+                      First and foremost I&apos;m a communicator! You&apos;ll
+                      receive regular and frequent updates, and we&apos;ll work
+                      together to ensure everything is on track. We can discuss
+                      the frequency at which you&apos;d like to receive updates,
+                      and I&apos;ll tailor my workflow to your needs.
                     </p>
                   </div>
 
@@ -130,8 +142,10 @@ export default function ContactPage() {
                       Launch & Support
                     </h3>
                     <p className='text-gray-600 font-light leading-relaxed text-sm'>
-                      After launch, I provide ongoing support and maintenance to
-                      ensure your website continues to perform optimally.
+                      I make sure to test thoroughly everything I deliver, but
+                      I&apos;ll also be available to help with any post-launch
+                      support you may need or want for a time period we will
+                      determine in the project proposal stage.
                     </p>
                   </div>
                 </div>
@@ -141,9 +155,7 @@ export default function ContactPage() {
                     <strong className='text-desert-700'>
                       Specializing in:
                     </strong>{' '}
-                    Outdoor industry, e-commerce, adventure & wellness travel
-                    companies, yoga and wellness practitioners, and travel
-                    bloggers.
+                    Wordpress, Squarespace, Shopify, and more.
                   </p>
                 </div>
               </div>

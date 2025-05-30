@@ -54,9 +54,9 @@ export default async function ProjectPage({
       </div>
 
       {/* Project Content */}
-      <div className='bg-[#f8f7f4] topo-pattern'>
+      <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
         <div className='container mx-auto px-4 py-16'>
-          <div className='max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-sm'>
+          <div className='max-w-4xl mx-auto bg-white dark:bg-desert-800 p-8 md:p-12 shadow-sm'>
             <div className='prose dark:prose-invert max-w-none mb-16'>
               <p className='text-xl leading-relaxed mb-8 font-light'>
                 {project.description}
@@ -66,7 +66,7 @@ export default async function ProjectPage({
                 {project.technologies.map(tech => (
                   <span
                     key={tech}
-                    className='px-4 py-1.5 bg-desert-50 text-desert-800 text-xs tracking-wide flex items-center'
+                    className='px-4 py-1.5 bg-desert-50 dark:bg-desert-700 text-desert-800 dark:text-desert-200 text-xs tracking-wide flex items-center'
                   >
                     <Mountain className='h-3 w-3 mr-2' />
                     {tech}
@@ -136,16 +136,18 @@ export default async function ProjectPage({
             {/*</section>*/}
 
             <section>
-              <h2 className='text-2xl font-light mb-12 tracking-wide text-desert-800'>
+              <h2 className='text-2xl font-light mb-12 tracking-wide text-desert-800 dark:text-desert-100'>
                 Project Highlights
               </h2>
               <ul className='space-y-6'>
                 {project.highlights.map((highlight, index) => (
                   <li key={index} className='flex items-start'>
-                    <span className='flex-shrink-0 w-6 h-6 border border-desert-300 flex items-center justify-center mr-4 mt-0.5 text-sm text-desert-800'>
+                    <span className='flex-shrink-0 w-6 h-6 border border-desert-300 dark:border-desert-600 flex items-center justify-center mr-4 mt-0.5 text-sm text-desert-800 dark:text-desert-200'>
                       {index + 1}
                     </span>
-                    <p className='text-gray-800 font-light'>{highlight}</p>
+                    <p className='text-gray-800 dark:text-gray-300 font-light'>
+                      {highlight}
+                    </p>
                   </li>
                 ))}
               </ul>
