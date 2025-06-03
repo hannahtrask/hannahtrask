@@ -15,6 +15,7 @@ export interface Project {
     | 'small e-commerce businesses'
     | 'creative studios'
     | 'values-driven teams'
+    | 'outdoor-industry'
   primaryTechnology?: string
 }
 
@@ -90,7 +91,7 @@ export const projects: Project[] = [
     technologies: ['JQuery', 'JavaScript', 'ProCard'],
     primaryTechnology: 'JavaScript',
     liveUrl: 'https://vertsolutions.com/',
-    category: 'values-driven teams',
+    category: 'outdoor-industry',
     highlights: [
       'Professional design that builds trust and credibility',
       'Schedule tracking and reporting',

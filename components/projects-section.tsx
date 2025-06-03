@@ -25,8 +25,10 @@ const categoryDescriptions = {
     "Small businesses are beacons of hope in a world of big box stores. Let's get yours live and looking great :)",
   'creative studios':
     "Videographers, editors, artists, photographers, you name it. I'll showcase your craft",
+  'outdoor-industry':
+    'Businesses in the outdoor industry, providing gear, services, and experiences for outdoor enthusiasts.',
   'values-driven teams':
-    'Organizations that strive to make positive change through policy, education, and avdocacy. You name it, I want to help you.',
+    'Organizations that strive to make positive change through policy, education, and advocacy. You name it, I want to help you.',
 } as const
 
 // TODO THIS IS GOING TO BE WHERE ALL THE PORTFOLIO ITEMS ARE BUT IT IS NOT CURRENTLY LIVE
