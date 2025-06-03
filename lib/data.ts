@@ -80,23 +80,22 @@ export const projects: Project[] = [
       'Optimized caching for improved performance, no matter where the user is',
     ],
   },
-  // {
-  //   slug: 'sustainable-consulting-firm',
-  //   title: 'Sustainable Business Consulting',
-  //   summary:
-  //     'Professional website for environmental consulting firm focused on sustainability.',
-  //   description:
-  //     'Created a professional, trust-building website for a sustainability consulting firm, emphasizing their expertise in environmental solutions and corporate responsibility.',
-  //   coverImage: '/placeholder.svg?height=600&width=800',
-  //   technologies: ['WordPress', 'Elementor Pro', 'Gravity Forms', 'Yoast SEO'],
-  //   primaryTechnology: 'WordPress',
-  //   liveUrl: 'https://example.com',
-  //   category: 'values-driven teams',
-  //   highlights: [
-  //     'Professional design that builds trust and credibility',
-  //     'Case study showcase highlighting environmental impact',
-  //     'Lead generation forms for consulting inquiries',
-  //     'Content strategy focused on sustainability expertise',
-  //   ],
-  // },
+  {
+    slug: 'vert-solutions-resort-booking',
+    title: 'Vert Solutions Resort Booking',
+    summary:
+      'Ski Resort booking software.',
+    description:
+      'Contracted to work for Vert Solutions, providing and maintaining booking software for ski resorts including Jackson Hole, Aspen Snowmass, and Big Sky.',
+    coverImage: '/projects/vert-solutions/vert-solutions-hero.png',
+    technologies: ['JQuery', 'JavaScript', 'ProCard'],
+    primaryTechnology: 'JavaScript',
+    liveUrl: 'https://vertsolutions.com/',
+    category: 'values-driven teams',
+    highlights: [
+      'Professional design that builds trust and credibility',
+      'Schedule tracking and reporting',
+      'Modular and fast web application design',
+    ],
+  },
 ]
