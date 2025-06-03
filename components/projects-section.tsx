@@ -8,8 +8,8 @@ import { useRef } from 'react'
 import { projects, type Project } from '@/lib/data'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import TechnologyBadge from '@/components/technology-badge'
-import { defineQuery } from 'groq'
-import { sanityFetch } from '@/app/sanity/live'
+// import { defineQuery } from 'groq'
+// import { sanityFetch } from '@/app/sanity/live'
 
 const categoryDisplayNames = {
   'thoughtful lifestyle brands': 'Thoughtful Lifestyle Brands',
