@@ -6,7 +6,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
-import {SanityLive} from "@/app/sanity/live";
+import { SanityLive } from '@/app/sanity/live'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],

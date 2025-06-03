@@ -5,8 +5,8 @@ import { ArrowLeft, ExternalLink, Mountain } from 'lucide-react'
 import { projects } from '@/lib/data'
 import { Button } from '@/components/ui/button'
 import { GitHubIcon } from '@/components/ui/social-icons'
-import {defineQuery} from "groq";
-import {sanityFetch} from "@/app/sanity/live";
+import { defineQuery } from 'groq'
+import { sanityFetch } from '@/app/sanity/live'
 
 export async function generateStaticParams() {
   return projects.map(project => ({
