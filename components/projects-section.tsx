@@ -16,6 +16,7 @@ const categoryDisplayNames = {
   'small e-commerce businesses': 'Small E-commerce Businesses',
   'creative studios': 'Creative Studios',
   'values-driven teams': 'Values-Driven Teams',
+  'outdoor-industry': 'Outdoor Industry',
 } as const
 
 const categoryDescriptions = {
