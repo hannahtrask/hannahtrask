@@ -8,6 +8,8 @@ import { useRef } from 'react'
 import { projects, type Project } from '@/lib/data'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import TechnologyBadge from '@/components/technology-badge'
+import {defineQuery} from "groq";
+import {sanityFetch} from "@/app/sanity/live";
 
 const categoryDisplayNames = {
   'thoughtful lifestyle brands': 'Thoughtful Lifestyle Brands',
@@ -26,6 +28,16 @@ const categoryDescriptions = {
   'values-driven teams':
     'Organizations that strive to make positive change through policy, education, and avdocacy. You name it, I want to help you.',
 } as const
+
+// TODO THIS IS GOING TO BE WHERE ALL THE PORTFOLIO ITEMS ARE BUT IT IS NOT CURRENTLY LIVE
+// const PROJECT_QUERY = defineQuery(`*[
+//   _type == "portfolioItem"
+// ]`);
+//
+// const { data: portfolioItems } = await sanityFetch({query: PROJECT_QUERY})
+//
+// console.log('portfolioItems', portfolioItems)
+// TODO TODO TODO!!!!
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const cardRef = useRef<HTMLDivElement>(null)
