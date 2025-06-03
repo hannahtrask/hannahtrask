@@ -83,8 +83,7 @@ export const projects: Project[] = [
   {
     slug: 'vert-solutions-resort-booking',
     title: 'Vert Solutions Resort Booking',
-    summary:
-      'Ski Resort booking software.',
+    summary: 'Ski Resort booking software.',
     description:
       'Contracted to work for Vert Solutions, providing and maintaining booking software for ski resorts including Jackson Hole, Aspen Snowmass, and Big Sky.',
     coverImage: '/projects/vert-solutions/vert-solutions-hero.png',
