@@ -25,13 +25,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-12 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
           ? 'py-4 bg-white/90 dark:bg-desert-900/90 backdrop-blur-md shadow-sm'
           : 'py-6 bg-transparent'
       }`}
     >
-      <div className='container mx-auto px-4'>
+      <div className='container mx-auto px-4 text-md mid:text-base'>
         <div className='flex items-center justify-between'>
           <Link
             href='/'
@@ -39,40 +39,50 @@ export default function Header() {
               isScrolled ? 'text-desert-800 dark:text-white' : 'text-white'
             }`}
           >
-            Hannah Trask | Web Developer
+            Ridgeline Creative
           </Link>
 
           {/* Desktop Navigation */}
           <nav className='hidden md:flex items-center space-x-8'>
             <Link
               href='/'
-              className={`text-sm tracking-wide transition-colors ${
+              className={`text-base tracking-wide transition-colors ${
                 isScrolled
                   ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
                   : 'text-white/80 hover:text-white'
               }`}
             >
-              Home
+              HOME
             </Link>
             <Link
               href='/about'
-              className={`text-sm tracking-wide transition-colors ${
+              className={`text-base tracking-wide transition-colors ${
                 isScrolled
                   ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
                   : 'text-white/80 hover:text-white'
               }`}
             >
-              About
+              ABOUT
+            </Link>
+            <Link
+              href='/services'
+              className={`text-base tracking-wide transition-colors ${
+                isScrolled
+                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
+                  : 'text-white/80 hover:text-white'
+              }`}
+            >
+              SERVICES
             </Link>
             <Link
               href='/contact'
-              className={`text-sm tracking-wide transition-colors ${
+              className={`text-base tracking-wide transition-colors ${
                 isScrolled
                   ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
                   : 'text-white/80 hover:text-white'
               }`}
             >
-              Contact
+              CONTACT
             </Link>
             <ModeToggle isScrolled={isScrolled} />
             <Button
@@ -105,21 +115,28 @@ export default function Header() {
           <nav className='md:hidden py-6 space-y-6 mt-4 bg-white dark:bg-gray-900 rounded-md shadow-lg'>
             <Link
               href='/'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-sm tracking-wide'
+              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href='/about'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-sm tracking-wide'
+              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
+              href='/services'
+              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
               href='/contact'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-sm tracking-wide'
+              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

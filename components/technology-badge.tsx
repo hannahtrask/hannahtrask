@@ -12,6 +12,7 @@ import {
   siPostgresql,
   siStripe,
   siMailchimp,
+  SimpleIcon,
 } from 'simple-icons'
 
 interface TechnologyBadgeProps {
@@ -20,7 +21,7 @@ interface TechnologyBadgeProps {
   size?: 'sm' | 'md' | 'lg'
 }
 
-const technologyIcons: Record<string, any> = {
+const technologyIcons: Record<string, SimpleIcon | any> = {
   WordPress: siWordpress,
   Shopify: siShopify,
   WooCommerce: siWoocommerce,

@@ -2,6 +2,7 @@ import type React from 'react'
 import type { Metadata } from 'next'
 import { Playfair_Display, Montserrat } from 'next/font/google'
 import './globals.css'
+import ScrollingBanner from '@/components/scrolling-banner'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -44,6 +45,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className='flex flex-col min-h-screen'>
+            <ScrollingBanner />
             <Header />
             <main className='flex-grow'>{children}</main>
             <SanityLive />
