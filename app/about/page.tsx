@@ -144,9 +144,9 @@ export default function AboutPage() {
                     Technical Experience
                   </h3>
                   <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
-                    We have a strong understanding of how the
-                    web works and know how to find the best way to implement
-                    solutions tailored to you.
+                    We have a strong understanding of how the web works and know
+                    how to find the best way to implement solutions tailored to
+                    you.
                   </p>
                 </div>
 
@@ -173,8 +173,8 @@ export default function AboutPage() {
                     Adventure Inspired
                   </h3>
                   <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
-                    Our love for adventure means we understand when it&apos;s time
-                    to focus and get into a flow state. Working together
+                    Our love for adventure means we understand when it&apos;s
+                    time to focus and get into a flow state. Working together
                     we&apos;ll make a plan and I&apos;ll get the job done for
                     you well and on time, no matter what.
                   </p>

@@ -112,8 +112,8 @@ export default function ServicesPage() {
               ARE YOU READY?
             </h2>
             <p className='text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Let&apos;s discuss how we can help bring your vision to life with a
-              custom web solution that fits your needs and budget.
+              Let&apos;s discuss how we can help bring your vision to life with
+              a custom web solution that fits your needs and budget.
             </p>
             <a
               href='/contact'
