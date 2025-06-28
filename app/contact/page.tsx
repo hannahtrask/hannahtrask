@@ -3,7 +3,7 @@ import { Mail, MapPin, Clock } from 'lucide-react'
 import ContactForm from '@/components/contact-form'
 
 export const metadata = {
-  title: 'Contact | Alpenglow Studio',
+  title: 'Contact | Sun & Sagebrush Creative',
   description:
     'Get in touch to discuss your next web development project. We specialize in creating beautiful, functional websites for outdoor industry and adventure businesses.',
 }

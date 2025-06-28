@@ -34,11 +34,11 @@ export default function AboutPage() {
       <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
         <div className='container mx-auto px-4 pt-8 pb-0'>
           <div className='max-w-8xl mx-auto'>
-            {/* Alpenglow Studio Introduction Section */}
+            {/* SUN & SAGEBRUSH CREATIVE Introduction Section */}
             <div className='bg-white dark:bg-desert-800 p-8 md:p-12 shadow-sm mb-16'>
               <div className='text-center mb-12'>
                 <h2 className='text-3xl md:text-4xl font-playfair font-light mb-6 text-desert-800 dark:text-desert-100'>
-                  ALPENGLOW STUDIO
+                  SUN & SAGEBRUSH CREATIVE
                 </h2>
                 <p className='text-xl leading-relaxed mb-2 font-light text-gray-800 dark:text-gray-200 max-w-4xl mx-auto'>
                   We&apos;re creatives with a passion for crafting and honing
