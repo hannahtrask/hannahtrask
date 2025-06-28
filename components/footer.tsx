@@ -8,11 +8,9 @@ export default function Footer() {
       <div className='container mx-auto'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0'>
           <div>
-            <h3 className='font-playfair text-xl mb-2'>
-              Hannah Catherine Trask
-            </h3>
+            <h3 className='font-playfair text-xl mb-2'>Alpenglow Studio</h3>
             <p className='text-gray-300 dark:text-gray-400 text-sm max-w-xs'>
-              Creating digital experiences with the same passion I bring to
+              Creating digital experiences with the same passion we bring to
               exploring the outdoors.
             </p>
           </div>

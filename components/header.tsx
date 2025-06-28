@@ -25,10 +25,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-12 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'py-4 bg-white/90 dark:bg-desert-900/90 backdrop-blur-md shadow-sm'
-          : 'py-6 bg-transparent'
+          ? 'top-0 py-4 bg-white/90 dark:bg-desert-900/90 backdrop-blur-md shadow-sm'
+          : 'top-12 py-6 bg-transparent'
       }`}
     >
       <div className='container mx-auto px-4 text-md mid:text-base'>
@@ -39,7 +39,7 @@ export default function Header() {
               isScrolled ? 'text-desert-800 dark:text-white' : 'text-white'
             }`}
           >
-            Ridgeline Creative
+            Alpenglow Studio
           </Link>
 
           {/* Desktop Navigation */}
@@ -94,7 +94,7 @@ export default function Header() {
                   : 'bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30'
               }
             >
-              <Link href='/contact'>Let's Talk</Link>
+              <Link href='/contact'>LET&apos;S CHAT</Link>
             </Button>
           </nav>
 

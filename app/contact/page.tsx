@@ -27,18 +27,14 @@ export default function ContactPage() {
         {/* Hero Content */}
         <div className='container mx-auto px-4 relative z-10 text-center'>
           <h1 className='text-5xl md:text-6xl font-playfair font-light mb-6 text-white'>
-            Get In Touch
+            GET IN TOUCH
           </h1>
-          <p className='text-xl text-gray-200 mb-8 max-w-2xl mx-auto font-light leading-relaxed'>
-            Ready to turn your vision into reality? Let's discuss your project
-            and create something extraordinary together.
-          </p>
         </div>
       </div>
 
       {/* Main Content */}
       <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
-        <div className='container mx-auto px-4 py-16'>
+        <div className='container mx-auto px-4 py-8'>
           <div className='max-w-6xl mx-auto'>
             {/* Contact Information Cards */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
@@ -85,79 +81,90 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <ContactForm />
+          </div>
+        </div>
+      </div>
 
+      {/* How It Works Section - Full Width */}
+      <div className='w-full bg-white dark:bg-desert-800'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 min-h-[600px]'>
+          {/* Content Side */}
+          <div className='flex items-center justify-center p-8 md:p-16'>
+            <div className='max-w-lg'>
+              <h2 className='text-4xl md:text-5xl font-playfair font-light text-desert-800 dark:text-desert-100 mb-8'>
+                HOW IT WORKS
+                <span className='block text-lg font-montserrat font-normal text-gray-600 dark:text-gray-300 mt-2'>
+                  the easy version ;)
+                </span>
+              </h2>
+
+              <ul className='space-y-4 text-gray-700 dark:text-gray-300'>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>FILL OUT THE CONTACT FORM ABOVE</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>WE CHAT TO FIGURE OUT THE PERFECT PACKAGE FOR YOU</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>
+                    COMPLETE YOUR PROJECT SCOPE & SUBMIT A DEPOSIT TO SECURE
+                    YOUR PROJECT
+                  </span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>FILL OUT PROJECT QUESTIONNAIRE</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>DESIGN & DEVELOPMENT TIME!</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>LAUNCH</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Image Side */}
+          <div className='relative h-[400px] lg:h-full'>
+            <Image
+              src='/me-climbing.jpg'
+              alt='Hannah climbing outdoors'
+              fill
+              className='object-cover'
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Information */}
+      <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
+        <div className='container mx-auto px-4 py-8'>
+          <div className='max-w-6xl mx-auto'>
             {/* Additional Information */}
-            <div className='bg-white p-8 md:p-12 shadow-sm mt-16'>
+            <div className='bg-white p-6 md:p-12 shadow-sm mt-16'>
               <div className='max-w-3xl mx-auto text-center'>
-                <h2 className='text-3xl font-playfair font-light text-desert-800 mb-6'>
-                  What to Expect
-                </h2>
-
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-8 text-left'>
-                  <div>
-                    <h3 className='font-medium text-desert-700 mb-3'>
-                      Initial Consultation
-                    </h3>
-                    <p className='text-gray-600 font-light leading-relaxed text-sm'>
-                      We&apos;ll talk about your goals and what you need.
-                      <br />
-                      Style changes? Design recommendations? Is your SEO not up
-                      to snuff? Do you need to implement a technical Shopify App
-                      into your online store? Are you migrating from Squarespace
-                      to Wordpress? Anything web or website, we can chat in this
-                      free call. I&apos;ll provide some insight and
-                      recommendations, and then I&apos;ll get to work.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className='font-medium text-desert-700 mb-3'>
-                      Project Proposal
-                    </h3>
-                    <p className='text-gray-600 font-light leading-relaxed text-sm'>
-                      This doesn&apos;t need to be a call, but it can be!
-                      I&apos;ll send you a proposal with a detailed breakdown of
-                      the project, including timelines, deliverables, and
-                      estimated cost. This is a no commitment proposal, so no
-                      stress if you decide it&apos;s not a good fit or if you
-                      need to change the scope of the project.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className='font-medium text-desert-700 mb-3'>
-                      Collaborative Process
-                    </h3>
-                    <p className='text-gray-600 font-light leading-relaxed text-sm'>
-                      First and foremost I&apos;m a communicator! You&apos;ll
-                      receive regular and frequent updates, and we&apos;ll work
-                      together to ensure everything is on track. We can discuss
-                      the frequency at which you&apos;d like to receive updates,
-                      and I&apos;ll tailor my workflow to your needs.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className='font-medium text-desert-700 mb-3'>
-                      Launch & Support
-                    </h3>
-                    <p className='text-gray-600 font-light leading-relaxed text-sm'>
-                      I make sure to test thoroughly everything I deliver, but
-                      I&apos;ll also be available to help with any post-launch
-                      support you may need or want for a time period we will
-                      determine in the project proposal stage.
-                    </p>
-                  </div>
-                </div>
-
-                <div className='mt-8 pt-8 border-t border-desert-100'>
-                  <p className='text-gray-600 font-light leading-relaxed'>
-                    <strong className='text-desert-700'>
-                      Specializing in:
-                    </strong>{' '}
-                    Wordpress, Squarespace, Shopify, and more.
-                  </p>
-                </div>
+                <p className='text-gray-600 font-light leading-relaxed'>
+                  <strong className='text-desert-700'>Specializing in:</strong>{' '}
+                  Wordpress, Squarespace, Shopify, and more.
+                </p>
               </div>
             </div>
           </div>

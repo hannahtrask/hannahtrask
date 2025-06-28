@@ -159,7 +159,7 @@ export default function ContactForm() {
                   </FormLabel>
                   <FormControl>
                     <Input
-                      placeholder='What would you like to discuss?'
+                      placeholder='Tell me a little bit about what you are looking for!'
                       className='border-desert-200 focus:border-desert-400 focus:ring-desert-400'
                       {...field}
                     />
@@ -179,7 +179,7 @@ export default function ContactForm() {
                   </FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder='Tell me about your project, timeline, and any specific requirements...'
+                      placeholder='Tell me about your project, timeline, and any specific requirements. The more details the better!'
                       className='border-desert-200 focus:border-desert-400 focus:ring-desert-400 min-h-[120px] resize-none'
                       {...field}
                     />

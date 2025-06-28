@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 }
 
 export default function ServicesPage() {
-
   return (
     <div className='min-h-screen'>
       {/* Hero Section with Image */}
@@ -26,8 +25,8 @@ export default function ServicesPage() {
         </div>
 
         <div className='container mx-auto px-4 relative z-10 text-center'>
-          <h1 className='text-5xl md:text-6xl font-playfair font-light text-white mb-6'>
-            Design & Development Offerings
+          <h1 className='text-5xl md:texts-6xl font-playfair font-light text-white mb-6'>
+            DESIGN & DEVELOPMENT OFFERINGS
           </h1>
         </div>
       </div>
@@ -264,8 +263,8 @@ export default function ServicesPage() {
                   Analytics & SEO
                 </h3>
                 <p className='text-gray-600 dark:text-gray-300'>
-                  Data-driven insights and search engine optimization to help your
-                  business grow online.
+                  Data-driven insights and search engine optimization to help
+                  your business grow online.
                 </p>
               </div>
             </div>
@@ -284,7 +283,7 @@ export default function ServicesPage() {
               href='/contact'
               className='inline-block bg-desert-600 hover:bg-desert-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300'
             >
-              Get In Touch
+              GET IN TOUCH
             </a>
           </div>
         </div>

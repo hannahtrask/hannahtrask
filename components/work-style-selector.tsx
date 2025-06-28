@@ -5,7 +5,9 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 
 export default function WorkStyleSelector() {
-  const [selectedWorkStyle, setSelectedWorkStyle] = useState<string | null>(null)
+  const [selectedWorkStyle, setSelectedWorkStyle] = useState<string | null>(
+    null
+  )
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -19,7 +21,7 @@ export default function WorkStyleSelector() {
       <h2 className='text-3xl md:text-4xl font-playfair font-bold text-desert-800 dark:text-white mb-8'>
         How do you prefer to work?
       </h2>
-      
+
       <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-8'>
         <label className='flex items-center cursor-pointer'>
           <input
@@ -27,19 +29,23 @@ export default function WorkStyleSelector() {
             name='workStyle'
             value='fast-furious'
             checked={selectedWorkStyle === 'fast-furious'}
-            onChange={(e) => setSelectedWorkStyle(e.target.value)}
+            onChange={e => setSelectedWorkStyle(e.target.value)}
             className='sr-only'
           />
-          <div className={`flex items-center space-x-3 px-6 py-4 rounded-lg border-2 transition-all duration-300 ${
-            selectedWorkStyle === 'fast-furious'
-              ? 'border-desert-600 bg-desert-50 dark:bg-desert-800/50'
-              : 'border-gray-300 dark:border-gray-600 hover:border-desert-400'
-          }`}>
-            <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+          <div
+            className={`flex items-center space-x-3 px-6 py-4 rounded-lg border-2 transition-all duration-300 ${
               selectedWorkStyle === 'fast-furious'
-                ? 'border-desert-600 bg-desert-600'
-                : 'border-gray-400'
-            }`}>
+                ? 'border-desert-600 bg-desert-50 dark:bg-desert-800/50'
+                : 'border-gray-300 dark:border-gray-600 hover:border-desert-400'
+            }`}
+          >
+            <div
+              className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                selectedWorkStyle === 'fast-furious'
+                  ? 'border-desert-600 bg-desert-600'
+                  : 'border-gray-400'
+              }`}
+            >
               {selectedWorkStyle === 'fast-furious' && (
                 <div className='w-2 h-2 rounded-full bg-white'></div>
               )}
@@ -56,19 +62,23 @@ export default function WorkStyleSelector() {
             name='workStyle'
             value='steady-thoughtful'
             checked={selectedWorkStyle === 'steady-thoughtful'}
-            onChange={(e) => setSelectedWorkStyle(e.target.value)}
+            onChange={e => setSelectedWorkStyle(e.target.value)}
             className='sr-only'
           />
-          <div className={`flex items-center space-x-3 px-6 py-4 rounded-lg border-2 transition-all duration-300 ${
-            selectedWorkStyle === 'steady-thoughtful'
-              ? 'border-desert-600 bg-desert-50 dark:bg-desert-800/50'
-              : 'border-gray-300 dark:border-gray-600 hover:border-desert-400'
-          }`}>
-            <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+          <div
+            className={`flex items-center space-x-3 px-6 py-4 rounded-lg border-2 transition-all duration-300 ${
               selectedWorkStyle === 'steady-thoughtful'
-                ? 'border-desert-600 bg-desert-600'
-                : 'border-gray-400'
-            }`}>
+                ? 'border-desert-600 bg-desert-50 dark:bg-desert-800/50'
+                : 'border-gray-300 dark:border-gray-600 hover:border-desert-400'
+            }`}
+          >
+            <div
+              className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                selectedWorkStyle === 'steady-thoughtful'
+                  ? 'border-desert-600 bg-desert-600'
+                  : 'border-gray-400'
+              }`}
+            >
               {selectedWorkStyle === 'steady-thoughtful' && (
                 <div className='w-2 h-2 rounded-full bg-white'></div>
               )}
@@ -98,7 +108,10 @@ export default function WorkStyleSelector() {
                 We recommend: CREATIVE SPRINTS
               </h3>
               <p className='text-gray-700 dark:text-gray-300 mb-6 leading-relaxed'>
-                This is for folks who have a clear vision of what they need for their website and are looking to build marketing collateral, unique art for a specific launch, or a website overhaul for a product release or announcement.
+                This is for folks who have a clear vision of what they need for
+                their website and are looking to build marketing collateral,
+                unique art for a specific launch, or a website overhaul for a
+                product release or announcement.
               </p>
               <Button
                 onClick={() => scrollToSection('creative-sprints')}
@@ -128,7 +141,10 @@ export default function WorkStyleSelector() {
                 We recommend: CLASSIC WEBSITE PACKAGES
               </h3>
               <p className='text-gray-700 dark:text-gray-300 mb-6 leading-relaxed'>
-                This is for folks who need an expert to develop a website from the ground up, and recognize that building a website with good branding and design to reflect your needs is something that takes time, and I have a budget to do it.
+                This is for folks who need an expert to develop a website from
+                the ground up, and recognize that building a website with good
+                branding and design to reflect your needs is something that
+                takes time, and I have a budget to do it.
               </p>
               <Button
                 onClick={() => scrollToSection('classic-packages')}

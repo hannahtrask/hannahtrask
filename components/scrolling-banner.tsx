@@ -3,7 +3,8 @@
 import Link from 'next/link'
 
 export default function ScrollingBanner() {
-  const bannerText = ' ☼\u00A0\u00A0\u00A0EXPLORE MY SERVICES\u00A0\u00A0\u00A0    '
+  const bannerText =
+    ' ☼\u00A0\u00A0\u00A0EXPLORE OUR SERVICES\u00A0\u00A0\u00A0    '
   const repeatedText = bannerText.repeat(20)
 
   return (
