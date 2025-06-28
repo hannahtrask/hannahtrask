@@ -33,7 +33,7 @@ export default function AboutPage() {
       {/* Main Content */}
       <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
         <div className='container mx-auto px-4 pt-8 pb-0'>
-          <div className='max-w-4xl mx-auto'>
+          <div className='max-w-8xl mx-auto'>
             {/* Alpenglow Studio Introduction Section */}
             <div className='bg-white dark:bg-desert-800 p-8 md:p-12 shadow-sm mb-16'>
               <div className='text-center mb-12'>
@@ -144,8 +144,7 @@ export default function AboutPage() {
                     Technical Experience
                   </h3>
                   <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
-                    I have four+ years of full time professional experience in
-                    web development. I have a strong understanding of how the
+                    We have a strong understanding of how the
                     web works and know how to find the best way to implement
                     solutions tailored to you.
                   </p>
@@ -160,7 +159,7 @@ export default function AboutPage() {
                   </h3>
                   <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
                     Every project starts with understanding what your goals are.
-                    I communicate early and often to ensure that the final
+                    We communicate early and often to ensure that the final
                     product not only looks great but also meets your specific
                     needs and objectives.
                   </p>
@@ -174,7 +173,7 @@ export default function AboutPage() {
                     Adventure Inspired
                   </h3>
                   <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
-                    My love for adventure means I understand when it&apos;s time
+                    Our love for adventure means we understand when it&apos;s time
                     to focus and get into a flow state. Working together
                     we&apos;ll make a plan and I&apos;ll get the job done for
                     you well and on time, no matter what.

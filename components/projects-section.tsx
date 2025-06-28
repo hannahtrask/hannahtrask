@@ -251,7 +251,7 @@ export default function ProjectsSection() {
             Featured Clients
           </h2>
           <p className='text-xl text-desert-600 dark:text-desert-300 max-w-4xl mx-auto leading-relaxed'>
-            I specialize in creating and buffing up websites for{' '}
+            We specialize in creating and buffing up websites for{' '}
             <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-800 px-3 py-1 rounded-full'>
               thoughtful lifestyle brands
             </span>
@@ -269,7 +269,7 @@ export default function ProjectsSection() {
             </span>
             . Mostly, I love working with clients who are passionate about what
             they do, and who prioritize real authentic connection! If that
-            sounds like you, let's chat. I've got the skills for you to get your
+            sounds like you, let's chat. We have the skills for you to get your
             real world business into the digital realm.
           </p>
         </motion.div>

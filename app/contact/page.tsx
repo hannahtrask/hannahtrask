@@ -3,9 +3,9 @@ import { Mail, MapPin, Clock } from 'lucide-react'
 import ContactForm from '@/components/contact-form'
 
 export const metadata = {
-  title: 'Contact | Hannah Catherine Trask',
+  title: 'Contact | Alpenglow Studio',
   description:
-    'Get in touch to discuss your next web development project. I specialize in creating beautiful, functional websites for outdoor industry and adventure businesses.',
+    'Get in touch to discuss your next web development project. We specialize in creating beautiful, functional websites for outdoor industry and adventure businesses.',
 }
 
 export default function ContactPage() {
