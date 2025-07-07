@@ -40,7 +40,10 @@ export default function ServicesPage() {
           <div className='w-full h-px bg-desert-300 dark:bg-desert-600 my-16'></div>
 
           {/* Project Sprints Section */}
-          <div id='creative-sprints' className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-800 py-16'>
+          <div
+            id='creative-sprints'
+            className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-800 py-16'
+          >
             <div className='container mx-auto px-4'>
               <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4 text-center'>
                 PROJECT SPRINTS
@@ -76,7 +79,10 @@ export default function ServicesPage() {
           </div>
 
           {/* INCLUSIVE WEBSITE PACKAGES Section */}
-          <div id='classic-packages' className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white dark:bg-desert-900 py-16'>
+          <div
+            id='classic-packages'
+            className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white dark:bg-desert-900 py-16'
+          >
             <div className='container mx-auto px-4'>
               <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4 text-center'>
                 INCLUSIVE WEBSITE PACKAGES
@@ -122,8 +128,8 @@ export default function ServicesPage() {
               </h2>
               <div className='w-full h-px bg-desert-300 dark:bg-desert-600 mb-12'></div>
               <p className='text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto'>
-                Let&apos;s discuss how we can help bring your vision to life with
-                a custom web solution that fits your needs and budget.
+                Let&apos;s discuss how we can help bring your vision to life
+                with a custom web solution that fits your needs and budget.
               </p>
               <a
                 href='/contact'

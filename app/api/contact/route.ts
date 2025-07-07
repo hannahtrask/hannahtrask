@@ -12,10 +12,15 @@ const contactSchema = z.object({
   budget: z.string().optional(),
   instagram: z.string().optional(),
   website: z.string().optional(),
-  services: z.enum(['branding', 'web-design-development', 'illustration', 'other'], {
-    required_error: 'Please select a service',
-  }),
-  vision: z.string().min(10, 'Please tell us about your vision (at least 10 characters)'),
+  services: z.enum(
+    ['branding', 'web-design-development', 'illustration', 'other'],
+    {
+      required_error: 'Please select a service',
+    }
+  ),
+  vision: z
+    .string()
+    .min(10, 'Please tell us about your vision (at least 10 characters)'),
 })
 
 export async function POST(request: NextRequest) {
@@ -48,33 +53,49 @@ export async function POST(request: NextRequest) {
               <p style="margin: 0; color: #333; font-size: 16px;">${validatedData.subject}</p>
             </div>
 
-            ${validatedData.completionDate ? `
+            ${
+              validatedData.completionDate
+                ? `
             <div style="margin-bottom: 20px;">
               <h3 style="color: #794d18; margin: 0 0 8px 0; font-size: 16px;">Requested Completion Date:</h3>
               <p style="margin: 0; color: #333; font-size: 16px;">${validatedData.completionDate}</p>
             </div>
-            ` : ''}
+            `
+                : ''
+            }
 
-            ${validatedData.budget ? `
+            ${
+              validatedData.budget
+                ? `
             <div style="margin-bottom: 20px;">
               <h3 style="color: #794d18; margin: 0 0 8px 0; font-size: 16px;">Estimated Budget:</h3>
               <p style="margin: 0; color: #333; font-size: 16px;">${validatedData.budget}</p>
             </div>
-            ` : ''}
+            `
+                : ''
+            }
 
-            ${validatedData.instagram ? `
+            ${
+              validatedData.instagram
+                ? `
             <div style="margin-bottom: 20px;">
               <h3 style="color: #794d18; margin: 0 0 8px 0; font-size: 16px;">Instagram Handle:</h3>
               <p style="margin: 0; color: #333; font-size: 16px;">${validatedData.instagram}</p>
             </div>
-            ` : ''}
+            `
+                : ''
+            }
 
-            ${validatedData.website ? `
+            ${
+              validatedData.website
+                ? `
             <div style="margin-bottom: 20px;">
               <h3 style="color: #794d18; margin: 0 0 8px 0; font-size: 16px;">Website:</h3>
               <p style="margin: 0; color: #333; font-size: 16px;">${validatedData.website}</p>
             </div>
-            ` : ''}
+            `
+                : ''
+            }
 
             <div style="margin-bottom: 20px;">
               <h3 style="color: #794d18; margin: 0 0 8px 0; font-size: 16px;">Services Interested In:</h3>

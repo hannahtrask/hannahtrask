@@ -92,10 +92,10 @@ export default function ContactPage() {
           {/* Image Side */}
           <div className='relative h-[400px] lg:h-full'>
             <Image
-                src='/me-selfie.jpg'
-                alt='Craters of the moon'
-                fill
-                className='object-cover'
+              src='/me-selfie.jpg'
+              alt='Craters of the moon'
+              fill
+              className='object-cover'
             />
           </div>
         </div>

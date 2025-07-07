@@ -31,7 +31,9 @@ const contactSchema = z.object({
   services: z.enum(['branding', 'web-design-development', 'other'], {
     required_error: 'Please select a service',
   }),
-  vision: z.string().min(10, 'Please tell us about your vision (at least 10 characters)'),
+  vision: z
+    .string()
+    .min(10, 'Please tell us about your vision (at least 10 characters)'),
 })
 
 type ContactFormData = z.infer<typeof contactSchema>
@@ -286,12 +288,19 @@ export default function ContactForm() {
                         <Label htmlFor='branding'>Branding</Label>
                       </div>
                       <div className='flex items-center space-x-2'>
-                        <RadioGroupItem value='web-design-development' id='web-design-development' />
-                        <Label htmlFor='web-design-development'>Web Design + Development</Label>
+                        <RadioGroupItem
+                          value='web-design-development'
+                          id='web-design-development'
+                        />
+                        <Label htmlFor='web-design-development'>
+                          Web Design + Development
+                        </Label>
                       </div>
                       <div className='flex items-center space-x-2'>
                         <RadioGroupItem value='other' id='other' />
-                        <Label htmlFor='other'>Other (list details below)</Label>
+                        <Label htmlFor='other'>
+                          Other (list details below)
+                        </Label>
                       </div>
                     </RadioGroup>
                   </FormControl>
