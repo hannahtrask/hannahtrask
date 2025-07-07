@@ -9,6 +9,8 @@ import { Send, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+import { Label } from '@/components/ui/label'
 import {
   Form,
   FormControl,
@@ -22,7 +24,14 @@ const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email address'),
   subject: z.string().min(5, 'Subject must be at least 5 characters'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
+  completionDate: z.string().optional(),
+  budget: z.string().optional(),
+  instagram: z.string().optional(),
+  website: z.string().optional(),
+  services: z.enum(['branding', 'web-design-development', 'other'], {
+    required_error: 'Please select a service',
+  }),
+  vision: z.string().min(10, 'Please tell us about your vision (at least 10 characters)'),
 })
 
 type ContactFormData = z.infer<typeof contactSchema>
@@ -36,7 +45,12 @@ export default function ContactForm() {
       name: '',
       email: '',
       subject: '',
-      message: '',
+      completionDate: '',
+      budget: '',
+      instagram: '',
+      website: '',
+      services: undefined,
+      vision: '',
     },
   })
 
@@ -169,13 +183,130 @@ export default function ContactForm() {
               )}
             />
 
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+              <FormField
+                control={form.control}
+                name='completionDate'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
+                      Requested Project Completion Date
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        type='date'
+                        className='border-desert-200 focus:border-desert-400 focus:ring-desert-400'
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name='budget'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
+                      Estimated Budget
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder='e.g., $5,000 - $10,000'
+                        className='border-desert-200 focus:border-desert-400 focus:ring-desert-400'
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+              <FormField
+                control={form.control}
+                name='instagram'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
+                      Instagram Handle
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder='@yourusername'
+                        className='border-desert-200 focus:border-desert-400 focus:ring-desert-400'
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name='website'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
+                      Website
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder='https://yourwebsite.com'
+                        className='border-desert-200 focus:border-desert-400 focus:ring-desert-400'
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
             <FormField
               control={form.control}
-              name='message'
+              name='services'
+              render={({ field }) => (
+                <FormItem className='space-y-3'>
+                  <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
+                    What services are you interested in?
+                  </FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                      className='flex flex-col space-y-2'
+                    >
+                      <div className='flex items-center space-x-2'>
+                        <RadioGroupItem value='branding' id='branding' />
+                        <Label htmlFor='branding'>Branding</Label>
+                      </div>
+                      <div className='flex items-center space-x-2'>
+                        <RadioGroupItem value='web-design-development' id='web-design-development' />
+                        <Label htmlFor='web-design-development'>Web Design + Development</Label>
+                      </div>
+                      <div className='flex items-center space-x-2'>
+                        <RadioGroupItem value='other' id='other' />
+                        <Label htmlFor='other'>Other (list details below)</Label>
+                      </div>
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name='vision'
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className='text-desert-700 dark:text-desert-200 font-medium'>
-                    Message
+                    Tell me about your vision!
                   </FormLabel>
                   <FormControl>
                     <Textarea

@@ -17,8 +17,8 @@ export default function WorkStyleSelector() {
   }
 
   return (
-    <div className='text-center mb-16'>
-      <h2 className='text-3xl md:text-4xl font-playfair font-bold text-desert-800 dark:text-white mb-8'>
+    <div className='w-full mb-16'>
+      <h2 className='text-3xl md:text-4xl font-playfair font-bold text-desert-800 dark:text-white mb-8 text-center'>
         How do you prefer to work?
       </h2>
 
@@ -36,14 +36,14 @@ export default function WorkStyleSelector() {
             className={`flex items-center space-x-3 px-6 py-4 rounded-lg border-2 transition-all duration-300 ${
               selectedWorkStyle === 'fast-furious'
                 ? 'border-desert-600 bg-desert-50 dark:bg-desert-800/50'
-                : 'border-gray-300 dark:border-gray-600 hover:border-desert-400'
+                : 'border-gray-100 dark:border-gray-600 hover:border-desert-400'
             }`}
           >
             <div
               className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
                 selectedWorkStyle === 'fast-furious'
                   ? 'border-desert-600 bg-desert-600'
-                  : 'border-gray-400'
+                  : 'border-gray-200'
               }`}
             >
               {selectedWorkStyle === 'fast-furious' && (
@@ -51,7 +51,7 @@ export default function WorkStyleSelector() {
               )}
             </div>
             <span className='text-lg font-medium text-desert-800 dark:text-white'>
-              Fast & Furious
+              gotta go FAST!
             </span>
           </div>
         </label>
@@ -69,14 +69,14 @@ export default function WorkStyleSelector() {
             className={`flex items-center space-x-3 px-6 py-4 rounded-lg border-2 transition-all duration-300 ${
               selectedWorkStyle === 'steady-thoughtful'
                 ? 'border-desert-600 bg-desert-50 dark:bg-desert-800/50'
-                : 'border-gray-300 dark:border-gray-600 hover:border-desert-400'
+                : 'border-gray-100 dark:border-gray-600 hover:border-desert-400'
             }`}
           >
             <div
               className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
                 selectedWorkStyle === 'steady-thoughtful'
                   ? 'border-desert-600 bg-desert-600'
-                  : 'border-gray-400'
+                  : 'border-gray-200'
               }`}
             >
               {selectedWorkStyle === 'steady-thoughtful' && (
@@ -84,7 +84,7 @@ export default function WorkStyleSelector() {
               )}
             </div>
             <span className='text-lg font-medium text-desert-800 dark:text-white'>
-              Steady & Thoughtful
+              ready to take it slow
             </span>
           </div>
         </label>
@@ -92,20 +92,20 @@ export default function WorkStyleSelector() {
 
       {/* Dynamic Content Based on Selection */}
       {selectedWorkStyle === 'fast-furious' && (
-        <div className='bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-8 shadow-lg transition-all duration-500 ease-in-out'>
-          <div className='flex flex-col md:flex-row items-center gap-8'>
-            <div className='md:w-1/3'>
+        <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] transition-all duration-500 ease-in-out'>
+          <div className='flex flex-col md:flex-row'>
+            <div className='md:w-1/2 w-full'>
               <Image
-                src='/me-climbing.jpg'
+                src='/roadtrip.jpg'
                 alt='Creative sprint illustration'
-                width={300}
-                height={200}
-                className='rounded-lg object-cover w-full h-48'
+                width={800}
+                height={600}
+                className='object-cover w-full h-64 md:h-96 max-h-96'
               />
             </div>
-            <div className='md:w-2/3 text-left'>
+            <div className='md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center bg-white dark:bg-desert-800'>
               <h3 className='text-2xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
-                We recommend: CREATIVE SPRINTS
+                We recommend: PROJECT SPRINTS
               </h3>
               <p className='text-gray-700 dark:text-gray-300 mb-6 leading-relaxed'>
                 This is for folks who have a clear vision of what they need for
@@ -115,7 +115,7 @@ export default function WorkStyleSelector() {
               </p>
               <Button
                 onClick={() => scrollToSection('creative-sprints')}
-                className='bg-desert-600 hover:bg-desert-700 text-white'
+                className='bg-desert-600 hover:bg-desert-700 text-white w-fit'
               >
                 Learn more
               </Button>
@@ -125,30 +125,30 @@ export default function WorkStyleSelector() {
       )}
 
       {selectedWorkStyle === 'steady-thoughtful' && (
-        <div className='bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-8 shadow-lg transition-all duration-500 ease-in-out'>
-          <div className='flex flex-col md:flex-row items-center gap-8'>
-            <div className='md:w-1/3'>
+        <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] transition-all duration-500 ease-in-out'>
+          <div className='flex flex-col md:flex-row'>
+            <div className='md:w-1/2 w-full'>
               <Image
-                src='/me-rafting.jpg'
-                alt='Classic website packages illustration'
-                width={300}
-                height={200}
-                className='rounded-lg object-cover w-full h-48'
+                src='/map.jpg'
+                alt='INCLUSIVE WEBSITE PACKAGES illustration'
+                width={800}
+                height={600}
+                className='object-cover w-full h-64 md:h-96 max-h-96'
               />
             </div>
-            <div className='md:w-2/3 text-left'>
+            <div className='md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center bg-white dark:bg-desert-800'>
               <h3 className='text-2xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
-                We recommend: CLASSIC WEBSITE PACKAGES
+                We recommend: INCLUSIVE WEBSITE PACKAGES
               </h3>
               <p className='text-gray-700 dark:text-gray-300 mb-6 leading-relaxed'>
                 This is for folks who need an expert to develop a website from
                 the ground up, and recognize that building a website with good
                 branding and design to reflect your needs is something that
-                takes time, and I have a budget to do it.
+                takes time and effort and you have the budget to do just that.
               </p>
               <Button
                 onClick={() => scrollToSection('classic-packages')}
-                className='bg-desert-600 hover:bg-desert-700 text-white'
+                className='bg-desert-600 hover:bg-desert-700 text-white w-fit'
               >
                 Learn more
               </Button>

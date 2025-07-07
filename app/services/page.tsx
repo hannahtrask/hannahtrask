@@ -32,22 +32,26 @@ export default function ServicesPage() {
       </div>
 
       <div className='container mx-auto px-4 py-16'>
-        <div className='max-w-4xl mx-auto'>
+        <div className='w-full'>
           {/* Work Style Selection Section */}
           <WorkStyleSelector />
 
-          {/* Creative Sprints Section */}
-          <div id='creative-sprints' className='mb-20'>
-            <div className='bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-8 shadow-lg'>
-              <h2 className='text-3xl font-playfair font-bold text-desert-800 dark:text-white mb-6 text-center'>
-                Creative Sprints
+          {/* Divider */}
+          <div className='w-full h-px bg-desert-300 dark:bg-desert-600 my-16'></div>
+
+          {/* Project Sprints Section */}
+          <div id='creative-sprints' className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-800 py-16'>
+            <div className='container mx-auto px-4'>
+              <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4 text-center'>
+                PROJECT SPRINTS
               </h2>
-              <div className='grid md:grid-cols-2 gap-8'>
-                <div>
+              <div className='w-full h-px bg-desert-300 dark:bg-desert-600 mb-12'></div>
+              <div className='grid md:grid-cols-2 gap-12'>
+                <div className='text-center md:text-right md:pr-6'>
                   <h3 className='text-xl font-semibold text-desert-800 dark:text-white mb-4'>
-                    Perfect for:
+                    PERFECT FOR:
                   </h3>
-                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6'>
+                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-left inline-block'>
                     <li>• Product launches and announcements</li>
                     <li>• Marketing campaign websites</li>
                     <li>• Event landing pages</li>
@@ -55,11 +59,11 @@ export default function ServicesPage() {
                     <li>• Promotional microsites</li>
                   </ul>
                 </div>
-                <div>
+                <div className='md:border-l border-desert-300 dark:border-desert-600 md:pl-12 border-t md:border-t-0 pt-8 md:pt-0 text-center md:text-left'>
                   <h3 className='text-xl font-semibold text-desert-800 dark:text-white mb-4'>
-                    What you get:
+                    WHAT YOU GET:
                   </h3>
-                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6'>
+                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-left inline-block'>
                     <li>• 2-4 week turnaround</li>
                     <li>• Custom design and development</li>
                     <li>• Mobile-responsive design</li>
@@ -71,18 +75,19 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* Classic Website Packages Section */}
-          <div id='classic-packages' className='mb-20'>
-            <div className='bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-8 shadow-lg'>
-              <h2 className='text-3xl font-playfair font-bold text-desert-800 dark:text-white mb-6 text-center'>
-                Classic Website Packages
+          {/* INCLUSIVE WEBSITE PACKAGES Section */}
+          <div id='classic-packages' className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white dark:bg-desert-900 py-16'>
+            <div className='container mx-auto px-4'>
+              <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4 text-center'>
+                INCLUSIVE WEBSITE PACKAGES
               </h2>
-              <div className='grid md:grid-cols-2 gap-8'>
-                <div>
+              <div className='w-full h-px bg-desert-300 dark:bg-desert-600 mb-12'></div>
+              <div className='grid md:grid-cols-2 gap-12'>
+                <div className='text-center md:text-right md:pr-6'>
                   <h3 className='text-xl font-semibold text-desert-800 dark:text-white mb-4'>
-                    Perfect for:
+                    PERFECT FOR:
                   </h3>
-                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6'>
+                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-left inline-block'>
                     <li>• New business websites</li>
                     <li>• Complete brand overhauls</li>
                     <li>• E-commerce platforms</li>
@@ -90,11 +95,11 @@ export default function ServicesPage() {
                     <li>• Long-term digital strategy</li>
                   </ul>
                 </div>
-                <div>
+                <div className='md:border-l border-desert-300 dark:border-desert-600 md:pl-12 border-t md:border-t-0 pt-8 md:pt-0 text-center md:text-left'>
                   <h3 className='text-xl font-semibold text-desert-800 dark:text-white mb-4'>
-                    What you get:
+                    WHAT YOU GET:
                   </h3>
-                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6'>
+                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-left inline-block'>
                     <li>• 6-12 week development process</li>
                     <li>• Comprehensive brand strategy</li>
                     <li>• Custom design system</li>
@@ -106,21 +111,27 @@ export default function ServicesPage() {
             </div>
           </div>
 
+          {/* Divider */}
+          <div className='w-full h-px bg-desert-300 dark:bg-desert-600 my-6'></div>
+
           {/* CTA Section */}
-          <div className='text-center bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-lg p-8 shadow-lg'>
-            <h2 className='text-2xl md:text-3xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
-              ARE YOU READY?
-            </h2>
-            <p className='text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Let&apos;s discuss how we can help bring your vision to life with
-              a custom web solution that fits your needs and budget.
-            </p>
-            <a
-              href='/contact'
-              className='inline-block bg-desert-600 hover:bg-desert-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300'
-            >
-              GET IN TOUCH
-            </a>
+          <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-800 py-16'>
+            <div className='container mx-auto px-4 text-center'>
+              <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
+                ARE YOU READY?
+              </h2>
+              <div className='w-full h-px bg-desert-300 dark:bg-desert-600 mb-12'></div>
+              <p className='text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto'>
+                Let&apos;s discuss how we can help bring your vision to life with
+                a custom web solution that fits your needs and budget.
+              </p>
+              <a
+                href='/contact'
+                className='inline-block bg-desert-600 hover:bg-desert-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300'
+              >
+                GET IN TOUCH
+              </a>
+            </div>
           </div>
         </div>
       </div>
