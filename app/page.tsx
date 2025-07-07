@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import ProjectsSection from '@/components/projects-section'
 import HeroDescription from '@/components/hero-description'
 
 export default function Home() {
@@ -29,9 +28,6 @@ export default function Home() {
 
       {/* Hero Description */}
       <HeroDescription />
-
-      {/* Projects Section */}
-      <ProjectsSection />
     </>
   )
 }

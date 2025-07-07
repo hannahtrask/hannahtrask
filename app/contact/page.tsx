@@ -32,8 +32,77 @@ export default function ContactPage() {
         </div>
       </div>
 
+      {/* How It Works Section - Full Width */}
+      <div className='w-full mt-2 bg-white dark:bg-desert-800'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 min-h-[600px]'>
+          {/* Content Side */}
+          <div className='flex items-center justify-center p-8 md:p-16'>
+            <div className='max-w-lg'>
+              <h2 className='text-4xl md:text-5xl font-playfair font-light text-desert-800 dark:text-desert-100 mb-8'>
+                HOW IT WORKS
+                <span className='block text-lg font-montserrat font-normal text-gray-600 dark:text-gray-300 mt-2'>
+                  the easy version ;)
+                </span>
+              </h2>
+
+              <ul className='space-y-4 text-gray-700 dark:text-gray-300'>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>FILL OUT THE CONTACT FORM BELOW</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>WE CHAT TO FIGURE OUT THE PERFECT PACKAGE FOR YOU</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>
+                    COMPLETE YOUR PROJECT SCOPE & SUBMIT A DEPOSIT TO SECURE
+                    YOUR PROJECT
+                  </span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>FILL OUT PROJECT QUESTIONNAIRE</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>DESIGN & DEVELOPMENT TIME!</span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>LAUNCH</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Image Side */}
+          <div className='relative h-[400px] lg:h-full'>
+            <Image
+                src='/me-selfie.jpg'
+                alt='Craters of the moon'
+                fill
+                className='object-cover'
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Main Content */}
-      <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
+      <div className='bg-[#f8f7f4] dark:bg-desert-900'>
         <div className='container mx-auto px-4 py-8'>
           <div className='max-w-6xl mx-auto'>
             {/* Contact Information Cards */}
@@ -85,77 +154,8 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* How It Works Section - Full Width */}
-      <div className='w-full bg-white dark:bg-desert-800'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 min-h-[600px]'>
-          {/* Content Side */}
-          <div className='flex items-center justify-center p-8 md:p-16'>
-            <div className='max-w-lg'>
-              <h2 className='text-4xl md:text-5xl font-playfair font-light text-desert-800 dark:text-desert-100 mb-8'>
-                HOW IT WORKS
-                <span className='block text-lg font-montserrat font-normal text-gray-600 dark:text-gray-300 mt-2'>
-                  the easy version ;)
-                </span>
-              </h2>
-
-              <ul className='space-y-4 text-gray-700 dark:text-gray-300'>
-                <li className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
-                    •
-                  </span>
-                  <span>FILL OUT THE CONTACT FORM ABOVE</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
-                    •
-                  </span>
-                  <span>WE CHAT TO FIGURE OUT THE PERFECT PACKAGE FOR YOU</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
-                    •
-                  </span>
-                  <span>
-                    COMPLETE YOUR PROJECT SCOPE & SUBMIT A DEPOSIT TO SECURE
-                    YOUR PROJECT
-                  </span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
-                    •
-                  </span>
-                  <span>FILL OUT PROJECT QUESTIONNAIRE</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
-                    •
-                  </span>
-                  <span>DESIGN & DEVELOPMENT TIME!</span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
-                    •
-                  </span>
-                  <span>LAUNCH</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Image Side */}
-          <div className='relative h-[400px] lg:h-full'>
-            <Image
-              src='/me-climbing.jpg'
-              alt='Hannah climbing outdoors'
-              fill
-              className='object-cover'
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Additional Information */}
-      <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
+      <div className='bg-[#f8f7f4] dark:bg-desert-900'>
         <div className='container mx-auto px-4 py-8'>
           <div className='max-w-6xl mx-auto'>
             {/* Additional Information */}

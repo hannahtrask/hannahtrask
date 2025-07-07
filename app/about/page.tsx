@@ -31,11 +31,11 @@ export default function AboutPage() {
       </div>
 
       {/* Main Content */}
-      <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
+      <div className='bg-[#f8f7f4] dark:bg-desert-900'>
         <div className='container mx-auto px-4 pt-8 pb-0'>
           <div className='max-w-8xl mx-auto'>
             {/* SUN & SAGEBRUSH CREATIVE Introduction Section */}
-            <div className='bg-white dark:bg-desert-800 p-8 md:p-12 shadow-sm mb-16'>
+            <div className='bg-white dark:bg-desert-800 p-4 md:pt-4 shadow-sm mb-16'>
               <div className='text-center mb-12'>
                 <h2 className='text-3xl md:text-4xl font-playfair font-light mb-6 text-desert-800 dark:text-desert-100'>
                   SUN & SAGEBRUSH CREATIVE
@@ -77,10 +77,10 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className='relative h-96 w-full overflow-hidden rounded-sm group'>
+                <div className='relative h-96 w-full overflow-hidden group'>
                   <Image
-                    src='/me-climbing.jpg'
-                    alt='Hannah white water rafting'
+                    src='/me-rafting.jpg'
+                    alt='Hannah wearing the purple rivers'
                     fill
                     className='object-cover transition-transform duration-700 group-hover:scale-105'
                   />
@@ -121,7 +121,7 @@ export default function AboutPage() {
             {/* Image Side */}
             <div className='relative h-[50vh] lg:h-auto'>
               <Image
-                src='/me-rafting.jpg'
+                src='/goose_river.jpg'
                 alt='Hannah rock climbing'
                 fill
                 className='object-cover'
@@ -131,7 +131,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className='bg-[#f8f7f4] dark:bg-desert-900 topo-pattern'>
+        <div className='bg-[#f8f7f4] dark:bg-desert-900'>
           <div className='container mx-auto px-4 py-16'>
             <div className='max-w-4xl mx-auto'>
               {/* Skills & Approach Section */}
