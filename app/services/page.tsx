@@ -35,7 +35,7 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <div className='container mx-auto px-4 py-16'>
+      <div className='container mx-auto px-4 pt-16'>
         <div className='w-full'>
           {/* Work Style Selection Section */}
           <WorkStyleSelector />
@@ -45,9 +45,6 @@ export default function ServicesPage() {
 
           {/* Project Sprints Section */}
           <ProjectSprintsSection />
-
-          {/* Brand Banner */}
-          <BrandBanner />
 
           {/* INCLUSIVE WEBSITE PACKAGES Section */}
           <InclusivePackagesSection />
@@ -74,6 +71,10 @@ export default function ServicesPage() {
               </a>
             </div>
           </div>
+
+          {/* Brand Banner */}
+          <BrandBanner />
+
         </div>
       </div>
     </div>
