@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import WorkStyleSelector from '@/components/work-style-selector'
+import ProjectSprintsSection from '@/components/project-sprints-section'
+import InclusivePackagesSection from '@/components/inclusive-packages-section'
+import FAQSection from '@/components/faq-section'
 
 export const metadata: Metadata = {
   title: 'Services | Hannah Trask - Web Developer',
@@ -40,82 +43,13 @@ export default function ServicesPage() {
           <div className='w-full h-px bg-desert-300 dark:bg-desert-600 my-16'></div>
 
           {/* Project Sprints Section */}
-          <div
-            id='creative-sprints'
-            className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-800 py-16'
-          >
-            <div className='container mx-auto px-4'>
-              <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4 text-center'>
-                PROJECT SPRINTS
-              </h2>
-              <div className='w-full h-px bg-desert-300 dark:bg-desert-600 mb-12'></div>
-              <div className='grid md:grid-cols-2 gap-12'>
-                <div className='text-center md:text-right md:pr-6'>
-                  <h3 className='text-xl font-semibold text-desert-800 dark:text-white mb-4'>
-                    PERFECT FOR:
-                  </h3>
-                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-left inline-block'>
-                    <li>• Product launches and announcements</li>
-                    <li>• Marketing campaign websites</li>
-                    <li>• Event landing pages</li>
-                    <li>• Quick website refreshes</li>
-                    <li>• Promotional microsites</li>
-                  </ul>
-                </div>
-                <div className='md:border-l border-desert-300 dark:border-desert-600 md:pl-12 border-t md:border-t-0 pt-8 md:pt-0 text-center md:text-left'>
-                  <h3 className='text-xl font-semibold text-desert-800 dark:text-white mb-4'>
-                    WHAT YOU GET:
-                  </h3>
-                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-left inline-block'>
-                    <li>• 2-4 week turnaround</li>
-                    <li>• Custom design and development</li>
-                    <li>• Mobile-responsive design</li>
-                    <li>• Basic SEO optimization</li>
-                    <li>• Content management system</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProjectSprintsSection />
 
           {/* INCLUSIVE WEBSITE PACKAGES Section */}
-          <div
-            id='classic-packages'
-            className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white dark:bg-desert-900 py-16'
-          >
-            <div className='container mx-auto px-4'>
-              <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4 text-center'>
-                INCLUSIVE WEBSITE PACKAGES
-              </h2>
-              <div className='w-full h-px bg-desert-300 dark:bg-desert-600 mb-12'></div>
-              <div className='grid md:grid-cols-2 gap-12'>
-                <div className='text-center md:text-right md:pr-6'>
-                  <h3 className='text-xl font-semibold text-desert-800 dark:text-white mb-4'>
-                    PERFECT FOR:
-                  </h3>
-                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-left inline-block'>
-                    <li>• New business websites</li>
-                    <li>• Complete brand overhauls</li>
-                    <li>• E-commerce platforms</li>
-                    <li>• Complex functionality requirements</li>
-                    <li>• Long-term digital strategy</li>
-                  </ul>
-                </div>
-                <div className='md:border-l border-desert-300 dark:border-desert-600 md:pl-12 border-t md:border-t-0 pt-8 md:pt-0 text-center md:text-left'>
-                  <h3 className='text-xl font-semibold text-desert-800 dark:text-white mb-4'>
-                    WHAT YOU GET:
-                  </h3>
-                  <ul className='text-gray-700 dark:text-gray-300 space-y-2 mb-6 text-left inline-block'>
-                    <li>• 6-12 week development process</li>
-                    <li>• Comprehensive brand strategy</li>
-                    <li>• Custom design system</li>
-                    <li>• Advanced functionality</li>
-                    <li>• Ongoing support and maintenance</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          <InclusivePackagesSection />
+
+          {/* FAQ Section */}
+          <FAQSection />
 
           {/* Divider */}
           <div className='w-full h-px bg-desert-300 dark:bg-desert-600 my-6'></div>
