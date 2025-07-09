@@ -112,7 +112,7 @@ function PackageOptionCard({
             <h4 className='text-lg font-semibold text-desert-800 dark:text-white mb-3'>
               What's included:
             </h4>
-            <div className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
+            <div className='grid grid-cols-1 sm:grid-cols-2'>
               {option.features.map((feature, featureIndex) => (
                 <div key={featureIndex} className='flex items-start'>
                   <span className='text-desert-600 mr-2 mt-1'>•</span>
@@ -159,15 +159,15 @@ export default function InclusivePackagesSection() {
   const { ref, isVisible } = useScrollAnimation(0.1)
 
   return (
-    <div id='classic-packages' className='mb-16'>
+    <div id='classic-packages' className='mt-0'>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 30 }}
         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6 }}
-        className='text-center mb-12'
+        className='text-center mb-12 mt-0'
       >
-        <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
+        <h2 className='text-4xl mt-6 md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
           INCLUSIVE WEBSITE PACKAGES
         </h2>
         <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>

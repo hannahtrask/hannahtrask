@@ -4,6 +4,7 @@ import WorkStyleSelector from '@/components/work-style-selector'
 import ProjectSprintsSection from '@/components/project-sprints-section'
 import InclusivePackagesSection from '@/components/inclusive-packages-section'
 import FAQSection from '@/components/faq-section'
+import BrandBanner from '@/components/brand-banner'
 
 export const metadata: Metadata = {
   title: 'Services | Hannah Trask - Web Developer',
@@ -45,17 +46,17 @@ export default function ServicesPage() {
           {/* Project Sprints Section */}
           <ProjectSprintsSection />
 
+          {/* Brand Banner */}
+          <BrandBanner />
+
           {/* INCLUSIVE WEBSITE PACKAGES Section */}
           <InclusivePackagesSection />
 
           {/* FAQ Section */}
           <FAQSection />
 
-          {/* Divider */}
-          <div className='w-full h-px bg-desert-300 dark:bg-desert-600 my-6'></div>
-
           {/* CTA Section */}
-          <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-800 py-16'>
+          <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-16'>
             <div className='container mx-auto px-4 text-center'>
               <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
                 ARE YOU READY?

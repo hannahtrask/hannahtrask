@@ -189,7 +189,7 @@ export default function ProjectSprintsSection() {
   const { ref, isVisible } = useScrollAnimation(0.1)
 
   return (
-    <div id='creative-sprints' className='mb-16'>
+    <div id='creative-sprints'>
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 30 }}
