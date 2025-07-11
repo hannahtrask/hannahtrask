@@ -167,7 +167,7 @@ export default function InclusivePackagesSection() {
         transition={{ duration: 0.6 }}
         className='text-center mb-12 mt-0'
       >
-        <h2 className='text-4xl mt-6 md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
+        <h2 className='text-4xl mt-12 md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
           INCLUSIVE WEBSITE PACKAGES
         </h2>
         <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>

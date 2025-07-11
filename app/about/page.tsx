@@ -31,7 +31,7 @@ export default function AboutPage() {
       </div>
 
       {/* Main Content */}
-      <div className='bg-[#f8f7f4] dark:bg-desert-900'>
+      <div className='bg-desert-50 dark:bg-desert-900'>
         <div className='container mx-auto px-4 pt-8 pb-0'>
           <div className='max-w-8xl mx-auto'>
             {/* SUN & SAGEBRUSH CREATIVE Introduction Section */}
@@ -131,7 +131,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className='bg-[#f8f7f4] dark:bg-desert-900'>
+        <div className='bg-desert-50 dark:bg-desert-900'>
           <div className='container mx-auto px-4 py-16'>
             <div className='max-w-4xl mx-auto'>
               {/* Skills & Approach Section */}

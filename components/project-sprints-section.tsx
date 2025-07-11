@@ -27,8 +27,6 @@ const sprintOptions: SprintOption[] = [
       'Mobile responsive',
       'Contact form integration',
       'Basic SEO optimization',
-      'Social media links',
-      'Fast loading speed',
     ],
     timeline: '1-2 weeks',
     price: 'Starting at $2,500',

@@ -102,7 +102,7 @@ export default function ContactPage() {
       </div>
 
       {/* Main Content */}
-      <div className='bg-[#f8f7f4] dark:bg-desert-900'>
+      <div className='bg-desert-50 dark:bg-desert-900'>
         <div className='container mx-auto px-4 py-8'>
           <div className='max-w-6xl mx-auto'>
             {/* Contact Information Cards */}
@@ -155,7 +155,7 @@ export default function ContactPage() {
       </div>
 
       {/* Additional Information */}
-      <div className='bg-[#f8f7f4] dark:bg-desert-900'>
+      <div className='bg-desert-50 dark:bg-desert-900'>
         <div className='container mx-auto px-4 py-8'>
           <div className='max-w-6xl mx-auto'>
             {/* Additional Information */}
