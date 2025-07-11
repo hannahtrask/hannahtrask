@@ -133,7 +133,7 @@ function SprintOptionCard({
           transition={{ duration: 0.8, delay: index * 0.2 + 0.4 }}
           className='md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center bg-white dark:bg-desert-800'
         >
-          <h3 className='text-2xl md:text-3xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
+          <h3 className='text-2xl md:text-3xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
             {option.title}
           </h3>
           <p className='text-gray-700 dark:text-gray-300 mb-6 leading-relaxed'>
@@ -197,7 +197,7 @@ export default function ProjectSprintsSection() {
         transition={{ duration: 0.6 }}
         className='text-center mb-12'
       >
-        <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
+        <h2 className='text-4xl md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
           PROJECT SPRINTS
         </h2>
         <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>

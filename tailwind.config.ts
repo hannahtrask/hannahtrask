@@ -19,9 +19,9 @@ const config = {
     },
     extend: {
       fontFamily: {
-        playfair: ['var(--font-playfair)'],
-        montserrat: ['var(--font-montserrat)'],
-        sans: ['var(--font-montserrat)'],
+        'julius-sans-one': ['var(--font-julius-sans-one)'],
+        'archivo-narrow': ['var(--font-archivo-narrow)'],
+        sans: ['var(--font-archivo-narrow)'],
       },
       colors: {
         border: 'hsl(var(--border))',

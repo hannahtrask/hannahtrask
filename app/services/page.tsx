@@ -29,7 +29,7 @@ export default function ServicesPage() {
         </div>
 
         <div className='container mx-auto px-4 relative z-10 text-center'>
-          <h1 className='text-5xl md:texts-6xl font-playfair font-light text-white mb-6'>
+          <h1 className='text-5xl md:texts-6xl font-julius-sans-one font-light text-white mb-6'>
             DESIGN & DEVELOPMENT OFFERINGS
           </h1>
         </div>
@@ -55,7 +55,7 @@ export default function ServicesPage() {
           {/* CTA Section */}
           <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-16'>
             <div className='container mx-auto px-4 text-center'>
-              <h2 className='text-4xl md:text-5xl font-playfair font-bold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-4xl md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
                 ARE YOU READY?
               </h2>
               <div className='w-full h-px bg-desert-300 dark:bg-desert-600 mb-12'></div>

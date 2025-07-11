@@ -24,7 +24,7 @@ export default function AboutPage() {
         </div>
 
         <div className='container mx-auto px-4 relative z-10 text-center'>
-          <h1 className='text-5xl md:text-6xl font-playfair font-light text-white mb-6'>
+          <h1 className='text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'>
             ABOUT
           </h1>
         </div>
@@ -37,7 +37,7 @@ export default function AboutPage() {
             {/* SUN & SAGEBRUSH CREATIVE Introduction Section */}
             <div className=' p-4 md:pt-4 shadow-sm mb-16'>
               <div className='text-center mb-12'>
-                <h2 className='text-6xl md:text-6xl font-playfair font-light mb-6 text-desert-800 dark:text-desert-100'>
+                <h2 className='text-6xl md:text-6xl font-julius-sans-one font-light mb-6 text-desert-800 dark:text-desert-100'>
                   SUN & SAGEBRUSH CREATIVE
                 </h2>
                 <p className='text-xl leading-relaxed mb-2 font-light text-gray-800 dark:text-gray-200 max-w-4xl mx-auto'>
@@ -97,7 +97,7 @@ export default function AboutPage() {
             {/* Text Side */}
             <div className='flex items-center p-8 md:p-16 lg:p-20'>
               <div className='max-w-lg mx-auto lg:mx-0'>
-                <h2 className='text-3xl md:text-4xl font-playfair font-light mb-2 text-desert-800 dark:text-desert-100 tracking-wide'>
+                <h2 className='text-3xl md:text-4xl font-julius-sans-one font-light mb-2 text-desert-800 dark:text-desert-100 tracking-wide'>
                   HANNAH CATHERINE TRASK
                 </h2>
                 <p className='text-lg font-light text-desert-600 dark:text-desert-300 mb-8'>

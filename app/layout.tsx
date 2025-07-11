@@ -1,6 +1,6 @@
 import type React from 'react'
 import type { Metadata } from 'next'
-import { Playfair_Display, Montserrat } from 'next/font/google'
+import { Julius_Sans_One, Archivo_Narrow } from 'next/font/google'
 import './globals.css'
 import ScrollingBanner from '@/components/scrolling-banner'
 import Header from '@/components/header'
@@ -9,14 +9,16 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
 import { SanityLive } from '@/app/sanity/live'
 
-const playfair = Playfair_Display({
+const juliusSansOne = Julius_Sans_One({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: '400',
+  variable: '--font-julius-sans-one',
 })
 
-const montserrat = Montserrat({
+const archivoNarrow = Archivo_Narrow({
   subsets: ['latin'],
-  variable: '--font-montserrat',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-archivo-narrow',
 })
 
 export const metadata: Metadata = {
@@ -36,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${montserrat.variable} min-h-screen font-montserrat`}
+        className={`${juliusSansOne.variable} ${archivoNarrow.variable} min-h-screen font-archivo-narrow`}
       >
         <ThemeProvider
           attribute='class'
