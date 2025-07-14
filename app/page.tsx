@@ -67,7 +67,7 @@ export default function Home() {
                   delay: 1.2,
                   ease: [0.25, 0.46, 0.45, 0.94],
                 }}
-                className='font-normal italic'
+                className='font-normal italic pr-2'
               >
                 roam
               </motion.span>
