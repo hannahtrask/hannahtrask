@@ -21,9 +21,9 @@ const sprintOptions: SprintOption[] = [
     id: 'one-page-website',
     title: 'One Page Website',
     description:
-      'Perfect for businesses that need a simple, elegant online presence. Get everything you need on a single, beautifully designed page that tells your story and converts visitors.',
+      'Perfect for those that need a simple, elegant online presence. Get everything you need on a single, beautifully designed page that tells your story and converts visitors.',
     bestFor:
-      'Service-based businesses that need a page to share their offerings and add a professional touch to their web presence.',
+      'Service-based businesses or individuals that need a page to share their offerings and add a professional touch to their web presence.',
     features: [
       'Single page design',
       'Mobile responsive',
@@ -41,7 +41,7 @@ const sprintOptions: SprintOption[] = [
     description:
       'Need something done quickly? Our intensive design day gets you a complete website design and development in just one focused session. Perfect for urgent launches.',
     bestFor:
-      'Businesses with tight deadlines who need both a set of assets (think logos, color palettes, and typography) and a single page website solution delivered in one intensive session.',
+      'Those with tight deadlines who need both a set of assets (think logos, color palettes, and typography) and a single page website solution delivered in one intensive session.',
     features: [
       'One day intensive session',
       'Single page, mobile responsive website',
@@ -58,7 +58,7 @@ const sprintOptions: SprintOption[] = [
     description:
       'The perfect balance of speed and quality. Get a fully custom, multi-page website designed and developed in just one week, without compromising on design or functionality.',
     bestFor:
-      'Growing businesses that need a comprehensive multi-page website with custom functionality and professional design.',
+      'Growing businesses and organizations that need a comprehensive multi-page website with custom functionality and professional design.',
     features: [
       'Multi-page website',
       'Advanced functionality — think custom forms, image galleries, and more',
@@ -198,8 +198,8 @@ export default function ProjectSprintsSection() {
         </h2>
         <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
         <p className='text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed'>
-          Fast-track your project with our sprint options. Perfect for
-          businesses that need quality results quickly.
+          Fast-track your project with our sprint options. Perfect for those
+          that need quality results quickly.
         </p>
       </motion.div>
 

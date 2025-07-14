@@ -39,7 +39,7 @@ const packageOptions: PackageOption[] = [
       'Security features',
       'Ongoing support & maintenance',
     ],
-    timeline: '6-12 weeks',
+    timeline: '4-10 weeks',
     imageUrl: '/website-template.jpg',
     imageAlt: 'Comprehensive web design and ecommerce illustration',
     imagePosition: 'right',
