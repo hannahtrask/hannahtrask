@@ -22,7 +22,8 @@ const sprintOptions: SprintOption[] = [
     title: 'One Page Website',
     description:
       'Perfect for businesses that need a simple, elegant online presence. Get everything you need on a single, beautifully designed page that tells your story and converts visitors.',
-    bestFor: 'Service-based businesses that need a page to share their offerings and add a professional touch to their web presence.',
+    bestFor:
+      'Service-based businesses that need a page to share their offerings and add a professional touch to their web presence.',
     features: [
       'Single page design',
       'Mobile responsive',
@@ -39,14 +40,12 @@ const sprintOptions: SprintOption[] = [
     title: 'Design Day',
     description:
       'Need something done quickly? Our intensive design day gets you a complete website design and development in just one focused session. Perfect for urgent launches.',
-    bestFor: 'Businesses with tight deadlines who need both a set of assets (think logos, color palettes, and typography) and a single page website solution delivered in one intensive session.',
+    bestFor:
+      'Businesses with tight deadlines who need both a set of assets (think logos, color palettes, and typography) and a single page website solution delivered in one intensive session.',
     features: [
       'One day intensive session',
-      'Complete website design',
-      'Up to 5 pages',
-      'Mobile responsive',
-      'Basic functionality',
-      'Same day delivery',
+      'Single page, mobile responsive website',
+      'Brand kit: logo, color palette and typography selection',
     ],
     timeline: '1 day',
     imageUrl: '/web-design.jpg',
@@ -58,14 +57,12 @@ const sprintOptions: SprintOption[] = [
     title: 'Website in a Week',
     description:
       'The perfect balance of speed and quality. Get a fully custom, multi-page website designed and developed in just one week, without compromising on design or functionality.',
-    bestFor: 'Growing businesses that need a comprehensive multi-page website with custom functionality and professional design.',
+    bestFor:
+      'Growing businesses that need a comprehensive multi-page website with custom functionality and professional design.',
     features: [
       'Multi-page website',
-      'Custom design system',
-      'Content management',
-      'Advanced functionality',
+      'Advanced functionality — think custom forms, image galleries, and more',
       'SEO optimization',
-      'Performance optimization',
     ],
     timeline: '1 week',
     imageUrl: '/website-mockup.jpg',

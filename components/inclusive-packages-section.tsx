@@ -8,6 +8,7 @@ interface PackageOption {
   id: string
   title: string
   description: string
+  bestFor: string
   features: string[]
   timeline: string
   imageUrl: string
@@ -18,25 +19,28 @@ interface PackageOption {
 const packageOptions: PackageOption[] = [
   {
     id: 'web-design-ecommerce-standard',
-    title: 'Web Design: Ecommerce & Standard',
+    title: 'Classic Web Design',
     description:
-      'Comprehensive website solutions that grow with your business. From simple business websites to complex e-commerce platforms, we create digital experiences that convert visitors into customers.',
+      'Choose between Standard or E-Commerce options to match your business needs. Whether you need a professional online presence or a full e-commerce platform, we create digital experiences that convert visitors into customers.',
+    bestFor:
+      'New or established businesses ready to invest in a complete digital transformation with either standard business functionality or full e-commerce capabilities.',
     features: [
+      'STANDARD: What you need to get started and establish a presence online',
+      'STANDARD: Up to five pages (including your homepage)',
+      'STANDARD: Great option for service-based businesses',
+      'E-COMMERCE: For e-commerce businesses or brands adding functionality',
+      'E-COMMERCE: Price based on desired features and number of products/pages',
       'Custom design system',
-      'E-commerce functionality',
       'Content management system',
       'SEO optimization',
       'Performance optimization',
       'Mobile responsive design',
       'Analytics integration',
       'Security features',
-      'Payment gateway integration',
-      'Inventory management',
-      'Customer account portal',
       'Ongoing support & maintenance',
     ],
     timeline: '6-12 weeks',
-    imageUrl: '/desert-roadtrip.jpg',
+    imageUrl: '/website-template.jpg',
     imageAlt: 'Comprehensive web design and ecommerce illustration',
     imagePosition: 'right',
   },
@@ -102,9 +106,18 @@ function PackageOptionCard({
           <h3 className='text-2xl md:text-3xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
             {option.title}
           </h3>
-          <p className='text-gray-700 dark:text-gray-300 mb-6 leading-relaxed'>
+          <p className='text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
             {option.description}
           </p>
+
+          <div className='mb-6'>
+            <h4 className='text-lg font-semibold text-desert-800 dark:text-white mb-2'>
+              Best for:
+            </h4>
+            <p className='text-gray-700 dark:text-gray-300 leading-relaxed italic'>
+              {option.bestFor}
+            </p>
+          </div>
 
           <div className='mb-6'>
             <h4 className='text-lg font-semibold text-desert-800 dark:text-white mb-3'>
@@ -114,7 +127,7 @@ function PackageOptionCard({
               {option.features.map((feature, featureIndex) => (
                 <div key={featureIndex} className='flex items-start'>
                   <span className='text-desert-600 mr-2 mt-1'>•</span>
-                  <span className='text-gray-700 dark:text-gray-300 text-sm'>
+                  <span className='text-gray-700 dark:text-gray-300 text-sm pr-1'>
                     {feature}
                   </span>
                 </div>
