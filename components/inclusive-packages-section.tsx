@@ -10,7 +10,6 @@ interface PackageOption {
   description: string
   features: string[]
   timeline: string
-  price: string
   imageUrl: string
   imageAlt: string
   imagePosition: 'left' | 'right'
@@ -37,7 +36,6 @@ const packageOptions: PackageOption[] = [
       'Ongoing support & maintenance',
     ],
     timeline: '6-12 weeks',
-    price: 'Starting at $8,500',
     imageUrl: '/desert-roadtrip.jpg',
     imageAlt: 'Comprehensive web design and ecommerce illustration',
     imagePosition: 'right',
@@ -83,7 +81,7 @@ function PackageOptionCard({
             alt={option.imageAlt}
             width={800}
             height={600}
-            className='object-cover w-full h-64 md:h-96 max-h-96'
+            className='object-cover w-full h-64 md:h-full'
           />
         </motion.div>
 
@@ -131,14 +129,6 @@ function PackageOptionCard({
               </span>
               <p className='text-lg font-semibold text-desert-800 dark:text-white'>
                 {option.timeline}
-              </p>
-            </div>
-            <div>
-              <span className='text-sm font-medium text-desert-600 dark:text-desert-400 uppercase tracking-wide'>
-                Investment
-              </span>
-              <p className='text-lg font-semibold text-desert-800 dark:text-white'>
-                {option.price}
               </p>
             </div>
           </div>

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ModeToggle } from './mode-toggle'
@@ -9,6 +10,8 @@ import { ModeToggle } from './mode-toggle'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+  const isAboutPage = pathname === '/about'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +31,9 @@ export default function Header() {
       className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
           ? 'top-0 py-4 bg-white/90 dark:bg-desert-900/90 backdrop-blur-md shadow-sm'
-          : 'top-12 py-6 bg-transparent'
+          : isAboutPage
+            ? 'top-12 py-6 bg-transparent'
+            : 'top-0 py-6 bg-transparent'
       }`}
     >
       <div className='container mx-auto px-4 text-md mid:text-base'>

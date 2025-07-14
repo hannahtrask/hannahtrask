@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Mountain, Code, Heart } from 'lucide-react'
+import ScrollingBanner from '@/components/scrolling-banner'
 
 export const metadata = {
   title: 'About | Hannah Catherine Trask',
@@ -10,6 +11,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className='min-h-screen'>
+      <ScrollingBanner />
       {/* Hero Section */}
       <div className='relative h-[60vh] w-full flex items-center'>
         <div className='absolute inset-0 z-0'>

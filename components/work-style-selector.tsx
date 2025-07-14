@@ -100,7 +100,7 @@ export default function WorkStyleSelector() {
                 alt='Creative sprint illustration'
                 width={800}
                 height={600}
-                className='object-cover w-full h-64 md:h-96 max-h-96'
+                className='object-cover w-full h-64 md:h-full'
               />
             </div>
             <div className='md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center bg-white dark:bg-desert-800'>
@@ -133,7 +133,7 @@ export default function WorkStyleSelector() {
                 alt='INCLUSIVE WEBSITE PACKAGES illustration'
                 width={800}
                 height={600}
-                className='object-cover w-full h-64 md:h-96 max-h-96'
+                className='object-cover w-full h-64 md:h-full'
               />
             </div>
             <div className='md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center bg-white dark:bg-desert-800'>

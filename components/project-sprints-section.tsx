@@ -8,9 +8,9 @@ interface SprintOption {
   id: string
   title: string
   description: string
+  bestFor: string
   features: string[]
   timeline: string
-  price: string
   imageUrl: string
   imageAlt: string
   imagePosition: 'left' | 'right'
@@ -22,15 +22,15 @@ const sprintOptions: SprintOption[] = [
     title: 'One Page Website',
     description:
       'Perfect for businesses that need a simple, elegant online presence. Get everything you need on a single, beautifully designed page that tells your story and converts visitors.',
+    bestFor: 'Service-based businesses that need a page to share their offerings and add a professional touch to their web presence.',
     features: [
       'Single page design',
       'Mobile responsive',
       'Contact form integration',
       'Basic SEO optimization',
     ],
-    timeline: '1-2 weeks',
-    price: 'Starting at $2,500',
-    imageUrl: '/roadtrip.jpg',
+    timeline: '2-4 days',
+    imageUrl: '/website-homepage.jpg',
     imageAlt: 'One page website design illustration',
     imagePosition: 'left',
   },
@@ -39,6 +39,7 @@ const sprintOptions: SprintOption[] = [
     title: 'Design Day',
     description:
       'Need something done quickly? Our intensive design day gets you a complete website design and development in just one focused session. Perfect for urgent launches.',
+    bestFor: 'Businesses with tight deadlines who need both a set of assets (think logos, color palettes, and typography) and a single page website solution delivered in one intensive session.',
     features: [
       'One day intensive session',
       'Complete website design',
@@ -48,8 +49,7 @@ const sprintOptions: SprintOption[] = [
       'Same day delivery',
     ],
     timeline: '1 day',
-    price: 'Starting at $3,500',
-    imageUrl: '/sagebrush.jpg',
+    imageUrl: '/web-design.jpg',
     imageAlt: 'Design day intensive session illustration',
     imagePosition: 'right',
   },
@@ -58,6 +58,7 @@ const sprintOptions: SprintOption[] = [
     title: 'Website in a Week',
     description:
       'The perfect balance of speed and quality. Get a fully custom, multi-page website designed and developed in just one week, without compromising on design or functionality.',
+    bestFor: 'Growing businesses that need a comprehensive multi-page website with custom functionality and professional design.',
     features: [
       'Multi-page website',
       'Custom design system',
@@ -67,8 +68,7 @@ const sprintOptions: SprintOption[] = [
       'Performance optimization',
     ],
     timeline: '1 week',
-    price: 'Starting at $5,000',
-    imageUrl: '/map.jpg',
+    imageUrl: '/website-mockup.jpg',
     imageAlt: 'Website in a week development illustration',
     imagePosition: 'left',
   },
@@ -113,7 +113,7 @@ function SprintOptionCard({
             alt={option.imageAlt}
             width={800}
             height={600}
-            className='object-cover w-full h-64 md:h-96 max-h-96'
+            className='object-cover w-full h-64 md:h-full'
           />
         </motion.div>
 
@@ -134,9 +134,18 @@ function SprintOptionCard({
           <h3 className='text-2xl md:text-3xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
             {option.title}
           </h3>
-          <p className='text-gray-700 dark:text-gray-300 mb-6 leading-relaxed'>
+          <p className='text-gray-700 dark:text-gray-300 mb-4 leading-relaxed'>
             {option.description}
           </p>
+
+          <div className='mb-6'>
+            <h4 className='text-lg font-semibold text-desert-800 dark:text-white mb-2'>
+              Best for:
+            </h4>
+            <p className='text-gray-700 dark:text-gray-300 leading-relaxed italic'>
+              {option.bestFor}
+            </p>
+          </div>
 
           <div className='mb-6'>
             <h4 className='text-lg font-semibold text-desert-800 dark:text-white mb-3'>
@@ -159,14 +168,6 @@ function SprintOptionCard({
               </span>
               <p className='text-lg font-semibold text-desert-800 dark:text-white'>
                 {option.timeline}
-              </p>
-            </div>
-            <div>
-              <span className='text-sm font-medium text-desert-600 dark:text-desert-400 uppercase tracking-wide'>
-                Investment
-              </span>
-              <p className='text-lg font-semibold text-desert-800 dark:text-white'>
-                {option.price}
               </p>
             </div>
           </div>
