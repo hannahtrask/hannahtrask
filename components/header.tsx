@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ModeToggle } from './mode-toggle'
@@ -10,8 +9,6 @@ import { ModeToggle } from './mode-toggle'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const pathname = usePathname()
-  const hasScrollingBanner = false // No pages have scrolling banner now
 
   useEffect(() => {
     const handleScroll = () => {
