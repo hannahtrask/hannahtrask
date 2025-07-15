@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   title: 'Work | Sun & Sagebrush Creative',
 }
 
-
-
 export default function WorkPage() {
   return (
     <div className='min-h-screen'>
@@ -43,7 +41,8 @@ export default function WorkPage() {
               Ready to start your project?
             </h3>
             <p className='text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto'>
-              Let's discuss how we can bring your vision to life with thoughtful design and development.
+              Let's discuss how we can bring your vision to life with thoughtful
+              design and development.
             </p>
             <Link
               href='/contact'

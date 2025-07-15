@@ -93,7 +93,9 @@ function ProjectDetailsSection({ project }: { project: any }) {
                 <h3 className='text-xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-2'>
                   Category
                 </h3>
-                <p className='text-gray-700 dark:text-gray-300'>{project.category}</p>
+                <p className='text-gray-700 dark:text-gray-300'>
+                  {project.category}
+                </p>
               </div>
             </div>
           </motion.div>
@@ -139,14 +141,20 @@ function TechnologySection({ project }: { project: any }) {
               Tools
             </h2>
             <p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8'>
-              This project was built using modern technologies and best practices to ensure optimal performance, scalability, and user experience.
+              This project was built using modern technologies and best
+              practices to ensure optimal performance, scalability, and user
+              experience.
             </p>
             <div className='flex flex-wrap gap-3'>
               {project.technologies.map((tech: string, index: number) => (
                 <motion.span
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                  animate={
+                    isVisible
+                      ? { opacity: 1, scale: 1 }
+                      : { opacity: 0, scale: 0.8 }
+                  }
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='bg-desert-600 text-white px-4 py-2 rounded-lg font-medium'
                 >
@@ -195,7 +203,8 @@ function ImagesSection({ project }: { project: any }) {
             Project Gallery
           </h2>
           <p className='text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto'>
-            A closer look at the design details and user experience elements that make this project unique.
+            A closer look at the design details and user experience elements
+            that make this project unique.
           </p>
         </motion.div>
 

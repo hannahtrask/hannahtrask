@@ -18,11 +18,12 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className='p-4 md:pt-4 shadow-sm'
           >
-
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
-                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                animate={
+                  isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
+                }
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300 mb-6'>
@@ -56,7 +57,9 @@ export default function AboutSection() {
 
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
-                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+                animate={
+                  isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
+                }
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='relative h-96 w-full overflow-hidden group'
               >

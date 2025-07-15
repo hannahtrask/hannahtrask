@@ -10,17 +10,19 @@ interface ProjectPageProps {
 }
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({
+  return projects.map(project => ({
     slug: project.slug,
   }))
 }
 
-export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
   const project = projects.find(p => p.slug === params.slug)
 
   if (!project) {
     return {
-      title: 'Project Not Found | Sun & Sagebrush Creative'
+      title: 'Project Not Found | Sun & Sagebrush Creative',
     }
   }
 
