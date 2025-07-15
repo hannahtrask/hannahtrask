@@ -125,8 +125,8 @@ function PackageOptionCard({
             </h4>
             <div className='grid grid-cols-1 sm:grid-cols-2'>
               {option.features.map((feature, featureIndex) => (
-                <div key={featureIndex} className='flex items-start'>
-                  <span className='text-desert-600 mr-2 mt-1'>•</span>
+                <div key={featureIndex} className='flex items-center'>
+                  <span className='text-desert-600 mr-2'>•</span>
                   <span className='text-gray-700 dark:text-gray-300 text-sm pr-1'>
                     {feature}
                   </span>

@@ -150,7 +150,7 @@ function SprintOptionCard({
             </h4>
             <ul className='text-gray-700 dark:text-gray-300 space-y-2'>
               {option.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className='flex items-start'>
+                <li key={featureIndex} className='flex items-center'>
                   <span className='text-desert-600 mr-2'>•</span>
                   {feature}
                 </li>
