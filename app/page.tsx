@@ -56,6 +56,7 @@ export default function Home() {
                   delay: 0.8,
                   ease: [0.25, 0.46, 0.45, 0.94],
                 }}
+                className='font-julius-sans-one'
               >
                 Let your ideas{' '}
               </motion.span>
@@ -67,7 +68,7 @@ export default function Home() {
                   delay: 1.2,
                   ease: [0.25, 0.46, 0.45, 0.94],
                 }}
-                className='font-normal italic pr-2'
+                className='font-julius-sans-one font-normal italic pr-2'
               >
                 roam
               </motion.span>
