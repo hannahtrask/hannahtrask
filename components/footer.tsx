@@ -31,11 +31,20 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href='/about'
+                    href='/work'
                     className='text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
-                    About
+                    Work
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href='/services'
+                    className='text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                  >
+                    <MapPin className='h-3 w-3 mr-2' />
+                    Services
                   </Link>
                 </li>
                 <li>

@@ -11,7 +11,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
-  const isAboutPage = pathname === '/about'
+  const hasScrollingBanner = false // No pages have scrolling banner now
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,9 +31,7 @@ export default function Header() {
       className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
           ? 'top-0 py-4 bg-white/90 dark:bg-desert-900/90 backdrop-blur-md shadow-sm'
-          : isAboutPage
-            ? 'top-12 py-6 bg-transparent'
-            : 'top-0 py-6 bg-transparent'
+          : 'top-0 py-6 bg-transparent'
       }`}
     >
       <div className='container mx-auto px-4 text-md mid:text-base'>
@@ -60,14 +58,14 @@ export default function Header() {
               HOME
             </Link>
             <Link
-              href='/about'
+              href='/work'
               className={`text-base tracking-wide transition-colors ${
                 isScrolled
                   ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
                   : 'text-white/80 hover:text-white'
               }`}
             >
-              ABOUT
+              WORK
             </Link>
             <Link
               href='/services'
@@ -126,11 +124,11 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href='/about'
+              href='/work'
               className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
               onClick={() => setIsMenuOpen(false)}
             >
-              About
+              Work
             </Link>
             <Link
               href='/services'

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import HeroDescription from '@/components/hero-description'
+import AboutSection from '@/components/about-section'
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0)
@@ -87,6 +88,9 @@ export default function Home() {
 
       {/* Hero Description */}
       <HeroDescription />
+
+      {/* About Section */}
+      <AboutSection />
     </>
   )
 }
