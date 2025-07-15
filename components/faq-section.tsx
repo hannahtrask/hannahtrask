@@ -22,7 +22,7 @@ const faqItems: FAQItem[] = [
     id: 'platforms',
     question: 'What platforms do you work on for websites?',
     answer:
-      "We specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best technology stack based on your specific needs and long-term goals.",
+      "We specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
   },
   {
     id: 'timeline',

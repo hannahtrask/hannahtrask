@@ -18,15 +18,6 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             className='p-4 md:pt-4 shadow-sm'
           >
-            <div className='text-center mb-12'>
-              <h2 className='text-6xl md:text-6xl font-julius-sans-one font-light mb-6 text-desert-800 dark:text-desert-100'>
-                SUN & SAGEBRUSH CREATIVE
-              </h2>
-              <p className='text-xl leading-relaxed mb-2 font-light text-gray-800 dark:text-gray-200 max-w-4xl mx-auto'>
-                We&apos;re creatives with a passion for crafting and honing
-                beautiful and functional digital experiences.
-              </p>
-            </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
               <motion.div
