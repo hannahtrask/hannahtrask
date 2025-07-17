@@ -12,8 +12,8 @@ export default function ContactPage() {
   return (
     <div className='min-h-screen'>
       {/* Hero Section with Background Image */}
-      <div className='relative h-[60vh] w-full flex items-center'>
-        <div className='absolute inset-0 z-0'>
+      <div className='relative h-screen w-full flex items-center overflow-hidden'>
+        <div className='absolute inset-0 z-0 w-full h-[120%]'>
           <Image
             src='/map.jpg'
             alt='Hannah on a mountain bike in Bend Oregon.'

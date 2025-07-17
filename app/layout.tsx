@@ -6,7 +6,6 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
-import { SanityLive } from '@/app/sanity/live'
 
 const juliusSansOne = Julius_Sans_One({
   subsets: ['latin'],
@@ -48,7 +47,6 @@ export default function RootLayout({
           <div className='flex flex-col min-h-screen'>
             <Header />
             <main className='flex-grow'>{children}</main>
-            <SanityLive />
             <Footer />
           </div>
           <Toaster position='top-center' richColors />
