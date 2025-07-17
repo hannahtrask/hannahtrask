@@ -9,27 +9,28 @@ export const metadata: Metadata = {
 
 export default function WorkPage() {
   return (
-    <div className='min-h-screen'>
-      {/* Hero Section */}
-      <div className='relative h-[60vh] w-full flex items-center'>
+    <>
+      <div className='relative h-screen w-full flex items-center overflow-hidden'>
+        {/* Hero Section */}
         <div className='absolute inset-0 z-0'>
-          <Image
-            src='/work-background-bison.jpg'
-            alt='Creative work and portfolio'
-            fill
-            priority
-            className='object-cover'
-          />
-          <div className='absolute inset-0 bg-black/50'></div>
-        </div>
+          <div className='absolute inset-0 z-0 w-full h-[120%]'>
+            <Image
+              src='/work-background-bison.jpg'
+              alt='Creative work and portfolio'
+              fill
+              priority
+              className='object-cover'
+            />
+            <div className='absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-brand-dustyrose/60'></div>
+          </div>
 
-        <div className='container mx-auto px-4 relative z-10 text-center'>
-          <h1 className='text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'>
-            OUR WORK
-          </h1>
+          <div className='container mx-auto px-4 relative z-10 flex items-center justify-center h-full'>
+            <h1 className='text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'>
+              OUR WORK
+            </h1>
+          </div>
         </div>
       </div>
-
       {/* Projects Section */}
       <div className='bg-desert-50 dark:bg-desert-900 py-16'>
         <div className='container mx-auto px-4'>
@@ -53,6 +54,6 @@ export default function WorkPage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
