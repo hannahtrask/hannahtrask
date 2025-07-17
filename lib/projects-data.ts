@@ -23,7 +23,7 @@ export const projects: ProjectItem[] = [
     category: 'Web Design & Development',
     imageUrl: '/desert-roadtrip.jpg',
     heroImage: '/desert-roadtrip.jpg',
-    technologies: ['Next.js', 'Tailwind CSS', 'Sanity CMS', 'Stripe', 'Vercel'],
+    technologies: ['Next.js', 'Tailwind CSS', 'Stripe', 'Vercel'],
     additionalImages: ['/sagebrush.jpg', '/roadtrip.jpg'],
   },
   {
