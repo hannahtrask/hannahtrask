@@ -8,15 +8,15 @@ export default function AboutSection() {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
-    <div className='bg-desert-50 dark:bg-desert-900 py-16'>
-      <div className='container mx-auto px-4'>
-        <div className='max-w-8xl mx-auto'>
+    <div className='bg-desert-50 dark:bg-desert-900'>
+      <div>
+        <div>
           <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 30 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
-            className='p-4 md:pt-4 shadow-sm'
+            className='shadow-sm'
           >
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
               <motion.div
@@ -25,6 +25,7 @@ export default function AboutSection() {
                   isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
                 }
                 transition={{ duration: 0.8, delay: 0.2 }}
+                className='px-16'
               >
                 <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300 mb-6'>
                   In our web development and design work, we specialize in
