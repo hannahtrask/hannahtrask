@@ -51,13 +51,7 @@ export const projects: ProjectItem[] = [
     category: 'Portfolio Design',
     imageUrl: '/roadtrip.jpg',
     heroImage: '/roadtrip.jpg',
-    technologies: [
-      'Next.js',
-      'Framer Motion',
-      'TypeScript',
-      'Sanity CMS',
-      'Vercel',
-    ],
+    technologies: ['Next.js', 'Framer Motion', 'TypeScript', 'Vercel'],
     additionalImages: ['/desert-roadtrip.jpg', '/sagebrush.jpg'],
   },
 ]
