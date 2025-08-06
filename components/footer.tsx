@@ -11,9 +11,8 @@ export default function Footer() {
             <h3 className='font-playfair text-xl mb-2'>
               SUN & SAGEBRUSH CREATIVE
             </h3>
-            <p className='text-gray-300 dark:text-gray-400 text-sm max-w-xs'>
-              Creating digital experiences with the same passion we bring to
-              exploring the outdoors.
+            <p className='text-desert-100 dark:text-desert-200 text-sm max-w-xs'>
+              Based in Jackson, WY. Available for remote and on-site work.
             </p>
           </div>
 
@@ -23,7 +22,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/'
-                    className='text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     Home
@@ -32,7 +31,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/work'
-                    className='text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     Work
@@ -41,7 +40,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/services'
-                    className='text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     Services
@@ -50,7 +49,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/contact'
-                    className='text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     Contact
@@ -63,14 +62,14 @@ export default function Footer() {
               <div className='flex space-x-4'>
                 <Link
                   href='https://github.com/hannahtrask'
-                  className='text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200'
+                  className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
                 >
                   <GitHubIcon size={18} />
                   <span className='sr-only'>GitHub</span>
                 </Link>
                 <Link
                   href='https://www.linkedin.com/in/hannahtrask/'
-                  className='text-gray-300 dark:text-gray-400 hover:text-white dark:hover:text-gray-200'
+                  className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
                 >
                   <LinkedInIcon size={18} />
                   <span className='sr-only'>LinkedIn</span>
@@ -81,7 +80,7 @@ export default function Footer() {
         </div>
 
         <div className='mt-16 pt-8 border-t border-desert-900 dark:border-desert-600'>
-          <p className='text-gray-50 dark:text-gray-300 text-xs'>
+          <p className='text-desert-50 dark:text-desert-300 text-xs'>
             © {new Date().getFullYear()} Sun & Sagebrush LLC. All rights
             reserved.
           </p>

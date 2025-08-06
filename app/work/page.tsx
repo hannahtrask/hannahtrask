@@ -39,17 +39,13 @@ export default function WorkPage() {
           {/* CTA Section */}
           <div className='text-center mt-16'>
             <h3 className='text-2xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
-              Ready to start your project?
+              Ready to get started?
             </h3>
-            <p className='text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto'>
-              Let's discuss how we can bring your vision to life with thoughtful
-              design and development.
-            </p>
             <Link
               href='/contact'
-              className='inline-block bg-desert-600 hover:bg-desert-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300'
+              className='font-julius-sans-one inline-block bg-desert-600 hover:bg-desert-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300'
             >
-              Start a Project
+              Contact
             </Link>
           </div>
         </div>
