@@ -33,7 +33,7 @@ export default function ContactPage() {
       </div>
 
       {/* How It Works Section - Full Width */}
-      <div className='w-full mt-2 bg-white dark:bg-desert-800'>
+      <div className='w-full bg-white dark:bg-desert-800'>
         <div className='grid grid-cols-1 lg:grid-cols-2 min-h-[600px]'>
           {/* Content Side */}
           <div className='flex items-center justify-center p-8 md:p-16'>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                   Email
                 </h3>
                 <p className='text-gray-600 dark:text-gray-300 text-sm'>
-                  sunandsagebrushllc@gmail.com
+                  hello@sunsagebrushcreative.com
                 </p>
               </div>
 

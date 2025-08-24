@@ -20,7 +20,7 @@ Hey there! I'm Hannah, a freelance web developer with a passion for creating bea
 
 ### Let's Connect
 
-- 📧 Business inquiries: sunandsagebrushllc@gmail.com
+- 📧 Business inquiries: hello@sunsagebrushcreative.com
 - 🌐 Portfolio: This very website you're looking at!
 
 ---

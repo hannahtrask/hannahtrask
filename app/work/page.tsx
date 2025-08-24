@@ -24,7 +24,7 @@ export default function WorkPage() {
             <div className='absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-brand-dustyrose/60'></div>
           </div>
 
-          <div className='container mx-auto px-4 relative z-10 flex items-center justify-center h-full'>
+          <div className='container mx-auto relative z-10 flex items-center justify-center h-full'>
             <h1 className='text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'>
               OUR WORK
             </h1>
@@ -32,8 +32,8 @@ export default function WorkPage() {
         </div>
       </div>
       {/* Projects Section */}
-      <div className='bg-desert-50 dark:bg-desert-900 py-16'>
-        <div className='container mx-auto px-4'>
+      <div className='bg-desert-50 dark:bg-desert-900 pb-16'>
+        <div className='container mx-auto px-0 !important'>
           <ProjectsGrid />
 
           {/* CTA Section */}

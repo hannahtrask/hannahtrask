@@ -30,7 +30,7 @@ function ProjectGridItem({ project }: { project: ProjectItem }) {
 
 export default function ProjectsGrid() {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-16'>
       {projects.map(project => (
         <ProjectGridItem key={project.id} project={project} />
       ))}
