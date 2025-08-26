@@ -65,16 +65,6 @@ export default function Header() {
               WORK
             </Link>
             <Link
-              href='/services'
-              className={`text-base tracking-wide transition-colors ${
-                isScrolled
-                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
-                  : 'text-white/80 hover:text-white'
-              }`}
-            >
-              SERVICES
-            </Link>
-            <Link
               href='/contact'
               className={`text-base tracking-wide transition-colors ${
                 isScrolled
@@ -126,13 +116,6 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Work
-            </Link>
-            <Link
-              href='/services'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
             </Link>
             <Link
               href='/contact'
