@@ -56,19 +56,19 @@ export const projects: ProjectItem[] = [
     ],
     websiteUrl: 'https://bloomist.com/',
   },
-  {
-    id: 'project-3',
-    slug: 'creative-studio-portfolio',
-    title: 'Creative Studio Portfolio',
-    description:
-      'Minimalist portfolio website showcasing photography and design work with smooth animations.',
-    fullDescription:
-      'A stunning portfolio website for a creative studio specializing in photography and design. The site features smooth animations, an intuitive gallery system, and a content management system that allows the studio to easily update their work and maintain their online presence.',
-    category: 'Portfolio Design',
-    imageUrl: '/roadtrip.jpg',
-    heroImage: '/roadtrip.jpg',
-    technologies: ['Next.js', 'Framer Motion', 'TypeScript', 'Vercel'],
-    additionalImages: ['/desert-roadtrip.jpg', '/sagebrush.jpg'],
-    websiteUrl: 'https://creative-studio-portfolio.com',
-  },
+  // {
+  //   id: 'project-3',
+  //   slug: 'creative-studio-portfolio',
+  //   title: 'Creative Studio Portfolio',
+  //   description:
+  //     'Minimalist portfolio website showcasing photography and design work with smooth animations.',
+  //   fullDescription:
+  //     'A stunning portfolio website for a creative studio specializing in photography and design. The site features smooth animations, an intuitive gallery system, and a content management system that allows the studio to easily update their work and maintain their online presence.',
+  //   category: 'Portfolio Design',
+  //   imageUrl: '/roadtrip.jpg',
+  //   heroImage: '/roadtrip.jpg',
+  //   technologies: ['Next.js', 'Framer Motion', 'TypeScript', 'Vercel'],
+  //   additionalImages: ['/desert-roadtrip.jpg', '/sagebrush.jpg'],
+  //   websiteUrl: 'https://creative-studio-portfolio.com',
+  // },
 ]

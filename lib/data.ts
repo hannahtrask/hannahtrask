@@ -12,7 +12,7 @@ export interface Project {
   highlights: string[]
   category:
     | 'thoughtful lifestyle brands'
-    | 'small e-commerce businesses'
+    | 'e-commerce businesses'
     | 'creative studios'
     | 'values-driven teams'
     | 'outdoor-industry'

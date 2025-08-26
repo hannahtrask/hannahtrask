@@ -35,7 +35,7 @@ export default function AboutSection() {
                   </span>
                   ,{' '}
                   <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
-                    small e-commerce businesses
+                    e-commerce businesses
                   </span>
                   ,{' '}
                   <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
