@@ -33,10 +33,10 @@ export default function WorkPage() {
       </div>
       {/* Projects Section */}
       <div className='bg-desert-50 dark:bg-desert-900 pb-16'>
-        <div className='container mx-auto px-0 !important'>
-          <ProjectsGrid />
+        <ProjectsGrid />
 
-          {/* CTA Section */}
+        {/* CTA Section */}
+        <div className='container mx-auto px-4'>
           <div className='text-center mt-16'>
             <h3 className='text-2xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
               Ready to get started?
