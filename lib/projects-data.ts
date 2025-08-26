@@ -9,22 +9,31 @@ export interface ProjectItem {
   technologies: string[]
   additionalImages: string[]
   fullDescription: string
+  websiteUrl: string
 }
 
 export const projects: ProjectItem[] = [
   {
     id: 'project-1',
-    slug: 'lifestyle-brand-website',
-    title: 'Lifestyle Brand Website',
+    slug: 'wyld-lark',
+    title: 'Wyld Lark Video Editing',
     description:
-      'A beautiful, responsive website for a sustainable lifestyle brand focused on outdoor adventures and eco-friendly products.',
+      'Portfolio website for a Jackson WY based video editor, photographer and videographer.',
     fullDescription:
-      "This project involved creating a complete digital presence for a sustainable lifestyle brand that specializes in outdoor adventures and eco-friendly products. The website features a modern, clean design that reflects the brand's commitment to environmental responsibility while showcasing their product line and brand story.",
+      'When Liz came to us, she was looking to give her site a facelift, so we did just that.' +
+      ' We implemented a modern, clean design, letting the videos do the talking. The site ' +
+      'is built on WordPress and uses Elementor for page building. Using Yoast SEO, we optimized ' +
+      'the site for better search engine optimization. The Wyld Lark website is an excellent example ' +
+      'of how small tweaks can go a long way.',
     category: 'Web Design & Development',
-    imageUrl: '/desert-roadtrip.jpg',
-    heroImage: '/desert-roadtrip.jpg',
-    technologies: ['Next.js', 'Tailwind CSS', 'Stripe', 'Vercel'],
-    additionalImages: ['/sagebrush.jpg', '/roadtrip.jpg'],
+    imageUrl: '/projects/wyld-lark/wyld-lark-logo.jpg',
+    heroImage: '/projects/wyld-lark/wyld-lark-logo.jpg',
+    technologies: ['Wordpress', 'Yoast SEO', 'Elementor'],
+    additionalImages: [
+      '/projects/wyld-lark/wyld-lark-banner.jpg',
+      '/projects/wyld-lark/wyld-lark-socials.jpg',
+    ],
+    websiteUrl: 'https://wyldlark.com/',
   },
   {
     id: 'project-2',
@@ -39,6 +48,7 @@ export const projects: ProjectItem[] = [
     heroImage: '/sagebrush.jpg',
     technologies: ['Shopify', 'React', 'Node.js', 'PostgreSQL', 'Stripe'],
     additionalImages: ['/desert-roadtrip.jpg', '/roadtrip.jpg'],
+    websiteUrl: 'https://example-ecommerce.com',
   },
   {
     id: 'project-3',
@@ -53,5 +63,6 @@ export const projects: ProjectItem[] = [
     heroImage: '/roadtrip.jpg',
     technologies: ['Next.js', 'Framer Motion', 'TypeScript', 'Vercel'],
     additionalImages: ['/desert-roadtrip.jpg', '/sagebrush.jpg'],
+    websiteUrl: 'https://creative-studio-portfolio.com',
   },
 ]

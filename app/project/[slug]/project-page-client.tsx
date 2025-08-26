@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowLeft } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 
 interface ProjectPageClientProps {
@@ -25,14 +24,6 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
           />
           <div className='absolute inset-0 bg-black/30'></div>
         </div>
-
-        {/* Back button */}
-        <Link
-          href='/work'
-          className='absolute top-8 left-8 z-20 bg-white/90 backdrop-blur-sm hover:bg-white text-desert-800 p-3 rounded-full transition-all duration-300 hover:scale-110'
-        >
-          <ArrowLeft className='w-6 h-6' />
-        </Link>
 
         {/* Hero content */}
         <div className='container mx-auto px-4 relative z-10 pb-16'>
@@ -97,6 +88,33 @@ function ProjectDetailsSection({ project }: { project: any }) {
                   {project.category}
                 </p>
               </div>
+              <div>
+                <h3 className='text-xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-2'>
+                  See it live
+                </h3>
+                <a
+                  href={project.websiteUrl}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='inline-flex items-center text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-desert-100 transition-colors duration-300 font-medium'
+                >
+                  {project.websiteUrl}
+                  <svg
+                    className='w-4 h-4 ml-2'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </motion.div>
 
@@ -126,61 +144,34 @@ function TechnologySection({ project }: { project: any }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
-    <div className='bg-desert-50 dark:bg-desert-800 py-20'>
-      <div className='container mx-auto px-4'>
-        <div className='flex flex-col lg:flex-row-reverse items-center gap-16'>
-          {/* Text content - slides in from right */}
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, x: 100 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-            transition={{ duration: 0.8 }}
-            className='lg:w-1/2'
-          >
-            <h2 className='text-4xl md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-8'>
-              Tools
-            </h2>
-            <p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8'>
-              This project was built using modern technologies and best
-              practices to ensure optimal performance, scalability, and user
-              experience.
-            </p>
-            <div className='flex flex-wrap gap-3'>
-              {project.technologies.map((tech: string, index: number) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={
-                    isVisible
-                      ? { opacity: 1, scale: 1 }
-                      : { opacity: 0, scale: 0.8 }
-                  }
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className='bg-desert-600 text-white px-4 py-2 rounded-lg font-medium'
-                >
-                  {tech}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Image - slides in from left */}
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='lg:w-1/2'
-          >
-            <div className='relative h-96 w-full overflow-hidden'>
-              <Image
-                src={project.additionalImages[1]}
-                alt={`${project.title} technology`}
-                fill
-                className='object-cover'
-              />
-            </div>
-          </motion.div>
-        </div>
+    <div className=' py-6'>
+      <div className='container mx-auto px-4 flex justify-center'>
+        {/* Text content - slides in from right */}
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, x: 100 }}
+          animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          transition={{ duration: 0.8 }}
+          className='lg:w-1/2'
+        >
+          <div className='flex flex-wrap gap-2 justify-center'>
+            {project.technologies.map((tech: string, index: number) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={
+                  isVisible
+                    ? { opacity: 1, scale: 1 }
+                    : { opacity: 0, scale: 0.8 }
+                }
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className='bg-desert-600 text-white px-4 py-2 rounded-lg font-medium'
+              >
+                {tech}
+              </motion.span>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   )
@@ -203,8 +194,7 @@ function ImagesSection({ project }: { project: any }) {
             Project Gallery
           </h2>
           <p className='text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto'>
-            A closer look at the design details and user experience elements
-            that make this project unique.
+            Peek at the details :)
           </p>
         </motion.div>
 
