@@ -14,7 +14,7 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
-    id: 'project-1',
+    id: 'wyld-lark',
     slug: 'wyld-lark',
     title: 'Wyld Lark Video Editing',
     description:
@@ -36,19 +36,25 @@ export const projects: ProjectItem[] = [
     websiteUrl: 'https://wyldlark.com/',
   },
   {
-    id: 'project-2',
-    slug: 'ecommerce-platform',
-    title: 'E-Commerce Platform',
-    description:
-      'Complete e-commerce solution with custom product configurator and seamless checkout experience.',
+    id: 'bloomist',
+    slug: 'bloomist',
+    title: 'Bloomist',
+    description: 'Technical tweaks in an existing Shopify store.',
     fullDescription:
-      'A comprehensive e-commerce platform built from the ground up with custom product configuration tools, advanced inventory management, and a streamlined checkout process. The platform includes admin dashboards, customer accounts, and integrated payment processing.',
+      'Bloomist was an already established, beautifully curated website that needed a little assistance ' +
+      'working with app installations and the more technical aspects of the Shopify e-commerce space. ' +
+      "That's where we came in. We worked with Bloomist to implement Gorgias chat, refresh and reorganize " +
+      'all collections to use meta-fields for categorization and improved SEO, and optimize product ' +
+      'images for faster load times and better visual appeal.',
     category: 'E-Commerce Development',
-    imageUrl: '/sagebrush.jpg',
-    heroImage: '/sagebrush.jpg',
-    technologies: ['Shopify', 'React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    additionalImages: ['/desert-roadtrip.jpg', '/roadtrip.jpg'],
-    websiteUrl: 'https://example-ecommerce.com',
+    imageUrl: '/projects/bloomist/bloomist-background.jpg',
+    heroImage: '/projects/bloomist/bloomist-category.jpg',
+    technologies: ['Shopify', 'Gorgias Chat', 'Theme Development'],
+    additionalImages: [
+      '/projects/bloomist/bloomist-background.jpg',
+      '/projects/bloomist/bloomist-homepage.jpg',
+    ],
+    websiteUrl: 'https://bloomist.com/',
   },
   {
     id: 'project-3',

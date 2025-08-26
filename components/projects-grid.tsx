@@ -6,7 +6,10 @@ import { projects, type ProjectItem } from '@/lib/projects-data'
 
 function ProjectGridItem({ project }: { project: ProjectItem }) {
   return (
-    <Link href={`/project/${project.slug}`} className='block'>
+    <Link
+      href={`/project/${project.slug}`}
+      className='block border-2 border-rose-200 hover:border-rose-400 transition-colors duration-300'
+    >
       <div className='group relative overflow-hidden cursor-pointer'>
         <div className='relative w-full h-64 md:h-80 overflow-hidden'>
           <Image

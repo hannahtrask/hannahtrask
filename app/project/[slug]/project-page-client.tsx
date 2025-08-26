@@ -74,7 +74,7 @@ function ProjectDetailsSection({ project }: { project: any }) {
             className='lg:w-1/2'
           >
             <h2 className='text-4xl md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-8'>
-              Project Overview
+              Overview
             </h2>
             <p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8'>
               {project.fullDescription}
@@ -191,7 +191,7 @@ function ImagesSection({ project }: { project: any }) {
           className='text-center mb-16'
         >
           <h2 className='text-4xl md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-8'>
-            Project Gallery
+            Gallery
           </h2>
           <p className='text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto'>
             Peek at the details :)
