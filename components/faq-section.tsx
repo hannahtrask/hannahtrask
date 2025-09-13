@@ -38,7 +38,7 @@ const faqItems: FAQItem[] = [
   },
   {
     id: 'why-choose-us',
-    question: 'Why should I work with Sun & Sagebrush Creative?',
+    question: 'Why should I work with SAGEBRUSH CREATIVE?',
     answer:
       "We bring a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. Based in Jackson Hole, WY, we understand the importance of authentic storytelling and building genuine connections. We're not just developers and designers, but also we're partners in your business growth. Our small team means you get personalized attention, direct communication, and websites that truly reflect your brand's personality and values.",
   },

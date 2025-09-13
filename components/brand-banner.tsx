@@ -2,7 +2,7 @@
 
 export default function BrandBanner() {
   const bannerText =
-    ' ☼\u00A0\u00A0\u00A0INVEST IN YOUR BRAND WITH SUN & SAGEBRUSH CREATIVE\u00A0\u00A0\u00A0    '
+    ' ☼\u00A0\u00A0\u00A0INVEST IN YOUR BRAND WITH SAGEBRUSH CREATIVE\u00A0\u00A0\u00A0    '
   const repeatedText = bannerText.repeat(5)
 
   return (

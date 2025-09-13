@@ -4,7 +4,7 @@ import Link from 'next/link'
 import ProjectsGrid from '@/components/projects-grid'
 
 export const metadata: Metadata = {
-  title: 'Work | Sun & Sagebrush Creative',
+  title: 'Work | SAGEBRUSH CREATIVE',
 }
 
 export default function WorkPage() {

@@ -23,12 +23,12 @@ export async function generateMetadata({
 
   if (!project) {
     return {
-      title: 'Project Not Found | Sun & Sagebrush Creative',
+      title: 'Project Not Found | SAGEBRUSH CREATIVE',
     }
   }
 
   return {
-    title: `${project.title} | Sun & Sagebrush Creative`,
+    title: `${project.title} | SAGEBRUSH CREATIVE`,
     description: project.description,
   }
 }

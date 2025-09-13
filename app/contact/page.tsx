@@ -3,7 +3,7 @@ import { Mail, MapPin, Clock } from 'lucide-react'
 import ContactForm from '@/components/contact-form'
 
 export const metadata = {
-  title: 'Contact | Sun & Sagebrush Creative',
+  title: 'Contact | SAGEBRUSH CREATIVE',
   description:
     'Get in touch to discuss your next web development project. We specialize in creating beautiful, functional websites for outdoor industry and adventure businesses.',
 }
@@ -92,8 +92,8 @@ export default function ContactPage() {
           {/* Image Side */}
           <div className='relative h-[400px] lg:h-full'>
             <Image
-              src='/me-selfie.jpg'
-              alt='Craters of the moon'
+              src='/workspace.jpg'
+              alt='Workspace and sage brush'
               fill
               className='object-cover'
             />

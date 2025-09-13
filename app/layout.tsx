@@ -20,7 +20,7 @@ const archivoNarrow = Archivo_Narrow({
 })
 
 export const metadata: Metadata = {
-  title: 'SUN & SAGEBRUSH CREATIVE',
+  title: 'SAGEBRUSH CREATIVE',
   description:
     'Showcasing our work as a web developers with a passion for the outdoors',
   icons: {
