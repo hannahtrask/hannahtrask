@@ -4,9 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
+import { ProjectItem } from '@/lib/projects-data'
 
 interface ProjectPageClientProps {
-  project: any
+  project: ProjectItem
 }
 
 export default function ProjectPageClient({ project }: ProjectPageClientProps) {
@@ -58,7 +59,7 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
   )
 }
 
-function ProjectDetailsSection({ project }: { project: any }) {
+function ProjectDetailsSection({ project }: { project: ProjectItem }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
@@ -140,7 +141,7 @@ function ProjectDetailsSection({ project }: { project: any }) {
   )
 }
 
-function TechnologySection({ project }: { project: any }) {
+function TechnologySection({ project }: { project: ProjectItem }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
@@ -177,7 +178,7 @@ function TechnologySection({ project }: { project: any }) {
   )
 }
 
-function ImagesSection({ project }: { project: any }) {
+function ImagesSection({ project }: { project: ProjectItem }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (

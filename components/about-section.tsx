@@ -28,31 +28,15 @@ export default function AboutSection() {
                 className='px-16'
               >
                 <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300 mb-6'>
-                  In our web development and design work, we specialize in
-                  working with{' '}
-                  <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
-                    thoughtful lifestyle brands
-                  </span>
-                  ,{' '}
-                  <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
-                    e-commerce businesses
-                  </span>
-                  ,{' '}
-                  <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
-                    creative studios
-                  </span>
-                  , and{' '}
-                  <span className='font-medium text-desert-700 dark:text-desert-200 bg-desert-50 dark:bg-desert-700 px-2 py-1 rounded'>
-                    values-driven teams
-                  </span>
-                  .
+                  We specialize in working with philanthropies, wellness
+                  organizations, creative studios, locally owned businesses, and
+                  adventure-focused brands.
                 </p>
 
                 <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300'>
                   We believe that great digital experiences come from
                   understanding your unique story and translating that into
-                  thoughtful design and development that truly serves your
-                  goals.
+                  thoughtful design and development that serves your goals.
                 </p>
               </motion.div>
 
@@ -65,7 +49,7 @@ export default function AboutSection() {
                 className='relative h-96 w-full overflow-hidden group'
               >
                 <Image
-                  src='/me-rafting.jpg'
+                  src='/hay.jpg'
                   alt='Hannah wearing the purple rivers'
                   fill
                   className='object-cover transition-transform duration-700 group-hover:scale-105'
