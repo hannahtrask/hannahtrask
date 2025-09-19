@@ -106,7 +106,7 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className='text-center mb-12'
         >
-          <h2 className='text-4xl md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
+          <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
             FREQUENTLY ASKED QUESTIONS
           </h2>
           <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>

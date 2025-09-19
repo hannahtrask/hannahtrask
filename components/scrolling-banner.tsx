@@ -10,7 +10,7 @@ export default function ScrollingBanner() {
     <div className='relative w-full h-12 bg-desert-600 dark:bg-desert-700 overflow-hidden z-50'>
       <Link href='/contact' className='block w-full h-full group'>
         <div className='absolute inset-0 flex items-center'>
-          <div className='animate-scroll-banner group-hover:animate-none whitespace-nowrap text-white font-archivo-narrow text-sm font-medium tracking-wider group-hover:text-desert-200 transition-colors duration-900 cursor-pointer'>
+          <div className='animate-scroll-banner group-hover:animate-none whitespace-nowrap text-white font-montserrat text-sm font-medium tracking-wider group-hover:text-desert-200 transition-colors duration-900 cursor-pointer'>
             {repeatedText}
           </div>
         </div>

@@ -1,22 +1,22 @@
 import type React from 'react'
 import type { Metadata } from 'next'
-import { Julius_Sans_One, Archivo_Narrow } from 'next/font/google'
+import { Cormorant_SC, Montserrat } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
 
-const juliusSansOne = Julius_Sans_One({
+const cormorantSC = Cormorant_SC({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-julius-sans-one',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-cormorant-sc',
 })
 
-const archivoNarrow = Archivo_Narrow({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-archivo-narrow',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-montserrat',
 })
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${juliusSansOne.variable} ${archivoNarrow.variable} min-h-screen font-archivo-narrow`}
+        className={`${cormorantSC.variable} ${montserrat.variable} min-h-screen font-montserrat`}
       >
         <ThemeProvider
           attribute='class'

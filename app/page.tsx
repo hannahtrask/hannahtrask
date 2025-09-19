@@ -47,7 +47,7 @@ export default function Home() {
                 ease: [0.25, 0.46, 0.45, 0.94],
                 delay: 0.3,
               }}
-              className='font-julius-sans-one text-4xl md:text-6xl font-light mb-6 tracking-tight text-white drop-shadow-2xl'
+              className='font-cormorant-sc text-4xl md:text-6xl font-light mb-6 tracking-tight text-white drop-shadow-2xl'
             >
               <motion.span
                 initial={{ opacity: 0, x: -100 }}
@@ -57,7 +57,7 @@ export default function Home() {
                   delay: 0.8,
                   ease: [0.25, 0.46, 0.45, 0.94],
                 }}
-                className='font-julius-sans-one'
+                className='font-cormorant-sc'
               >
                 Let your ideas{' '}
               </motion.span>
@@ -69,7 +69,7 @@ export default function Home() {
                   delay: 1.2,
                   ease: [0.25, 0.46, 0.45, 0.94],
                 }}
-                className='font-julius-sans-one font-normal italic pr-2'
+                className='font-cormorant-sc font-normal italic pr-2'
               >
                 roam
               </motion.span>

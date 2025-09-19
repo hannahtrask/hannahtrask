@@ -19,9 +19,9 @@ const config = {
     },
     extend: {
       fontFamily: {
-        'julius-sans-one': ['var(--font-julius-sans-one)'],
-        'archivo-narrow': ['var(--font-archivo-narrow)'],
-        sans: ['var(--font-archivo-narrow)'],
+        'cormorant-sc': ['var(--font-cormorant-sc)'],
+        montserrat: ['var(--font-montserrat)'],
+        sans: ['var(--font-montserrat)'],
       },
       colors: {
         border: 'hsl(var(--border))',

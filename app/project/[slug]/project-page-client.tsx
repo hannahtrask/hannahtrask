@@ -37,7 +37,7 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
             <span className='text-lg font-medium text-white/90 uppercase tracking-wide mb-4 block'>
               {project.category}
             </span>
-            <h1 className='text-5xl md:text-7xl font-julius-sans-one font-light mb-6'>
+            <h1 className='text-5xl md:text-7xl font-cormorant-sc font-light mb-6'>
               {project.title}
             </h1>
             <p className='text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed'>
@@ -74,7 +74,7 @@ function ProjectDetailsSection({ project }: { project: ProjectItem }) {
             transition={{ duration: 0.8 }}
             className='lg:w-1/2'
           >
-            <h2 className='text-4xl md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-8'>
+            <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
               Overview
             </h2>
             <p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8'>
@@ -82,7 +82,7 @@ function ProjectDetailsSection({ project }: { project: ProjectItem }) {
             </p>
             <div className='space-y-4'>
               <div>
-                <h3 className='text-xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-2'>
+                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-2'>
                   Category
                 </h3>
                 <p className='text-gray-700 dark:text-gray-300'>
@@ -90,7 +90,7 @@ function ProjectDetailsSection({ project }: { project: ProjectItem }) {
                 </p>
               </div>
               <div>
-                <h3 className='text-xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-2'>
+                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-2'>
                   See it live
                 </h3>
                 <a
@@ -191,7 +191,7 @@ function ImagesSection({ project }: { project: ProjectItem }) {
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
         >
-          <h2 className='text-4xl md:text-5xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-8'>
+          <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
             Gallery
           </h2>
           <p className='text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto'>

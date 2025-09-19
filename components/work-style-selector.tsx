@@ -18,7 +18,7 @@ export default function WorkStyleSelector() {
 
   return (
     <div className='w-full mb-16'>
-      <h2 className='text-3xl md:text-4xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-8 text-center'>
+      <h2 className='text-3xl md:text-4xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8 text-center'>
         How do you prefer to work?
       </h2>
 
@@ -104,7 +104,7 @@ export default function WorkStyleSelector() {
               />
             </div>
             <div className='md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center bg-white dark:bg-desert-800'>
-              <h3 className='text-2xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
+              <h3 className='text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
                 We recommend: PROJECT SPRINTS
               </h3>
               <p className='text-gray-700 dark:text-gray-300 mb-6 leading-relaxed'>
@@ -137,7 +137,7 @@ export default function WorkStyleSelector() {
               />
             </div>
             <div className='md:w-1/2 w-full p-8 md:p-12 flex flex-col justify-center bg-white dark:bg-desert-800'>
-              <h3 className='text-2xl font-julius-sans-one font-bold text-desert-800 dark:text-white mb-4'>
+              <h3 className='text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
                 We recommend: INCLUSIVE WEBSITE PACKAGES
               </h3>
               <p className='text-gray-700 dark:text-gray-300 mb-6 leading-relaxed'>
