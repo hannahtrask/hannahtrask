@@ -8,17 +8,7 @@ export default function AboutSection() {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
-    <div
-      className='bg-desert-50 dark:bg-desert-900 relative'
-      style={{
-        background: `
-          linear-gradient(to right, rgba(127, 73, 46, 0.1), transparent),
-          url(https://grainy-gradients.vercel.app/noise.svg),
-          hsl(40, 25%, 95%)
-        `,
-        filter: 'contrast(120%) brightness(100%)',
-      }}
-    >
+    <div className='bg-desert-50 dark:bg-desert-900 relative'>
       <div>
         <div>
           <motion.div
