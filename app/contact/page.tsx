@@ -1,12 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import { Mail, MapPin, Clock } from 'lucide-react'
+import { motion } from 'framer-motion'
 import ContactForm from '@/components/contact-form'
-
-export const metadata = {
-  title: 'Contact | SAGEBRUSH CREATIVE',
-  description:
-    'Get in touch to discuss your next web development project. We specialize in creating beautiful, functional websites for outdoor industry and adventure businesses.',
-}
 
 export default function ContactPage() {
   return (
@@ -56,7 +53,18 @@ export default function ContactPage() {
                   <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
                     •
                   </span>
-                  <span>WE CHAT TO FIGURE OUT THE PERFECT PACKAGE FOR YOU</span>
+                  <span>
+                    WE'LL TOUCH BASE AND THEN SEND YOU A MORE DETAILED PROJECT
+                    QUESTIONNAIRE
+                  </span>
+                </li>
+                <li className='flex items-start'>
+                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
+                    •
+                  </span>
+                  <span>
+                    WE CHAT TO FIGURE OUT THE PERFECT DELIVERABLE FOR YOU
+                  </span>
                 </li>
                 <li className='flex items-start'>
                   <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
@@ -66,12 +74,6 @@ export default function ContactPage() {
                     COMPLETE YOUR PROJECT SCOPE & SUBMIT A DEPOSIT TO SECURE
                     YOUR PROJECT
                   </span>
-                </li>
-                <li className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
-                    •
-                  </span>
-                  <span>FILL OUT PROJECT QUESTIONNAIRE</span>
                 </li>
                 <li className='flex items-start'>
                   <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1'>
@@ -90,14 +92,24 @@ export default function ContactPage() {
           </div>
 
           {/* Image Side */}
-          <div className='relative h-[400px] lg:h-full'>
+          <motion.div
+            className='relative h-[400px] lg:h-full overflow-hidden group cursor-pointer'
+            initial={{ opacity: 0, x: 200, scale: 0.8 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{
+              duration: 1.2,
+              delay: 0.5,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
+          >
             <Image
               src='/workspace.jpg'
               alt='Workspace and sage brush'
               fill
-              className='object-cover'
+              className='object-cover transition-transform duration-500 group-hover:scale-110'
             />
-          </div>
+            <div className='absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+          </motion.div>
         </div>
       </div>
 

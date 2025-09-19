@@ -8,7 +8,17 @@ export default function AboutSection() {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
-    <div className='bg-desert-50 dark:bg-desert-900'>
+    <div
+      className='bg-desert-50 dark:bg-desert-900 relative'
+      style={{
+        background: `
+          linear-gradient(to right, rgba(127, 73, 46, 0.1), transparent),
+          url(https://grainy-gradients.vercel.app/noise.svg),
+          hsl(40, 25%, 95%)
+        `,
+        filter: 'contrast(120%) brightness(100%)',
+      }}
+    >
       <div>
         <div>
           <motion.div
@@ -25,18 +35,18 @@ export default function AboutSection() {
                   isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
                 }
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className='px-16'
+                className='px-4 md:px-8 lg:px-16'
               >
                 <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300 mb-6'>
-                  We specialize in working with philanthropies, wellness
-                  organizations, creative studios, locally owned businesses, and
-                  adventure-focused brands.
+                  We specialize in web development and design for food & bev,
+                  wellness brands, artists & creatives, and small businesses.
                 </p>
 
                 <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300'>
-                  We believe that great digital experiences come from
-                  understanding your unique story and translating that into
-                  thoughtful design and development that serves your goals.
+                  We gravitate especially to adventure, connection with nature,
+                  and unique stories. We believe that great digital experiences
+                  come from understanding <em>your</em> goals and translating
+                  them into thoughtful design and development.
                 </p>
               </motion.div>
 
