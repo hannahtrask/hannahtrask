@@ -21,10 +21,11 @@ export const projects: ProjectItem[] = [
       'Portfolio website for a Jackson WY based video editor, photographer and videographer.',
     fullDescription:
       'When Liz came to us, she was looking to give her site a facelift, so we did just that.' +
-      ' We implemented a modern, clean design, letting the videos do the talking. The site ' +
+      ' We implemented a modern, clean design, letting her expertise with video editing do the talking. The site ' +
       'is built on WordPress and uses Elementor for page building. Using Yoast SEO, we optimized ' +
-      'the site for better search engine optimization. The Wyld Lark website is an excellent example ' +
-      'of how small tweaks can go a long way.',
+      "the site for better search engine optimization, and implemented SSL to ensure robust security and protect her website's data. " +
+      'Wyld Lark is clean, simple, and easy to navigate. This website is an excellent example ' +
+      'of how a simple, clean design can go a long way.',
     category: 'Web Design & Development',
     imageUrl: '/projects/wyld-lark/wyld-lark-logo.jpg',
     heroImage: '/projects/wyld-lark/wyld-lark-logo.jpg',

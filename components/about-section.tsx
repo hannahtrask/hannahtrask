@@ -25,18 +25,18 @@ export default function AboutSection() {
                   isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }
                 }
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className='px-4 md:px-8 lg:px-16'
+                className='px-4 md:px-8 lg:px-16 py-2'
               >
                 <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300 mb-6'>
                   We specialize in web development and design for food & bev,
-                  wellness brands, artists & creatives, and small businesses.
+                  adventure brands, and small businesses.
                 </p>
 
                 <p className='text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300'>
-                  We gravitate especially to adventure, connection with nature,
-                  and unique stories. We believe that great digital experiences
-                  come from understanding <em>your</em> goals and translating
-                  them into thoughtful design and development.
+                  Great digital experiences come from understanding{' '}
+                  <em>your</em> goals and translating them into a thoughtful web
+                  presence. If you already have a web presence and need some
+                  help with an intimidating web task, we'll do that too.
                 </p>
               </motion.div>
 
