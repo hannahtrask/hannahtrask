@@ -4,9 +4,12 @@ export interface ProjectItem {
   title: string
   description: string
   category: string
+  // Recommended size: 800x600px (4:3 aspect ratio) - Used in project grid (h-64 md:h-80)
   imageUrl: string
+  // Recommended size: 1920x1080px (16:9 aspect ratio) - Used as full-screen hero background
   heroImage: string
   technologies: string[]
+  // Recommended size: 800x600px (4:3 aspect ratio) - Used in project detail sections (h-96) and gallery grid (h-80)
   additionalImages: string[]
   fullDescription: string
   websiteUrl: string
