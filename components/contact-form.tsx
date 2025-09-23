@@ -134,6 +134,7 @@ export default function ContactForm() {
         <div className='hb-p-68ab7f800c8dd7002e944c41-2'></div>
 
         {/* HoneyBook tracking pixel */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           height='1'
           width='1'
