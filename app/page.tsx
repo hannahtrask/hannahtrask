@@ -10,7 +10,7 @@ export default function Home() {
     <>
       {/* Hero Section with Parallax Background */}
       <Hero
-        backgroundImage='/desert-roadtrip.jpg'
+        backgroundImage='/hero-images/desert-roadtrip.jpg'
         backgroundImageAlt='A westfalia driving through a beautiful desert landscape.'
         title=''
         enableParallax={true}

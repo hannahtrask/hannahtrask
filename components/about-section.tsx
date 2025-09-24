@@ -49,7 +49,7 @@ export default function AboutSection() {
                 className='relative w-full overflow-hidden group'
               >
                 <Image
-                  src='/hay.jpg'
+                  src='/hero-images/hay.jpg'
                   alt='Hay truck driving away'
                   width={800}
                   height={600}
