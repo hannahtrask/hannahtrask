@@ -38,6 +38,7 @@ export const projects: ProjectItem[] = [
       '/projects/wyld-lark/wyld-lark.jpg',
     ],
     websiteUrl: 'https://wyldlark.com/',
+    webpageImage: '/projects/wyld-lark/wyld-lark-webpage.jpg',
   },
   {
     id: 'bloomist',
