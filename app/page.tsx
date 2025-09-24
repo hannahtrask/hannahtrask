@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Hero from '@/components/hero'
-import HeroDescription from '@/components/hero-description'
+import Hero from '@/components/hero/hero'
+import HeroDescription from '@/components/hero/hero-description'
 import AboutSection from '@/components/about-section'
 
 export default function Home() {

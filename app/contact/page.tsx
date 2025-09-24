@@ -3,18 +3,18 @@
 import Image from 'next/image'
 import { Mail, MapPin, Clock } from 'lucide-react'
 import { motion } from 'framer-motion'
-import Hero from '@/components/hero'
-import ContactForm from '@/components/contact-form'
+import Hero from '@/components/hero/hero'
+import ContactForm from '@/components/contact/contact-form'
 
 export default function ContactPage() {
   return (
     <div className='min-h-screen'>
       {/* Hero Section with Background Image */}
       <Hero
-        backgroundImage='/map.jpg'
+        backgroundImage='/hero-images/western-backdrop.jpg'
         backgroundImageAlt='Hannah on a mountain bike in Bend Oregon.'
         title='GET IN TOUCH'
-        overlayType='dark'
+        overlayType='gradient'
         titleClassName='text-5xl md:text-6xl font-julius-sans-one font-light mb-6 text-white'
       />
 
@@ -92,12 +92,12 @@ export default function ContactPage() {
             }}
           >
             <Image
-              src='/workspace.jpg'
+              src='/page-images/workspace-image.jpg'
               alt='Workspace and sage brush'
               fill
               className='object-cover transition-transform duration-500 group-hover:scale-110'
             />
-            <div className='absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+            <div className='absolute inset-0 bg-black/20 dark:bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
           </motion.div>
         </div>
       </div>

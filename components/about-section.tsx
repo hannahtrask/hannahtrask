@@ -55,7 +55,7 @@ export default function AboutSection() {
                   height={600}
                   className='w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105'
                 />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent'></div>
+                <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent dark:from-black/70'></div>
               </motion.div>
             </div>
           </motion.div>

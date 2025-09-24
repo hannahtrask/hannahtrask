@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
-import Hero from '@/components/hero'
+import Hero from '@/components/hero/hero'
 import { ProjectItem } from '@/lib/projects-data'
 
 interface ProjectPageClientProps {
@@ -23,7 +23,7 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
         description={project.description}
         contentAlignment='bottom'
         overlayType='custom'
-        overlayClassName='absolute inset-0 bg-black/40'
+        overlayClassName='absolute inset-0 bg-black/40 dark:bg-black/70'
         titleClassName='text-5xl md:text-7xl font-cormorant-sc mb-6'
         subtitleClassName='text-lg font-medium text-white/90 uppercase tracking-wide mb-4 block'
         descriptionClassName='text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed'

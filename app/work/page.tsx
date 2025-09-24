@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Hero from '@/components/hero'
-import ProjectsGrid from '@/components/projects-grid'
+import Hero from '@/components/hero/hero'
+import ProjectsGrid from '@/components/projects/projects-grid'
 
 export const metadata: Metadata = {
   title: 'Work | SAGEBRUSH CREATIVE',
