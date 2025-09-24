@@ -69,7 +69,7 @@ export const projects: ProjectItem[] = [
       "Hired on contract to work on Vert Solutions' booking software. Assisted in development, deployment, and comms between Vert Solutions and related resorts.",
     category: 'Portfolio Design',
     heroImage: '/projects/vert-solutions/procard-vert-solutions-frame.jpg',
-    technologies: ['Next.js', 'Framer Motion', 'TypeScript', 'Vercel'],
+    technologies: ['jQuery', 'JavaScript', 'CI/CD', 'GitHub'],
     additionalImages: [
       '/projects/vert-solutions/logo-vert-solutions.jpg',
       '/projects/vert-solutions/procard-vert-solutions-frame.jpg',
