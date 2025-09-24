@@ -11,8 +11,8 @@ export default function ContactPage() {
     <div className='min-h-screen'>
       {/* Hero Section with Background Image */}
       <Hero
-        backgroundImage='/hero-images/western-backdrop.jpg'
-        backgroundImageAlt='Hannah on a mountain bike in Bend Oregon.'
+        backgroundImage='/hero-images/desert-roadtrip.jpg'
+        backgroundImageAlt='A westfalia driving through a beautiful desert landscape.'
         title='GET IN TOUCH'
         overlayType='gradient'
         titleClassName='text-5xl md:text-6xl font-julius-sans-one font-light mb-6 text-white'
