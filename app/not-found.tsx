@@ -1,20 +1,18 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
+import Hero from '@/components/hero'
 
 export default function NotFound() {
   return (
-    <div className='min-h-screen relative flex items-center justify-center'>
-      <div className='absolute inset-0 z-0'>
-        <Image
-          src='/road-404.jpg'
-          alt='A highway somewhere in the American West.'
-          fill
-          className='object-cover'
-        />
-      </div>
-
-      <div className='container mx-auto px-4 relative z-10 text-center'>
+    <Hero
+      backgroundImage='/road-404.jpg'
+      backgroundImageAlt='A highway somewhere in the American West.'
+      title='404'
+      overlayType='custom'
+      overlayClassName=''
+      animateContent={false}
+    >
+      <div className='text-center text-white'>
         <h1 className='text-6xl font-light mb-6 text-white'>404</h1>
         <h2 className='text-2xl font-light mb-8 tracking-wide text-white'>
           Page Not Found
@@ -31,6 +29,6 @@ export default function NotFound() {
           <Link href='/'>Go back home</Link>
         </Button>
       </div>
-    </div>
+    </Hero>
   )
 }

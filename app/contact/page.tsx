@@ -3,31 +3,20 @@
 import Image from 'next/image'
 import { Mail, MapPin, Clock } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Hero from '@/components/hero'
 import ContactForm from '@/components/contact-form'
 
 export default function ContactPage() {
   return (
     <div className='min-h-screen'>
       {/* Hero Section with Background Image */}
-      <div className='relative h-screen w-full flex items-center overflow-hidden'>
-        <div className='absolute inset-0 z-0 w-full h-[120%]'>
-          <Image
-            src='/map.jpg'
-            alt='Hannah on a mountain bike in Bend Oregon.'
-            fill
-            priority
-            className='object-cover'
-          />
-          <div className='absolute inset-0 bg-black/50 backdrop-blur-[1px]'></div>
-        </div>
-
-        {/* Hero Content */}
-        <div className='container mx-auto px-4 relative z-10 text-center'>
-          <h1 className='text-5xl md:text-6xl font-julius-sans-one font-light mb-6 text-white'>
-            GET IN TOUCH
-          </h1>
-        </div>
-      </div>
+      <Hero
+        backgroundImage='/map.jpg'
+        backgroundImageAlt='Hannah on a mountain bike in Bend Oregon.'
+        title='GET IN TOUCH'
+        overlayType='dark'
+        titleClassName='text-5xl md:text-6xl font-julius-sans-one font-light mb-6 text-white'
+      />
 
       {/* How It Works Section - Full Width */}
       <div className='w-full bg-white dark:bg-desert-800'>
