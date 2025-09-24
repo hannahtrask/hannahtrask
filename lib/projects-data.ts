@@ -68,7 +68,7 @@ export const projects: ProjectItem[] = [
       'Ski lesson booking software for Jackson Hole, Aspen Snowmass, Big Sky, and other resorts.',
     fullDescription:
       "Hired on contract to work on Vert Solutions' booking software. Assisted in development, deployment, and comms between Vert Solutions and related resorts.",
-    category: 'Portfolio Design',
+    category: 'Software Development',
     heroImage: '/projects/vert-solutions/procard-vert-solutions-frame.jpg',
     technologies: ['jQuery', 'JavaScript', 'CI/CD', 'GitHub'],
     additionalImages: [
