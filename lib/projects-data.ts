@@ -9,6 +9,8 @@ export interface ProjectItem {
   technologies: string[]
   // Recommended size: 500x500px (1:1 square aspect ratio) - Used in square gallery grid (max 250px wide)
   additionalImages: string[]
+  // Recommended size: 3022x5772px (1:1.91 portrait aspect ratio) - Used for full webpage screenshots
+  webpageImage?: string
   fullDescription: string
   websiteUrl: string
 }
@@ -57,19 +59,22 @@ export const projects: ProjectItem[] = [
     ],
     websiteUrl: 'https://bloomist.com/',
   },
-  // {
-  //   id: 'project-3',
-  //   slug: 'creative-studio-portfolio',
-  //   title: 'Creative Studio Portfolio',
-  //   description:
-  //     'Minimalist portfolio website showcasing photography and design work with smooth animations.',
-  //   fullDescription:
-  //     'A stunning portfolio website for a creative studio specializing in photography and design. The site features smooth animations, an intuitive gallery system, and a content management system that allows the studio to easily update their work and maintain their online presence.',
-  //   category: 'Portfolio Design',
-  //   imageUrl: '/roadtrip.jpg',
-  //   heroImage: '/roadtrip.jpg',
-  //   technologies: ['Next.js', 'Framer Motion', 'TypeScript', 'Vercel'],
-  //   additionalImages: ['/desert-roadtrip.jpg', '/sagebrush.jpg'],
-  //   websiteUrl: 'https://creative-studio-portfolio.com',
-  // },
+  {
+    id: 'vert-solutions',
+    slug: 'vert-solutions',
+    title: 'Vert Solutions',
+    description:
+      'Ski lesson booking software for Jackson Hole, Aspen Snowmass, Big Sky, and other resorts.',
+    fullDescription:
+      "Hired on contract to work on Vert Solutions' booking software. Assisted in development, deployment, and comms between Vert Solutions and related resorts.",
+    category: 'Portfolio Design',
+    heroImage: '/projects/vert-solutions/procard-vert-solutions-frame.jpg',
+    technologies: ['Next.js', 'Framer Motion', 'TypeScript', 'Vercel'],
+    additionalImages: [
+      '/projects/vert-solutions/logo-vert-solutions.jpg',
+      '/projects/vert-solutions/procard-vert-solutions-frame.jpg',
+    ],
+    websiteUrl: 'https://www.vertsolutions.com/',
+    webpageImage: '/projects/vert-solutions/vert-solutions-webpage.png',
+  },
 ]

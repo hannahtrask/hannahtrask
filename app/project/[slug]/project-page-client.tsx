@@ -23,7 +23,7 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
             priority
             className='object-cover'
           />
-          <div className='absolute inset-0 bg-black/30'></div>
+          <div className='absolute inset-0 bg-black/40'></div>
         </div>
 
         {/* Hero content */}
@@ -37,7 +37,7 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
             <span className='text-lg font-medium text-white/90 uppercase tracking-wide mb-4 block'>
               {project.category}
             </span>
-            <h1 className='text-5xl md:text-7xl font-cormorant-sc font-light mb-6'>
+            <h1 className='text-5xl md:text-7xl font-cormorant-sc mb-6'>
               {project.title}
             </h1>
             <p className='text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed'>
@@ -53,6 +53,9 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
       {/* Tools Section */}
       <TechnologySection project={project} />
 
+      {/* Webpage Screenshot Section */}
+      {project.webpageImage && <WebpageSection project={project} />}
+
       {/* Additional Images Section */}
       <ImagesSection project={project} />
     </div>
@@ -63,7 +66,7 @@ function ProjectDetailsSection({ project }: { project: ProjectItem }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
-    <div className='bg-white dark:bg-desert-900 py-20'>
+    <div className='bg-white dark:bg-desert-900 py-10'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col lg:flex-row items-center gap-16'>
           {/* Text content - slides in from left */}
@@ -142,6 +145,43 @@ function ProjectDetailsSection({ project }: { project: ProjectItem }) {
   )
 }
 
+function WebpageSection({ project }: { project: ProjectItem }) {
+  const { ref, isVisible } = useScrollAnimation(0.3)
+
+  if (!project.webpageImage) return null
+
+  return (
+    <div className='bg-desert-50 dark:bg-desert-800 py-5'>
+      <div className='container mx-auto px-4'>
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
+          className='text-center mb-16'
+        ></motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='flex justify-center'
+        >
+          <div className='relative max-w-md w-full overflow-hidden shadow-2xl'>
+            <Image
+              src={project.webpageImage}
+              alt={`${project.title} website preview`}
+              width={3022}
+              height={5772}
+              className='w-full h-auto object-cover hover:scale-105 transition-transform duration-700'
+            />
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  )
+}
+
 function TechnologySection({ project }: { project: ProjectItem }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
@@ -183,7 +223,7 @@ function ImagesSection({ project }: { project: ProjectItem }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
-    <div className='bg-white dark:bg-desert-900 py-20'>
+    <div className='bg-white dark:bg-desert-900 py-10'>
       <div className='container mx-auto px-4'>
         <motion.div
           ref={ref}
@@ -191,14 +231,7 @@ function ImagesSection({ project }: { project: ProjectItem }) {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
-        >
-          <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
-            Gallery
-          </h2>
-          <p className='text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto'>
-            Peek at some more images :)
-          </p>
-        </motion.div>
+        ></motion.div>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'>
           {project.additionalImages.map((image: string, index: number) => (
