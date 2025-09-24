@@ -5,7 +5,7 @@ import Hero from '@/components/hero/hero'
 export default function NotFound() {
   return (
     <Hero
-      backgroundImage='/road-404.jpg'
+      backgroundImage='/hero-images/road-404.jpg'
       backgroundImageAlt='A highway somewhere in the American West.'
       title='404'
       overlayType='custom'
