@@ -11,7 +11,7 @@ export default function Home() {
       {/* Hero Section with Parallax Background */}
       <Hero
         backgroundImage='/hero-images/western-backdrop.jpg'
-        backgroundImageAlt='A beautiful western backdrop with a cowgirl.'
+        backgroundImageAlt='A beautiful western backdrop with a cowgirl. By Taylor Brandon.'
         title=''
         enableParallax={true}
         animateContent={false}

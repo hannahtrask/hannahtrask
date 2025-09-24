@@ -12,7 +12,7 @@ export default function WorkPage() {
     <>
       <Hero
         backgroundImage='/hero-images/work-background-bison.jpg'
-        backgroundImageAlt='Creative work and portfolio'
+        backgroundImageAlt='Bison lingering in a field in front of mountains'
         title='OUR WORK'
         titleClassName='text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'
       />
