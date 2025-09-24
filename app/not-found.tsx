@@ -28,7 +28,7 @@ export default function NotFound() {
           variant='outline'
           className='border-white text-desert-900 hover:bg-desert-100'
         >
-          <Link href='/'>Return to Base Camp</Link>
+          <Link href='/'>Go back home</Link>
         </Button>
       </div>
     </div>
