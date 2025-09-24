@@ -26,7 +26,7 @@ export default function ServicesPageClient() {
             className='w-full h-[120%]'
           >
             <Image
-              src='/workspace.jpg'
+              src='/hero-images/workspace.jpg'
               alt='Creative workspace and services'
               fill
               priority
