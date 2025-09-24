@@ -15,7 +15,7 @@ Hey there! I'm Hannah, a freelance web developer with a passion for creating bea
 
 - **Specialization**: Web development for outdoor industry, e-commerce, adventure & wellness travel companies, yoga and wellness practitioners, and travel bloggers
 - **Focus Areas**: Thoughtful lifestyle brands, small e-commerce businesses, creative studios, and values-driven teams
-- **Preferred Platforms**: WordPress, Shopify, and custom React/Next.js applications
+- **Preferred Platforms**: WordPress, Shopify, Sanity CMS, and custom React/Next.js applications
 - **Design Philosophy**: Clean, nature-inspired designs with smooth animations and excellent user experience
 
 ### Let's Connect
@@ -62,6 +62,14 @@ Hey there! I'm Hannah, a freelance web developer with a passion for creating bea
 - **Simple Icons** – Brand icons for technology badges
 - **Custom SVG Icons** – Hand-crafted icons for specific use cases
 
+### Content Management & Data
+
+- **Sanity CMS** – Headless CMS for content management
+  - `@sanity/client` – JavaScript client for Sanity
+  - `@sanity/image-url` – Image URL builder for optimized images
+  - `next-sanity` – Next.js integration with live preview capabilities
+- **GROQ** – Graph-Relational Object Queries for Sanity data fetching
+
 ### Email & Communication
 
 - **Resend** – Modern email API for contact form submissions
@@ -79,6 +87,7 @@ Hey there! I'm Hannah, a freelance web developer with a passion for creating bea
 - **Prettier** – Code formatting with custom configuration (no semicolons!)
 - **PostCSS** – CSS processing with Tailwind CSS integration
 - **Autoprefixer** – Automatic vendor prefixes for CSS
+- **Sanity Studio** – Content management interface for editors
 
 ### Build & Deployment
 

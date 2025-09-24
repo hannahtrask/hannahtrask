@@ -33,6 +33,7 @@ export async function generateMetadata({
   }
 }
 
+
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const resolvedParams = await params
   const project = projects.find(p => p.slug === resolvedParams.slug)

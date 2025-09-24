@@ -1,13 +1,33 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/hero/hero'
-import { projects } from '@/lib/projects-data'
+import { client } from '@/sanity/client'
+import { SanityDocument } from 'next-sanity'
 
 export const metadata: Metadata = {
   title: 'Work | SAGEBRUSH CREATIVE',
 }
 
-export default function WorkPage() {
+const PROJECTS_QUERY = `*[_type == "project" && defined(slug.current)] | order(_createdAt desc)[0...12] {
+  _id,
+  title,
+  slug,
+  category,
+  description,
+  heroImage,
+  technologies,
+  websiteUrl
+}`
+
+const options = { next: { revalidate: 30 } }
+
+export default async function WorkPage() {
+  const projects = await client.fetch<SanityDocument[]>(
+    PROJECTS_QUERY,
+    {},
+    options
+  )
+
   return (
     <>
       <Hero
@@ -28,9 +48,9 @@ export default function WorkPage() {
             {/* Client Names List */}
             <div className='space-y-6'>
               {projects.map(project => (
-                <div key={project.id}>
+                <div key={project._id}>
                   <Link
-                    href={`/project/${project.slug}`}
+                    href={`/project/${project.slug.current}`}
                     className='text-2xl md:text-3xl font-cormorant-sc text-desert-700 dark:text-desert-200 hover:text-desert-900 dark:hover:text-white transition-colors duration-300 block py-2'
                   >
                     {project.title}
