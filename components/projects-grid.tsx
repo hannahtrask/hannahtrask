@@ -13,7 +13,7 @@ function ProjectGridItem({ project }: { project: ProjectItem }) {
       <div className='group relative overflow-hidden cursor-pointer'>
         <div className='relative w-full h-64 md:h-80 overflow-hidden'>
           <Image
-            src={project.imageUrl}
+            src={project.additionalImages[0]}
             alt={project.title}
             fill
             className='object-cover transition-transform duration-700 group-hover:scale-105'

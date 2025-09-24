@@ -126,12 +126,13 @@ function ProjectDetailsSection({ project }: { project: ProjectItem }) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className='w-full lg:w-1/2'
           >
-            <div className='relative h-96 w-full overflow-hidden'>
+            <div className='relative w-full overflow-hidden'>
               <Image
                 src={project.additionalImages[0]}
                 alt={`${project.title} detail`}
-                fill
-                className='object-cover'
+                width={800}
+                height={600}
+                className='w-full h-auto object-cover'
               />
             </div>
           </motion.div>
@@ -195,18 +196,18 @@ function ImagesSection({ project }: { project: ProjectItem }) {
             Gallery
           </h2>
           <p className='text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto'>
-            Peek at the details :)
+            Peek at some more images :)
           </p>
         </motion.div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'>
           {project.additionalImages.map((image: string, index: number) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className='relative h-80 w-full overflow-hidden'
+              className='relative w-full max-w-[400px] aspect-square overflow-hidden'
             >
               <Image
                 src={image}

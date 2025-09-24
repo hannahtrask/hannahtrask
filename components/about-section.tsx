@@ -46,13 +46,14 @@ export default function AboutSection() {
                   isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }
                 }
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className='relative h-64 lg:h-96 w-full overflow-hidden group mx-6 md:mx-0'
+                className='relative w-full overflow-hidden group'
               >
                 <Image
                   src='/hay.jpg'
-                  alt='Hannah wearing the purple rivers'
-                  fill
-                  className='object-cover transition-transform duration-700 group-hover:scale-105'
+                  alt='Hay truck driving away'
+                  width={800}
+                  height={600}
+                  className='w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105'
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent'></div>
               </motion.div>

@@ -4,12 +4,10 @@ export interface ProjectItem {
   title: string
   description: string
   category: string
-  // Recommended size: 800x600px (4:3 aspect ratio) - Used in project grid (h-64 md:h-80)
-  imageUrl: string
   // Recommended size: 1920x1080px (16:9 aspect ratio) - Used as full-screen hero background
   heroImage: string
   technologies: string[]
-  // Recommended size: 800x600px (4:3 aspect ratio) - Used in project detail sections (h-96) and gallery grid (h-80)
+  // Recommended size: 500x500px (1:1 square aspect ratio) - Used in square gallery grid (max 250px wide)
   additionalImages: string[]
   fullDescription: string
   websiteUrl: string
@@ -30,12 +28,12 @@ export const projects: ProjectItem[] = [
       'Wyld Lark is clean, simple, and easy to navigate. This website is an excellent example ' +
       'of how a simple, clean design can go a long way.',
     category: 'Web Design & Development',
-    imageUrl: '/projects/wyld-lark/wyld-lark-logo.jpg',
     heroImage: '/projects/wyld-lark/wyld-lark-logo.jpg',
     technologies: ['Wordpress', 'Yoast SEO', 'Elementor'],
     additionalImages: [
-      '/projects/wyld-lark/wyld-lark-banner.jpg',
-      '/projects/wyld-lark/wyld-lark-socials.jpg',
+      '/projects/wyld-lark/wyld-lark-logo-square.jpg',
+      '/projects/wyld-lark/wyld-lark-flying.jpg',
+      '/projects/wyld-lark/wyld-lark.jpg',
     ],
     websiteUrl: 'https://wyldlark.com/',
   },
@@ -51,7 +49,6 @@ export const projects: ProjectItem[] = [
       'all collections to use meta-fields for categorization and improved SEO, and optimize product ' +
       'images for faster load times and better visual appeal.',
     category: 'E-Commerce Development',
-    imageUrl: '/projects/bloomist/bloomist-background.jpg',
     heroImage: '/projects/bloomist/bloomist-category.jpg',
     technologies: ['Shopify', 'Gorgias Chat', 'Theme Development'],
     additionalImages: [
