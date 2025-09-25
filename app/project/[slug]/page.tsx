@@ -45,6 +45,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     notFound()
   }
 
-  // @ts-ignore
+  console.log('project', project)
+
   return <ProjectPageClient project={project} />
 }

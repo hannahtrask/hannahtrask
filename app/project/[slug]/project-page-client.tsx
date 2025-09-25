@@ -9,7 +9,11 @@ import { SanityDocument, SanityImageAssetDocument } from 'next-sanity'
 import { PortableText } from '@portabletext/react'
 import { urlFor } from '@/sanity/utils/imageUrlBuilder'
 
-export default function ProjectPageClient({ project }: SanityDocument) {
+export default function ProjectPageClient({
+  project,
+}: {
+  project: SanityDocument
+}) {
   return (
     <div className='min-h-screen'>
       {/* Full-screen Hero Section */}
