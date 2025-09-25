@@ -45,7 +45,5 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     notFound()
   }
 
-  console.log('project', project)
-
   return <ProjectPageClient project={project} />
 }
