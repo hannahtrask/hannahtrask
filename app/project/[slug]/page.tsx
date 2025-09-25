@@ -21,7 +21,7 @@ export async function generateMetadata({
     await params,
     options
   )
-  console.log('project', project)
+
 
   if (!project) {
     return {

@@ -6,13 +6,14 @@ import { motion } from 'framer-motion'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import Hero from '@/components/hero/hero'
 import { SanityDocument, SanityImageAssetDocument } from 'next-sanity'
+import {urlFor} from "@/sanity/utils/imageUrlBuilder";
 
 export default function ProjectPageClient({ project }: SanityDocument) {
   return (
     <div className='min-h-screen'>
       {/* Full-screen Hero Section */}
       <Hero
-        backgroundImage={project.heroImage.asset._ref}
+        backgroundImage={urlFor(project.heroImage).url()}
         backgroundImageAlt={project.title}
         title={project.title}
         subtitle={project.category}
@@ -110,7 +111,7 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
           >
             <div className='relative w-full overflow-hidden'>
               <Image
-                src={project.additionalImages[0].asset._ref}
+                src={urlFor(project.additionalImages[0]).url()}
                 alt={`${project.title} detail`}
                 width={800}
                 height={600}
@@ -148,7 +149,7 @@ function WebpageSection({ project }: { project: SanityDocument }) {
         >
           <div className='relative max-w-md w-full overflow-hidden shadow-2xl'>
             <Image
-              src={project.webpageImage.asset._ref}
+              src={urlFor(project.webpageImage).url()}
               alt={`${project.title} website preview`}
               width={3022}
               height={5772}
@@ -225,7 +226,7 @@ function ImagesSection({ project }: { project: SanityDocument }) {
                 className='relative w-full max-w-[400px] aspect-square overflow-hidden'
               >
                 <Image
-                  src={item.assset._ref}
+                  src={urlFor(item).url()}
                   alt={`${project.title} gallery ${index + 1}`}
                   fill
                   className='object-cover hover:scale-105 transition-transform duration-700'
