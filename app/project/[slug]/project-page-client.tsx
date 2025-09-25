@@ -20,9 +20,6 @@ export default function ProjectPageClient({
       <Hero
         backgroundImage={urlFor(project.heroImage).url()}
         backgroundImageAlt={project.title}
-        title={project.title}
-        subtitle={project.category}
-        description={project.description}
         contentAlignment='bottom'
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/40 dark:bg-black/70'
@@ -52,6 +49,22 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
 
   return (
     <div className='bg-white dark:bg-desert-900 py-10'>
+      <div className='container mx-auto px-4'>
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
+          className='text-center mb-16'
+        >
+          <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
+            {project.title}
+          </h2>
+          <p className='text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+            {project.description}
+          </p>
+        </motion.div>
+      </div>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col lg:flex-row items-center gap-16'>
           {/* Text content - slides in from left */}

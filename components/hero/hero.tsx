@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 interface HeroProps {
   backgroundImage: string
   backgroundImageAlt: string
-  title: string
+  title?: string
   subtitle?: string
   description?: string
   contentAlignment?: 'center' | 'bottom' | 'custom'
