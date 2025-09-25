@@ -15,32 +15,31 @@ const faqItems: FAQItem[] = [
   {
     id: 'project-minimum',
     question: 'What is your project minimum?',
-    answer:
-      'Our project minimum varies depending on the type of service. For Project Sprints, we start at $1,500 for a one-page website. For Inclusive Website Packages, our minimum is $6,000. This ensures we can dedicate the proper time and resources to deliver exceptional results that meet your business goals.',
+    answer: 'Our project minimum varies depending on the type of service.',
   },
   {
     id: 'platforms',
     question: 'What platforms do you work on for websites?',
     answer:
-      "We specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
+      "Sagebrush Creative specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
   },
   {
     id: 'timeline',
     question: 'How long should I expect my project to take?',
     answer:
-      "Project timelines vary based on complexity and scope. Our Design Day option delivers results in just one day, while our Website in a Week option takes one week. For other types of packages, like the Inclusive Website Packages, you can expect a 4-10 weeks timeline from start to finish (meaning first planning to execution and delivery!), depending on the features and functionality required. We'll provide detailed timelines during our initial consultation and keep you updated throughout the process.",
+      "Project timelines vary based on complexity and scope. We'll provide detailed timelines during our initial consultation and keep you updated throughout the process.",
   },
   {
     id: 'getting-started',
     question: 'How do I get started?',
     answer:
-      "The first thing you\'ll want to do is reach out through our contact form and we can schedule a time to meet up in person or virtually. You won't be charged anything until we've sent a project proposal and contract and you are 100% ready to move forward! When we meet, we'll discuss your project goals, timeline, and budget to determine the best approach. After contracts are signed, you'll be asked to submit a deposit (typically 50% of the total fee) to secure your project, and we'll get started right away.",
+      "The first thing you\'ll want to do is reach out through our contact form and we can schedule a time to meet up in person or virtually. You won't be charged anything until you've received a project proposal and contract and you are 100% ready to move forward! When we meet, we'll discuss your project goals, timeline, and budget to determine the best approach. After contracts are signed, you'll be asked to submit a deposit (typically 50% of the total fee) to secure your project, and we'll get started right away.",
   },
   {
     id: 'why-choose-us',
     question: 'Why should I work with SAGEBRUSH CREATIVE?',
     answer:
-      "We bring a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. Based in Jackson Hole, WY, we understand the importance of authentic storytelling and building genuine connections. We're not just developers and designers, but also we're partners in your business growth. Our small team means you get personalized attention, direct communication, and websites that truly reflect your brand's personality and values.",
+      "Sagebrush Creative brings a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. Based in Jackson Hole, WY, we understand the importance of authentic storytelling, community, and building genuine connections. You'll get personalized attention, direct communication, and websites that truly reflect your brand's personality and values.",
   },
 ]
 
@@ -111,8 +110,8 @@ export default function FAQSection() {
           </h2>
           <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
           <p className='text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed'>
-            Got questions? We've got answers. Here are some of the most common
-            questions we receive about our services.
+            Got questions? Here's answers. Here are some of the most common
+            questions about our services.
           </p>
         </motion.div>
 
@@ -131,7 +130,7 @@ export default function FAQSection() {
           className='text-center mt-12'
         >
           <p className='text-gray-600 dark:text-gray-300 mb-6'>
-            Still have questions? We'd love to hear from you.
+            Still have questions? Send a message.
           </p>
           <a
             href='/contact'

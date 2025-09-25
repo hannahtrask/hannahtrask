@@ -90,7 +90,7 @@ export default function ServicesPageClient() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
-              WHAT WE OFFER
+              WHAT SAGEBRUSH CREATIVE OFFERS
             </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
 

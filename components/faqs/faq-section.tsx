@@ -22,13 +22,13 @@ const faqItems: FAQItem[] = [
     id: 'platforms',
     question: 'What platforms do you work on for websites?',
     answer:
-      "We specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
+      "Sagebrush Creative specializes in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
   },
   {
     id: 'timeline',
     question: 'How long should I expect my project to take?',
     answer:
-      "Project timelines vary based on complexity and scope, so it's hard to say in a general sense. We have a Website in a Day option, which is the fastest way from start to launch. Otherwise, what we can promise is that before you pay a dime we will have established a timeline that works for you, and we'll provide detailed updates throughout the process.",
+      "Project timelines vary based on complexity and scope, so it's hard to say in a general sense.",
   },
   {
     id: 'getting-started',
@@ -40,7 +40,7 @@ const faqItems: FAQItem[] = [
     id: 'why-choose-us',
     question: 'Why should I work with Sagebrush Creative?',
     answer:
-      "We bring a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. Based in Jackson Hole, WY, we understand the importance of authenticity and spirit and building genuine connections. We're not just developers and designers, but also we're partners in your business growth. You will get personalized attention, direct communication (with REAL humans), and websites that truly reflect your brand's personality and values.",
+      "We bring a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. You will get personalized attention, direct communication (with a REAL human), and websites that truly reflect your brand's personality and values.",
   },
 ]
 

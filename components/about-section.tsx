@@ -28,7 +28,7 @@ export default function AboutSection() {
                 className='px-6 py-8 md:px-8 lg:px-16 lg:py-2'
               >
                 <p className='text-base lg:text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300 mb-4 lg:mb-6'>
-                  We specialize in web development and design for food & bev,
+                  Specializing in web development and design for food & bev,
                   adventure brands, and small businesses.
                 </p>
 
@@ -36,7 +36,7 @@ export default function AboutSection() {
                   Great digital experiences come from understanding{' '}
                   <em>your</em> goals and translating them into a thoughtful web
                   presence. If you already have a web presence and need some
-                  help with an intimidating web task, we'll do that too.
+                  help with intimidating web tasks, I'm here to help.
                 </p>
               </motion.div>
 
