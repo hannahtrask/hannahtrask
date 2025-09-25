@@ -22,7 +22,6 @@ export async function generateMetadata({
     options
   )
 
-
   if (!project) {
     return {
       title: 'Project Not Found | SAGEBRUSH CREATIVE',
@@ -36,7 +35,7 @@ export async function generateMetadata({
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const project = await client.fetch<SanityDocument>(
+  const project: SanityDocument = await client.fetch<SanityDocument>(
     PROJECT_QUERY,
     await params,
     options
@@ -46,5 +45,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     notFound()
   }
 
+  // @ts-ignore
   return <ProjectPageClient project={project} />
 }

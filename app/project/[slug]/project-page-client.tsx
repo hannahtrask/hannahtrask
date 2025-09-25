@@ -6,7 +6,8 @@ import { motion } from 'framer-motion'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import Hero from '@/components/hero/hero'
 import { SanityDocument, SanityImageAssetDocument } from 'next-sanity'
-import {urlFor} from "@/sanity/utils/imageUrlBuilder";
+import { PortableText } from '@portabletext/react'
+import { urlFor } from '@/sanity/utils/imageUrlBuilder'
 
 export default function ProjectPageClient({ project }: SanityDocument) {
   return (
@@ -60,9 +61,20 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
             <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
               Overview
             </h2>
-            <p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8'>
-              {project.fullDescription}
-            </p>
+            <div className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8 prose prose-lg max-w-none'>
+              <PortableText
+                value={project.fullDescription}
+                components={{
+                  block: {
+                    normal: ({ children }) => (
+                      <p className='text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4'>
+                        {children}
+                      </p>
+                    ),
+                  },
+                }}
+              />
+            </div>
             <div className='space-y-4'>
               <div>
                 <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-2'>
