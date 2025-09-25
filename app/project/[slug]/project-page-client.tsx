@@ -5,18 +5,14 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import Hero from '@/components/hero/hero'
-import { ProjectItem } from '@/lib/projects-data'
+import { SanityDocument, SanityImageAssetDocument } from 'next-sanity'
 
-interface ProjectPageClientProps {
-  project: ProjectItem
-}
-
-export default function ProjectPageClient({ project }: ProjectPageClientProps) {
+export default function ProjectPageClient({ project }: SanityDocument) {
   return (
     <div className='min-h-screen'>
       {/* Full-screen Hero Section */}
       <Hero
-        backgroundImage={project.heroImage}
+        backgroundImage={project.heroImage.asset._ref}
         backgroundImageAlt={project.title}
         title={project.title}
         subtitle={project.category}
@@ -45,7 +41,7 @@ export default function ProjectPageClient({ project }: ProjectPageClientProps) {
   )
 }
 
-function ProjectDetailsSection({ project }: { project: ProjectItem }) {
+function ProjectDetailsSection({ project }: { project: SanityDocument }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
@@ -114,7 +110,7 @@ function ProjectDetailsSection({ project }: { project: ProjectItem }) {
           >
             <div className='relative w-full overflow-hidden'>
               <Image
-                src={project.additionalImages[0]}
+                src={project.additionalImages[0].asset._ref}
                 alt={`${project.title} detail`}
                 width={800}
                 height={600}
@@ -128,7 +124,7 @@ function ProjectDetailsSection({ project }: { project: ProjectItem }) {
   )
 }
 
-function WebpageSection({ project }: { project: ProjectItem }) {
+function WebpageSection({ project }: { project: SanityDocument }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   if (!project.webpageImage) return null
@@ -152,7 +148,7 @@ function WebpageSection({ project }: { project: ProjectItem }) {
         >
           <div className='relative max-w-md w-full overflow-hidden shadow-2xl'>
             <Image
-              src={project.webpageImage}
+              src={project.webpageImage.asset._ref}
               alt={`${project.title} website preview`}
               width={3022}
               height={5772}
@@ -165,7 +161,7 @@ function WebpageSection({ project }: { project: ProjectItem }) {
   )
 }
 
-function TechnologySection({ project }: { project: ProjectItem }) {
+function TechnologySection({ project }: { project: SanityDocument }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
@@ -202,7 +198,7 @@ function TechnologySection({ project }: { project: ProjectItem }) {
   )
 }
 
-function ImagesSection({ project }: { project: ProjectItem }) {
+function ImagesSection({ project }: { project: SanityDocument }) {
   const { ref, isVisible } = useScrollAnimation(0.3)
 
   return (
@@ -217,22 +213,26 @@ function ImagesSection({ project }: { project: ProjectItem }) {
         ></motion.div>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'>
-          {project.additionalImages.map((image: string, index: number) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className='relative w-full max-w-[400px] aspect-square overflow-hidden'
-            >
-              <Image
-                src={image}
-                alt={`${project.title} gallery ${index + 1}`}
-                fill
-                className='object-cover hover:scale-105 transition-transform duration-700'
-              />
-            </motion.div>
-          ))}
+          {project.additionalImages.map(
+            (item: SanityImageAssetDocument, index: number) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                animate={
+                  isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                }
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className='relative w-full max-w-[400px] aspect-square overflow-hidden'
+              >
+                <Image
+                  src={item.assset._ref}
+                  alt={`${project.title} gallery ${index + 1}`}
+                  fill
+                  className='object-cover hover:scale-105 transition-transform duration-700'
+                />
+              </motion.div>
+            )
+          )}
         </div>
 
         {/* Back to Work CTA */}

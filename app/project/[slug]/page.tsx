@@ -1,7 +1,11 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { projects } from '@/lib/projects-data'
 import ProjectPageClient from './project-page-client'
+import { client } from '@/sanity/client'
+import { SanityDocument } from 'next-sanity'
+
+const PROJECT_QUERY = `*[_type == "project" && slug.current == $slug][0]`
+const options = { next: { revalidate: 30 } }
 
 interface ProjectPageProps {
   params: Promise<{
@@ -9,17 +13,15 @@ interface ProjectPageProps {
   }>
 }
 
-export async function generateStaticParams() {
-  return projects.map(project => ({
-    slug: project.slug,
-  }))
-}
-
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
-  const resolvedParams = await params
-  const project = projects.find(p => p.slug === resolvedParams.slug)
+  const project = await client.fetch<SanityDocument>(
+    PROJECT_QUERY,
+    await params,
+    options
+  )
+  console.log('project', project)
 
   if (!project) {
     return {
@@ -33,10 +35,12 @@ export async function generateMetadata({
   }
 }
 
-
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const resolvedParams = await params
-  const project = projects.find(p => p.slug === resolvedParams.slug)
+  const project = await client.fetch<SanityDocument>(
+    PROJECT_QUERY,
+    await params,
+    options
+  )
 
   if (!project) {
     notFound()
