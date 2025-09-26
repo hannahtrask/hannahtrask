@@ -50,8 +50,7 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
   return (
     <div className='bg-white dark:bg-desert-900 py-10'>
       <div className='container mx-auto px-4'>
-        <div
-        >
+        <div>
           <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
             {project.title}
           </h2>
@@ -63,8 +62,7 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
       <div className='container mx-auto px-4'>
         <div className='flex flex-col lg:flex-row items-center gap-16'>
           {/* Text content - slides in from left */}
-          <div
-          >
+          <div>
             <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
               Overview
             </h2>
@@ -122,8 +120,7 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
           </div>
 
           {/* Image - slides in from right */}
-          <div
-          >
+          <div>
             <div className='relative w-full overflow-hidden'>
               <Image
                 src={urlFor(project.additionalImages[0]).url()}
