@@ -28,7 +28,7 @@ const faqItems: FAQItem[] = [
     id: 'timeline',
     question: 'How long should I expect my project to take?',
     answer:
-      "Project timelines vary based on complexity and scope, so it's hard to say in a general sense.",
+      "Project timelines vary based on complexity and scope, so it's hard to say in a general sense. The shortest option is website in a day, which will take one day after a contract is signed and 50% of the project fee paid.",
   },
   {
     id: 'getting-started',

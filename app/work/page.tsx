@@ -51,7 +51,7 @@ export default async function WorkPage() {
                 <div key={project._id}>
                   <Link
                     href={`/project/${project.slug.current}`}
-                    className='text-2xl md:text-3xl font-cormorant-sc text-desert-700 dark:text-desert-200 hover:text-desert-900 dark:hover:text-white transition-colors duration-300 block py-2'
+                    className='text-2xl md:text-3xl font-cormorant-sc text-desert-700 dark:text-desert-200 hover:text-desert-900 dark:hover:text-white transition-colors duration-300 block py-1'
                   >
                     {project.title}
                   </Link>
