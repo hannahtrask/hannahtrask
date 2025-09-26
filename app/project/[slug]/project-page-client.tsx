@@ -111,7 +111,7 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
                   rel='noopener noreferrer'
                   className='inline-flex items-center text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-desert-100 transition-colors duration-300 font-medium'
                 >
-                  {project.websiteUrl}
+                  {project.title}'s site
                   <svg
                     className='w-4 h-4 ml-2'
                     fill='none'
