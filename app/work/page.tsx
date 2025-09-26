@@ -36,16 +36,16 @@ export default async function WorkPage() {
         title='OUR WORK'
         titleClassName='text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'
       />
-      {/* Clients Section */}
+      {/* Work Section */}
       <div className='bg-desert-50 dark:bg-desert-900 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
-              CLIENTS
+              THE WORK
             </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
 
-            {/* Client Names List */}
+            {/* Project Names List */}
             <div className='space-y-6'>
               {projects.map(project => (
                 <div key={project._id}>
