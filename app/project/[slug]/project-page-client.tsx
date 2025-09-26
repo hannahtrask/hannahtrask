@@ -155,7 +155,7 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
 }
 
 function WebpageSection({ project }: { project: SanityDocument }) {
-  const { ref, isVisible } = useScrollAnimation(0.3)
+  const { ref, isVisible } = useScrollAnimation(0.1)
 
   if (!project.webpageImage) return null
 
