@@ -45,17 +45,12 @@ export default function ProjectPageClient({
 }
 
 function ProjectDetailsSection({ project }: { project: SanityDocument }) {
-  const { ref, isVisible } = useScrollAnimation(0.3)
+  // const { ref, isVisible } = useScrollAnimation(0.1)
 
   return (
     <div className='bg-white dark:bg-desert-900 py-10'>
       <div className='container mx-auto px-4'>
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          className='text-center mb-16'
+        <div
         >
           <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
             {project.title}
@@ -63,17 +58,12 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
           <p className='text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed'>
             {project.description}
           </p>
-        </motion.div>
+        </div>
       </div>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col lg:flex-row items-center gap-16'>
           {/* Text content - slides in from left */}
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, x: -100 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-            transition={{ duration: 0.8 }}
-            className='lg:w-1/2'
+          <div
           >
             <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
               Overview
@@ -129,14 +119,10 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Image - slides in from right */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='w-full lg:w-1/2'
+          <div
           >
             <div className='relative w-full overflow-hidden'>
               <Image
@@ -147,7 +133,7 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
                 className='w-full h-auto object-cover'
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
