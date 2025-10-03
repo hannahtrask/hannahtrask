@@ -54,12 +54,12 @@ function ProjectDetailsSection({ project }: { project: SanityDocument }) {
           <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
             {project.title}
           </h2>
-          <p className='text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+          <p className='text-gray-600 dark:text-gray-300 max-w-3xl leading-relaxed'>
             {project.description}
           </p>
         </div>
       </div>
-      <div className='container mx-auto px-4'>
+      <div className='container mx-auto px-4 pt-4'>
         <div className='flex flex-col lg:flex-row items-center gap-16'>
           {/* Text content - slides in from left */}
           <div>
@@ -241,7 +241,7 @@ function ImagesSection({ project }: { project: SanityDocument }) {
                   src={urlFor(item).url()}
                   alt={`${project.title} gallery ${index + 1}`}
                   fill
-                  className='object-cover hover:scale-105 transition-transform duration-700'
+                  className='object-contain hover:scale-105 transition-transform duration-700'
                 />
               </motion.div>
             )

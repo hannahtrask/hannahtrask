@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Hero from '@/components/hero/hero'
 import { client } from '@/sanity/client'
 import { SanityDocument } from 'next-sanity'
+import Image from 'next/image'
+import { urlFor } from '@/sanity/utils/imageUrlBuilder'
 
 export const metadata: Metadata = {
   title: 'Work | SAGEBRUSH CREATIVE',
@@ -15,6 +17,7 @@ const PROJECTS_QUERY = `*[_type == "project" && defined(slug.current)] | order(_
   category,
   description,
   heroImage,
+  webpageImage,
   technologies,
   websiteUrl
 }`
@@ -57,6 +60,33 @@ export default async function WorkPage() {
                   </Link>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Webpage Preview */}
+        <div className='bg-desert-50 dark:bg-desert-900 py-16'>
+          <div className='container mx-auto px-4'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
+              <div className='flex justify-center'>
+                <div className='grid grid-cols-3 md:grid-cols-4 gap-2 max-w-4xl'>
+                  {projects.map(
+                    project =>
+                      project.webpageImage && (
+                        <div key={project._id} className='overflow-hidden'>
+                          <Image
+                            src={urlFor(project.webpageImage).url()}
+                            alt={`${project.title} website preview`}
+                            width={300}
+                            height={573}
+                            className='w-full h-auto object-contain hover:scale-105 transition-transform duration-700'
+                          />
+                        </div>
+                      )
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
