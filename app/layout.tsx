@@ -20,9 +20,9 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'SAGEBRUSH CREATIVE',
+  title: 'SAGEBRUSH CREATIVE - Under Construction',
   description:
-    'Showcasing our work as a web developers with a passion for the outdoors',
+    "Sagebrush Creative is currently under construction. We're working hard to bring you an incredible new website experience. Contact us about your project!",
   icons: {
     icon: '/favicon.ico',
   },

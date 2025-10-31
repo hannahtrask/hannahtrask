@@ -1,73 +1,50 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import Hero from '@/components/hero/hero'
-import HeroDescription from '@/components/hero/hero-description'
-import AboutSection from '@/components/about-section'
+import ContactForm from '@/components/contact/contact-form'
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section with Parallax Background */}
+      {/* Under Construction Hero Section */}
       <Hero
         backgroundImage='/hero-images/western-backdrop.jpg'
-        backgroundImageAlt='A beautiful western backdrop with a cowgirl. By Taylor Brandon.'
-        title=''
-        enableParallax={true}
-        animateContent={false}
+        backgroundImageAlt='A highway somewhere in the American West.'
+        title='UNDER CONSTRUCTION'
+        overlayType='custom'
+        overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
+        animateContent={true}
+        titleClassName='text-5xl md:text-7xl font-cormorant-sc mb-6 text-white'
       >
-        <div className='text-center'>
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1.2,
-              ease: [0.25, 0.46, 0.45, 0.94],
-              delay: 0.3,
-            }}
-            className='font-cormorant-sc text-4xl md:text-6xl font-light mb-6 tracking-tight text-white drop-shadow-2xl'
-          >
-            <motion.span
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 1.0,
-                delay: 0.8,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              }}
-              className='font-cormorant-sc'
-            >
-              Let your ideas{' '}
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 1.0,
-                delay: 1.2,
-                ease: [0.25, 0.46, 0.45, 0.94],
-              }}
-              className='font-cormorant-sc font-normal italic pr-2'
-            >
-              roam
-            </motion.span>
-          </motion.h1>
-
-          {/* Animated decorative element */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 1.8 }}
-            className='w-24 h-px bg-gradient-to-r from-transparent via-brand-lavender to-transparent mx-auto'
-          />
+        <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
+          <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-cormorant-sc mb-4 sm:mb-6 text-white leading-tight px-2'>
+            UNDER CONSTRUCTION
+          </h1>
+          <h2 className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 sm:mb-8 tracking-wide text-white px-4'>
+            something new is coming :)
+          </h2>
+          <p className='text-gray-200 mb-8 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto font-light text-sm sm:text-base md:text-lg leading-relaxed px-4'>
+            Sagebrush Creative is currently undergoing some exciting changes. In
+            the meantime, we'd love to hear about your project! Check out the
+            lead inquiry below.
+          </p>
         </div>
       </Hero>
 
-      {/* Hero Description */}
-      <HeroDescription />
-
-      {/* About Section */}
-      <AboutSection />
+      {/* Contact Form Section */}
+      <div id='contact-form' className='bg-desert-50 dark:bg-desert-900 py-16'>
+        <div className='container mx-auto px-4'>
+          <div className='text-center mb-12'>
+            <h2 className='text-4xl md:text-5xl font-cormorant-sc font-light text-desert-800 dark:text-desert-100 mb-6'>
+              Let's Connect
+            </h2>
+            <p className='text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed'>
+              Even though our site is under construction, we're still taking on
+              new projects. Tell us about your vision and let's start the
+              conversation!
+            </p>
+          </div>
+          <ContactForm />
+        </div>
+      </div>
     </>
   )
 }

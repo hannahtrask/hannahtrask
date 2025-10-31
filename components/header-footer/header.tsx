@@ -42,7 +42,7 @@ export default function Header() {
             <strong>SAGEBRUSH CREATIVE</strong>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Under Construction Mode */}
           <nav className='hidden md:flex items-center space-x-8'>
             <Link
               href='/'
@@ -54,39 +54,40 @@ export default function Header() {
             >
               HOME
             </Link>
-            <Link
-              href='/work'
-              className={`text-base tracking-wide transition-colors ${
+            <span
+              className={`text-base tracking-wide opacity-50 cursor-not-allowed ${
                 isScrolled
-                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
-                  : 'text-white/80 hover:text-white'
+                  ? 'text-gray-400 dark:text-gray-500'
+                  : 'text-white/40'
               }`}
             >
               WORK
-            </Link>
-            <Link
-              href='/services'
-              className={`text-base tracking-wide transition-colors ${
+            </span>
+            <span
+              className={`text-base tracking-wide opacity-50 cursor-not-allowed ${
                 isScrolled
-                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
-                  : 'text-white/80 hover:text-white'
+                  ? 'text-gray-400 dark:text-gray-500'
+                  : 'text-white/40'
               }`}
             >
               SERVICES
-            </Link>
-            <Link
-              href='/contact'
-              className={`text-base tracking-wide transition-colors ${
+            </span>
+            <span
+              className={`text-base tracking-wide opacity-50 cursor-not-allowed ${
                 isScrolled
-                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
-                  : 'text-white/80 hover:text-white'
+                  ? 'text-gray-400 dark:text-gray-500'
+                  : 'text-white/40'
               }`}
             >
               CONTACT
-            </Link>
-            <ModeToggle isScrolled={isScrolled} />
+            </span>
+            {/*<ModeToggle isScrolled={isScrolled} />*/}
             <Button
-              asChild
+              onClick={() => {
+                document
+                  .getElementById('contact-form')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }}
               variant={isScrolled ? 'outline' : 'secondary'}
               className={
                 isScrolled
@@ -94,13 +95,13 @@ export default function Header() {
                   : 'bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30'
               }
             >
-              <Link href='/contact'>LET&apos;S CHAT</Link>
+              LET&apos;S CHAT
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <div className='flex items-center md:hidden'>
-            <ModeToggle isScrolled={isScrolled} />
+            {/*<ModeToggle isScrolled={isScrolled} />*/}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`ml-2 p-2 ${isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-white'}`}
@@ -110,7 +111,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Under Construction Mode */}
         {isMenuOpen && (
           <nav className='md:hidden py-6 space-y-6 mt-4 bg-white dark:bg-gray-900 rounded-md shadow-lg'>
             <Link
@@ -120,36 +121,27 @@ export default function Header() {
             >
               Home
             </Link>
-            <Link
-              href='/work'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <span className='block px-4 text-gray-400 dark:text-gray-500 text-base tracking-wide opacity-50 cursor-not-allowed'>
               Work
-            </Link>
-            <Link
-              href='/services'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
-              onClick={() => setIsMenuOpen(false)}
-            >
+            </span>
+            <span className='block px-4 text-gray-400 dark:text-gray-500 text-base tracking-wide opacity-50 cursor-not-allowed'>
               Services
-            </Link>
-            <Link
-              href='/contact'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
-              onClick={() => setIsMenuOpen(false)}
-            >
+            </span>
+            <span className='block px-4 text-gray-400 dark:text-gray-500 text-base tracking-wide opacity-50 cursor-not-allowed'>
               Contact
-            </Link>
+            </span>
             <div className='px-4'>
               <Button
-                asChild
+                onClick={() => {
+                  setIsMenuOpen(false)
+                  document
+                    .getElementById('contact-form')
+                    ?.scrollIntoView({ behavior: 'smooth' })
+                }}
                 variant='outline'
                 className='w-full border-desert-300 text-desert-800 dark:border-gray-700 dark:text-white'
               >
-                <Link href='/contact' onClick={() => setIsMenuOpen(false)}>
-                  Let's Talk
-                </Link>
+                Let's Talk
               </Button>
             </div>
           </nav>
