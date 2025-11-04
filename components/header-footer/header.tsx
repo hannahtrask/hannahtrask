@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -89,30 +88,6 @@ export default function Header() {
             <span className='block px-4 text-gray-400 dark:text-gray-500 text-base tracking-wide opacity-50 cursor-not-allowed'>
               Work
             </span>
-            <Link
-              href='/services'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <span className='block px-4 text-gray-400 dark:text-gray-500 text-base tracking-wide opacity-50 cursor-not-allowed'>
-              Contact
-            </span>
-            <div className='px-4'>
-              <Button
-                onClick={() => {
-                  setIsMenuOpen(false)
-                  document
-                    .getElementById('contact-form')
-                    ?.scrollIntoView({ behavior: 'smooth' })
-                }}
-                variant='outline'
-                className='w-full border-desert-300 text-desert-800 dark:border-gray-700 dark:text-white'
-              >
-                Let's Talk
-              </Button>
-            </div>
           </nav>
         )}
       </div>
