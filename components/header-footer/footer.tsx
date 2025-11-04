@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className='py-16 px-4 md:px-8 bg-desert-400 dark:bg-desert-800 text-white'>
+    <footer className='py-16 px-4 md:px-8 bg-sage-500 dark:bg-desert-800 text-white'>
       <div className='container mx-auto'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0'>
           <div>
@@ -24,7 +24,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/'
-                    className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     Home
@@ -37,21 +37,21 @@ export default function Footer() {
               <div className='flex space-x-4'>
                 <Link
                   href='https://github.com/hannahtrask'
-                  className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                  className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
                 >
                   <GitHubIcon size={18} />
                   <span className='sr-only'>GitHub</span>
                 </Link>
                 <Link
                   href='https://www.linkedin.com/in/hannahtrask/'
-                  className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                  className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
                 >
                   <LinkedInIcon size={18} />
                   <span className='sr-only'>LinkedIn</span>
                 </Link>
                 <Link
                   href='https://www.instagram.com/sagebrush.dev'
-                  className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                  className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
                 >
                   <InstagramIcon size={18} />
                   <span className='sr-only'>Instagram</span>

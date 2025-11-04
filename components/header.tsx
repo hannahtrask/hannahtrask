@@ -64,28 +64,7 @@ export default function Header() {
             >
               WORK
             </Link>
-            <Link
-              href='/contact'
-              className={`text-base tracking-wide transition-colors ${
-                isScrolled
-                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
-                  : 'text-white/80 hover:text-white'
-              }`}
-            >
-              CONTACT
-            </Link>
             <ModeToggle isScrolled={isScrolled} />
-            <Button
-              asChild
-              variant={isScrolled ? 'outline' : 'secondary'}
-              className={
-                isScrolled
-                  ? 'border-desert-300 text-desert-800'
-                  : 'bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30'
-              }
-            >
-              <Link href='/contact'>LET&apos;S CHAT</Link>
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -117,24 +96,6 @@ export default function Header() {
             >
               Work
             </Link>
-            <Link
-              href='/contact'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            <div className='px-4'>
-              <Button
-                asChild
-                variant='outline'
-                className='w-full border-desert-300 text-desert-800 dark:border-gray-700 dark:text-white'
-              >
-                <Link href='/contact' onClick={() => setIsMenuOpen(false)}>
-                  Let's Talk
-                </Link>
-              </Button>
-            </div>
           </nav>
         )}
       </div>

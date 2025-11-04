@@ -132,12 +132,6 @@ export default function FAQSection() {
           <p className='text-gray-600 dark:text-gray-300 mb-6'>
             Still have questions? Send a message.
           </p>
-          <a
-            href='/contact'
-            className='inline-block bg-desert-600 hover:bg-desert-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300'
-          >
-            Get in Touch
-          </a>
         </motion.div>
       </div>
     </div>

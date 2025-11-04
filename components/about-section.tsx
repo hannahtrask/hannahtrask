@@ -48,14 +48,12 @@ export default function AboutSection() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='relative w-full overflow-hidden group'
               >
-                <Image
-                  src='/hero-images/hay.jpg'
+                <img
+                  src='/hero-images/work-background-bison.jpg'
                   alt='Hay truck driving away'
-                  width={800}
-                  height={600}
                   className='w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105'
                 />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent dark:from-black/70'></div>
+                <div className='absolute inset-0 bg-black/60 dark:bg-black/80'></div>
               </motion.div>
             </div>
           </motion.div>

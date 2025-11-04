@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus, Minus } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
+import Link from 'next/link'
 
 interface FAQItem {
   id: string
@@ -133,12 +134,12 @@ export default function FAQSection() {
           <p className='text-gray-600 dark:text-gray-300 mb-6'>
             Still have questions? We'd love to hear from you.
           </p>
-          <a
-            href='/contact'
-            className='inline-block bg-desert-600 hover:bg-desert-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300'
+          <Link
+            href='mailto:hello@sunsagebrushcreative.com'
+            className='text-desert-600 dark:text-desert-200 hover:underline'
           >
-            Get in Touch
-          </a>
+            hello@sunsagebrushcreative.com
+          </Link>
         </motion.div>
       </div>
     </div>

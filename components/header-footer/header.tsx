@@ -62,40 +62,6 @@ export default function Header() {
             >
               WORK
             </span>
-            <span
-              className={`text-base tracking-wide opacity-50 cursor-not-allowed ${
-                isScrolled
-                  ? 'text-gray-400 dark:text-gray-500'
-                  : 'text-white/40'
-              }`}
-            >
-              SERVICES
-            </span>
-            <span
-              className={`text-base tracking-wide opacity-50 cursor-not-allowed ${
-                isScrolled
-                  ? 'text-gray-400 dark:text-gray-500'
-                  : 'text-white/40'
-              }`}
-            >
-              CONTACT
-            </span>
-            {/*<ModeToggle isScrolled={isScrolled} />*/}
-            <Button
-              onClick={() => {
-                document
-                  .getElementById('contact-form')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }}
-              variant={isScrolled ? 'outline' : 'secondary'}
-              className={
-                isScrolled
-                  ? 'border-desert-300 text-desert-800'
-                  : 'bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30'
-              }
-            >
-              LET&apos;S CHAT
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -123,9 +89,13 @@ export default function Header() {
             <span className='block px-4 text-gray-400 dark:text-gray-500 text-base tracking-wide opacity-50 cursor-not-allowed'>
               Work
             </span>
-            <span className='block px-4 text-gray-400 dark:text-gray-500 text-base tracking-wide opacity-50 cursor-not-allowed'>
+            <Link
+              href='/services'
+              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
+              onClick={() => setIsMenuOpen(false)}
+            >
               Services
-            </span>
+            </Link>
             <span className='block px-4 text-gray-400 dark:text-gray-500 text-base tracking-wide opacity-50 cursor-not-allowed'>
               Contact
             </span>
