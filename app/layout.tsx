@@ -46,7 +46,8 @@ export default function RootLayout({
 
   return (
     <html lang='en' suppressHydrationWarning>
-      <head title='Sagebrush Creative - Web Design & Development'>
+      <head>
+        <title>Sagebrush Creative - Web Design & Development</title>
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
