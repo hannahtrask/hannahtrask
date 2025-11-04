@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import { MapPin } from 'lucide-react'
-import { GitHubIcon, LinkedInIcon } from '@/components/ui/social-icons'
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  InstagramIcon,
+} from '@/components/ui/social-icons'
 
 export default function Footer() {
   return (
@@ -26,33 +30,6 @@ export default function Footer() {
                     Home
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href='/work'
-                    className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
-                  >
-                    <MapPin className='h-3 w-3 mr-2' />
-                    Work
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href='/services'
-                    className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
-                  >
-                    <MapPin className='h-3 w-3 mr-2' />
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href='/contact'
-                    className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
-                  >
-                    <MapPin className='h-3 w-3 mr-2' />
-                    Contact
-                  </Link>
-                </li>
               </ul>
             </div>
 
@@ -71,6 +48,13 @@ export default function Footer() {
                 >
                   <LinkedInIcon size={18} />
                   <span className='sr-only'>LinkedIn</span>
+                </Link>
+                <Link
+                  href='https://www.instagram.com/sagebrush.dev'
+                  className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                >
+                  <InstagramIcon size={18} />
+                  <span className='sr-only'>Instagram</span>
                 </Link>
               </div>
             </div>

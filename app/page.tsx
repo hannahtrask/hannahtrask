@@ -36,11 +36,6 @@ export default function Home() {
             <h2 className='text-4xl md:text-5xl font-cormorant-sc font-light text-desert-800 dark:text-desert-100 mb-6'>
               Let's Connect
             </h2>
-            <p className='text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed'>
-              Even though our site is under construction, we're still taking on
-              new projects. Tell us about your vision and let's start the
-              conversation!
-            </p>
           </div>
           <ContactForm />
         </div>
