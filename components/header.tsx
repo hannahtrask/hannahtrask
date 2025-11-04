@@ -62,12 +62,10 @@ export default function Header() {
             >
               WORK
             </Link>
-            <ModeToggle isScrolled={isScrolled} />
           </nav>
 
           {/* Mobile Menu Button */}
           <div className='flex items-center md:hidden'>
-            <ModeToggle isScrolled={isScrolled} />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`ml-2 p-2 ${isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-white'}`}

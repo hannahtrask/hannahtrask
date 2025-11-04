@@ -8,14 +8,25 @@ import Hero from '@/components/hero/hero'
 import { SanityDocument, SanityImageAssetDocument } from 'next-sanity'
 import { PortableText } from '@portabletext/react'
 import { urlFor } from '@/sanity/utils/imageUrlBuilder'
+import { generateProjectStructuredData } from '@/components/seo/seo-head'
 
 export default function ProjectPageClient({
   project,
 }: {
   project: SanityDocument
 }) {
+  const projectStructuredData = generateProjectStructuredData(project)
+
   return (
     <div className='min-h-screen'>
+      {/* Structured Data */}
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(projectStructuredData),
+        }}
+      />
+
       {/* Full-screen Hero Section */}
       <Hero
         backgroundImage={urlFor(project.heroImage).url()}

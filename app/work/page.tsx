@@ -6,10 +6,22 @@ import { SanityDocument } from 'next-sanity'
 import Image from 'next/image'
 import { urlFor } from '@/sanity/utils/imageUrlBuilder'
 import ContactForm from '@/components/contact-form'
+import { generateSEOMetadata } from '@/components/seo/seo-head'
 
-export const metadata: Metadata = {
-  title: 'Work | SAGEBRUSH CREATIVE',
-}
+export const metadata: Metadata = generateSEOMetadata({
+  title: 'Work',
+  description:
+    'Explore our portfolio of web design and development projects for outdoor industry businesses, e-commerce ventures, and adventure-focused brands.',
+  keywords: [
+    'portfolio',
+    'web design projects',
+    'web development work',
+    'outdoor industry websites',
+    'e-commerce projects',
+  ],
+  url: '/work',
+  type: 'website',
+})
 
 const PROJECTS_QUERY = `*[_type == "project" && defined(slug.current)] | order(_createdAt desc)[0...12] {
   _id,

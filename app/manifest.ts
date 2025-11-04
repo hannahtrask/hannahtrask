@@ -1,0 +1,45 @@
+import { MetadataRoute } from 'next'
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: 'Sagebrush Creative - Web Design & Development',
+    short_name: 'Sagebrush Creative',
+    description:
+      'Professional web design and development services for outdoor industry businesses, e-commerce ventures, and adventure-focused brands.',
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#7F492E',
+    theme_color: '#7F492E',
+    icons: [
+      {
+        src: '/favicon-16x16.png',
+        sizes: '16x16',
+        type: 'image/png',
+      },
+      {
+        src: '/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        src: '/favicon-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'maskable',
+      },
+      {
+        src: '/favicon-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+        purpose: 'maskable',
+      },
+      {
+        src: '/favicon.ico',
+        sizes: '48x48',
+        type: 'image/x-icon',
+      },
+    ],
+    categories: ['business', 'design', 'development'],
+    lang: 'en-US',
+  }
+}

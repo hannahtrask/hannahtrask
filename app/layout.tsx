@@ -6,6 +6,10 @@ import Header from '@/components/header-footer/header'
 import Footer from '@/components/header-footer/footer'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
+import {
+  generateSEOMetadata,
+  generateBusinessStructuredData,
+} from '@/components/seo/seo-head'
 import { Analytics } from '@vercel/analytics/next'
 
 const cormorantSC = Cormorant_SC({
@@ -20,22 +24,36 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 })
 
-export const metadata: Metadata = {
-  title: 'SAGEBRUSH CREATIVE - Under Construction',
+export const metadata: Metadata = generateSEOMetadata({
+  title: 'Under Construction',
   description:
     "Sagebrush Creative is currently under construction. We're working hard to bring you an incredible new website experience. Contact us about your project!",
-  icons: {
-    icon: '/favicon.ico',
-  },
-}
+  keywords: [
+    'under construction',
+    'coming soon',
+    'web design',
+    'web development',
+  ],
+  type: 'website',
+})
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const businessStructuredData = generateBusinessStructuredData()
+
   return (
     <html lang='en' suppressHydrationWarning>
+      <head title='Sagebrush Creative - Web Design & Development'>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(businessStructuredData),
+          }}
+        />
+      </head>
       <body
         className={`${cormorantSC.variable} ${montserrat.variable} min-h-screen font-montserrat`}
       >
