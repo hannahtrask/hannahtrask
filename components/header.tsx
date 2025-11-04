@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
-import { ModeToggle } from './mode-toggle'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
