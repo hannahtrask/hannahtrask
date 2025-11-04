@@ -102,11 +102,13 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-lg md:text-xl font-semibold text-desert-800 dark:text-white mb-2'>
-                      Web Maintenance + Updates
+                      Personal Dashboard + Internal Applications
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-sm md:text-base leading-relaxed'>
-                      We offer ongoing support and updates to keep your website
-                      running smoothly.
+                      Custom dashboards and internal applications to help you
+                      run your business more efficiently. Built so you cn be in
+                      control and do what you do best. Have an idea? Let's build
+                      it.
                     </p>
                   </div>
                 </div>
