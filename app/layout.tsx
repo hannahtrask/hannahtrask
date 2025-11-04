@@ -6,6 +6,7 @@ import Header from '@/components/header-footer/header'
 import Footer from '@/components/header-footer/footer'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
+import { Analytics } from '@vercel/analytics/next'
 
 const cormorantSC = Cormorant_SC({
   subsets: ['latin'],
@@ -46,7 +47,10 @@ export default function RootLayout({
         >
           <div className='flex flex-col min-h-screen'>
             <Header />
-            <main className='flex-grow'>{children}</main>
+            <main className='flex-grow'>
+              {children}
+              <Analytics />
+            </main>
             <Footer />
           </div>
           <Toaster position='top-center' richColors />
