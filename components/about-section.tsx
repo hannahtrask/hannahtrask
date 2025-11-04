@@ -28,8 +28,8 @@ export default function AboutSection() {
                 className='px-6 py-8 md:px-8 lg:px-16 lg:py-2'
               >
                 <p className='text-base lg:text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300 mb-4 lg:mb-6'>
-                  Specializing in web development and design for food & bev,
-                  adventure brands, and small businesses.
+                  Specializing in web development and design for small
+                  businesses.
                 </p>
 
                 <p className='text-base lg:text-lg leading-relaxed font-light text-gray-700 dark:text-gray-300'>
