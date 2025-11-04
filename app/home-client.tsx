@@ -86,7 +86,7 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-lg md:text-xl font-semibold text-desert-800 dark:text-white mb-2'>
-                      Technical Consulting + Maintenance
+                      Technical Consulting + Migrations
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-sm md:text-base leading-relaxed'>
                       We take the intimidation out of web tasks. Whether you
@@ -102,12 +102,11 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-lg md:text-xl font-semibold text-desert-800 dark:text-white mb-2'>
-                      Illustration + Graphics
+                      Web Maintenance + Updates
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-sm md:text-base leading-relaxed'>
-                      Custom illustrations and graphics that bring your brand to
-                      life. Perfect for packaging, marketing materials, and
-                      digital assets.
+                      We offer ongoing support and updates to keep your website
+                      running smoothly.
                     </p>
                   </div>
                 </div>
