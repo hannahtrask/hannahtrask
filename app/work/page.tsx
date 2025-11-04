@@ -5,6 +5,7 @@ import { client } from '@/sanity/client'
 import { SanityDocument } from 'next-sanity'
 import Image from 'next/image'
 import { urlFor } from '@/sanity/utils/imageUrlBuilder'
+import ContactForm from '@/components/contact-form'
 
 export const metadata: Metadata = {
   title: 'Work | SAGEBRUSH CREATIVE',
@@ -34,8 +35,10 @@ export default async function WorkPage() {
   return (
     <>
       <Hero
-        backgroundImage='/hero-images/work-background-bison.jpg'
+        backgroundImage='/hero-images/hay.jpg'
         backgroundImageAlt='Bison lingering in a field in front of mountains'
+        overlayType='custom'
+        overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         title='OUR WORK'
         titleClassName='text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'
       />
@@ -43,9 +46,6 @@ export default async function WorkPage() {
       <div className='bg-desert-50 dark:bg-desert-900 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
-            <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
-              THE WORK
-            </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
 
             {/* Project Names List */}
@@ -65,7 +65,7 @@ export default async function WorkPage() {
         </div>
 
         {/* Webpage Preview */}
-        <div className='bg-desert-50 dark:bg-desert-900 py-16'>
+        <div className='bg-desert-50 dark:bg-desert-900 py-8'>
           <div className='container mx-auto px-4'>
             <div className='max-w-4xl mx-auto text-center'>
               <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
@@ -94,15 +94,7 @@ export default async function WorkPage() {
         {/* CTA Section */}
         <div className='container mx-auto px-4'>
           <div className='text-center mt-16'>
-            <h3 className='text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
-              Ready to get started?
-            </h3>
-            <Link
-              href='/contact'
-              className='inline-block bg-desert-600 hover:bg-desert-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300'
-            >
-              Contact
-            </Link>
+            <ContactForm />
           </div>
         </div>
       </div>
