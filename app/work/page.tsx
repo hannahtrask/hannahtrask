@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/hero/hero'
 import WorkShowcaseSection from '@/components/work/work-showcase-section'
-import WebPageGallery from '@/components/work/web-page-gallery'
+import WebPageGallery from '@/components/work/web-page-gallery-server'
 import ContactForm from '@/components/contact-form'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 
@@ -52,14 +52,15 @@ export default function WorkPage() {
 
       {/* Web Development Showcase */}
       <WorkShowcaseSection
-        title='Web Development'
-        description='Custom websites built with modern technologies, optimized for performance and user experience. From concept to launch, we create responsive, accessible websites that work beautifully across all devices.'
+        title='Web Development & Design'
+        description="Custom websites that capture your brand's essence and convert visitors into customers. From concept to launch, we create responsive, user-friendly experiences."
         features={[
-          'Custom React & Next.js development',
-          'Responsive design for all screen sizes',
+          'Squarespace, Wix, Shopify or WordPress development',
           'SEO optimization and performance tuning',
           'Content management system integration',
-          'Analytics and conversion tracking',
+          'Shopify and custom e-commerce development',
+          'Payment gateway integration (Stripe, PayPal) and inventory management',
+          'Mobile-first experiences',
         ]}
         imageSrc='/page-images/workspace-image.jpg'
         imageAlt='Modern website development showcase'
@@ -70,16 +71,17 @@ export default function WorkPage() {
         index={0}
       />
 
-      {/* E-commerce Showcase */}
+      {/* Technical Consulting & Migrations */}
       <WorkShowcaseSection
-        title='E-commerce Solutions'
-        description='Powerful online stores that convert visitors into customers. We build scalable e-commerce platforms with seamless checkout experiences, inventory management, and marketing integrations.'
+        title='Technical Consulting & Migrations'
+        description="We take the intimidation out of web tasks. Whether you need help with a plugin, domains, migrating, hosting, SEO, or custom code, we've got you covered."
         features={[
-          'Shopify and custom e-commerce development',
-          'Payment gateway integration (Stripe, PayPal)',
-          'Inventory management and order processing',
-          'Email marketing automation (Klaviyo, Mailchimp)',
-          'Mobile-optimized shopping experiences',
+          'Plugin installation and configuration',
+          'Domain registration and management',
+          'Website migrations and transfers',
+          'Hosting and server setup',
+          'SEO optimization and performance tuning',
+          'Custom code development and debugging',
         ]}
         imageSrc='/hero-images/work-background-bison.jpg'
         imageAlt='E-commerce website showcase'
@@ -90,15 +92,16 @@ export default function WorkPage() {
         index={1}
       />
 
-      {/* Branding & Visual Identity */}
+      {/* Personal Dashboards & Internal Applications */}
       <WorkShowcaseSection
-        title='Branding & Visual Identity'
-        description='Cohesive brand experiences that tell your story across all touchpoints. From logo design to complete brand guidelines, we help establish a memorable visual identity that resonates with your audience.'
+        title='Personal Dashboards & Internal Applications'
+        description="Custom dashboards and internal applications to help you run your business more efficiently. Built so you cn be in control and do what you do best. Have an idea? Let's build it."
         features={[
-          'Logo design and brand mark creation',
-          'Color palette and typography selection',
-          'Brand guidelines and style documentation',
-          'Marketing collateral design',
+          'Custom dashboard and internal application development',
+          'User authentication and access control',
+          'Data visualization and reporting',
+          'Integration with external APIs and services',
+          'Customized user interfaces and workflows',
           'Website integration and brand consistency',
         ]}
         imageSrc='/hero-images/western-backdrop.jpg'
@@ -113,11 +116,12 @@ export default function WorkPage() {
       {/* Small Business Solutions */}
       <WorkShowcaseSection
         title='Small Business Websites'
-        description='Professional websites designed specifically for small businesses and entrepreneurs. We focus on creating cost-effective solutions that establish credibility and drive local business growth.'
+        description='Professional websites designed specifically for small businesses and entrepreneurs. We focus on creating cost-effective solutions that establish credibility and drive local business growth and offer e-commerce builds.'
         features={[
-          'WordPress and Squarespace development',
+          'WordPress, Wix, Shopify or Squarespace development',
           'Local SEO optimization',
           'Contact forms and lead generation',
+          'Appointment scheduling and booking',
           'Social media integration',
           'Easy content management for business owners',
         ]}
