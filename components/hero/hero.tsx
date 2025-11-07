@@ -57,7 +57,7 @@ export default function Hero({
 
     switch (overlayType) {
       case 'gradient':
-        return 'absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-brand-dustyrose/60 dark:from-black/60 dark:via-black/75 dark:to-black/80'
+        return 'absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-brand-sage/60 dark:from-black/60 dark:via-black/75 dark:to-black/80'
       case 'dark':
         return 'absolute inset-0 bg-black/50 dark:bg-black/70 backdrop-blur-[1px]'
       case 'light':
@@ -65,7 +65,7 @@ export default function Hero({
       case 'custom':
         return ''
       default:
-        return 'absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-brand-dustyrose/60 dark:from-black/60 dark:via-black/75 dark:to-black/80'
+        return 'absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-brand-sage/60 dark:from-black/60 dark:via-black/75 dark:to-black/80'
     }
   }
 

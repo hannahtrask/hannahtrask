@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/hero/hero'
 import WorkShowcaseSection from '@/components/work/work-showcase-section'
+import WebPageGallery from '@/components/work/web-page-gallery'
 import ContactForm from '@/components/contact-form'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 
@@ -38,7 +39,7 @@ export default function WorkPage() {
             <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
               Crafting Digital Experiences
             </h2>
-            <div className='w-24 h-px bg-brand-dustyrose mx-auto mb-8'></div>
+            <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-lg leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
               From custom web development to e-commerce solutions, we create
               digital experiences that connect with your audience and drive
@@ -83,7 +84,7 @@ export default function WorkPage() {
         imageSrc='/hero-images/work-background-bison.jpg'
         imageAlt='E-commerce website showcase'
         imagePosition='right'
-        backgroundColor='bg-gradient-to-bl from-brand-lavender/10 to-brand-dustyrose/10 dark:from-brand-lavender/20 dark:to-brand-dustyrose/20'
+        backgroundColor='bg-gradient-to-bl from-brand-desert/10 to-brand-sage/10 dark:from-brand-desert/20 dark:to-brand-sage/20'
         textColor='text-desert-800 dark:text-white'
         accentColor='#B295C1'
         index={1}
@@ -103,7 +104,7 @@ export default function WorkPage() {
         imageSrc='/hero-images/western-backdrop.jpg'
         imageAlt='Brand identity design showcase'
         imagePosition='left'
-        backgroundColor='bg-gradient-to-tr from-brand-dustyrose/10 to-brand-sage/10 dark:from-brand-dustyrose/20 dark:to-brand-sage/20'
+        backgroundColor='bg-gradient-to-tr from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-sage/20'
         textColor='text-desert-800 dark:text-white'
         accentColor='#CD9493'
         index={2}
@@ -128,6 +129,9 @@ export default function WorkPage() {
         accentColor='#9D9B86'
         index={3}
       />
+
+      {/* Fun Web Pages Gallery Section */}
+      <WebPageGallery />
 
       {/* Contact Section */}
       <div className='bg-desert-50 dark:bg-desert-900 py-20'>
