@@ -106,7 +106,7 @@ export default function HomeClient() {
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-sm md:text-base leading-relaxed'>
                       Custom dashboards and internal applications to help you
-                      run your business more efficiently. Built so you cn be in
+                      run your business more efficiently. Built so you can be in
                       control and do what you do best. Have an idea? Let's build
                       it.
                     </p>

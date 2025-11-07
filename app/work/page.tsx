@@ -1,10 +1,6 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import Hero from '@/components/hero/hero'
-import { client } from '@/sanity/client'
-import { SanityDocument } from 'next-sanity'
-import Image from 'next/image'
-import { urlFor } from '@/sanity/utils/imageUrlBuilder'
+import WorkShowcaseSection from '@/components/work/work-showcase-section'
 import ContactForm from '@/components/contact-form'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 
@@ -23,27 +19,7 @@ export const metadata: Metadata = generateSEOMetadata({
   type: 'website',
 })
 
-const PROJECTS_QUERY = `*[_type == "project" && defined(slug.current)] | order(_createdAt desc)[0...12] {
-  _id,
-  title,
-  slug,
-  category,
-  description,
-  heroImage,
-  webpageImage,
-  technologies,
-  websiteUrl
-}`
-
-const options = { next: { revalidate: 30 } }
-
-export default async function WorkPage() {
-  const projects = await client.fetch<SanityDocument[]>(
-    PROJECTS_QUERY,
-    {},
-    options
-  )
-
+export default function WorkPage() {
   return (
     <>
       <Hero
@@ -52,60 +28,111 @@ export default async function WorkPage() {
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         title='OUR WORK'
-        titleClassName='text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'
+        titleClassName='text-5xl md:text-6xl font-cormorant-sc font-light text-white mb-6'
       />
-      {/* Work Section */}
-      <div className='bg-desert-50 dark:bg-desert-900 py-16'>
+
+      {/* Introduction Section */}
+      <div className='bg-desert-50 dark:bg-desert-900 py-20'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
-            <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
-
-            {/* Project Names List */}
-            <div className='space-y-6'>
-              {projects.map(project => (
-                <div key={project._id}>
-                  <Link
-                    href={`/project/${project.slug.current}`}
-                    className='text-2xl md:text-3xl font-cormorant-sc text-desert-700 dark:text-desert-200 hover:text-desert-900 dark:hover:text-white transition-colors duration-300 block py-1'
-                  >
-                    {project.title}
-                  </Link>
-                </div>
-              ))}
-            </div>
+            <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
+              Crafting Digital Experiences
+            </h2>
+            <div className='w-24 h-px bg-brand-dustyrose mx-auto mb-8'></div>
+            <p className='text-lg leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
+              From custom web development to e-commerce solutions, we create
+              digital experiences that connect with your audience and drive
+              results. Each project is thoughtfully designed to reflect your
+              brand's unique story and goals.
+            </p>
           </div>
         </div>
+      </div>
 
-        {/* Webpage Preview */}
-        <div className='bg-desert-50 dark:bg-desert-900 py-8'>
-          <div className='container mx-auto px-4'>
-            <div className='max-w-4xl mx-auto text-center'>
-              <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
-              <div className='flex justify-center'>
-                <div className='grid grid-cols-3 md:grid-cols-4 gap-2 max-w-4xl'>
-                  {projects.map(
-                    project =>
-                      project.webpageImage && (
-                        <div key={project._id} className='overflow-hidden'>
-                          <Image
-                            src={urlFor(project.webpageImage).url()}
-                            alt={`${project.title} website preview`}
-                            width={300}
-                            height={573}
-                            className='w-full h-auto object-contain hover:scale-105 transition-transform duration-700'
-                          />
-                        </div>
-                      )
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Web Development Showcase */}
+      <WorkShowcaseSection
+        title='Web Development'
+        description='Custom websites built with modern technologies, optimized for performance and user experience. From concept to launch, we create responsive, accessible websites that work beautifully across all devices.'
+        features={[
+          'Custom React & Next.js development',
+          'Responsive design for all screen sizes',
+          'SEO optimization and performance tuning',
+          'Content management system integration',
+          'Analytics and conversion tracking',
+        ]}
+        imageSrc='/page-images/workspace-image.jpg'
+        imageAlt='Modern website development showcase'
+        imagePosition='left'
+        backgroundColor='bg-gradient-to-br from-brand-brown/10 to-brand-olive/10 dark:from-brand-brown/20 dark:to-brand-olive/20'
+        textColor='text-desert-800 dark:text-white'
+        accentColor='#7F492E'
+        index={0}
+      />
 
-        {/* CTA Section */}
+      {/* E-commerce Showcase */}
+      <WorkShowcaseSection
+        title='E-commerce Solutions'
+        description='Powerful online stores that convert visitors into customers. We build scalable e-commerce platforms with seamless checkout experiences, inventory management, and marketing integrations.'
+        features={[
+          'Shopify and custom e-commerce development',
+          'Payment gateway integration (Stripe, PayPal)',
+          'Inventory management and order processing',
+          'Email marketing automation (Klaviyo, Mailchimp)',
+          'Mobile-optimized shopping experiences',
+        ]}
+        imageSrc='/hero-images/work-background-bison.jpg'
+        imageAlt='E-commerce website showcase'
+        imagePosition='right'
+        backgroundColor='bg-gradient-to-bl from-brand-lavender/10 to-brand-dustyrose/10 dark:from-brand-lavender/20 dark:to-brand-dustyrose/20'
+        textColor='text-desert-800 dark:text-white'
+        accentColor='#B295C1'
+        index={1}
+      />
+
+      {/* Branding & Visual Identity */}
+      <WorkShowcaseSection
+        title='Branding & Visual Identity'
+        description='Cohesive brand experiences that tell your story across all touchpoints. From logo design to complete brand guidelines, we help establish a memorable visual identity that resonates with your audience.'
+        features={[
+          'Logo design and brand mark creation',
+          'Color palette and typography selection',
+          'Brand guidelines and style documentation',
+          'Marketing collateral design',
+          'Website integration and brand consistency',
+        ]}
+        imageSrc='/hero-images/western-backdrop.jpg'
+        imageAlt='Brand identity design showcase'
+        imagePosition='left'
+        backgroundColor='bg-gradient-to-tr from-brand-dustyrose/10 to-brand-sage/10 dark:from-brand-dustyrose/20 dark:to-brand-sage/20'
+        textColor='text-desert-800 dark:text-white'
+        accentColor='#CD9493'
+        index={2}
+      />
+
+      {/* Small Business Solutions */}
+      <WorkShowcaseSection
+        title='Small Business Websites'
+        description='Professional websites designed specifically for small businesses and entrepreneurs. We focus on creating cost-effective solutions that establish credibility and drive local business growth.'
+        features={[
+          'WordPress and Squarespace development',
+          'Local SEO optimization',
+          'Contact forms and lead generation',
+          'Social media integration',
+          'Easy content management for business owners',
+        ]}
+        imageSrc='/hero-images/hay.jpg'
+        imageAlt='Small business website showcase'
+        imagePosition='right'
+        backgroundColor='bg-gradient-to-bl from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-olive/20'
+        textColor='text-desert-800 dark:text-white'
+        accentColor='#9D9B86'
+        index={3}
+      />
+
+      {/* Contact Section */}
+      <div className='bg-desert-50 dark:bg-desert-900 py-20'>
         <div className='container mx-auto px-4'>
-          <div className='text-center mt-16'>
+          <div className='text-center'>
             <ContactForm />
           </div>
         </div>

@@ -52,15 +52,16 @@ export default function Header() {
             >
               HOME
             </Link>
-            <span
-              className={`text-base tracking-wide opacity-50 cursor-not-allowed ${
+            <Link
+              href='/work'
+              className={`text-base tracking-wide transition-colors ${
                 isScrolled
-                  ? 'text-gray-400 dark:text-gray-500'
-                  : 'text-white/40'
+                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
+                  : 'text-white/80 hover:text-white'
               }`}
             >
               WORK
-            </span>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -84,9 +85,13 @@ export default function Header() {
             >
               Home
             </Link>
-            <span className='block px-4 text-gray-400 dark:text-gray-500 text-base tracking-wide opacity-50 cursor-not-allowed'>
+            <Link
+              href='/work'
+              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
+              onClick={() => setIsMenuOpen(false)}
+            >
               Work
-            </span>
+            </Link>
           </nav>
         )}
       </div>
