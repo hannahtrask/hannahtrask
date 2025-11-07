@@ -56,7 +56,7 @@ export default function WorkShowcaseSection({
       transition: {
         duration: 0.8,
         delay: 0.2,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
   }
@@ -74,7 +74,7 @@ export default function WorkShowcaseSection({
       transition: {
         duration: 0.8,
         delay: 0.4,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
   }
@@ -87,7 +87,7 @@ export default function WorkShowcaseSection({
       transition: {
         duration: 0.5,
         delay: 0.6 + i * 0.1,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     }),
   }
