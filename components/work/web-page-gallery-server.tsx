@@ -1,5 +1,4 @@
 import { client } from '@/sanity/client'
-import { SanityDocument } from 'next-sanity'
 import WebPageGalleryClient from './web-page-gallery-client'
 
 const PROJECTS_WITH_WEBPAGE_QUERY = `*[_type == "project" && defined(webpageImage)] {

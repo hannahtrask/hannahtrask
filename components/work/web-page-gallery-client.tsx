@@ -55,7 +55,7 @@ export default function WebPageGalleryClient({
 
   return (
     <>
-      <style jsx>{`
+      <style>{`
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
@@ -181,6 +181,7 @@ export default function WebPageGalleryClient({
                         onError={e => {
                           console.error(
                             'Image failed to load:',
+                            e,
                             project.title,
                             project.webpageImage
                           )
