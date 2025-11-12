@@ -77,8 +77,8 @@ export default function WorkPage() {
                 <p className='text-lg leading-relaxed text-gray-700 dark:text-gray-300'>
                   Speaking of real humans, I&apos;m Hannah, the founder and
                   owner of Sagebrush Creative. My passions lie in empowering
-                  real humans in their dreams, businesses, or personal goals. I
-                  believe we can bring connection and community back in the
+                  people to pursue their dreams, businesses, and personal goals.
+                  I believe we can bring connection and community back in the
                   digital age by acting with intention, authenticity, and
                   honesty. I specialize in creating websites that not only look
                   beautiful but also tell your unique story for your business

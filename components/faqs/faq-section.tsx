@@ -17,7 +17,7 @@ const faqItems: FAQItem[] = [
     id: 'project-minimum',
     question: 'What is your project minimum?',
     answer:
-      'Our project minimum varies depending on the type of service and we are not one size fits all! Rates vary based on need, project, and complexity. 3-5 page sites (like a landing page with some supporting pages and light functionality) start at $2,500 and scale up from there. For more complex projects and e-commerce stores, our minimum is $4,000. This ensures we can dedicate the proper time and resources to deliver exceptional results that meet your business goals.',
+      "We don't have a project minimum, but work within reason. We work with clients of all sizes and budgets, so don't be afraid to reach out because you don't think you can afford it or your project is too small. There is no such thing and we are here to work with you! We also do payment plans to ease the financial burden.",
   },
   {
     id: 'platforms',
