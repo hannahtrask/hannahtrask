@@ -37,15 +37,60 @@ export default function WorkPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
-              Crafting Digital Experiences
+              Working with Real Humans
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-lg leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              From custom web development to e-commerce solutions, we create
-              digital experiences that connect with your audience and drive
-              results. Each project is thoughtfully designed to reflect your
-              brand's unique story and goals.
+              Here at Sagebrush Creative we know that the internet is
+              intimidating, and we know it's hard to sort through the jargon and
+              find the right person for the job. We're here to cut through the
+              robotic nature of the web and tailor every project to you and your
+              needs. Every project and person is different, and that's part of
+              the fun.
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Meet Hannah Section */}
+      <div className='bg-white dark:bg-desert-800 pt-10'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-6xl mx-auto'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+              {/* Image */}
+              <div className='order-2 lg:order-1'>
+                <div className='relative'>
+                  <img
+                    src='/HANNAH_TRASK.png'
+                    alt='Hannah Trask - Founder of Sagebrush Creative'
+                    className='w-full h-auto object-cover'
+                  />
+                </div>
+              </div>
+
+              {/* Text Content */}
+              <div className='order-1 lg:order-2 space-y-6'>
+                <h3 className='text-3xl md:text-4xl font-cormorant-sc font-bold text-desert-800 dark:text-white'>
+                  Meet Hannah
+                </h3>
+                <div className='w-16 h-px bg-brand-sage'></div>
+                <p className='text-lg leading-relaxed text-gray-700 dark:text-gray-300'>
+                  Speaking of real humans, I&apos;m Hannah, the founder and
+                  owner of Sagebrush Creative. My passions lie in empowering
+                  real humans in their dreams, businesses, or personal goals. I
+                  believe we can bring connection and community back in the
+                  digital age by acting with intention, authenticity, and
+                  honesty. I specialize in creating websites that not only look
+                  beautiful but also tell your unique story for your business
+                  and <strong>your</strong> vision.
+                </p>
+                <p className='text-lg leading-relaxed text-gray-700 dark:text-gray-300'>
+                  When I'm not coding, building websites or writing, you&apos;ll
+                  find me exploring outside, learning a new thing, or trying out
+                  a new pasta recipe I saw on Instagram.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -53,7 +98,7 @@ export default function WorkPage() {
       {/* Web Development Showcase */}
       <WorkShowcaseSection
         title='Web Development & Design'
-        description="Custom websites that capture your brand's essence and convert visitors into customers. From concept to launch, we create responsive, user-friendly experiences."
+        description='Custom websites that capture the story you need to tell to your visitors.'
         features={[
           'Squarespace, Wix, Shopify or WordPress development',
           'SEO optimization and performance tuning',
@@ -116,7 +161,7 @@ export default function WorkPage() {
       {/* Small Business Solutions */}
       <WorkShowcaseSection
         title='Small Business Websites'
-        description='Professional websites designed specifically for small businesses and entrepreneurs. We focus on creating cost-effective solutions that establish credibility and drive local business growth and offer e-commerce builds.'
+        description="Professional websites designed specifically for small businesses and entrepreneurs. Tell us your budget, and we'll work within it. Establish credibility, drive local business growth, and build a community around it."
         features={[
           'WordPress, Wix, Shopify or Squarespace development',
           'Local SEO optimization',
