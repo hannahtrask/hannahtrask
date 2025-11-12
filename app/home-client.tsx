@@ -22,12 +22,13 @@ export default function HomeClient() {
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
           <Typewriter
             lines={[
-              'website development',
-              'technical consulting & migrations',
+              'web development',
               'web design',
+              'migrations',
               'internal applications',
+              'technical consulting',
             ]}
-            className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-cormorant-sc mb-4 sm:mb-6 text-white leading-tight px-2'
+            className='text-xl sm:text-xl md:text-2xl lg:text-4xl font-cormorant-sc mb-4 sm:mb-6 text-white leading-tight px-2'
             typingSpeed={80}
             deletingSpeed={40}
             pauseDuration={2500}
