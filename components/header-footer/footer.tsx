@@ -38,6 +38,8 @@ export default function Footer() {
                 <Link
                   href='https://github.com/hannahtrask'
                   className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <GitHubIcon size={18} />
                   <span className='sr-only'>GitHub</span>
@@ -45,6 +47,8 @@ export default function Footer() {
                 <Link
                   href='https://www.linkedin.com/in/hannahtrask/'
                   className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <LinkedInIcon size={18} />
                   <span className='sr-only'>LinkedIn</span>
@@ -52,6 +56,8 @@ export default function Footer() {
                 <Link
                   href='https://www.instagram.com/sagebrush.dev'
                   className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
                   <InstagramIcon size={18} />
                   <span className='sr-only'>Instagram</span>
