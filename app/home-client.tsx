@@ -2,9 +2,9 @@
 
 import Hero from '@/components/hero/hero'
 import ContactForm from '@/components/contact/contact-form'
-import { motion } from 'framer-motion'
 import AboutSection from '@/components/about-section'
 import FAQSection from '@/components/faqs/faq-section'
+import Typewriter from '@/components/ui/typewriter'
 
 export default function HomeClient() {
   return (
@@ -20,14 +20,19 @@ export default function HomeClient() {
         titleClassName='text-5xl md:text-7xl font-cormorant-sc mb-6 text-white'
       >
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
-          <motion.h1
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-cormorant-sc mb-4 sm:mb-6 text-white leading-tight px-2'
-          >
-            let your ideas roam
-          </motion.h1>
+          <Typewriter
+            lines={[
+              'website development',
+              'technical consulting & migrations',
+              'web design',
+              'internal applications',
+            ]}
+            className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-cormorant-sc mb-4 sm:mb-6 text-white leading-tight px-2'
+            typingSpeed={80}
+            deletingSpeed={40}
+            pauseDuration={2500}
+            showCursor={true}
+          />
         </div>
       </Hero>
 
