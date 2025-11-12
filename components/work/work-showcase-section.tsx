@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 import { useEffect, useState } from 'react'
 
@@ -43,7 +43,7 @@ export default function WorkShowcaseSection({
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: {
       opacity: 0,
       x: imagePosition === 'left' ? -100 : 100,
@@ -56,12 +56,12 @@ export default function WorkShowcaseSection({
       transition: {
         duration: 0.8,
         delay: 0.2,
-        ease: 'easeOut',
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   }
 
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: {
       opacity: 0,
       x: imagePosition === 'left' ? 100 : -100,
@@ -74,12 +74,12 @@ export default function WorkShowcaseSection({
       transition: {
         duration: 0.8,
         delay: 0.4,
-        ease: 'easeOut',
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   }
 
-  const featureVariants = {
+  const featureVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
@@ -87,7 +87,7 @@ export default function WorkShowcaseSection({
       transition: {
         duration: 0.5,
         delay: 0.6 + i * 0.1,
-        ease: 'easeOut',
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     }),
   }
