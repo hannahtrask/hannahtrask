@@ -61,9 +61,10 @@ export default function HomeClient() {
                       Web Design + Development
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-sm md:text-base leading-relaxed'>
-                      Custom websites that capture your brand's essence and
-                      convert visitors into customers. From concept to launch,
-                      we create responsive, user-friendly experiences.
+                      Custom websites that capture your story. What are you
+                      trying to communicate to convert visitors into customers?
+                      From concept to launch, we create responsive,
+                      user-friendly experiences.
                     </p>
                   </div>
                 </div>
@@ -77,9 +78,9 @@ export default function HomeClient() {
                       E-commerce Solutions
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-sm md:text-base leading-relaxed'>
-                      Powerful online stores built to sell. We integrate secure
-                      payment processing, inventory management, and marketing
-                      tools to grow your business.
+                      Powerful online stores built to represent who you are. We
+                      build custom e-commerce stores that are optimized for
+                      conversion and built to grow with you.
                     </p>
                   </div>
                 </div>
@@ -97,7 +98,7 @@ export default function HomeClient() {
                     <p className='text-desert-600 dark:text-desert-300 text-sm md:text-base leading-relaxed'>
                       We take the intimidation out of web tasks. Whether you
                       need help with a plugin, domains, migrating, hosting, SEO,
-                      or custom code, we've got you covered.
+                      or custom code, we&apos;ve got you covered.
                     </p>
                   </div>
                 </div>
@@ -113,8 +114,8 @@ export default function HomeClient() {
                     <p className='text-desert-600 dark:text-desert-300 text-sm md:text-base leading-relaxed'>
                       Custom dashboards and internal applications to help you
                       run your business more efficiently. Built so you can be in
-                      control and do what you do best. Have an idea? Let's build
-                      it.
+                      control and do what you do best. Have an idea? Let&apos;s
+                      build it.
                     </p>
                   </div>
                 </div>
@@ -139,8 +140,8 @@ export default function HomeClient() {
               </h2>
               <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-8'></div>
               <p className='text-lg text-desert-600 dark:text-desert-300 max-w-2xl mx-auto leading-relaxed'>
-                Ready to bring your vision to life? Let's discuss your project
-                and create something amazing together.
+                Ready to bring your vision to life? Let&apos;s discuss your
+                project and create something amazing together.
               </p>
             </div>
             <ContactForm />

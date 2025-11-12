@@ -196,7 +196,7 @@ export default function WebPageGalleryClient({
                     )}
 
                     {/* Overlay with project info */}
-                    <div className='absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-500 flex items-end'>
+                    <div className='absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-500 flex items-start'>
                       <div className='p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500'>
                         <h3 className='text-xl font-cormorant-sc font-bold mb-2'>
                           {project.title}
@@ -211,20 +211,6 @@ export default function WebPageGalleryClient({
               </motion.div>
             ))}
           </div>
-
-          {/* Scroll Indicator */}
-          {projects.length > 3 && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className='text-center mt-8'
-            >
-              <p className='text-sm text-desert-600 dark:text-desert-400'>
-                Scroll horizontally to see more projects
-              </p>
-            </motion.div>
-          )}
         </div>
       </div>
     </>
