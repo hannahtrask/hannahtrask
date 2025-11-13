@@ -17,7 +17,7 @@ const faqItems: FAQItem[] = [
     id: 'project-minimum',
     question: 'What is your project minimum?',
     answer:
-      "We don't have a project minimum, but work within reason. We work with clients of all sizes and budgets, so don't be afraid to reach out because you don't think you can afford it or your project is too small. There is no such thing and we are here to work with you! We also do payment plans to ease the financial burden.",
+      "We don't have a project minimum, but work within reason. We work with clients of all sizes and budgets, so don't be afraid to reach out because you don't think you can afford it or your project is too small. There is no such thing and we are here to work with you! We also do payment plans for your investment.",
   },
   {
     id: 'platforms',
