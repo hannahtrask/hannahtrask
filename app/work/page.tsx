@@ -62,10 +62,13 @@ export default function WorkPage() {
         </div>
       </div>
 
+      {/* Fun Web Pages Gallery Section */}
+      <WebPageGallery />
+
       {/* Web Development Showcase */}
       <WorkShowcaseSection
         title='Web Development & Design'
-        description='Custom websites that capture the story you need to tell to your visitors.'
+        description='Custom websites that capture the story you want to tell to your visitors.'
         features={[
           'Squarespace, Wix, Shopify or WordPress development',
           'SEO optimization and performance tuning',
@@ -86,7 +89,7 @@ export default function WorkPage() {
       {/* Technical Consulting & Migrations */}
       <WorkShowcaseSection
         title='Technical Consulting & Migrations'
-        description="We take the intimidation out of web tasks. Whether you need help with a plugin, domains, migrating, hosting, SEO, or custom code, we've got you covered."
+        description="We take the intimidation out of web tasks. I'm here to help with a plugins, domains, migrating, hosting, SEO, or custom code."
         features={[
           'Plugin installation and configuration',
           'Domain registration and management',
@@ -107,7 +110,7 @@ export default function WorkPage() {
       {/* Personal Dashboards & Internal Applications */}
       <WorkShowcaseSection
         title='Personal Dashboards & Internal Applications'
-        description="Custom dashboards and internal applications to help you run your business more efficiently. Built so you cn be in control and do what you do best. Have an idea? Let's build it."
+        description='Custom dashboards and internal applications to help you run your business more efficiently. Built so you can be in control of your business and focus on what you do best.'
         features={[
           'Custom dashboard and internal application development',
           'User authentication and access control',
@@ -128,7 +131,7 @@ export default function WorkPage() {
       {/* Small Business Solutions */}
       <WorkShowcaseSection
         title='Small Business Websites'
-        description="Professional websites designed specifically for small businesses and entrepreneurs. Tell us your budget, and we'll work within it. Establish credibility, drive local business growth, and build a community around it."
+        description="Professional websites designed specifically for small businesses and entrepreneurs. Tell us your budget, and I'll work within it. Establish credibility, drive local business growth, and build a community around it."
         features={[
           'WordPress, Wix, Shopify or Squarespace development',
           'Local SEO optimization',
@@ -145,9 +148,6 @@ export default function WorkPage() {
         accentColor='#9D9B86'
         index={3}
       />
-
-      {/* Fun Web Pages Gallery Section */}
-      <WebPageGallery />
 
       {/* Contact Section */}
       <div className='bg-desert-50 dark:bg-desert-900 py-20'>
