@@ -17,31 +17,31 @@ const faqItems: FAQItem[] = [
     id: 'project-minimum',
     question: 'What is your project minimum?',
     answer:
-      "We don't have a project minimum, but work within reason. We work with clients of all sizes and budgets, so don't be afraid to reach out because you don't think you can afford it or your project is too small. There is no such thing and we are here to work with you! We also do payment plans for your investment.",
+      "I don't have a project minimum, but work within reason. I work with clients of all sizes and budgets, so don't be afraid to reach out because you don't think you can afford it or your project is too small. There is no such thing and I am here to work with you! I also am happy to come up with payment plans for your investment.",
   },
   {
     id: 'platforms',
     question: 'What platforms do you work on for websites?',
     answer:
-      "Sagebrush Creative specializes in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
+      "I specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, I can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
   },
   {
     id: 'timeline',
     question: 'How long should I expect my project to take?',
     answer:
-      "Project timelines vary based on complexity and scope, so it's hard to say in a general sense. The shortest option is website in a day, which will take one day after a contract is signed and 50% of the project fee paid.",
+      "Project timelines vary based on complexity and scope, so it's hard to say in a general sense. I take into account project urgency, scope, and complexity to determine a reasonable timeline.",
   },
   {
     id: 'getting-started',
     question: 'How do I get started?',
     answer:
-      "The first thing you\'ll want to do is reach out through our contact form and we can schedule a time to meet up in person or virtually. You won't be charged anything until we've BOTH signed a contract and you are 100% ready to move forward! When we meet, we'll discuss your project goals, timeline, and budget to determine the best approach. After contracts are signed, you'll be asked to submit a deposit (typically 50% of the total fee) to secure your project, and we'll get started right away.",
+      "The first thing you\'ll want to do is reach out through my contact form and we can schedule a time to meet up in person or virtually. You won't be charged anything until we've BOTH signed a contract and you are 100% ready to move forward! When we meet, we'll discuss your project goals, timeline, and budget to determine the best approach. After contracts are signed, you'll be asked to submit a deposit (typically 50% of the total fee) to secure your project, and I'll get started right away.",
   },
   {
     id: 'why-choose-us',
     question: 'Why should I work with Sagebrush Creative?',
     answer:
-      "We bring a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. You will get personalized attention, direct communication (with a REAL human), and websites that truly reflect your brand's personality and values.",
+      "I bring a unique combination of technical expertise and creativity to my work. I'm inspired by my connection to the wild spaces around Jackson, WY and in the intermountain West. You will get personalized attention, direct communication (with a REAL human), and website and work completed that truly reflect your business's personality and values.",
   },
 ]
 

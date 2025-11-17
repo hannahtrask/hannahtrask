@@ -94,10 +94,6 @@ export default function WebPageGalleryClient({
             <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
               Recent Clients
             </h2>
-            <div className='w-24 h-px bg-desert-600 dark:bg-desert-400 mx-auto mb-8'></div>
-            <p className='text-lg text-desert-700 dark:text-desert-300 max-w-2xl mx-auto leading-relaxed'>
-              Scroll through to see some of our recent clients.
-            </p>
           </motion.div>
 
           {/* Navigation Buttons */}
@@ -196,8 +192,8 @@ export default function WebPageGalleryClient({
                     )}
 
                     {/* Overlay with project info */}
-                    <div className='absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-500 flex items-start'>
-                      <div className='p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500'>
+                    <div className='absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-all duration-500 flex items-start'>
+                      <div className='p-6 text-white transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500'>
                         <h3 className='text-xl font-cormorant-sc font-bold mb-2'>
                           {project.title}
                         </h3>
