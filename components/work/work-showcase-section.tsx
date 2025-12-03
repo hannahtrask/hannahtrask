@@ -31,7 +31,7 @@ export default function WorkShowcaseSection({
   index,
 }: WorkShowcaseSectionProps) {
   const { ref, isVisible } = useScrollAnimation(0.2)
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState<boolean | null>(null)
 
   useEffect(() => {
     const checkMobile = () => {
@@ -42,6 +42,9 @@ export default function WorkShowcaseSection({
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  // Don't animate until we know if it's mobile or not
+  const shouldAnimate = isMobile === false
 
   const imageVariants: Variants = {
     hidden: {
@@ -122,9 +125,11 @@ export default function WorkShowcaseSection({
         >
           {/* Image Section */}
           <motion.div
-            initial={isMobile ? {} : 'hidden'}
-            animate={isMobile ? {} : isVisible ? 'visible' : 'hidden'}
-            variants={isMobile ? {} : imageVariants}
+            initial={shouldAnimate ? 'hidden' : 'visible'}
+            animate={
+              shouldAnimate ? (isVisible ? 'visible' : 'hidden') : 'visible'
+            }
+            variants={imageVariants}
             className={`relative ${imagePosition === 'right' ? 'lg:col-start-2' : ''}`}
           >
             <div className='relative overflow-hidden shadow-2xl'>
@@ -142,9 +147,11 @@ export default function WorkShowcaseSection({
 
           {/* Text Section */}
           <motion.div
-            initial={isMobile ? {} : 'hidden'}
-            animate={isMobile ? {} : isVisible ? 'visible' : 'hidden'}
-            variants={isMobile ? {} : textVariants}
+            initial={shouldAnimate ? 'hidden' : 'visible'}
+            animate={
+              shouldAnimate ? (isVisible ? 'visible' : 'hidden') : 'visible'
+            }
+            variants={textVariants}
             className={`${imagePosition === 'right' ? 'lg:col-start-1 lg:row-start-1' : ''}`}
           >
             <div className='max-w-xl'>
@@ -169,9 +176,15 @@ export default function WorkShowcaseSection({
                 {features.map((feature, i) => (
                   <motion.div
                     key={i}
-                    initial={isMobile ? {} : 'hidden'}
-                    animate={isMobile ? {} : isVisible ? 'visible' : 'hidden'}
-                    variants={isMobile ? {} : featureVariants}
+                    initial={shouldAnimate ? 'hidden' : 'visible'}
+                    animate={
+                      shouldAnimate
+                        ? isVisible
+                          ? 'visible'
+                          : 'hidden'
+                        : 'visible'
+                    }
+                    variants={featureVariants}
                     custom={i}
                     className='flex items-start space-x-3'
                   >
