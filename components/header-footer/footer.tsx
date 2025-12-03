@@ -16,6 +16,9 @@ export default function Footer() {
             <p className='text-desert-100 dark:text-desert-200 text-sm max-w-xs'>
               Based in Jackson, WY. Available for remote and on-site work.
             </p>
+            <p className='text-desert-100 dark:text-desert-200 text-sm max-w-xs'>
+              hello@sunsagebrushcreative.com
+            </p>
           </div>
 
           <div className='flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-16'>
