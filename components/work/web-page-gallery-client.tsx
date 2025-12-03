@@ -22,7 +22,7 @@ export default function WebPageGalleryClient({
   projects,
 }: WebPageGalleryClientProps) {
   const { ref, isVisible } = useScrollAnimation(0.1)
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState<boolean | null>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -34,6 +34,9 @@ export default function WebPageGalleryClient({
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  // Don't animate until we know if it's mobile or not
+  const shouldAnimate = isMobile === false
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -86,8 +89,16 @@ export default function WebPageGalleryClient({
         <div className='container mx-auto px-4 relative z-10'>
           <motion.div
             ref={ref}
-            initial={{ opacity: 0, y: 50 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            initial={
+              shouldAnimate ? { opacity: 0, y: 50 } : { opacity: 1, y: 0 }
+            }
+            animate={
+              shouldAnimate && isVisible
+                ? { opacity: 1, y: 0 }
+                : shouldAnimate
+                  ? { opacity: 0, y: 50 }
+                  : { opacity: 1, y: 0 }
+            }
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
           >
@@ -150,13 +161,17 @@ export default function WebPageGalleryClient({
             {projects.map((project, index) => (
               <motion.div
                 key={project._id}
-                initial={isMobile ? {} : { opacity: 0, x: -100, scale: 0.9 }}
+                initial={
+                  shouldAnimate
+                    ? { opacity: 0, x: -100, scale: 0.9 }
+                    : { opacity: 1, x: 0, scale: 1 }
+                }
                 animate={
-                  isMobile
-                    ? {}
-                    : isVisible
+                  shouldAnimate
+                    ? isVisible
                       ? { opacity: 1, x: 0, scale: 1 }
                       : { opacity: 0, x: -100, scale: 0.9 }
+                    : { opacity: 1, x: 0, scale: 1 }
                 }
                 transition={{
                   duration: 0.8,
