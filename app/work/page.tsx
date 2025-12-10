@@ -33,7 +33,11 @@ export default function WorkPage() {
       >
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
           <Typewriter
-            lines={['past work', 'client projects']}
+            lines={[
+              'technical consulting',
+              'web development and design',
+              'small business websites',
+            ]}
             className='text-xl sm:text-xl md:text-2xl lg:text-4xl font-cormorant-sc mb-4 sm:mb-6 text-white leading-tight px-2'
             typingSpeed={80}
             deletingSpeed={40}
