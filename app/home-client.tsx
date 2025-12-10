@@ -64,10 +64,9 @@ export default function HomeClient() {
                   Hey, I&apos;m Hannah, the founder and owner of Sagebrush
                   Studio. My passion is helping locals, creatives, and
                   community-driven businesses establish a strong online presence
-                  while celebrating their unique story and connection to their
-                  community and environment. I believe we can bring connection
-                  and community back in the digital age by acting with
-                  intention, authenticity, and honesty. I have 5+ years of
+                  so they can focus on their work. I believe we can bring
+                  connection and community back in the digital age by acting
+                  with intention, authenticity, and honesty. I have 5+ years of
                   experience in web development and specialize in creating
                   websites that not only look beautiful but also tell your
                   unique story for your business and <strong>your</strong>{' '}
