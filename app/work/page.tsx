@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/hero/hero'
 import WorkShowcaseSection from '@/components/work/work-showcase-section'
-import WebPageGallery from '@/components/work/web-page-gallery-server'
 import ContactForm from '@/components/contact-form'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 import Typewriter from '@/components/ui/typewriter'
@@ -62,8 +61,8 @@ export default function WorkPage() {
         </div>
       </div>
 
-      {/* Fun Web Pages Gallery Section */}
-      <WebPageGallery />
+      {/*/!* Fun Web Pages Gallery Section *!/*/}
+      {/*<WebPageGallery />*/}
 
       {/* Web Development Showcase */}
       <WorkShowcaseSection
