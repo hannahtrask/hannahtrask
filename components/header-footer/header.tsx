@@ -37,7 +37,7 @@ export default function Header() {
               isScrolled ? 'text-desert-800 dark:text-white' : 'text-white'
             }`}
           >
-            <strong>SAGEBRUSH CREATIVE</strong>
+            <strong>SAGEBRUSH STUDIO</strong>
           </Link>
 
           {/* Desktop Navigation - Under Construction Mode */}
@@ -50,7 +50,7 @@ export default function Header() {
                   : 'text-white/80 hover:text-white'
               }`}
             >
-              HOME
+              home
             </Link>
             <Link
               href='/work'
@@ -60,7 +60,7 @@ export default function Header() {
                   : 'text-white/80 hover:text-white'
               }`}
             >
-              WORK
+              services
             </Link>
           </nav>
 
@@ -83,14 +83,14 @@ export default function Header() {
               className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
+              home
             </Link>
             <Link
               href='/work'
               className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
               onClick={() => setIsMenuOpen(false)}
             >
-              Work
+              services
             </Link>
           </nav>
         )}

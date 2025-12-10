@@ -25,14 +25,14 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Under Construction',
+  title: 'Web Design & Development',
   description:
-    "Sagebrush Creative is currently under construction. We're working hard to bring you an incredible new website experience. Contact us about your project!",
+    'Sagebrush Studio helps locals, creatives, and community-driven businesses establish a strong online presence while celebrating their unique story and connection to their community and environment.',
   keywords: [
-    'under construction',
-    'coming soon',
     'web design',
     'web development',
+    'local business websites',
+    'creative business websites',
   ],
   type: 'website',
 })
@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
-        <title>Sagebrush Creative - Web Design & Development</title>
+        <title>Sagebrush Studio - Web Design & Development</title>
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{

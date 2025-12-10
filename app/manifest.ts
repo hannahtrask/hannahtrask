@@ -2,10 +2,10 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Sagebrush Creative - Web Design & Development',
-    short_name: 'Sagebrush Creative',
+    name: 'Sagebrush Studio - Web Design & Development',
+    short_name: 'Sagebrush Studio',
     description:
-      'Professional web design and development services for outdoor industry businesses, e-commerce ventures, and adventure-focused brands.',
+      'Web development and design for dreamers, creatives, and community builders. Build your presence. Grow your business.',
     start_url: '/',
     display: 'standalone',
     background_color: '#7F492E',

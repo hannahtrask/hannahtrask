@@ -26,11 +26,11 @@ export function generateSEOMetadata({
   noIndex = false,
 }: SEOProps): Metadata {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushcreative.com'
-  const siteName = 'Sagebrush Creative'
-  const defaultTitle = 'Sagebrush Creative - Web Design & Development'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushstudio.com'
+  const siteName = 'Sagebrush Studio'
+  const defaultTitle = 'Sagebrush Studio - Web Design & Development'
   const defaultDescription =
-    'Professional web design and development services for outdoor industry businesses, e-commerce ventures, and adventure-focused brands.'
+    'Sagebrush Studio helps locals, creatives, and community-driven businesses establish a strong online presence while celebrating their unique story and connection to their community and environment.'
   const defaultImage = `${baseUrl}/hero-images/western-backdrop.jpg`
 
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle
@@ -41,14 +41,14 @@ export function generateSEOMetadata({
   const defaultKeywords = [
     'web design',
     'web development',
-    'outdoor industry',
-    'e-commerce',
-    'adventure brands',
-    'responsive design',
-    'SEO optimization',
-    'branding',
-    'illustration',
-    'freelance developer',
+    'local business websites',
+    'creative business websites',
+    'community-driven business',
+    'Shopify',
+    'WordPress',
+    'Wix',
+    'Squarespace',
+    'freelance web developer',
   ]
 
   const allKeywords = [...defaultKeywords, ...keywords].join(', ')
@@ -75,7 +75,7 @@ export function generateSEOMetadata({
           url: fullImage,
           width: 1200,
           height: 630,
-          alt: title || 'Sagebrush Creative',
+          alt: title || 'Sagebrush Studio',
         },
       ],
       locale: 'en_US',
@@ -114,14 +114,14 @@ export function generateSEOMetadata({
 // Structured Data (JSON-LD) generators
 export function generateBusinessStructuredData() {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushcreative.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushstudio.com'
 
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'Sagebrush Creative',
+    name: 'Sagebrush Studio',
     description:
-      'Professional web design and development services for outdoor industry businesses, e-commerce ventures, and adventure-focused brands.',
+      'Sagebrush Studio helps locals, creatives, and community-driven businesses establish a strong online presence while celebrating their unique story and connection to their community and environment.',
     url: baseUrl,
     logo: `${baseUrl}/favicon.ico`,
     image: `${baseUrl}/hero-images/western-backdrop.jpg`,
@@ -134,8 +134,8 @@ export function generateBusinessStructuredData() {
       'Web Design',
       'Web Development',
       'E-commerce Development',
-      'Branding',
-      'Illustration',
+      'Technical Consulting',
+      'Migrations',
     ],
     areaServed: 'Worldwide',
     hasOfferCatalog: {
@@ -179,7 +179,7 @@ export function generateBusinessStructuredData() {
 
 export function generateProjectStructuredData(project: any) {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushcreative.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushstudio.com'
 
   return {
     '@context': 'https://schema.org',
@@ -195,7 +195,7 @@ export function generateProjectStructuredData(project: any) {
     },
     creator: {
       '@type': 'Organization',
-      name: 'Sagebrush Creative',
+      name: 'Sagebrush Studio',
       url: baseUrl,
     },
     dateCreated: project._createdAt,

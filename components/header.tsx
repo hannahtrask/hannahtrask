@@ -50,7 +50,7 @@ export default function Header() {
                   : 'text-white/80 hover:text-white'
               }`}
             >
-              HOME
+              home
             </Link>
             <Link
               href='/work'

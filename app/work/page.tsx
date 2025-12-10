@@ -38,7 +38,7 @@ export default function WorkPage() {
               'web development and design',
               'small business websites',
             ]}
-            className='text-xl sm:text-xl md:text-2xl lg:text-4xl font-cormorant-sc mb-4 sm:mb-6 text-white leading-tight px-2'
+            className='text-lg sm:text-xl md:text-2xl font-cormorant-sc mb-4 sm:mb-6 text-white leading-tight px-2'
             typingSpeed={80}
             deletingSpeed={40}
             pauseDuration={2500}
@@ -51,12 +51,12 @@ export default function WorkPage() {
       <div className='bg-desert-50 dark:bg-desert-900 py-20'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
-            <h2 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
+            <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
               Working with Real Humans
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
-            <p className='text-lg leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              I started Sagebrush Creative because I know that the internet is
+            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
+              I started Sagebrush Studio because I know that the internet is
               intimidating, and I know it's hard to sort through the jargon and
               find the right person for the job. My goal is to work with you
               authentically, so I tailor each project to you and your needs.

@@ -156,18 +156,18 @@ export default function WorkShowcaseSection({
           >
             <div className='max-w-xl'>
               <h2
-                className={`text-4xl md:text-5xl font-cormorant-sc font-bold ${textColor} mb-6 leading-tight`}
+                className={`text-2xl md:text-3xl font-cormorant-sc font-bold ${textColor} mb-4 leading-tight`}
               >
                 {title}
               </h2>
 
               <div
-                className={`w-24 h-px bg-current opacity-60 mb-8`}
+                className={`w-16 h-px bg-current opacity-60 mb-6`}
                 style={{ color: accentColor }}
               ></div>
 
               <p
-                className={`text-lg leading-relaxed ${textColor} opacity-90 mb-8`}
+                className={`text-sm leading-relaxed ${textColor} opacity-90 mb-6`}
               >
                 {description}
               </p>
@@ -192,7 +192,9 @@ export default function WorkShowcaseSection({
                       className='w-2 h-2 rounded-full mt-2 flex-shrink-0'
                       style={{ backgroundColor: accentColor }}
                     ></div>
-                    <span className={`${textColor} opacity-85 leading-relaxed`}>
+                    <span
+                      className={`${textColor} opacity-85 leading-relaxed text-sm`}
+                    >
                       {feature}
                     </span>
                   </motion.div>

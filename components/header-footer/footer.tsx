@@ -8,11 +8,11 @@ import {
 
 export default function Footer() {
   return (
-    <footer className='py-16 px-4 md:px-8 bg-sage-500 dark:bg-desert-800 text-white'>
+    <footer className='py-16 px-4 md:px-8 bg-sand-500 dark:bg-sand-800 text-white'>
       <div className='container mx-auto'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0'>
           <div>
-            <h3 className='font-playfair text-xl mb-2'>SAGEBRUSH CREATIVE</h3>
+            <h3 className='font-playfair text-xl mb-2'>SAGEBRUSH STUDIO</h3>
             <p className='text-desert-100 dark:text-desert-200 text-sm max-w-xs'>
               Based in Jackson, WY. Available for remote and on-site work.
             </p>
@@ -33,7 +33,7 @@ export default function Footer() {
                     className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
-                    Home
+                    home
                   </Link>
                 </li>
               </ul>

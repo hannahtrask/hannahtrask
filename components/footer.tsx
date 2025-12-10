@@ -8,8 +8,8 @@ export default function Footer() {
       <div className='container mx-auto'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0'>
           <div>
-            <h3 className='font-playfair text-xl mb-2'>SAGEBRUSH CREATIVE</h3>
-            <p className='text-desert-100 dark:text-desert-200 text-sm max-w-xs'>
+            <h3 className='font-playfair text-md mb-2'>SAGEBRUSH CREATIVE</h3>
+            <p className='text-desert-100 dark:text-desert-200 text-xs max-w-xs'>
               Based in Jackson, WY. Available for remote and on-site work.
             </p>
           </div>
@@ -23,7 +23,7 @@ export default function Footer() {
                     className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
-                    Home
+                    home
                   </Link>
                 </li>
                 <li>
@@ -32,7 +32,7 @@ export default function Footer() {
                     className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
-                    Work
+                    services
                   </Link>
                 </li>
                 <li>
@@ -41,7 +41,7 @@ export default function Footer() {
                     className='text-desert-600 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
-                    Contact
+                    contact
                   </Link>
                 </li>
               </ul>
