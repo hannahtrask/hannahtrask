@@ -38,7 +38,7 @@ export default function WorkPage() {
               'web development and design',
               'small business websites',
             ]}
-            className='text-lg sm:text-xl md:text-2xl lg:text-4xl font-cormorant-sc mb-4 sm:mb-6 text-white leading-tight px-2'
+            className='text-lg sm:text-xl md:text-2xl font-cormorant-sc mb-6 text-white leading-tight px-2'
             typingSpeed={80}
             deletingSpeed={40}
             pauseDuration={2500}
