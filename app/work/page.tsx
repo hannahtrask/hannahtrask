@@ -51,18 +51,25 @@ export default function WorkPage() {
       </Hero>
 
       {/* Introduction Section */}
-      <div className='bg-desert-50 dark:bg-desert-900 py-20'>
+      <div className='bg-desert-50 dark:bg-desert-900 py-10'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
-              Working with Real Humans
+              Working with a real human
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              I started Sagebrush Studio because I know that the web can be
-              overwhelming, time-consuming, and intimidating. My goal is to work
-              with you authentically, so I tailor each project to you and your
-              needs.
+              I started Sagebrush Studio because I know that the web can both
+              feel very impersonal AND overwhelming, time-consuming, and
+              intimidating. My goal is to work with you authentically, so I
+              tailor each project to you and your needs.
+            </p>
+            <br />
+            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
+              We will talk on the phone, Zoom, Google Meet, email, or meet over
+              coffee. I believe real life interaction is mission critical, and I
+              want to know what makes you tick so I can provide services that
+              reflect your needs.
             </p>
           </div>
         </div>
