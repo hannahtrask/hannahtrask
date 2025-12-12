@@ -68,9 +68,9 @@ export default function HomeClient() {
                   so they can focus on their work.
                   <br />
                   <br />I have 5+ years of experience in web development and
-                  specialize in creating websites that not only look beautiful
-                  but also tell your unique story for your business and{' '}
-                  <strong>your</strong> vision.
+                  specialize in creating and enhancing websites that not only
+                  look beautiful but also are intuitive and easy to use, work
+                  for your business and engage your audience.
                 </p>
                 <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
                   When I'm not coding, building websites or writing, you&apos;ll
