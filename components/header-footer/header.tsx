@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
@@ -31,13 +32,23 @@ export default function Header() {
     >
       <div className='container mx-auto px-4 text-md mid:text-base'>
         <div className='flex items-center justify-between'>
-          <Link
-            href='/'
-            className={`text-2xl font-cormorant-sc font-semibold tracking-wide transition-colors ${
-              isScrolled ? 'text-desert-800 dark:text-white' : 'text-white'
-            }`}
-          >
-            <strong>SAGEBRUSH STUDIO</strong>
+          <Link href='/' className='relative h-10 w-56'>
+            <Image
+              src='/site-title/site-title-light.png'
+              alt='Sagebrush Studio'
+              fill
+              className={`object-contain transition-opacity duration-300 ${
+                isScrolled ? 'opacity-0 dark:opacity-100' : 'opacity-100'
+              }`}
+            />
+            <Image
+              src='/site-title/site-title-dark.png'
+              alt='Sagebrush Studio'
+              fill
+              className={`object-contain transition-opacity duration-300 ${
+                isScrolled ? 'opacity-100 dark:opacity-0' : 'opacity-0'
+              }`}
+            />
           </Link>
 
           {/* Desktop Navigation - Under Construction Mode */}
