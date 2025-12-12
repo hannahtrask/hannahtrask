@@ -64,13 +64,6 @@ export default function WorkPage() {
               intimidating. My goal is to work with you authentically, so I
               tailor each project to you and your needs.
             </p>
-            <br />
-            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              We will talk on the phone, Zoom, Google Meet, email, or meet over
-              coffee. I believe real life interaction is mission critical, and I
-              want to know what makes you tick so I can provide services that
-              reflect your needs.
-            </p>
           </div>
         </div>
       </div>

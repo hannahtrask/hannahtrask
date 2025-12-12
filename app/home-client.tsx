@@ -65,9 +65,7 @@ export default function HomeClient() {
                   Hey, I&apos;m Hannah, the founder and owner of Sagebrush
                   Studio. My passion is helping locals, creatives, and
                   community-driven businesses establish a strong online presence
-                  so they can focus on their work. I believe we can bring
-                  connection and community back in the digital age by acting
-                  with intention, authenticity, and honesty.
+                  so they can focus on their work.
                   <br />
                   <br />I have 5+ years of experience in web development and
                   specialize in creating websites that not only look beautiful
@@ -95,8 +93,6 @@ export default function HomeClient() {
             </h2>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
               I handle individual pages and minor tweaks to full website builds.
-              Sagebrush Studio is a one stop shop for all your web needs. I'll
-              do the tech so you can focus on your work.
             </p>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
 
@@ -114,10 +110,6 @@ export default function HomeClient() {
                       Website overhauls and tweaks to building custom websites
                       on Squarespace, Wix, Shopify, Wordpress, and sometimes
                       custom HTML/CSS/JavaScript.
-                      <br />
-                      <br />
-                      Every project is different, and I&apos;ll work with you to
-                      land on exactly what you need.
                     </p>
                   </div>
                 </div>
@@ -134,11 +126,6 @@ export default function HomeClient() {
                       With over three years of professional experience in the
                       e-commerce space and more than 5 in the web development
                       world, I know Shopify can be a bear to navigate.
-                      <br />
-                      <br />
-                      That&apos;s why I&apos;m here, whether you need help
-                      installing a new app on your store or need a fresh Shopify
-                      presence.
                     </p>
                   </div>
                 </div>
@@ -172,12 +159,9 @@ export default function HomeClient() {
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       Custom dashboards and internal applications to help you
-                      run your business more efficiently.
-                      <br />
-                      <br />
-                      Built so you can be in control, personalized to your
-                      business so you can focus on what you do best, which is
-                      your work! Have an idea? Let&apos;s build it.
+                      run your business more efficiently. Built so you can be in
+                      control, personalized to your business so you can focus on
+                      what you do best, which is your work.
                     </p>
                   </div>
                 </div>
