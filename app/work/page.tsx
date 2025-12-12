@@ -71,13 +71,14 @@ export default function WorkPage() {
       {/* Web Development Showcase */}
       <WorkShowcaseSection
         title='Web Development & Design'
-        description='Custom websites that capture the story you want to tell to your visitors.'
+        description="Custom websites that capture the story you want to tell to your visitors. I'll build you a website from scratch, completely overhaul your existing site, or make some tweaks based on your needs. I offer data-driven website audits and analytics to help you understand your visitors and improve your website."
         features={[
           'Squarespace, Wix, Shopify or WordPress development',
           'SEO optimization and performance tuning',
           'Content management system integration',
           'Shopify and custom e-commerce development',
           'Payment gateway integration (Stripe, PayPal) and inventory management',
+          'Website audits and analytics',
           'Mobile-first experiences',
         ]}
         imageSrc='/page-images/workspace-image.jpg'
@@ -92,7 +93,7 @@ export default function WorkPage() {
       {/* Technical Consulting & Migrations */}
       <WorkShowcaseSection
         title='Technical Consulting & Migrations'
-        description="We take the intimidation out of web tasks. I'm here to help with a plugins, domains, migrating, hosting, SEO, or custom code."
+        description="Web tasks can be: intimidating, time-consuming, and take you away from your work. I'm here to help with any web task, from plugins, domains, migrations, hosting, SEO, or custom code."
         features={[
           'Plugin installation and configuration',
           'Domain registration and management',
@@ -113,7 +114,7 @@ export default function WorkPage() {
       {/* Personal Dashboards & Internal Applications */}
       <WorkShowcaseSection
         title='Personal Dashboards & Internal Applications'
-        description='Custom dashboards and internal applications to help you run your business more efficiently. Built so you can be in control of your business and focus on what you do best.'
+        description='Custom dashboards and internal applications to help you run your business more efficiently. Built so you can be in control and focus on what you do best.'
         features={[
           'Custom dashboard and internal application development',
           'User authentication and access control',
@@ -134,7 +135,7 @@ export default function WorkPage() {
       {/* Small Business Solutions */}
       <WorkShowcaseSection
         title='Small Business Websites'
-        description="Professional websites designed specifically for small businesses and entrepreneurs. Tell us your budget, and I'll work within it. Establish credibility, drive local business growth, and build a community around it."
+        description='Professional websites built specifically for small businesses and entrepreneurs. For those wanting to establish credibility, drive local business growth, and communicate their value.'
         features={[
           'WordPress, Wix, Shopify or Squarespace development',
           'Local SEO optimization',
@@ -142,6 +143,7 @@ export default function WorkPage() {
           'Appointment scheduling and booking',
           'Social media integration',
           'Easy content management for business owners',
+          'Payment gateway integration (Stripe, PayPal) and manual or automatic inventory management',
         ]}
         imageSrc='/hero-images/hay.jpg'
         imageAlt='Small business website showcase'

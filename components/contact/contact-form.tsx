@@ -33,11 +33,11 @@ export default function ContactForm() {
     <div className='bg-white dark:bg-desert-800 p-4 md:p-4 shadow-sm'>
       <div className='max-w-6xl mx-auto'>
         <div className='text-center mb-8'>
-          <h2 className='text-3xl font-cormorant-sc font-light text-desert-800 dark:text-desert-100 mb-4'>
-            Let's Start a Conversation
-          </h2>
+          <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
+            This is a no-commitment connection, let&apos;s just see if
+            we&apos;re a good fit.
+          </p>
         </div>
-
         {/* HoneyBook Contact Form Widget */}
         <div className='w-full hb-p-68ab7f800c8dd7002e944c41-2'></div>
 

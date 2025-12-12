@@ -4,6 +4,7 @@ import Hero from '@/components/hero/hero'
 import ContactForm from '@/components/contact/contact-form'
 import FAQSection from '@/components/faqs/faq-section'
 import Typewriter from '@/components/ui/typewriter'
+import Link from 'next/link'
 
 export default function HomeClient() {
   return (
@@ -92,10 +93,9 @@ export default function HomeClient() {
               businesses establish a strong online presence.
             </h2>
             <p className='text-xs leading-relaxed text-gray-700 dark:text-gray-300'>
-              We handle individual pages and minor tweaks to full website
-              builds. Sagebrush Studio is a one stop shop for all your web
-              needs. We handle the tech so you can focus on what you&apos;re
-              passionate about.
+              I handle individual pages and minor tweaks to full website builds.
+              Sagebrush Studio is a one stop shop for all your web needs. I'll
+              do the tech so you can focus on you&apos;re work.
             </p>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
 
@@ -110,11 +110,11 @@ export default function HomeClient() {
                       Web Design + Development
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      Custom websites on Squarespace, Wix, Shopify, Wordpress,
-                      and sometimes custom HTML/CSS/JavaScript. Every project is
-                      different, and I&apos;ll work with you to land on exactly
-                      what you need. Have an existing website that needs help? I
-                      do that too.
+                      Website overhauls and tweaks to building custom websites
+                      on Squarespace, Wix, Shopify, Wordpress, and sometimes
+                      custom HTML/CSS/JavaScript. Every project is different,
+                      and I&apos;ll work with you to land on exactly what you
+                      need.
                     </p>
                   </div>
                 </div>
@@ -129,10 +129,11 @@ export default function HomeClient() {
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       With over three years of professional experience in the
-                      e-commerce space, I know Shopify can be a bear to
-                      navigate. That&apos;s why I&apos;m here, whether you need
-                      help installing a new app on your store or need a fresh
-                      Shopify presence.
+                      e-commerce space and more than 5 in the web development
+                      world, I know Shopify can be a bear to navigate.
+                      That&apos;s why I&apos;m here, whether you need help
+                      installing a new app on your store or need a fresh Shopify
+                      presence.
                     </p>
                   </div>
                 </div>
@@ -167,8 +168,8 @@ export default function HomeClient() {
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       Custom dashboards and internal applications to help you
                       run your business more efficiently. Built so you can be in
-                      control and personalized to your business so you can focus
-                      on what you do best, which if your work! Have an idea?
+                      control, personalized to your business so you can focus on
+                      what you do best, which is your work! Have an idea?
                       Let&apos;s build it.
                     </p>
                   </div>
@@ -197,8 +198,15 @@ export default function HomeClient() {
               </h2>
               <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-8'></div>
               <p className='text-sm text-desert-600 dark:text-desert-300 max-w-2xl mx-auto leading-relaxed'>
-                Want to talk more about what you need? Fill out the form below
-                and we&apos;ll get in touch within 24-48 hours.
+                Want to talk more about what you need? Shoot me an email at{' '}
+                <Link
+                  href='mailto:hello@sunsagebrushcreative.com'
+                  className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-sand-500 dark:hover:text-gray-200'
+                >
+                  hello@sunsagebrushcreative.com
+                </Link>{' '}
+                or fill out the form below and I&apos;ll get in touch within
+                24-48 hours.
               </p>
             </div>
             <ContactForm />
