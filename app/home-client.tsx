@@ -96,7 +96,7 @@ export default function HomeClient() {
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
               I handle individual pages and minor tweaks to full website builds.
               Sagebrush Studio is a one stop shop for all your web needs. I'll
-              do the tech so you can focus on you&apos;re work.
+              do the tech so you can focus on your work.
             </p>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
 
