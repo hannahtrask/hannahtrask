@@ -33,7 +33,7 @@ export default function HomeClient() {
             pauseDuration={2500}
             showCursor={true}
           />
-          <p className='text-xs leading-relaxed text-white/90'>
+          <p className='text-sm leading-relaxed text-white/90'>
             web design and development for searchers, makers and dreamers
           </p>
         </div>
@@ -67,11 +67,12 @@ export default function HomeClient() {
                   community-driven businesses establish a strong online presence
                   so they can focus on their work. I believe we can bring
                   connection and community back in the digital age by acting
-                  with intention, authenticity, and honesty. I have 5+ years of
-                  experience in web development and specialize in creating
-                  websites that not only look beautiful but also tell your
-                  unique story for your business and <strong>your</strong>{' '}
-                  vision.
+                  with intention, authenticity, and honesty.
+                  <br />
+                  <br />I have 5+ years of experience in web development and
+                  specialize in creating websites that not only look beautiful
+                  but also tell your unique story for your business and{' '}
+                  <strong>your</strong> vision.
                 </p>
                 <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
                   When I'm not coding, building websites or writing, you&apos;ll
@@ -92,7 +93,7 @@ export default function HomeClient() {
               Sagebrush Studio helps locals, creatives, and community-driven
               businesses establish a strong online presence.
             </h2>
-            <p className='text-xs leading-relaxed text-gray-700 dark:text-gray-300'>
+            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
               I handle individual pages and minor tweaks to full website builds.
               Sagebrush Studio is a one stop shop for all your web needs. I'll
               do the tech so you can focus on you&apos;re work.
@@ -112,9 +113,11 @@ export default function HomeClient() {
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       Website overhauls and tweaks to building custom websites
                       on Squarespace, Wix, Shopify, Wordpress, and sometimes
-                      custom HTML/CSS/JavaScript. Every project is different,
-                      and I&apos;ll work with you to land on exactly what you
-                      need.
+                      custom HTML/CSS/JavaScript.
+                      <br />
+                      <br />
+                      Every project is different, and I&apos;ll work with you to
+                      land on exactly what you need.
                     </p>
                   </div>
                 </div>
@@ -131,6 +134,8 @@ export default function HomeClient() {
                       With over three years of professional experience in the
                       e-commerce space and more than 5 in the web development
                       world, I know Shopify can be a bear to navigate.
+                      <br />
+                      <br />
                       That&apos;s why I&apos;m here, whether you need help
                       installing a new app on your store or need a fresh Shopify
                       presence.
@@ -167,10 +172,12 @@ export default function HomeClient() {
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       Custom dashboards and internal applications to help you
-                      run your business more efficiently. Built so you can be in
-                      control, personalized to your business so you can focus on
-                      what you do best, which is your work! Have an idea?
-                      Let&apos;s build it.
+                      run your business more efficiently.
+                      <br />
+                      <br />
+                      Built so you can be in control, personalized to your
+                      business so you can focus on what you do best, which is
+                      your work! Have an idea? Let&apos;s build it.
                     </p>
                   </div>
                 </div>

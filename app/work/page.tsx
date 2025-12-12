@@ -44,7 +44,7 @@ export default function WorkPage() {
             pauseDuration={2500}
             showCursor={true}
           />
-          <p className='text-xs leading-relaxed text-white/90'>
+          <p className='text-sm leading-relaxed text-white/90'>
             services and offerings
           </p>
         </div>
@@ -59,10 +59,10 @@ export default function WorkPage() {
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              I started Sagebrush Studio because I know that the internet is
-              intimidating, and I know it's hard to sort through the jargon and
-              find the right person for the job. My goal is to work with you
-              authentically, so I tailor each project to you and your needs.
+              I started Sagebrush Studio because I know that the web can be
+              overwhelming, time-consuming, and intimidating. My goal is to work
+              with you authentically, so I tailor each project to you and your
+              needs.
             </p>
           </div>
         </div>
