@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/hero/hero'
 import WorkShowcaseSection from '@/components/work/work-showcase-section'
-import ContactForm from '@/components/contact-form'
+import ContactForm from '@/components/contact/contact-form'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 import Typewriter from '@/components/ui/typewriter'
 
@@ -24,7 +24,7 @@ export default function WorkPage() {
   return (
     <>
       <Hero
-        backgroundImage='/hero-images/hay.jpg'
+        backgroundImage='/hero-images/work-background-bison.jpg'
         backgroundImageAlt='Bison lingering in a field in front of mountains'
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
@@ -44,6 +44,9 @@ export default function WorkPage() {
             pauseDuration={2500}
             showCursor={true}
           />
+          <p className='text-xs leading-relaxed text-white/90'>
+            services and offerings
+          </p>
         </div>
       </Hero>
 
