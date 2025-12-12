@@ -73,11 +73,25 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className='mt-16 pt-8 border-t border-desert-900 dark:border-desert-600'>
+        <div className='mt-16 pt-8 border-t border-desert-900 dark:border-desert-600 flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0'>
           <p className='text-desert-50 dark:text-desert-300 text-xs'>
             © {new Date().getFullYear()} Sun & Sagebrush LLC. All rights
             reserved.
           </p>
+          <div className='flex space-x-4'>
+            <Link
+              href='/privacy'
+              className='text-desert-50 dark:text-desert-300 hover:text-white dark:hover:text-gray-200 text-xs'
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href='/terms'
+              className='text-desert-50 dark:text-desert-300 hover:text-white dark:hover:text-gray-200 text-xs'
+            >
+              Terms & Conditions
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
