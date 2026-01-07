@@ -54,6 +54,20 @@ export default function RootLayout({
             __html: JSON.stringify(businessStructuredData),
           }}
         />
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-H27HPKYH03'
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-H27HPKYH03');
+            `,
+          }}
+        />
       </head>
       <body
         className={`${cormorantSC.variable} ${montserrat.variable} min-h-screen font-montserrat`}
