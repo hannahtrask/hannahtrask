@@ -139,10 +139,10 @@ export default function ContactForm() {
               out directly:
             </p>
             <a
-              href='mailto:hello@sunsagebrushcreative.com'
+              href='mailto:hello@wearesagebrush.com'
               className='inline-block bg-desert-600 hover:bg-desert-700 text-white px-6 py-3 rounded-md transition-colors mb-4'
             >
-              Email hello@sunsagebrushcreative.com
+              Email hello@wearesagebrush.com
             </a>
             <br />
             <button

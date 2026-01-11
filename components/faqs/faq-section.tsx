@@ -135,10 +135,10 @@ export default function FAQSection() {
             Still have questions? We'd love to hear from you.
           </p>
           <Link
-            href='mailto:hello@sunsagebrushcreative.com'
+            href='mailto:hello@wearesagebrush.com'
             className='text-desert-600 dark:text-desert-200 hover:underline'
           >
-            hello@sunsagebrushcreative.com
+            hello@wearesagebrush.com
           </Link>
         </motion.div>
       </div>

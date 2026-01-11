@@ -133,10 +133,10 @@ export default function TermsPage() {
                 If you have any questions about these Terms and Conditions,
                 please contact us at{' '}
                 <Link
-                  href='mailto:hello@sunsagebrushcreative.com'
+                  href='mailto:hello@wearesagebrush.com'
                   className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-white dark:hover:text-gray-200'
                 >
-                  hello@sunsagebrushcreative.com
+                  hello@wearesagebrush.com
                 </Link>
                 .
               </p>

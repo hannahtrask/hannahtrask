@@ -17,10 +17,10 @@ export default function Footer() {
               Based in Jackson, WY. Available for remote and on-site work.
             </p>
             <Link
-              href='mailto:hello@sunsagebrushcreative.com'
+              href='mailto:hello@wearesagebrush.com'
               className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-white dark:hover:text-gray-200'
             >
-              hello@sunsagebrushcreative.com
+              hello@wearesagebrush.com
             </Link>
           </div>
 

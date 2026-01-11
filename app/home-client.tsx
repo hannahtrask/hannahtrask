@@ -191,10 +191,10 @@ export default function HomeClient() {
               <p className='text-sm text-desert-600 dark:text-desert-300 max-w-2xl mx-auto leading-relaxed'>
                 Want to talk more about what you need? Shoot me an email at{' '}
                 <Link
-                  href='mailto:hello@sunsagebrushcreative.com'
+                  href='mailto:hello@wearesagebrush.com'
                   className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-sand-500 dark:hover:text-gray-200'
                 >
-                  hello@sunsagebrushcreative.com
+                  hello@wearesagebrush.com
                 </Link>{' '}
                 or fill out the form below and I&apos;ll get in touch within
                 24-48 hours.

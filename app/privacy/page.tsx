@@ -115,10 +115,10 @@ export default function PrivacyPolicyPage() {
                 You have the right to access, correct, or delete your personal
                 information. To exercise these rights, please contact us at
                 <Link
-                  href='mailto:hello@sunsagebrushcreative.com'
+                  href='mailto:hello@wearesagebrush.com'
                   className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-white dark:hover:text-gray-200'
                 >
-                  hello@sunsagebrushcreative.com
+                  hello@wearesagebrush.com
                 </Link>
               </p>
             </section>
@@ -142,10 +142,10 @@ export default function PrivacyPolicyPage() {
                 If you have any questions about this Privacy Policy, please
                 contact us at{' '}
                 <Link
-                  href='mailto:hello@sunsagebrushcreative.com'
+                  href='mailto:hello@wearesagebrush.com'
                   className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-white dark:hover:text-gray-200'
                 >
-                  hello@sunsagebrushcreative.com
+                  hello@wearesagebrush.com
                 </Link>
                 .
               </p>
