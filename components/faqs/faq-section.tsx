@@ -39,7 +39,7 @@ const faqItems: FAQItem[] = [
   },
   {
     id: 'why-choose-us',
-    question: 'Why should I work with Sagebrush Creative?',
+    question: 'Why should I work with Sagebrush Studio?',
     answer:
       "I bring a unique combination of technical expertise and creativity to my work. I'm inspired by my connection to the wild spaces around Jackson, WY and in the intermountain West. You will get personalized attention, direct communication (with a REAL human), and website and work completed that truly reflect your business's personality and values.",
   },

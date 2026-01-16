@@ -49,7 +49,7 @@ export default function HomeClient() {
                 <div className='relative'>
                   <img
                     src='/HANNAH_TRASK.png'
-                    alt='Hannah Trask - Founder of Sagebrush Creative'
+                    alt='Hannah Trask - Founder of Sagebrush Studio'
                     className='w-full h-auto object-cover'
                   />
                 </div>
