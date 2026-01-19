@@ -109,7 +109,7 @@ export default function WorkPage() {
           'SEO optimization and performance tuning',
           'Custom code development and debugging',
         ]}
-        imageSrc='/hero-images/work-background-bison.jpg'
+        imageSrc='/hero-images/wolf.jpg'
         imageAlt='E-commerce website showcase'
         imagePosition='right'
         backgroundColor='bg-gradient-to-bl from-brand-desert/10 to-brand-sage/10 dark:from-brand-desert/20 dark:to-brand-sage/20'
