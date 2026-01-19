@@ -24,12 +24,16 @@ export default function WorkPage() {
   return (
     <>
       <Hero
-        backgroundImage='/hero-images/work-background-bison.jpg'
+        backgroundImage='/hero-images/elk-background.jpg'
         backgroundImageAlt='Bison lingering in a field in front of mountains'
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         animateContent={true}
         titleClassName='text-5xl md:text-7xl font-cormorant-sc mb-6 text-white'
+        photoCredit={{
+          name: 'Nick Sulzer',
+          url: 'https://www.nicksulzer.com/',
+        }}
       >
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
           <Typewriter
@@ -148,7 +152,7 @@ export default function WorkPage() {
           'Easy content management for business owners',
           'Payment gateway integration (Stripe, PayPal) and manual or automatic inventory management',
         ]}
-        imageSrc='/hero-images/hay.jpg'
+        imageSrc='/hero-images/tetons-backdrop.jpg'
         imageAlt='Small business website showcase'
         imagePosition='right'
         backgroundColor='bg-gradient-to-bl from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-olive/20'

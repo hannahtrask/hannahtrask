@@ -4,6 +4,11 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
+interface PhotoCredit {
+  name: string
+  url?: string
+}
+
 interface HeroProps {
   backgroundImage: string
   backgroundImageAlt: string
@@ -21,6 +26,7 @@ interface HeroProps {
   descriptionClassName?: string
   containerClassName?: string
   animateContent?: boolean
+  photoCredit?: PhotoCredit
 }
 
 export default function Hero({
@@ -40,6 +46,7 @@ export default function Hero({
   descriptionClassName = '',
   containerClassName = '',
   animateContent = true,
+  photoCredit,
 }: HeroProps) {
   const [scrollY, setScrollY] = useState(0)
 
@@ -179,6 +186,27 @@ export default function Hero({
           </div>
         )}
       </div>
+
+      {/* Photo Credit */}
+      {photoCredit && (
+        <div className='absolute bottom-2 right-2 z-20'>
+          <span className='text-[10px] text-white/70'>
+            Photo by{' '}
+            {photoCredit.url ? (
+              <a
+                href={photoCredit.url}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='hover:text-white/90 underline'
+              >
+                {photoCredit.name}
+              </a>
+            ) : (
+              photoCredit.name
+            )}
+          </span>
+        </div>
+      )}
     </div>
   )
 }

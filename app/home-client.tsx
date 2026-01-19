@@ -11,12 +11,16 @@ export default function HomeClient() {
     <>
       {/* Home Hero Section */}
       <Hero
-        backgroundImage='/hero-images/western-backdrop.jpg'
-        backgroundImageAlt='A highway somewhere in the American West.'
+        backgroundImage='/hero-images/bison-grand.jpg'
+        backgroundImageAlt='Bison graze in front of the Tetons. Photo by Nick Sulzer.'
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         animateContent={true}
         titleClassName='text-5xl md:text-7xl font-cormorant-sc mb-6 text-white'
+        photoCredit={{
+          name: 'Nick Sulzer',
+          url: 'https://www.nicksulzer.com/',
+        }}
       >
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
           <Typewriter

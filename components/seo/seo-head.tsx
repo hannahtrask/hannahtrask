@@ -31,7 +31,7 @@ export function generateSEOMetadata({
   const defaultTitle = 'Sagebrush Studio - Web Design & Development'
   const defaultDescription =
     'Sagebrush Studio helps locals, creatives, and community-driven businesses establish a strong online presence while celebrating their unique story and connection to their community and environment.'
-  const defaultImage = `${baseUrl}/hero-images/western-backdrop.jpg`
+  const defaultImage = `${baseUrl}/hero-images/tetons-backdrop.jpg`
 
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle
   const fullDescription = description || defaultDescription
@@ -124,7 +124,7 @@ export function generateBusinessStructuredData() {
       'Sagebrush Studio helps locals, creatives, and community-driven businesses establish a strong online presence while celebrating their unique story and connection to their community and environment.',
     url: baseUrl,
     logo: `${baseUrl}/favicon.ico`,
-    image: `${baseUrl}/hero-images/western-backdrop.jpg`,
+    image: `${baseUrl}/hero-images/tetons-backdrop.jpg`,
     founder: {
       '@type': 'Person',
       name: 'Hannah Trask',

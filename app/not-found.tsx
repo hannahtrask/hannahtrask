@@ -5,26 +5,27 @@ import Hero from '@/components/hero/hero'
 export default function NotFound() {
   return (
     <Hero
-      backgroundImage='/hero-images/road-404.jpg'
-      backgroundImageAlt='A highway somewhere in the American West.'
+      backgroundImage='/hero-images/grand-teton.jpg'
+      backgroundImageAlt='The Grand Teton in the sunlight. Photo by Nick Sulzer.'
       title='404'
       overlayType='custom'
       overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
       animateContent={true}
+      photoCredit={{ name: 'Nick Sulzer', url: 'https://www.nicksulzer.com/' }}
     >
       <div className='text-center text-white'>
         <h1 className='text-5xl md:text-7xl font-cormorant-sc mb-6 text-white'>
-          OOPS!
+          OOPS
         </h1>
-        <h2 className='text-2xl md:text-3xl font-light mb-8 tracking-wide text-white'>
-          Looks like you took a wrong turn somewhere.
+        <h2 className='text-md font-montserrat md:text-md font-light mb-8 tracking-wide text-white'>
+          looks like you ended up somewhere that doesn&apos;t exist
         </h2>
         <Button
           asChild
-          variant='outline'
+          variant='ghost'
           className='border-white text-desert-900 hover:bg-desert-100'
         >
-          <Link href='/'>back to home base</Link>
+          <Link href='/'>head home</Link>
         </Button>
       </div>
     </Hero>
