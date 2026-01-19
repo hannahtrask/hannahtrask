@@ -5,6 +5,7 @@ import ContactForm from '@/components/contact/contact-form'
 import FAQSection from '@/components/faqs/faq-section'
 import Typewriter from '@/components/ui/typewriter'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function HomeClient() {
   return (
@@ -51,9 +52,11 @@ export default function HomeClient() {
               {/* Image */}
               <div className='order-2 lg:order-1'>
                 <div className='relative'>
-                  <img
+                  <Image
                     src='/HANNAH_TRASK.png'
                     alt='Hannah Trask - Founder of Sagebrush Studio'
+                    width={600}
+                    height={600}
                     className='w-full h-auto object-cover'
                   />
                 </div>
