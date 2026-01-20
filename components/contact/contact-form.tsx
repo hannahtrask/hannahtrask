@@ -112,7 +112,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='bg-white dark:bg-desert-800 p-4 md:p-4 shadow-sm'>
+    <div className='bg-white dark:bg-desert-800 py-4 md:p-4 shadow-sm'>
       <div className='max-w-6xl mx-auto'>
         <div className='text-center mb-8'>
           <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>

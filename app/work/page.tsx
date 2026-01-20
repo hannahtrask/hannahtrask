@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Hero from '@/components/hero/hero'
 import WorkShowcaseSection from '@/components/work/work-showcase-section'
-import ContactForm from '@/components/contact/contact-form'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 import Typewriter from '@/components/ui/typewriter'
 
@@ -163,15 +162,6 @@ export default function WorkPage() {
         accentColor='#9D9B86'
         index={3}
       />
-
-      {/* Contact Section */}
-      <div className='bg-desert-50 dark:bg-desert-900 py-20'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center'>
-            <ContactForm />
-          </div>
-        </div>
-      </div>
     </>
   )
 }
