@@ -9,7 +9,7 @@ const PROJECTS_QUERY = `*[_type == "project" && defined(slug.current)] {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushcreative.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushstudio.com'
 
   // Get all projects from Sanity
   const projects = await client.fetch<SanityDocument[]>(PROJECTS_QUERY)

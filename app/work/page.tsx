@@ -6,10 +6,13 @@ import { generateSEOMetadata } from '@/components/seo/seo-head'
 import Typewriter from '@/components/ui/typewriter'
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Work',
+  title: 'Work - Jackson WY Web Design Portfolio',
   description:
-    'Explore our portfolio of web design and development projects for outdoor industry businesses, e-commerce ventures, and adventure-focused brands.',
+    'Explore our portfolio of web design and development projects from Sagebrush Studio in Jackson, Wyoming. We build websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands in Jackson Hole and beyond.',
   keywords: [
+    'Jackson WY web design portfolio',
+    'Jackson Hole web developer work',
+    'Wyoming web design projects',
     'portfolio',
     'web design projects',
     'web development work',

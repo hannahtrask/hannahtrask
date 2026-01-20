@@ -28,9 +28,9 @@ export function generateSEOMetadata({
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushstudio.com'
   const siteName = 'Sagebrush Studio'
-  const defaultTitle = 'Sagebrush Studio - Web Design & Development'
+  const defaultTitle = 'Sagebrush Studio - Jackson WY Web Design & Development'
   const defaultDescription =
-    'Sagebrush Studio helps locals, creatives, and community-driven businesses establish a strong online presence while celebrating their unique story and connection to their community and environment.'
+    'Sagebrush Studio is a Jackson, Wyoming web design and development studio helping locals, creatives, and community-driven businesses in the Teton Valley establish a strong online presence while celebrating their unique story and connection to their community and environment.'
   const defaultImage = `${baseUrl}/hero-images/tetons-backdrop.jpg`
 
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle
@@ -39,6 +39,12 @@ export function generateSEOMetadata({
   const fullImage = image ? `${baseUrl}${image}` : defaultImage
 
   const defaultKeywords = [
+    'Jackson WY web design',
+    'Jackson WY web development',
+    'Jackson Wyoming web developer',
+    'Jackson Hole web design',
+    'Teton Valley web development',
+    'Sagebrush Studio Jackson WY',
     'web design',
     'web development',
     'local business websites',
@@ -49,6 +55,7 @@ export function generateSEOMetadata({
     'Wix',
     'Squarespace',
     'freelance web developer',
+    'Wyoming web designer',
   ]
 
   const allKeywords = [...defaultKeywords, ...keywords].join(', ')
@@ -121,7 +128,7 @@ export function generateBusinessStructuredData() {
     '@type': 'ProfessionalService',
     name: 'Sagebrush Studio',
     description:
-      'Sagebrush Studio helps locals, creatives, and community-driven businesses establish a strong online presence while celebrating their unique story and connection to their community and environment.',
+      'Sagebrush Studio is a Jackson, Wyoming web design and development studio helping locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley establish a strong online presence.',
     url: baseUrl,
     logo: `${baseUrl}/favicon.ico`,
     image: `${baseUrl}/hero-images/tetons-backdrop.jpg`,
@@ -137,7 +144,35 @@ export function generateBusinessStructuredData() {
       'Technical Consulting',
       'Migrations',
     ],
-    areaServed: 'Worldwide',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Jackson',
+      addressRegion: 'WY',
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 43.4799,
+      longitude: -110.7624,
+    },
+    areaServed: [
+      {
+        '@type': 'City',
+        name: 'Jackson',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Wyoming',
+        },
+      },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'Teton County',
+      },
+      {
+        '@type': 'Place',
+        name: 'Jackson Hole',
+      },
+    ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Web Design & Development Services',

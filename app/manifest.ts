@@ -2,10 +2,10 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Sagebrush Studio - Web Design & Development',
+    name: 'Sagebrush Studio - Jackson WY Web Design & Development',
     short_name: 'Sagebrush Studio',
     description:
-      'Web development and design for dreamers, creatives, and community builders. Build your presence. Grow your business.',
+      'Jackson, Wyoming web design and development studio. Web development and design for dreamers, creatives, and community builders in Jackson Hole and the Teton Valley.',
     start_url: '/',
     display: 'standalone',
     background_color: '#7F492E',
