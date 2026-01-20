@@ -40,6 +40,11 @@ export default function ContactPage() {
         }}
       >
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
+          {/* SEO-friendly hidden H1 */}
+          <h1 className='sr-only'>
+            Contact Hannah Trask - Jackson WY Web Developer | Sagebrush Studio
+            Inquiry
+          </h1>
           <Typewriter
             lines={['get in touch', "let's work together", 'say hello']}
             className='text-lg sm:text-xl md:text-2xl font-cormorant-sc mb-6 text-white leading-tight px-2'

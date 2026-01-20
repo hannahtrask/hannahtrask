@@ -39,10 +39,14 @@ export function generateSEOMetadata({
   const fullImage = image ? `${baseUrl}${image}` : defaultImage
 
   const defaultKeywords = [
+    'Hannah Trask',
+    'Hannah Trask web developer',
+    'Hannah Trask Jackson WY',
     'Jackson WY web design',
     'Jackson WY web development',
     'Jackson Wyoming web developer',
     'Jackson Hole web design',
+    'Jackson Hole web developer',
     'Teton Valley web development',
     'Sagebrush Studio Jackson WY',
     'web design',
@@ -56,6 +60,7 @@ export function generateSEOMetadata({
     'Squarespace',
     'freelance web developer',
     'Wyoming web designer',
+    'freelance web developer Wyoming',
   ]
 
   const allKeywords = [...defaultKeywords, ...keywords].join(', ')

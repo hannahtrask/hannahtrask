@@ -38,6 +38,11 @@ export default function WorkPage() {
         }}
       >
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
+          {/* SEO-friendly hidden H1 */}
+          <h1 className='sr-only'>
+            Web Design & Development Services in Jackson WY | Sagebrush Studio
+            by Hannah Trask
+          </h1>
           <Typewriter
             lines={[
               'technical consulting',

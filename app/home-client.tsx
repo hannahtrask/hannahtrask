@@ -24,6 +24,11 @@ export default function HomeClient() {
         }}
       >
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
+          {/* SEO-friendly hidden H1 */}
+          <h1 className='sr-only'>
+            Hannah Trask - Jackson WY Web Developer & Designer | Sagebrush
+            Studio Web Development
+          </h1>
           <Typewriter
             lines={[
               'web development',
@@ -48,6 +53,11 @@ export default function HomeClient() {
       <div className='bg-white dark:bg-desert-800 pt-10'>
         <div className='container mx-auto px-4'>
           <div className='max-w-6xl mx-auto'>
+            {/* SEO-friendly hidden H2 */}
+            <h2 className='sr-only'>
+              About Hannah Trask - Jackson Hole Web Developer and Freelance Web
+              Designer
+            </h2>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
               {/* Image */}
               <div className='order-2 lg:order-1'>
@@ -94,10 +104,15 @@ export default function HomeClient() {
       <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-900 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
-            <h2 className='text-lg md:text-xl lg:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4 leading-tight'>
+            {/* SEO-friendly hidden H2 */}
+            <h2 className='sr-only'>
+              Web Development Services in Jackson WY - Squarespace, Shopify,
+              WordPress, Wix
+            </h2>
+            <p className='text-lg md:text-xl lg:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4 leading-tight'>
               Sagebrush Studio helps locals, creatives, and community-driven
               businesses establish a strong online presence.
-            </h2>
+            </p>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
               I handle individual pages and minor tweaks to full website builds.
             </p>
@@ -115,8 +130,8 @@ export default function HomeClient() {
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       Website overhauls and tweaks to building custom websites
-                      on Squarespace, Wix, Shopify, Wordpress, and sometimes
-                      custom HTML/CSS/JavaScript.
+                      on Squarespace, Wix, Shopify, WordPress, and occasionally
+                      custom NextJS websites deployed on Vercel.
                     </p>
                   </div>
                 </div>
@@ -130,9 +145,10 @@ export default function HomeClient() {
                       E-commerce Solutions
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      With over three years of professional experience in the
+                      I have over three years of professional experience in the
                       e-commerce space and more than 5 in the web development
-                      world, I know Shopify can be a bear to navigate.
+                      world. I can help you build and maintain a scalable online
+                      store.
                     </p>
                   </div>
                 </div>
@@ -148,10 +164,11 @@ export default function HomeClient() {
                       Technical Consulting + Migrations
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      Whether you need help with a plugin, domains, migrating,
-                      hosting, SEO, or custom code, I&apos;ll give you the tools
-                      and will educate you every step of the way so you can feel
-                      empowered to manage your web presence.
+                      Whether you need help with a site audit, WordPress plugin,
+                      domains, migrating, hosting, SEO, or custom code,
+                      I&apos;ll give you the tools and will educate you every
+                      step of the way so you can feel empowered to manage your
+                      web presence.
                     </p>
                   </div>
                 </div>
@@ -168,7 +185,7 @@ export default function HomeClient() {
                       Custom dashboards and internal applications to help you
                       run your business more efficiently. Built so you can be in
                       control, personalized to your business so you can focus on
-                      what you do best, which is your work.
+                      what you do best ... your work!
                     </p>
                   </div>
                 </div>
