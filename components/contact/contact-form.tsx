@@ -58,15 +58,36 @@ export default function ContactForm() {
       return containerRef.current.children.length > 0
     }
 
+    const waitForWidget = (): Promise<boolean> => {
+      return new Promise(resolve => {
+        let pollCount = 0
+        const maxPolls = 20 // Poll for up to 10 seconds (20 * 500ms)
+
+        const poll = () => {
+          if (checkWidgetLoaded()) {
+            resolve(true)
+            return
+          }
+          pollCount++
+          if (pollCount < maxPolls) {
+            setTimeout(poll, 500)
+          } else {
+            resolve(false)
+          }
+        }
+        poll()
+      })
+    }
+
     const attemptLoad = async () => {
       try {
         initHoneyBook()
         await loadScript()
 
-        // Give the widget time to render
-        await new Promise(resolve => setTimeout(resolve, 1000))
+        // Poll for widget to load (up to 10 seconds)
+        const loaded = await waitForWidget()
 
-        if (checkWidgetLoaded()) {
+        if (loaded) {
           setIsLoading(false)
           setHasError(false)
         } else if (retryCount < maxRetries) {
@@ -76,7 +97,9 @@ export default function ContactForm() {
             'script[src*="honeybook.com"]'
           )
           existingScript?.remove()
-          retryTimeout = setTimeout(attemptLoad, 1500)
+          // Also clear HoneyBook state
+          ;(window as any)._HB_ = {}
+          retryTimeout = setTimeout(attemptLoad, 1000)
         } else {
           setIsLoading(false)
           setHasError(true)
@@ -84,7 +107,7 @@ export default function ContactForm() {
       } catch {
         if (retryCount < maxRetries) {
           retryCount++
-          retryTimeout = setTimeout(attemptLoad, 1500)
+          retryTimeout = setTimeout(attemptLoad, 1000)
         } else {
           setIsLoading(false)
           setHasError(true)

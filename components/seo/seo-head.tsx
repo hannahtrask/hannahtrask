@@ -26,7 +26,7 @@ export function generateSEOMetadata({
   noIndex = false,
 }: SEOProps): Metadata {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushstudio.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://wearesagebrush.com'
   const siteName = 'Sagebrush Studio'
   const defaultTitle = 'Sagebrush Studio - Jackson WY Web Design & Development'
   const defaultDescription =
@@ -121,7 +121,7 @@ export function generateSEOMetadata({
 // Structured Data (JSON-LD) generators
 export function generateBusinessStructuredData() {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushstudio.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://wearesagebrush.com'
 
   return {
     '@context': 'https://schema.org',
@@ -214,7 +214,7 @@ export function generateBusinessStructuredData() {
 
 export function generateProjectStructuredData(project: any) {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://sagebrushstudio.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://wearesagebrush.com'
 
   return {
     '@context': 'https://schema.org',

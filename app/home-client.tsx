@@ -188,27 +188,25 @@ export default function HomeClient() {
         id='contact'
         className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white dark:bg-desert-900 py-16'
       >
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto'>
-            <div className='text-center mb-12'>
-              <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
-                LET'S WORK TOGETHER
-              </h2>
-              <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-8'></div>
-              <p className='text-sm text-desert-600 dark:text-desert-300 max-w-2xl mx-auto leading-relaxed'>
-                Want to talk more about what you need? Shoot me an email at{' '}
-                <Link
-                  href='mailto:hello@wearesagebrush.com'
-                  className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-sand-500 dark:hover:text-gray-200'
-                >
-                  hello@wearesagebrush.com
-                </Link>{' '}
-                or fill out the form below and I&apos;ll get in touch within
-                24-48 hours.
-              </p>
-            </div>
-            <ContactForm />
+        <div className='px-4 sm:px-6'>
+          <div className='text-center mb-12'>
+            <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
+              LET'S WORK TOGETHER
+            </h2>
+            <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-8'></div>
+            <p className='text-sm text-desert-600 dark:text-desert-300 max-w-2xl mx-auto leading-relaxed'>
+              Want to talk more about what you need? Shoot me an email at{' '}
+              <Link
+                href='mailto:hello@wearesagebrush.com'
+                className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-sand-500 dark:hover:text-gray-200'
+              >
+                hello@wearesagebrush.com
+              </Link>{' '}
+              or fill out the form below and I&apos;ll get in touch within 24-48
+              hours.
+            </p>
           </div>
+          <ContactForm />
         </div>
       </div>
     </>
