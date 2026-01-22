@@ -75,7 +75,7 @@ export default function HomeClient() {
               {/* Text Content */}
               <div className='order-1 lg:order-2 space-y-6'>
                 <h3 className='text-xl md:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white'>
-                  ABOUT SAGEBRUSH
+                  ABOUT SAGEBRUSH STUDIO
                 </h3>
                 <div className='w-16 h-px bg-brand-sage'></div>
                 <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
