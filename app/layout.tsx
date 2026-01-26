@@ -33,6 +33,8 @@ export const metadata: Metadata = generateSEOMetadata({
     'Jackson WY web design',
     'Jackson WY web development',
     'Jackson Hole web designer',
+    'Jackson Hole web developer',
+    'Hannah Trask web developer',
     'Sagebrush Studio Jackson WY',
     'Wyoming web developer',
     'Teton Valley web design',
