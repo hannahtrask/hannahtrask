@@ -1,0 +1,36 @@
+# Sagebrush Studio
+
+> Sagebrush Studio is a web design and development studio based in Jackson, Wyoming, founded by Hannah Trask. We help locals, creatives, and community-driven businesses establish a strong online presence through custom websites, migrations, and technical consulting.
+
+## About
+
+Hannah Trask is a freelance web developer and web designer with 5+ years of experience, specializing in creating websites that are beautiful, intuitive, and effective for small businesses. Sagebrush Studio serves clients in Jackson Hole, Teton Valley, and throughout Wyoming.
+
+## Services
+
+- **Web Design & Development**: Custom websites on Squarespace, Wix, Shopify, WordPress, and custom HTML/CSS/JavaScript
+- **Website Migrations**: Moving sites between platforms while preserving SEO and content
+- **Technical Consulting**: Helping businesses make informed decisions about their web presence
+- **Internal Applications**: Custom tools and applications for business operations
+
+## Location
+
+- Based in Jackson, Wyoming (Jackson Hole)
+- Serving clients in Teton Valley, Wyoming, and remotely
+
+## Contact
+
+- Website: https://wearesagebrush.com
+- Email: hannah@wearesagebrush.com
+- Contact Form: https://wearesagebrush.com/contact
+
+## Pages
+
+- [Homepage](https://wearesagebrush.com): Main landing page with overview of services
+- [Work & Services](https://wearesagebrush.com/work): Portfolio and detailed service offerings
+- [Contact](https://wearesagebrush.com/contact): Contact form and inquiry information
+
+## Keywords
+
+Jackson WY web design, Jackson Hole web developer, Wyoming web development, Hannah Trask, Sagebrush Studio, freelance web developer Wyoming, small business websites, Squarespace developer, WordPress developer, Shopify developer
+
