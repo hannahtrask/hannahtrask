@@ -12,6 +12,16 @@ Hannah Trask is a freelance web developer and web designer with 5+ years of expe
 - **Website Migrations**: Moving sites between platforms while preserving SEO and content
 - **Technical Consulting**: Helping businesses make informed decisions about their web presence
 - **Internal Applications**: Custom tools and applications for business operations
+- **Small Business Websites**: Professional websites built specifically for small businesses and entrepreneurs
+
+## Case Studies
+
+Detailed project showcases demonstrating our design and development process, including:
+- Problem statements and challenges
+- Solutions implemented
+- Design and development process
+- Technologies used
+- Project galleries
 
 ## Location
 
@@ -27,10 +37,11 @@ Hannah Trask is a freelance web developer and web designer with 5+ years of expe
 ## Pages
 
 - [Homepage](https://wearesagebrush.com): Main landing page with overview of services
-- [Work & Services](https://wearesagebrush.com/work): Portfolio and detailed service offerings
+- [Services](https://wearesagebrush.com/services): Detailed service offerings
+- [Case Studies](https://wearesagebrush.com/case-studies): Portfolio of client projects with in-depth breakdowns
 - [Contact](https://wearesagebrush.com/contact): Contact form and inquiry information
 
 ## Keywords
 
-Jackson WY web design, Jackson Hole web developer, Wyoming web development, Hannah Trask, Sagebrush Studio, freelance web developer Wyoming, small business websites, Squarespace developer, WordPress developer, Shopify developer
+Jackson WY web design, Jackson Hole web developer, Wyoming web development, Hannah Trask, Sagebrush Studio, freelance web developer Wyoming, small business websites, Squarespace developer, WordPress developer, Shopify developer, web design case studies, portfolio
 
