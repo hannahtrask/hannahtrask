@@ -3,10 +3,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { CaseStudy } from '@/data/case-studies'
+import { SanityCaseStudy } from '@/sanity/types/caseStudy'
+import { urlFor } from '@/sanity/utils/imageUrlBuilder'
 
 interface CaseStudyGridProps {
-  caseStudies: CaseStudy[]
+  caseStudies: SanityCaseStudy[]
 }
 
 export default function CaseStudyGrid({ caseStudies }: CaseStudyGridProps) {
@@ -52,8 +53,8 @@ export default function CaseStudyGrid({ caseStudies }: CaseStudyGridProps) {
                   {/* Hero Image */}
                   <div className='relative h-48 overflow-hidden'>
                     <Image
-                      src={study.heroImage}
-                      alt={study.heroImageAlt}
+                      src={urlFor(study.heroImage).width(600).height(400).url()}
+                      alt={`${study.title} hero image`}
                       fill
                       className='object-cover transition-transform duration-700 group-hover:scale-110'
                     />
@@ -64,8 +65,8 @@ export default function CaseStudyGrid({ caseStudies }: CaseStudyGridProps) {
                   <div className='absolute top-4 left-4 bg-white dark:bg-desert-800 rounded-lg p-3 shadow-md'>
                     <div className='relative w-16 h-16'>
                       <Image
-                        src={study.logo}
-                        alt={study.logoAlt}
+                        src={urlFor(study.logo).width(128).height(128).url()}
+                        alt={`${study.title} logo`}
                         fill
                         className='object-contain'
                       />

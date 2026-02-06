@@ -2,12 +2,12 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { CaseStudy } from '@/data/case-studies'
+import { SanityCaseStudy } from '@/sanity/types/caseStudy'
 import { ArrowLeft, ExternalLink, CheckCircle } from 'lucide-react'
 import CaseStudyGallery from './case-study-gallery'
 
 interface CaseStudyContentProps {
-  caseStudy: CaseStudy
+  caseStudy: SanityCaseStudy
 }
 
 export default function CaseStudyContent({ caseStudy }: CaseStudyContentProps) {

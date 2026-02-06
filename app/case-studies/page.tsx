@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Hero from '@/components/hero/hero'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 import Typewriter from '@/components/ui/typewriter'
-import { caseStudies } from '@/data/case-studies'
+import { getAllCaseStudies } from '@/sanity/lib/caseStudies'
 import CaseStudyGrid from '@/components/case-studies/case-study-grid'
 
 export const metadata: Metadata = generateSEOMetadata({
@@ -18,7 +18,10 @@ export const metadata: Metadata = generateSEOMetadata({
   ],
 })
 
-export default function CaseStudiesPage() {
+export const revalidate = 60 // Revalidate every 60 seconds
+
+export default async function CaseStudiesPage() {
+  const caseStudies = await getAllCaseStudies()
   return (
     <>
       <Hero

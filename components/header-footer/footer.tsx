@@ -45,6 +45,24 @@ export default function Footer() {
                     services
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href='/case-studies'
+                    className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                  >
+                    <MapPin className='h-3 w-3 mr-2' />
+                    projects
+                  </Link>
+                </li>{' '}
+                <li>
+                  <Link
+                    href='/contact'
+                    className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                  >
+                    <MapPin className='h-3 w-3 mr-2' />
+                    contact
+                  </Link>
+                </li>
               </ul>
             </div>
 

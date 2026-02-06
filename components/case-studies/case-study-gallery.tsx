@@ -4,10 +4,11 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
-import { CaseStudyImage } from '@/data/case-studies'
+import { SanityCaseStudyImage } from '@/sanity/types/caseStudy'
+import { urlFor } from '@/sanity/utils/imageUrlBuilder'
 
 interface CaseStudyGalleryProps {
-  images: CaseStudyImage[]
+  images: SanityCaseStudyImage[]
   title?: string
 }
 
@@ -56,8 +57,8 @@ export default function CaseStudyGallery({ images }: CaseStudyGalleryProps) {
           >
             <div className='relative aspect-[4/3] overflow-hidden rounded-lg shadow-md'>
               <Image
-                src={image.src}
-                alt={image.alt}
+                src={urlFor(image.asset).width(600).height(450).url()}
+                alt={image.alt || 'Project image'}
                 fill
                 className='object-cover transition-transform duration-500 group-hover:scale-110'
               />
@@ -121,8 +122,8 @@ export default function CaseStudyGallery({ images }: CaseStudyGalleryProps) {
               onClick={e => e.stopPropagation()}
             >
               <Image
-                src={images[selectedIndex].src}
-                alt={images[selectedIndex].alt}
+                src={urlFor(images[selectedIndex].asset).width(1920).url()}
+                alt={images[selectedIndex].alt || 'Project image'}
                 fill
                 className='object-contain'
                 priority
