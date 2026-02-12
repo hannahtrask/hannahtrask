@@ -21,7 +21,7 @@ const faqItems: FAQItem[] = [
     id: 'platforms',
     question: 'What platforms do you work on for websites?',
     answer:
-      "Sagebrush Studio specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
+      "Sagebrush Web Studio specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
   },
   {
     id: 'timeline',
@@ -37,9 +37,9 @@ const faqItems: FAQItem[] = [
   },
   {
     id: 'why-choose-us',
-    question: 'Why should I work with SAGEBRUSH STUDIO?',
+    question: 'Why should I work with SAGEBRUSH WEB STUDIO?',
     answer:
-      "Sagebrush Studio brings a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. Based in Jackson Hole, WY, we understand the importance of authentic storytelling, community, and building genuine connections. You'll get personalized attention, direct communication, and websites that truly reflect your brand's personality and values.",
+      "Sagebrush Web Studio brings a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. Based in Jackson Hole, WY, we understand the importance of authentic storytelling, community, and building genuine connections. You'll get personalized attention, direct communication, and websites that truly reflect your brand's personality and values.",
   },
 ]
 

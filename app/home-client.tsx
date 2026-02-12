@@ -64,7 +64,7 @@ export default function HomeClient() {
                 <div className='relative'>
                   <Image
                     src='/HANNAH_TRASK.png'
-                    alt='Hannah Trask - Founder of Sagebrush Studio'
+                    alt='Hannah Trask - Founder of Sagebrush Web Studio'
                     width={600}
                     height={600}
                     className='w-full h-auto object-cover'
@@ -75,7 +75,7 @@ export default function HomeClient() {
               {/* Text Content */}
               <div className='order-1 lg:order-2 space-y-6'>
                 <h3 className='text-xl md:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white'>
-                  ABOUT SAGEBRUSH STUDIO
+                  ABOUT SAGEBRUSH WEB STUDIO
                 </h3>
                 <div className='w-16 h-px bg-brand-sage'></div>
                 <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
@@ -110,7 +110,7 @@ export default function HomeClient() {
               WordPress, Wix
             </h2>
             <p className='text-lg md:text-xl lg:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4 leading-tight'>
-              Sagebrush Studio helps locals, creatives, and community-driven
+              Sagebrush Web Studio helps locals, creatives, and community-driven
               businesses establish a strong online presence.
             </p>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>

@@ -7,7 +7,7 @@ import Typewriter from '@/components/ui/typewriter'
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Work - Jackson WY Web Design Portfolio',
   description:
-    'Explore our portfolio of web design and development projects from Sagebrush Studio in Jackson, Wyoming. We build websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands in Jackson Hole and beyond.',
+    'Explore our portfolio of web design and development projects from Sagebrush Web Studio in Jackson, Wyoming. We build websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands in Jackson Hole and beyond.',
   keywords: [
     'Jackson WY web design portfolio',
     'Jackson Hole web developer work',
@@ -40,8 +40,8 @@ export default function WorkPage() {
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
           {/* SEO-friendly hidden H1 */}
           <h1 className='sr-only'>
-            Web Design & Development Services in Jackson WY | Sagebrush Studio
-            by Hannah Trask
+            Web Design & Development Services in Jackson WY | Sagebrush Web
+            Studio by Hannah Trask
           </h1>
           <Typewriter
             lines={[
@@ -70,8 +70,8 @@ export default function WorkPage() {
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              I started Sagebrush Studio because I know that the web can both
-              feel very impersonal AND overwhelming, time-consuming, and
+              I started Sagebrush Web Studio because I know that the web can
+              both feel very impersonal AND overwhelming, time-consuming, and
               intimidating. My goal is to work with you authentically, so I
               tailor each project to you and your needs.
             </p>

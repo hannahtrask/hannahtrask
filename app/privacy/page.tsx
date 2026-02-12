@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Privacy Policy',
   description:
-    'Privacy Policy for Sagebrush Studio. Learn how we collect, use, and protect your personal information.',
+    'Privacy Policy for Sagebrush Web Studio. Learn how we collect, use, and protect your personal information.',
   url: '/privacy',
   type: 'website',
 })
@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
                 Introduction
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
-                Sun & Sagebrush LLC (&quot;Sagebrush Studio,&quot;
+                Sun & Sagebrush LLC (&quot;Sagebrush Web Studio,&quot;
                 &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) respects
                 your privacy and is committed to protecting your personal
                 information. This Privacy Policy explains how we collect, use,

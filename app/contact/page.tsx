@@ -11,11 +11,11 @@ import {
 } from '@/components/ui/social-icons'
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Contact - Sagebrush Studio',
+  title: 'Contact - Sagebrush Web Studio',
   description:
-    'Get in touch with Sagebrush Studio for web design and development services in Jackson, Wyoming. Fill out our inquiry form or reach out directly via email.',
+    'Get in touch with Sagebrush Web Studio for web design and development services in Jackson, Wyoming. Fill out our inquiry form or reach out directly via email.',
   keywords: [
-    'contact Sagebrush Studio',
+    'contact Sagebrush Web Studio',
     'Jackson WY web designer contact',
     'Wyoming web development inquiry',
     'hire web developer Jackson Hole',
@@ -42,8 +42,8 @@ export default function ContactPage() {
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
           {/* SEO-friendly hidden H1 */}
           <h1 className='sr-only'>
-            Contact Hannah Trask - Jackson WY Web Developer | Sagebrush Studio
-            Inquiry
+            Contact Hannah Trask - Jackson WY Web Developer | Sagebrush Web
+            Studio Inquiry
           </h1>
           <Typewriter
             lines={['get in touch', "let's work together", 'say hello']}

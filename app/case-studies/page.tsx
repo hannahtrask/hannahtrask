@@ -8,7 +8,7 @@ import CaseStudyGrid from '@/components/case-studies/case-study-grid'
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Case Studies',
   description:
-    'Explore detailed case studies of web design and development projects by Sagebrush Studio. See how we solve real problems for outdoor industry businesses, e-commerce ventures, and creative brands.',
+    'Explore detailed case studies of web design and development projects by Sagebrush Web Studio. See how we solve real problems for outdoor industry businesses, e-commerce ventures, and creative brands.',
   url: '/case-studies',
   keywords: [
     'web design case studies',
@@ -39,7 +39,8 @@ export default async function CaseStudiesPage() {
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
           {/* SEO-friendly hidden H1 */}
           <h1 className='sr-only'>
-            Case Studies - Web Design & Development Projects | Sagebrush Studio
+            Case Studies - Web Design & Development Projects | Sagebrush Web
+            Studio
           </h1>
           <Typewriter
             lines={['case studies', 'client projects', 'success stories']}

@@ -35,7 +35,7 @@ export default function Header() {
           <Link href='/' className='relative h-10 w-56'>
             <Image
               src='/site-title/site-title-light.png'
-              alt='Sagebrush Studio'
+              alt='Sagebrush Web Studio'
               fill
               className={`object-contain transition-opacity duration-300 ${
                 isScrolled ? 'opacity-0 dark:opacity-100' : 'opacity-100'
@@ -43,7 +43,7 @@ export default function Header() {
             />
             <Image
               src='/site-title/site-title-dark.png'
-              alt='Sagebrush Studio'
+              alt='Sagebrush Web Studio'
               fill
               className={`object-contain transition-opacity duration-300 ${
                 isScrolled ? 'opacity-100 dark:opacity-0' : 'opacity-0'

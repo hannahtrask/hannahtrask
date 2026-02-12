@@ -28,14 +28,14 @@ const montserrat = Montserrat({
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Jackson WY Web Design & Development',
   description:
-    'Sagebrush Studio is a Jackson, Wyoming web design and development studio. We help locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley establish a strong online presence.',
+    'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio. We help locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley establish a strong online presence.',
   keywords: [
     'Jackson WY web design',
     'Jackson WY web development',
     'Jackson Hole web designer',
     'Jackson Hole web developer',
     'Hannah Trask web developer',
-    'Sagebrush Studio Jackson WY',
+    'Sagebrush Web Studio Jackson WY',
     'Wyoming web developer',
     'Teton Valley web design',
     'local business websites',
@@ -54,7 +54,9 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
-        <title>Sagebrush Studio - Jackson WY Web Design & Development</title>
+        <title>
+          Sagebrush Web Studio - Jackson WY Web Design & Development
+        </title>
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{

@@ -12,7 +12,7 @@ export default function Footer() {
       <div className='container mx-auto'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0'>
           <div>
-            <h3 className='font-playfair text-xl mb-2'>SAGEBRUSH STUDIO</h3>
+            <h3 className='font-playfair text-xl mb-2'>SAGEBRUSH WEB STUDIO</h3>
             <p className='text-desert-100 dark:text-desert-200 text-sm max-w-xs'>
               Based in Jackson, WY. Available for remote and on-site work.
             </p>

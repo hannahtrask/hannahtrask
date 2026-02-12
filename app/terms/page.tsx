@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Terms & Conditions',
   description:
-    'Terms and Conditions for Sagebrush Studio. Read our terms of service and usage policies.',
+    'Terms and Conditions for Sagebrush Web Studio. Read our terms of service and usage policies.',
   url: '/terms',
   type: 'website',
 })
@@ -28,9 +28,10 @@ export default function TermsPage() {
                 Agreement to Terms
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
-                By accessing or using the Sagebrush Studio website, you agree to
-                be bound by these Terms and Conditions. If you do not agree with
-                any part of these terms, you may not access the website.
+                By accessing or using the Sagebrush Web Studio website, you
+                agree to be bound by these Terms and Conditions. If you do not
+                agree with any part of these terms, you may not access the
+                website.
               </p>
             </section>
 
@@ -39,7 +40,7 @@ export default function TermsPage() {
                 Services
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
-                Sagebrush Studio provides web design, development, and
+                Sagebrush Web Studio provides web design, development, and
                 consulting services. All services are subject to separate
                 agreements and contracts that will be provided before work
                 begins.
@@ -83,7 +84,7 @@ export default function TermsPage() {
                 Limitation of Liability
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
-                Sagebrush Studio shall not be liable for any indirect,
+                Sagebrush Web Studio shall not be liable for any indirect,
                 incidental, special, consequential, or punitive damages
                 resulting from your use of or inability to use the website or
                 services.
