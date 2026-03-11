@@ -25,24 +25,34 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 })
 
-export const metadata: Metadata = generateSEOMetadata({
-  title: 'Jackson WY Web Design & Development',
-  description:
-    'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio. We help locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley establish a strong online presence.',
-  keywords: [
-    'Jackson WY web design',
-    'Jackson WY web development',
-    'Jackson Hole web designer',
-    'Jackson Hole web developer',
-    'Hannah Trask web developer',
-    'Sagebrush Web Studio Jackson WY',
-    'Wyoming web developer',
-    'Teton Valley web design',
-    'local business websites',
-    'creative business websites',
-  ],
-  type: 'website',
-})
+const iconMetadata: Metadata = {
+  icons: {
+    icon: '/favicon-512x512.png',
+    apple: '/favicon-512x512.png',
+  },
+}
+
+export const metadata: Metadata = {
+  ...iconMetadata,
+  ...generateSEOMetadata({
+    title: 'Jackson WY Web Design & Development',
+    description:
+      'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio. We help locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley establish a strong online presence.',
+    keywords: [
+      'Jackson WY web design',
+      'Jackson WY web development',
+      'Jackson Hole web designer',
+      'Jackson Hole web developer',
+      'Hannah Trask web developer',
+      'Sagebrush Web Studio Jackson WY',
+      'Wyoming web developer',
+      'Teton Valley web design',
+      'local business websites',
+      'creative business websites',
+    ],
+    type: 'website',
+  }),
+}
 
 export default function RootLayout({
   children,
