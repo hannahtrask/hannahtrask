@@ -17,7 +17,7 @@ const faqItems: FAQItem[] = [
     id: 'project-minimum',
     question: 'What is your project minimum?',
     answer:
-      "I do not have a strict project minimum. I take on full builds, smaller updates, and hourly support based on scope and fit.",
+      'I do not have a strict project minimum. I take on full builds, smaller updates, and hourly support based on scope and fit.',
   },
   {
     id: 'platforms',

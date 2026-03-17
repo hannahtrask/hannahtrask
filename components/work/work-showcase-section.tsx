@@ -127,8 +127,9 @@ export default function WorkShowcaseSection({
       <div className={contentWrapperClassName}>
         <motion.div
           ref={ref}
-          className={`grid grid-cols-1 ${showImage ? 'lg:grid-cols-2' : ''} gap-8 ${showImage ? 'lg:gap-16' : ''} items-center ${imagePosition === 'right' ? 'lg:grid-flow-col-dense' : ''
-            }`}
+          className={`grid grid-cols-1 ${showImage ? 'lg:grid-cols-2' : ''} gap-8 ${showImage ? 'lg:gap-16' : ''} items-center ${
+            imagePosition === 'right' ? 'lg:grid-flow-col-dense' : ''
+          }`}
         >
           {/* Image Section */}
           {showImage && (
@@ -161,10 +162,11 @@ export default function WorkShowcaseSection({
               shouldAnimate ? (isVisible ? 'visible' : 'hidden') : 'visible'
             }
             variants={textVariants}
-            className={`${showImage && imagePosition === 'right'
-              ? 'lg:col-start-1 lg:row-start-1'
-              : ''
-              } ${showImage ? '' : 'mx-auto max-w-3xl'}`}
+            className={`${
+              showImage && imagePosition === 'right'
+                ? 'lg:col-start-1 lg:row-start-1'
+                : ''
+            } ${showImage ? '' : 'mx-auto max-w-3xl'}`}
           >
             <div className={showImage ? 'max-w-xl' : 'max-w-none'}>
               <h2

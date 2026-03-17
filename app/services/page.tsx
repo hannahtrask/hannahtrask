@@ -70,9 +70,9 @@ export default function WorkPage() {
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              Web projects can feel overwhelming. I work with you one-on-one
-              to plan, build, and improve your site with clear communication
-              and recommendations tailored to your goals.
+              Web projects can feel overwhelming. I work with you one-on-one to
+              plan, build, and improve your site with clear communication and
+              recommendations tailored to your goals.
             </p>
           </div>
         </div>

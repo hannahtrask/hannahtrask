@@ -114,8 +114,8 @@ export default function HomeClient() {
               locals, creatives, and community-driven businesses.
             </p>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
-              Work with me for full website projects, focused new builds, or hourly
-              support for updates, improvements, and technical help.
+              Work with me for full website projects, focused new builds, or
+              hourly support for updates, improvements, and technical help.
             </p>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
 
