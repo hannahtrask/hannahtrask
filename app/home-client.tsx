@@ -110,11 +110,12 @@ export default function HomeClient() {
               WordPress, Wix
             </h2>
             <p className='text-lg md:text-xl lg:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4 leading-tight'>
-              Sagebrush Web Studio helps locals, creatives, and community-driven
-              businesses establish a strong online presence.
+              Sagebrush Web Studio builds thoughtful websites and web tools for
+              locals, creatives, and community-driven businesses.
             </p>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
-              I handle individual pages and minor tweaks to full website builds.
+              Work with me for full website projects, focused new builds, or hourly
+              support for updates, improvements, and technical help.
             </p>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
 
@@ -126,12 +127,11 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Web Design + Development
+                      WordPress, Wix or Squarespace Sites
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      Website overhauls and tweaks to building custom websites
-                      on Squarespace, Wix, Shopify, WordPress, and occasionally
-                      custom NextJS websites deployed on Vercel.
+                      New website builds, redesigns, and updates on WordPress,
+                      Wix, and Squarespace.
                     </p>
                   </div>
                 </div>
@@ -142,13 +142,11 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      E-commerce Solutions
+                      Custom WordPress Themes
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      I have over three years of professional experience in the
-                      e-commerce space and more than 5 in the web development
-                      world. I can help you build and maintain a scalable online
-                      store.
+                      Custom theme development and theme customization tailored
+                      to your brand and content needs.
                     </p>
                   </div>
                 </div>
@@ -161,14 +159,11 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Technical Consulting + Migrations
+                      Shopify / E-commerce Setup
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      Whether you need help with a site audit, WordPress plugin,
-                      domains, migrating, hosting, SEO, or custom code,
-                      I&apos;ll give you the tools and will educate you every
-                      step of the way so you can feel empowered to manage your
-                      web presence.
+                      Shopify stores, product setup, and e-commerce workflows
+                      built to support smooth day-to-day operations.
                     </p>
                   </div>
                 </div>
@@ -179,13 +174,11 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Personal Dashboard + Internal Applications
+                      Internal Apps
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      Custom dashboards and internal applications to help you
-                      run your business more efficiently. Built so you can be in
-                      control, personalized to your business so you can focus on
-                      what you do best ... your work!
+                      Custom dashboards and internal tools to streamline
+                      operations and help you work more efficiently.
                     </p>
                   </div>
                 </div>

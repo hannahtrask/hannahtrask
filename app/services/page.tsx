@@ -66,14 +66,13 @@ export default function WorkPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
-              Working with a real human
+              Direct support from start to finish
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              I started Sagebrush Web Studio because I know that the web can
-              both feel very impersonal AND overwhelming, time-consuming, and
-              intimidating. My goal is to work with you authentically, so I
-              tailor each project to you and your needs.
+              Web projects can feel overwhelming. I work with you one-on-one
+              to plan, build, and improve your site with clear communication
+              and recommendations tailored to your goals.
             </p>
           </div>
         </div>
@@ -82,91 +81,97 @@ export default function WorkPage() {
       {/*/!* Fun Web Pages Gallery Section *!/*/}
       {/*<WebPageGallery />*/}
 
-      {/* Web Development Showcase */}
-      <WorkShowcaseSection
-        title='Web Development & Design'
-        description="Custom websites that capture the story you want to tell to your visitors. I'll build you a website from scratch, completely overhaul your existing site, or make some tweaks based on your needs. I offer data-driven website audits and analytics to help you understand your visitors and improve your website."
-        features={[
-          'Squarespace, Wix, Shopify or WordPress development',
-          'SEO optimization and performance tuning',
-          'Content management system integration',
-          'Shopify and custom e-commerce development',
-          'Payment gateway integration (Stripe, PayPal) and inventory management',
-          'Website audits and analytics',
-          'Mobile-first experiences',
-        ]}
-        imageSrc='/page-images/workspace-image.jpg'
-        imageAlt='Modern website development showcase'
-        imagePosition='left'
-        backgroundColor='bg-gradient-to-br from-brand-brown/10 to-brand-olive/10 dark:from-brand-brown/20 dark:to-brand-olive/20'
-        textColor='text-desert-800 dark:text-white'
-        accentColor='#7F492E'
-        index={0}
-      />
+      <div className='container mx-auto px-4 py-8 md:py-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
+          {/* Web Development Showcase */}
+          <WorkShowcaseSection
+            title='Website Builds: WordPress, Wix, Squarespace'
+            description='Need a new site or a serious refresh? I design and build clear, modern websites on WordPress, Wix, and Squarespace, including custom WordPress themes.'
+            showImage={false}
+            features={[
+              'New websites and full redesigns',
+              'Custom WordPress theme development',
+              'WordPress, Wix, and Squarespace setup',
+              'Mobile-friendly layouts',
+              'On-page SEO and performance basics',
+              'Easy handoff so you can edit your own content',
+            ]}
+            imageSrc='/page-images/workspace-image.jpg'
+            imageAlt='Modern website development showcase'
+            imagePosition='left'
+            backgroundColor='bg-gradient-to-br from-brand-brown/10 to-brand-olive/10 dark:from-brand-brown/20 dark:to-brand-olive/20'
+            textColor='text-desert-800 dark:text-white'
+            accentColor='#7F492E'
+            index={0}
+          />
 
-      {/* Technical Consulting & Migrations */}
-      <WorkShowcaseSection
-        title='Technical Consulting & Migrations'
-        description="Web tasks can be: intimidating, time-consuming, and take you away from your work. I'm here to help with any web task, from plugins, domains, migrations, hosting, SEO, or custom code."
-        features={[
-          'Plugin installation and configuration',
-          'Domain registration and management',
-          'Website migrations and transfers',
-          'Hosting and server setup',
-          'SEO optimization and performance tuning',
-          'Custom code development and debugging',
-        ]}
-        imageSrc='/hero-images/wolf.jpg'
-        imageAlt='E-commerce website showcase'
-        imagePosition='right'
-        backgroundColor='bg-gradient-to-bl from-brand-desert/10 to-brand-sage/10 dark:from-brand-desert/20 dark:to-brand-sage/20'
-        textColor='text-desert-800 dark:text-white'
-        accentColor='#B295C1'
-        index={1}
-      />
+          {/* Technical Consulting & Migrations */}
+          <WorkShowcaseSection
+            title='Shopify and E-commerce Setup'
+            description='I build and improve Shopify stores that are simple to manage and ready to sell, from storefront setup to checkout flow improvements.'
+            showImage={false}
+            features={[
+              'Shopify store setup and theme customization',
+              'Product, collection, and navigation setup',
+              'Payment and shipping configuration',
+              'App integrations and workflow setup',
+              'Conversion-focused page updates',
+              'Store cleanup and maintenance support',
+            ]}
+            imageSrc='/hero-images/wolf.jpg'
+            imageAlt='E-commerce website showcase'
+            imagePosition='right'
+            backgroundColor='bg-gradient-to-br from-brand-brown/10 to-brand-olive/10 dark:from-brand-brown/20 dark:to-brand-olive/20'
+            textColor='text-desert-800 dark:text-white'
+            accentColor='#B295C1'
+            index={1}
+          />
 
-      {/* Personal Dashboards & Internal Applications */}
-      <WorkShowcaseSection
-        title='Personal Dashboards & Internal Applications'
-        description='Custom dashboards and internal applications to help you run your business more efficiently. Built so you can be in control and focus on what you do best.'
-        features={[
-          'Custom dashboard and internal application development',
-          'User authentication and access control',
-          'Data visualization and reporting',
-          'Integration with external APIs and services',
-          'Customized user interfaces and workflows',
-          'Website integration and brand consistency',
-        ]}
-        imageSrc='/hero-images/western-backdrop.jpg'
-        imageAlt='Brand identity design showcase'
-        imagePosition='left'
-        backgroundColor='bg-gradient-to-tr from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-sage/20'
-        textColor='text-desert-800 dark:text-white'
-        accentColor='#CD9493'
-        index={2}
-      />
+          {/* Personal Dashboards & Internal Applications */}
+          <WorkShowcaseSection
+            title='Internal Apps and Dashboards'
+            description='Custom internal tools to help your business run smoother, cut manual work, and keep key information in one place.'
+            showImage={false}
+            features={[
+              'Internal dashboards tailored to your workflow',
+              'Role-based access and secure logins',
+              'Forms, automations, and process tracking',
+              'Reports and data visualization',
+              'Integrations with third-party tools and APIs',
+              'Ongoing improvements as your business grows',
+            ]}
+            imageSrc='/hero-images/western-backdrop.jpg'
+            imageAlt='Brand identity design showcase'
+            imagePosition='left'
+            backgroundColor='bg-gradient-to-tr from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-sage/20'
+            textColor='text-desert-800 dark:text-white'
+            accentColor='#CD9493'
+            index={2}
+          />
 
-      {/* Small Business Solutions */}
-      <WorkShowcaseSection
-        title='Small Business Websites'
-        description='Professional websites built specifically for small businesses and entrepreneurs. For those wanting to establish credibility, drive local business growth, and communicate their value.'
-        features={[
-          'WordPress, Wix, Shopify or Squarespace development',
-          'Local SEO optimization',
-          'Contact forms and lead generation',
-          'Appointment scheduling and booking',
-          'Social media integration',
-          'Easy content management for business owners',
-          'Payment gateway integration (Stripe, PayPal) and manual or automatic inventory management',
-        ]}
-        imageSrc='/hero-images/tetons-backdrop.jpg'
-        imageAlt='Small business website showcase'
-        imagePosition='right'
-        backgroundColor='bg-gradient-to-bl from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-olive/20'
-        textColor='text-desert-800 dark:text-white'
-        accentColor='#9D9B86'
-        index={3}
-      />
+          {/* Small Business Solutions */}
+          <WorkShowcaseSection
+            title='Hourly Support, Fixes, and Migrations'
+            description='Already have a site? Hire me hourly for updates, troubleshooting, migrations, and ongoing technical support without a full rebuild.'
+            showImage={false}
+            features={[
+              'WordPress, Wix, Squarespace, and Shopify fixes',
+              'Content edits and design updates',
+              'Platform migrations and domain changes',
+              'Plugin and integration troubleshooting',
+              'Speed and SEO tune-ups',
+              'Flexible hourly retainers',
+            ]}
+            imageSrc='/hero-images/tetons-backdrop.jpg'
+            imageAlt='Small business website showcase'
+            imagePosition='right'
+            backgroundColor='bg-gradient-to-bl from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-olive/20'
+            textColor='text-desert-800 dark:text-white'
+            accentColor='#9D9B86'
+            index={3}
+          />
+        </div>
+      </div>
     </>
   )
 }

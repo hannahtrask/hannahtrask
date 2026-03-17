@@ -28,3 +28,6 @@ next-env.d.ts
 
 # intelliJ
 /.idea/
+
+# DS_Store
+.DS_Store

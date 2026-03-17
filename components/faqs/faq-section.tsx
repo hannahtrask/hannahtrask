@@ -17,31 +17,31 @@ const faqItems: FAQItem[] = [
     id: 'project-minimum',
     question: 'What is your project minimum?',
     answer:
-      "I don't have a project minimum, but work within reason. I work with clients of all sizes and budgets, so don't be afraid to reach out because you don't think you can afford it or your project is too small. There is no such thing and I am here to work with you! I also am happy to come up with payment plans for your investment.",
+      "I do not have a strict project minimum. I take on full builds, smaller updates, and hourly support based on scope and fit.",
   },
   {
     id: 'platforms',
     question: 'What platforms do you work on for websites?',
     answer:
-      "I specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, I can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
+      'I build and maintain sites on WordPress, Squarespace, Wix, and Shopify. I also create custom WordPress themes and can take on custom web projects when needed.',
   },
   {
     id: 'timeline',
     question: 'How long should I expect my project to take?',
     answer:
-      "Project timelines vary based on complexity and scope, so it's hard to say in a general sense. I take into account project urgency, scope, and complexity to determine a reasonable timeline.",
+      'Most timelines depend on project size, content readiness, and urgency. After a quick discovery call, I will give you a clear timeline and next steps.',
   },
   {
     id: 'getting-started',
     question: 'How do I get started?',
     answer:
-      "The first thing you\'ll want to do is reach out through my contact form and we can schedule a time to meet up in person or virtually. You won't be charged anything until we've BOTH signed a contract and you are 100% ready to move forward! When we meet, we'll discuss your project goals, timeline, and budget to determine the best approach. After contracts are signed, you'll be asked to submit a deposit (typically 50% of the total fee) to secure your project, and I'll get started right away.",
+      'Reach out through the contact form and we will schedule a quick intro call. We will review your goals, scope, and budget, then move forward with a proposal and contract if it is a good fit.',
   },
   {
     id: 'why-choose-us',
     question: 'Why should I work with Sagebrush Web Studio?',
     answer:
-      "I bring a unique combination of technical expertise and creativity to my work. I'm inspired by my connection to the wild spaces around Jackson, WY and in the intermountain West. You will get personalized attention, direct communication (with a REAL human), and website and work completed that truly reflect your business's personality and values.",
+      'You will work directly with me from start to finish. I combine strategy, design, and development to build sites and internal tools that are clear, useful, and built around your business.',
   },
 ]
 
