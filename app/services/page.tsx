@@ -3,6 +3,7 @@ import Hero from '@/components/hero/hero'
 import WorkShowcaseSection from '@/components/work/work-showcase-section'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 import Typewriter from '@/components/ui/typewriter'
+import WebsiteInWeekBooking from '@/components/services/website-in-week-booking'
 
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Work - Jackson WY Web Design Portfolio',
@@ -78,8 +79,22 @@ export default function WorkPage() {
         </div>
       </div>
 
-      {/*/!* Fun Web Pages Gallery Section *!/*/}
-      {/*<WebPageGallery />*/}
+      <section className='bg-desert-100 dark:bg-desert-900 py-5'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 rounded-lg border border-desert-200 dark:border-desert-700 bg-white/90 dark:bg-desert-800/90 p-4 md:p-5'>
+            <p className='text-sm md:text-base text-desert-800 dark:text-white font-medium text-center sm:text-left'>
+              Want to launch fast? I&apos;ll build you a beautiful website in
+              one week.
+            </p>
+            <a
+              href='#build-my-website-in-a-week'
+              className='inline-flex items-center justify-center rounded-md bg-brand-sage px-5 py-2.5 text-white text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap'
+            >
+              Let's do it
+            </a>
+          </div>
+        </div>
+      </section>
 
       <div className='container mx-auto px-4 py-8 md:py-10'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
@@ -172,6 +187,104 @@ export default function WorkPage() {
           />
         </div>
       </div>
+
+      <section
+        id='build-my-website-in-a-week'
+        className='bg-gradient-to-b from-desert-100 to-desert-50 dark:from-desert-900 dark:to-desert-950 py-12 md:py-8'
+      >
+        <div className='container mx-auto px-4'>
+          <div className='max-w-5xl mx-auto'>
+            <div className='text-center mb-8 md:mb-10'>
+              <h2 className='text-3xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+                Build my website in a week
+              </h2>
+              <p className='text-sm md:text-base text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+                A complete, professional website built on Squarespace. For those
+                ready to establish or refresh their online presence fast.
+              </p>
+              <div className='mt-6'>
+                <a
+                  href='#book-website-in-a-week'
+                  className='inline-flex items-center justify-center rounded-md bg-brand-sage px-6 py-3 text-white text-sm md:text-base font-medium hover:opacity-90 transition-opacity'
+                >
+                  Okay, let&apos;s do it
+                </a>
+              </div>
+            </div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
+              <div className='rounded-xl border border-desert-200 dark:border-desert-700 bg-white/80 dark:bg-desert-800/70 p-6'>
+                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+                  You&apos;ll receive
+                </h3>
+                <ul className='space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed'>
+                  <li>
+                    3-5 strategic pages (Home, About, Services, Contact, FAQ)
+                  </li>
+                  <li>
+                    Built on Squarespace with fully responsive design across all
+                    devices
+                  </li>
+                  <li>
+                    SEO &amp; AIO optimization including meta tags, schema
+                    markup, keyword optimization, and structured data for search
+                    visibility
+                  </li>
+                  <li>
+                    Brand-aligned design with custom styling that reflects your
+                    brand identity and values
+                  </li>
+                  <li>
+                    Conversion-focused copy tailored to your industry and target
+                    audience
+                  </li>
+                  <li>
+                    Contact integration with functional forms and email routing
+                    to your inbox
+                  </li>
+                  <li>
+                    Performance optimization for fast load times and seamless
+                    user experience
+                  </li>
+                </ul>
+              </div>
+
+              <div className='rounded-xl border border-desert-200 dark:border-desert-700 bg-white/80 dark:bg-desert-800/70 p-6'>
+                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+                  Is this for me?
+                </h3>
+                <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4'>
+                  Small businesses, service providers, creative professionals,
+                  and entrepreneurs who need a polished web presence without the
+                  months-long timeline.
+                </p>
+
+                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-2'>
+                  Timeline
+                </h3>
+                <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4'>
+                  One week from your scheduled kick-off to launch-ready.
+                </p>
+
+                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-2'>
+                  Investment
+                </h3>
+                <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2'>
+                  $1500 total.
+                </p>
+                <p className='text-sm font-medium text-desert-800 dark:text-desert-100 leading-relaxed'>
+                  No money is paid upfront. Payment is split as 50% before your
+                  kick-off call and 50% at project completion.
+                </p>
+              </div>
+            </div>
+
+            <div id='book-website-in-a-week'>
+              <WebsiteInWeekBooking />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
