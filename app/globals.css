@@ -50,9 +50,20 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   * {
     @apply border-border;
   }
+
   body {
     @apply text-foreground;
     background: linear-gradient(
@@ -77,6 +88,7 @@
       hsl(60, 8%, 25%) 100%
     );
   }
+
   h1,
   h2,
   h3,
@@ -85,6 +97,7 @@
   h6 {
     @apply font-cormorant-sc;
   }
+
   p,
   a,
   li,

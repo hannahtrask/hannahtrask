@@ -81,16 +81,15 @@ export default function WorkPage() {
 
       <section className='bg-desert-100 dark:bg-desert-900 py-5'>
         <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 rounded-lg border border-desert-200 dark:border-desert-700 bg-white/90 dark:bg-desert-800/90 p-4 md:p-5'>
+          <div className='max-w-4xl mx-auto flex flex-col items-center justify-between gap-3 border-desert-200 dark:border-desert-700 dark:bg-desert-800/90 p-4 md:p-5'>
             <p className='text-sm md:text-base text-desert-800 dark:text-white font-medium text-center sm:text-left'>
-              Want to launch fast? I&apos;ll build you a beautiful website in
-              one week.
+              Need a site this month? Let&apos;s get it done in a week.
             </p>
             <a
               href='#build-my-website-in-a-week'
               className='inline-flex items-center justify-center rounded-md bg-brand-sage px-5 py-2.5 text-white text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap'
             >
-              Let's do it
+              Book it
             </a>
           </div>
         </div>
@@ -212,43 +211,7 @@ export default function WorkPage() {
               </div>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
-              <div className='rounded-xl border border-desert-200 dark:border-desert-700 bg-white/80 dark:bg-desert-800/70 p-6'>
-                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
-                  You&apos;ll receive
-                </h3>
-                <ul className='space-y-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed'>
-                  <li>
-                    3-5 strategic pages (Home, About, Services, Contact, FAQ)
-                  </li>
-                  <li>
-                    Built on Squarespace with fully responsive design across all
-                    devices
-                  </li>
-                  <li>
-                    SEO &amp; AIO optimization including meta tags, schema
-                    markup, keyword optimization, and structured data for search
-                    visibility
-                  </li>
-                  <li>
-                    Brand-aligned design with custom styling that reflects your
-                    brand identity and values
-                  </li>
-                  <li>
-                    Conversion-focused copy tailored to your industry and target
-                    audience
-                  </li>
-                  <li>
-                    Contact integration with functional forms and email routing
-                    to your inbox
-                  </li>
-                  <li>
-                    Performance optimization for fast load times and seamless
-                    user experience
-                  </li>
-                </ul>
-              </div>
-
+            <div className='max-w-3xl mx-auto mb-8'>
               <div className='rounded-xl border border-desert-200 dark:border-desert-700 bg-white/80 dark:bg-desert-800/70 p-6'>
                 <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
                   Is this for me?
