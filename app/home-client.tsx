@@ -241,6 +241,34 @@ export default function HomeClient() {
           <ContactForm />
         </div>
       </div>
+
+      {/* Follow Our Work Section */}
+      <div className='bg-desert-50 dark:bg-desert-900 py-12'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-3xl mx-auto text-center'>
+            <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+              Follow our work
+            </h2>
+            <div className='w-16 h-px bg-brand-sage mx-auto mb-6'></div>
+            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-3'>
+              Want to see more?
+            </p>
+            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-8'>
+              Follow @sagebrushwebstudio on Instagram for behind-the-scenes
+              project updates and web design inspiration.
+            </p>
+            <a
+              href='https://www.instagram.com/sagebrushwebstudio/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white font-medium transition-colors duration-200'
+            >
+              follow @sagebrushwebstudio
+              <ArrowRight className='w-4 h-4' />
+            </a>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
