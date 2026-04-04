@@ -30,6 +30,7 @@ export default function ContactPage() {
       <Hero
         backgroundImage='/hero-images/wolf.jpg'
         backgroundImageAlt='A wolf faces a man in the Tetons.'
+        enableParallax={true}
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         animateContent={true}

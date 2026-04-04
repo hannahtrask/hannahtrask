@@ -13,6 +13,7 @@ export default function HomeClient() {
       <Hero
         backgroundImage='/hero-images/bison-grand.jpg'
         backgroundImageAlt='Bison graze in front of the Tetons. Photos by Nick Sulzer.'
+        enableParallax={true}
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         animateContent={true}

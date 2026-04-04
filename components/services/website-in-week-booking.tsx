@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 const HONEYBOOK_PID = '68ab7f800c8dd7002e944c41'
 const HONEYBOOK_SCRIPT_URL =
@@ -156,61 +156,67 @@ export default function WebsiteInWeekBooking() {
           <span>
             {isOpen ? 'Hide booking options' : 'Open booking options'}
           </span>
-          {isOpen ? (
-            <ChevronUp className='h-4 w-4' />
-          ) : (
-            <ChevronDown className='h-4 w-4' />
-          )}
+          <ChevronDown
+            className={`h-4 w-4 transition-transform duration-300 ${
+              isOpen ? 'rotate-180' : 'rotate-0'
+            }`}
+          />
         </button>
       </div>
 
-      {isOpen && (
-        <div id='website-in-week-booking-panel' className='mt-6'>
-          {isLoading && (
-            <div className='flex items-center justify-center py-10 text-gray-600 dark:text-gray-300'>
-              <div className='h-7 w-7 animate-spin rounded-full border-b-2 border-desert-600'></div>
-              <span className='ml-3 text-sm'>Loading booking options...</span>
-            </div>
-          )}
+      <div
+        id='website-in-week-booking-panel'
+        aria-hidden={!isOpen}
+        className={`overflow-hidden transition-all duration-800 ease-out ${
+          isOpen
+            ? 'mt-6 max-h-[2200px] opacity-100 translate-y-0'
+            : 'mt-0 max-h-0 opacity-0 -translate-y-1 pointer-events-none'
+        }`}
+      >
+        {isLoading && (
+          <div className='flex items-center justify-center py-10 text-gray-600 dark:text-gray-300'>
+            <div className='h-7 w-7 animate-spin rounded-full border-b-2 border-desert-600'></div>
+            <span className='ml-3 text-sm'>Loading booking options...</span>
+          </div>
+        )}
 
-          {hasError && (
-            <div className='py-6 text-center'>
-              <p className='mb-3 text-sm text-gray-700 dark:text-gray-300'>
-                Booking options are temporarily unavailable.
-              </p>
-              <a
-                href='/contact'
-                className='inline-flex items-center justify-center rounded-none bg-desert-700 px-4 py-2 text-sm text-white transition-colors hover:bg-desert-800'
+        {hasError && (
+          <div className='py-6 text-center'>
+            <p className='mb-3 text-sm text-gray-700 dark:text-gray-300'>
+              Booking options are temporarily unavailable.
+            </p>
+            <a
+              href='/contact'
+              className='inline-flex items-center justify-center rounded-none bg-desert-700 px-4 py-2 text-sm text-white transition-colors hover:bg-desert-800'
+            >
+              Contact me to book directly
+            </a>
+            <div>
+              <button
+                type='button'
+                onClick={handleRetry}
+                className='mt-3 text-sm text-desert-700 hover:underline dark:text-desert-200'
               >
-                Contact me to book directly
-              </a>
-              <div>
-                <button
-                  type='button'
-                  onClick={handleRetry}
-                  className='mt-3 text-sm text-desert-700 hover:underline dark:text-desert-200'
-                >
-                  Try loading booking options again
-                </button>
-              </div>
+                Try loading booking options again
+              </button>
             </div>
-          )}
+          </div>
+        )}
 
-          <div
-            ref={containerRef}
-            className={`hb-p-68ab7f800c8dd7002e944c41-3 min-h-[320px] ${hasError ? 'hidden' : ''}`}
-          ></div>
+        <div
+          ref={containerRef}
+          className={`hb-p-68ab7f800c8dd7002e944c41-3 min-h-[320px] ${hasError ? 'hidden' : ''}`}
+        ></div>
 
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            height='1'
-            width='1'
-            style={{ display: 'none' }}
-            src={`https://www.honeybook.com/p.png?pid=${HONEYBOOK_PID}`}
-            alt=''
-          />
-        </div>
-      )}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          height='1'
+          width='1'
+          style={{ display: 'none' }}
+          src={`https://www.honeybook.com/p.png?pid=${HONEYBOOK_PID}`}
+          alt=''
+        />
+      </div>
     </div>
   )
 }

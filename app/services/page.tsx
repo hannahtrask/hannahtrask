@@ -29,6 +29,7 @@ export default function WorkPage() {
       <Hero
         backgroundImage='/hero-images/elk-background.jpg'
         backgroundImageAlt='Bison lingering in a field in front of mountains'
+        enableParallax={true}
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         animateContent={true}
@@ -84,7 +85,7 @@ export default function WorkPage() {
       {/* Website in a Week — featured */}
       <section
         id='build-my-website-in-a-week'
-        className='bg-gradient-to-b from-desert-100 to-desert-50 dark:from-desert-900 dark:to-desert-950 py-16'
+        className='scroll-mt-24 md:scroll-mt-28 bg-gradient-to-b from-desert-100 to-desert-50 dark:from-desert-900 dark:to-desert-950 py-16'
       >
         <div className='container mx-auto px-4'>
           <div className='max-w-5xl mx-auto'>

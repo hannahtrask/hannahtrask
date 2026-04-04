@@ -26,6 +26,7 @@ export default async function CaseStudiesPage() {
     <>
       <Hero
         backgroundImage='/hero-images/tetons-sunlight.jpg'
+        enableParallax={true}
         photoCredit={{
           name: 'Nick Sulzer',
           url: 'https://www.nicksulzer.com/',

@@ -12,6 +12,7 @@ import {
 } from '@/components/seo/seo-head'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import SmoothHashScroll from '@/components/scroll/smooth-hash-scroll'
 
 const cormorantSC = Cormorant_SC({
   subsets: ['latin'],
@@ -98,6 +99,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <SmoothHashScroll />
           <div className='flex flex-col min-h-screen'>
             <Header />
             <main className='flex-grow'>

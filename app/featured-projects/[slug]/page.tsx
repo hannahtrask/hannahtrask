@@ -67,6 +67,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       <Hero
         backgroundImage={heroImageUrl}
         backgroundImageAlt={`${caseStudy.title} hero image`}
+        enableParallax={true}
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         animateContent={true}

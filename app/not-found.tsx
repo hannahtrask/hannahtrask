@@ -7,6 +7,7 @@ export default function NotFound() {
     <Hero
       backgroundImage='/hero-images/grand-teton.jpg'
       backgroundImageAlt='The Grand Teton in the sunlight. Photo by Nick Sulzer.'
+      enableParallax={true}
       title='404'
       overlayType='custom'
       overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
