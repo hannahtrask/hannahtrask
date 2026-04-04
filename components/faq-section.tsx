@@ -122,17 +122,6 @@ export default function FAQSection() {
             ))}
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className='text-center mt-12'
-        >
-          <p className='text-gray-600 dark:text-gray-300 mb-6'>
-            Still have questions? Send a message.
-          </p>
-        </motion.div>
       </div>
     </div>
   )

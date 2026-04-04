@@ -4,6 +4,7 @@ import WorkShowcaseSection from '@/components/work/work-showcase-section'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 import Typewriter from '@/components/ui/typewriter'
 import WebsiteInWeekBooking from '@/components/services/website-in-week-booking'
+import FAQSection from '@/components/faq-section'
 
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Work - Jackson WY Web Design Portfolio',
@@ -259,6 +260,9 @@ export default function WorkPage() {
             index={3}
           />
         </div>
+      </div>
+      <div>
+        <FAQSection />
       </div>
     </>
   )
