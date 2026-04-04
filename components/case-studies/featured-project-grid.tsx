@@ -46,7 +46,7 @@ export default function CaseStudyGrid({ caseStudies }: CaseStudyGridProps) {
           {caseStudies.map(study => (
             <motion.div key={study.slug} variants={itemVariants}>
               <Link
-                href={`/case-studies/${study.slug}`}
+                href={`/featured-projects/${study.slug}`}
                 className='group block'
               >
                 <div className='relative bg-desert-50 dark:bg-desert-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2'>
@@ -101,7 +101,7 @@ export default function CaseStudyGrid({ caseStudies }: CaseStudyGridProps) {
 
                     {/* View Project Link */}
                     <div className='mt-6 flex items-center text-brand-sage font-medium text-sm group-hover:translate-x-2 transition-transform'>
-                      <span>View Case Study</span>
+                      <span>View Featured Project</span>
                       <svg
                         className='w-4 h-4 ml-2'
                         fill='none'

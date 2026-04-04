@@ -25,11 +25,11 @@ export default function CaseStudyContent({ caseStudy }: CaseStudyContentProps) {
       {/* Back Link */}
       <div className='container mx-auto px-4 py-8'>
         <Link
-          href='/case-studies'
+          href='/featured-projects'
           className='inline-flex items-center text-brand-sage hover:text-brand-sage/80 transition-colors'
         >
           <ArrowLeft className='w-4 h-4 mr-2' />
-          <span>Back to Case Studies</span>
+          <span>Back to Featured Projects</span>
         </Link>
       </div>
 

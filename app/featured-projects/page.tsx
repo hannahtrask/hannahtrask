@@ -3,15 +3,15 @@ import Hero from '@/components/hero/hero'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 import Typewriter from '@/components/ui/typewriter'
 import { getAllCaseStudies } from '@/sanity/lib/caseStudies'
-import CaseStudyGrid from '@/components/case-studies/case-study-grid'
+import CaseStudyGrid from '@/components/case-studies/featured-project-grid'
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: 'Case Studies',
+  title: 'Featured Projects',
   description:
-    'Explore detailed case studies of web design and development projects by Sagebrush Web Studio. See how we solve real problems for outdoor industry businesses, e-commerce ventures, and creative brands.',
-  url: '/case-studies',
+    'Explore featured projects in web design and development by Sagebrush Web Studio. See how we solve real problems for outdoor industry businesses, e-commerce ventures, and creative brands.',
+  url: '/featured-projects',
   keywords: [
-    'web design case studies',
+    'web design featured projects',
     'web development portfolio',
     'project showcase',
     'client work examples',
@@ -39,11 +39,11 @@ export default async function CaseStudiesPage() {
         <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
           {/* SEO-friendly hidden H1 */}
           <h1 className='sr-only'>
-            Case Studies - Web Design & Development Projects | Sagebrush Web
-            Studio
+            Featured Projects - Web Design & Development Projects | Sagebrush
+            Web Studio
           </h1>
           <Typewriter
-            lines={['case studies', 'client projects', 'success stories']}
+            lines={['featured projects', 'client projects', 'success stories']}
             className='text-lg sm:text-xl md:text-2xl font-cormorant-sc mb-6 text-white leading-tight px-2'
             typingSpeed={80}
             deletingSpeed={40}
@@ -73,7 +73,7 @@ export default async function CaseStudiesPage() {
         </div>
       </div>
 
-      {/* Case Studies Grid */}
+      {/* Featured Projects Grid */}
       <CaseStudyGrid caseStudies={caseStudies} />
     </>
   )

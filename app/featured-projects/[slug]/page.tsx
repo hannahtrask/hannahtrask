@@ -28,8 +28,8 @@ export async function generateMetadata({
 
   if (!caseStudy) {
     return generateSEOMetadata({
-      title: 'Case Study not found',
-      description: 'The requested case study could not be found.',
+      title: 'Featured Project not found',
+      description: 'The requested featured project could not be found.',
     })
   }
 
@@ -38,13 +38,13 @@ export async function generateMetadata({
     : undefined
 
   return generateSEOMetadata({
-    title: `${caseStudy.title} - Case Study`,
+    title: `${caseStudy.title} - Featured Project`,
     description: caseStudy.overview,
-    url: `/case-studies/${slug}`,
+    url: `/featured-projects/${slug}`,
     image: heroImageUrl,
     keywords: [
       caseStudy.title,
-      'case study',
+      'featured project',
       'web design',
       'web development',
       ...(caseStudy.technologies || []),
@@ -74,7 +74,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       >
         <div className='text-center'>
           <p className='text-sm md:text-base uppercase tracking-widest text-white/80 mb-4'>
-            Case Study
+            Featured Project
           </p>
           <h1 className='text-4xl md:text-6xl font-cormorant-sc mb-4 text-white'>
             {caseStudy.title}
