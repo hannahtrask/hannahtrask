@@ -48,7 +48,9 @@ export default function WorkPage() {
             lines={[
               'technical consulting',
               'web development and design',
-              'small business websites',
+              'monthly maintenance',
+              'internal applications',
+              'e-commerce solutions',
             ]}
             className='text-lg sm:text-xl md:text-2xl font-cormorant-sc mb-6 text-white leading-tight px-2'
             typingSpeed={80}
@@ -71,147 +73,40 @@ export default function WorkPage() {
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              Web projects can feel overwhelming. I work with you one-on-one to
-              plan, build, and improve your site with clear communication and
-              recommendations tailored to your goals.
+              Web projects can feel overwhelming. I work with you one-on-one to plan, build, and improve your site with clear communication and recommendations tailored to your goals.
             </p>
           </div>
         </div>
       </div>
 
-      <section className='bg-desert-100 dark:bg-desert-900 py-5'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto flex flex-col items-center justify-between gap-3 border-desert-200 dark:border-desert-700 dark:bg-desert-800/90 p-4 md:p-5'>
-            <p className='text-sm md:text-base text-desert-800 dark:text-white font-medium text-center sm:text-left'>
-              Need a site this month? Let&apos;s get it done in a week.
-            </p>
-            <a
-              href='#build-my-website-in-a-week'
-              className='inline-flex items-center justify-center rounded-md bg-brand-sage px-5 py-2.5 text-white text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap'
-            >
-              Book it
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <div className='container mx-auto px-4 py-8 md:py-10'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
-          {/* Web Development Showcase */}
-          <WorkShowcaseSection
-            title='Website Builds: WordPress, Wix, Squarespace'
-            description='Need a new site or a serious refresh? I design and build clear, modern websites on WordPress, Wix, and Squarespace, including custom WordPress themes.'
-            showImage={false}
-            features={[
-              'New websites and full redesigns',
-              'Custom WordPress theme development',
-              'WordPress, Wix, and Squarespace setup',
-              'Mobile-friendly layouts',
-              'On-page SEO and performance basics',
-              'Easy handoff so you can edit your own content',
-            ]}
-            imageSrc='/page-images/workspace-image.jpg'
-            imageAlt='Modern website development showcase'
-            imagePosition='left'
-            backgroundColor='bg-gradient-to-br from-brand-brown/10 to-brand-olive/10 dark:from-brand-brown/20 dark:to-brand-olive/20'
-            textColor='text-desert-800 dark:text-white'
-            accentColor='#7F492E'
-            index={0}
-          />
-
-          {/* Technical Consulting & Migrations */}
-          <WorkShowcaseSection
-            title='Shopify and E-commerce Setup'
-            description='I build and improve Shopify stores that are simple to manage and ready to sell, from storefront setup to checkout flow improvements.'
-            showImage={false}
-            features={[
-              'Shopify store setup and theme customization',
-              'Product, collection, and navigation setup',
-              'Payment and shipping configuration',
-              'App integrations and workflow setup',
-              'Conversion-focused page updates',
-              'Store cleanup and maintenance support',
-            ]}
-            imageSrc='/hero-images/wolf.jpg'
-            imageAlt='E-commerce website showcase'
-            imagePosition='right'
-            backgroundColor='bg-gradient-to-br from-brand-brown/10 to-brand-olive/10 dark:from-brand-brown/20 dark:to-brand-olive/20'
-            textColor='text-desert-800 dark:text-white'
-            accentColor='#B295C1'
-            index={1}
-          />
-
-          {/* Personal Dashboards & Internal Applications */}
-          <WorkShowcaseSection
-            title='Internal Apps and Dashboards'
-            description='Custom internal tools to help your business run smoother, cut manual work, and keep key information in one place.'
-            showImage={false}
-            features={[
-              'Internal dashboards tailored to your workflow',
-              'Role-based access and secure logins',
-              'Forms, automations, and process tracking',
-              'Reports and data visualization',
-              'Integrations with third-party tools and APIs',
-              'Ongoing improvements as your business grows',
-            ]}
-            imageSrc='/hero-images/western-backdrop.jpg'
-            imageAlt='Brand identity design showcase'
-            imagePosition='left'
-            backgroundColor='bg-gradient-to-tr from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-sage/20'
-            textColor='text-desert-800 dark:text-white'
-            accentColor='#CD9493'
-            index={2}
-          />
-
-          {/* Small Business Solutions */}
-          <WorkShowcaseSection
-            title='Hourly Support, Fixes, and Migrations'
-            description='Already have a site? Hire me hourly for updates, troubleshooting, migrations, and ongoing technical support without a full rebuild.'
-            showImage={false}
-            features={[
-              'WordPress, Wix, Squarespace, and Shopify fixes',
-              'Content edits and design updates',
-              'Platform migrations and domain changes',
-              'Plugin and integration troubleshooting',
-              'Speed and SEO tune-ups',
-              'Flexible hourly retainers',
-            ]}
-            imageSrc='/hero-images/tetons-backdrop.jpg'
-            imageAlt='Small business website showcase'
-            imagePosition='right'
-            backgroundColor='bg-gradient-to-bl from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-olive/20'
-            textColor='text-desert-800 dark:text-white'
-            accentColor='#9D9B86'
-            index={3}
-          />
-        </div>
-      </div>
-
+      {/* Website in a Week — featured */}
       <section
         id='build-my-website-in-a-week'
-        className='bg-gradient-to-b from-desert-100 to-desert-50 dark:from-desert-900 dark:to-desert-950 py-12 md:py-8'
+        className='bg-gradient-to-b from-desert-100 to-desert-50 dark:from-desert-900 dark:to-desert-950 py-16'
       >
         <div className='container mx-auto px-4'>
           <div className='max-w-5xl mx-auto'>
-            <div className='text-center mb-8 md:mb-10'>
-              <h2 className='text-3xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
-                Build my website in a week
-              </h2>
-              <p className='text-sm md:text-base text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-                A complete, professional website built on Squarespace. For those
-                ready to establish or refresh their online presence fast.
-              </p>
-              <div className='mt-6'>
+            <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start mb-8'>
+              <div className='text-center lg:text-left'>
+                <h2 className='text-3xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+                  Website in a Week
+                </h2>
+                <p className='text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6'>
+                  A complete, professional website built on Squarespace. For
+                  those ready to establish or refresh their online presence
+                  fast.
+                </p>
+                <p className='text-sm md:text-base font-semibold text-desert-800 dark:text-white mb-8 tracking-wide'>
+                  $1500 &nbsp;|&nbsp; 1 Week &nbsp;|&nbsp; Launch-Ready
+                </p>
                 <a
                   href='#book-website-in-a-week'
-                  className='inline-flex items-center justify-center rounded-md bg-brand-sage px-6 py-3 text-white text-sm md:text-base font-medium hover:opacity-90 transition-opacity'
+                  className='inline-flex items-center justify-center rounded-none bg-brand-sage px-6 py-3 text-white text-sm md:text-base font-medium hover:opacity-90 transition-opacity'
                 >
-                  Okay, let&apos;s do it
+                  Let&apos;s build it
                 </a>
               </div>
-            </div>
 
-            <div className='max-w-3xl mx-auto mb-8'>
               <div className='rounded-xl border border-desert-200 dark:border-desert-700 bg-white/80 dark:bg-desert-800/70 p-6'>
                 <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
                   Is this for me?
@@ -236,7 +131,7 @@ export default function WorkPage() {
                   $1500 total.
                 </p>
                 <p className='text-sm font-medium text-desert-800 dark:text-desert-100 leading-relaxed'>
-                  No money is paid upfront. Payment is split as 50% before your
+                  No money is paid upfront. Payment is split as 50% by the date of your
                   kick-off call and 50% at project completion.
                 </p>
               </div>
@@ -248,6 +143,121 @@ export default function WorkPage() {
           </div>
         </div>
       </section>
+
+      {/* Divider heading for other services */}
+      <div className='bg-white dark:bg-desert-900 py-10'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-4xl mx-auto text-center'>
+            <h2 className='text-xl md:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+              Looking for something else? Here&apos;s what else we do
+            </h2>
+            <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
+            <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed'>
+              Need something else?{' '}
+              <br className='sm:hidden' />
+              See our full services below, or{' '}
+              <a
+                href='/contact'
+                className='underline underline-offset-2 hover:text-desert-800 dark:hover:text-white transition-colors'
+              >
+                schedule a consultation
+              </a>{' '}
+              to discuss your project.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className='container mx-auto px-4 py-8 md:py-10 bg-white dark:bg-desert-900 rounded-lg shadow-sm'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
+          <WorkShowcaseSection
+            title='Website Design & Build'
+            description='Everything from concept to launch. New websites, redesigns, and full builds—on WordPress, Shopify, Squarespace, or whatever works best for you.'
+            showImage={false}
+            features={[
+              'Strategy and planning',
+              'Custom design and development',
+              'On-page SEO and performance',
+              'Mobile-friendly and accessible',
+              'Content setup and training',
+              'Launch support',
+            ]}
+            imageSrc='/page-images/workspace-image.jpg'
+            imageAlt='Modern website development showcase'
+            imagePosition='left'
+            backgroundColor='bg-gradient-to-br from-brand-brown/10 to-brand-olive/10 dark:from-brand-brown/20 dark:to-brand-olive/20'
+            textColor='text-desert-800 dark:text-white'
+            accentColor='#7F492E'
+            index={0}
+          />
+
+          {/* Technical Consulting & Migrations */}
+          <WorkShowcaseSection
+            title='Shopify & E-Commerce'
+            description='Build or improve your online store. Full setup, customization, and optimization to sell smoothly.'
+            showImage={false}
+            features={[
+              'Store setup and theme customization',
+              'Product and collection management',
+              'Payment and shipping configuration',
+              'App integrations and automations',
+              'Conversion optimization',
+              'Ongoing maintenance',
+            ]}
+            imageSrc='/hero-images/wolf.jpg'
+            imageAlt='E-commerce website showcase'
+            imagePosition='right'
+            backgroundColor='bg-gradient-to-br from-brand-brown/10 to-brand-olive/10 dark:from-brand-brown/20 dark:to-brand-olive/20'
+            textColor='text-desert-800 dark:text-white'
+            accentColor='#B295C1'
+            index={1}
+          />
+
+          {/* Personal Dashboards & Internal Applications */}
+          <WorkShowcaseSection
+            title='Internal Apps & Automations'
+            description='Custom tools to streamline your operations. Dashboards, workflows, Zapier automations, and integrations that cut manual work.'
+            showImage={false}
+            features={[
+              'Internal dashboards and portals',
+              'Workflow automation and integrations',
+              'Form builders and data collection',
+              'API connections and custom logic',
+              'Role-based access and security',
+              'Ongoing support and updates',
+            ]}
+            imageSrc='/hero-images/western-backdrop.jpg'
+            imageAlt='Brand identity design showcase'
+            imagePosition='left'
+            backgroundColor='bg-gradient-to-tr from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-sage/20'
+            textColor='text-desert-800 dark:text-white'
+            accentColor='#CD9493'
+            index={2}
+          />
+
+          {/* Small Business Solutions */}
+          <WorkShowcaseSection
+            title='Maintenance & Technical Support'
+            description="Hourly support for updates, fixes, migrations, and ongoing care. Don't want a full rebuild? This is for you."
+            showImage={false}
+            features={[
+              'Content updates and design tweaks',
+              'Plugin and integration troubleshooting',
+              'Platform migrations and domain changes',
+              'Speed and SEO optimization',
+              'Monthly retainer options',
+              'On-demand hourly support',
+            ]}
+            imageSrc='/hero-images/tetons-backdrop.jpg'
+            imageAlt='Small business website showcase'
+            imagePosition='right'
+            backgroundColor='bg-gradient-to-bl from-brand-sage/10 to-brand-olive/10 dark:from-brand-sage/20 dark:to-brand-olive/20'
+            textColor='text-desert-800 dark:text-white'
+            accentColor='#9D9B86'
+            index={3}
+          />
+        </div>
+      </div>
     </>
   )
 }

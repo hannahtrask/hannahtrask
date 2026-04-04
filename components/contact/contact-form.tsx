@@ -19,8 +19,8 @@ export default function ContactForm() {
     const initHoneyBook = () => {
       if (typeof window === 'undefined')
         return // Always set/reset the HoneyBook config
-      ;(window as any)._HB_ = (window as any)._HB_ || {}
-      ;(window as any)._HB_.pid = HONEYBOOK_PID
+          ; (window as any)._HB_ = (window as any)._HB_ || {}
+        ; (window as any)._HB_.pid = HONEYBOOK_PID
     }
 
     const loadScript = (): Promise<void> => {
@@ -33,7 +33,7 @@ export default function ContactForm() {
         if (existingScript) {
           // Script exists - try to re-trigger widget initialization
           if ((window as any)._HB_?.init) {
-            ;(window as any)._HB_.init()
+            ; (window as any)._HB_.init()
           }
           resolve()
           return
@@ -97,8 +97,8 @@ export default function ContactForm() {
             'script[src*="honeybook.com"]'
           )
           existingScript?.remove()
-          // Also clear HoneyBook state
-          ;(window as any)._HB_ = {}
+            // Also clear HoneyBook state
+            ; (window as any)._HB_ = {}
           retryTimeout = setTimeout(attemptLoad, 1000)
         } else {
           setIsLoading(false)
@@ -163,7 +163,7 @@ export default function ContactForm() {
             </p>
             <a
               href='mailto:hello@wearesagebrush.com'
-              className='inline-block bg-desert-600 hover:bg-desert-700 text-white px-6 py-3 rounded-md transition-colors mb-4'
+              className='inline-block bg-desert-600 hover:bg-desert-700 text-white px-6 py-3 rounded-none transition-colors mb-4'
             >
               Email hello@wearesagebrush.com
             </a>

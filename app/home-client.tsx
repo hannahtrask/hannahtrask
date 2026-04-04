@@ -45,13 +45,20 @@ export default function HomeClient() {
           <p className='text-sm leading-relaxed text-white/90 mb-8'>
             web design and development based in Jackson Hole, Wyoming
           </p>
-          <Link
-            href='/contact'
-            className='inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white font-medium transition-colors duration-200'
-          >
-            work with me
-            <ArrowRight className='w-4 h-4' />
-          </Link>
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+            <Link
+              href='/contact'
+              className='inline-flex items-center justify-center gap-2 w-64 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white transition-colors duration-200'
+            >
+              work with me
+            </Link>
+            <Link
+              href='/services#build-my-website-in-a-week'
+              className='inline-flex items-center justify-center gap-2 w-64 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white transition-colors duration-200'
+            >
+              website in a week
+            </Link>
+          </div>
         </div>
       </Hero>
 
@@ -173,6 +180,39 @@ export default function HomeClient() {
       <div className='bg-white dark:bg-desert-900'>
         <FAQSection />
       </div> */}
+
+      {/* Website in a Week Section */}
+      <div className='bg-white dark:bg-desert-800 py-16'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-3xl mx-auto text-center'>
+            <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+              Website in a Week
+            </h2>
+            <div className='w-16 h-px bg-brand-sage mx-auto mb-6'></div>
+            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-2'>
+              Need a professional site fast?
+            </p>
+            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-8'>
+              A complete Squarespace website built and launched in one week.{' '}
+              <span className='font-semibold text-desert-800 dark:text-white'>
+                $1500. No upfront costs.
+              </span>
+            </p>
+            <Link
+              href='/services#build-my-website-in-a-week'
+              className='inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white font-medium transition-colors duration-200 mb-10'
+            >
+              See how it works
+              <ArrowRight className='w-4 h-4' />
+            </Link>
+            <p className='text-xs text-desert-600 dark:text-desert-300 mt-8'>
+              <span className='font-semibold'>Perfect for:</span> Service
+              businesses, freelancers, small shops, and anyone who needs to
+              launch now, not in 3 months.
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Contact Section */}
       <div
