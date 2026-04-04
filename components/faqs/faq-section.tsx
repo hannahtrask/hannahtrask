@@ -132,14 +132,18 @@ export default function FAQSection() {
           className='text-center mt-12'
         >
           <p className='text-gray-600 dark:text-gray-300 mb-6'>
-            Still have questions? We'd love to hear from you.
+            Ready to get started?
           </p>
-          <Link
-            href='mailto:hello@wearesagebrush.com'
-            className='text-desert-600 dark:text-desert-200 hover:underline'
-          >
-            hello@wearesagebrush.com
-          </Link>
+          <p className='text-gray-600 dark:text-gray-300 mb-6'>
+            Get in touch at{' '}
+            <Link
+              href='mailto:hello@wearesagebrush.com'
+              className='text-desert-600 dark:text-desert-200 hover:underline'
+            >
+              hello@wearesagebrush.com
+            </Link>{' '}
+            or fill out the form below. I typically respond within 24 hours.
+          </p>
         </motion.div>
       </div>
     </div>

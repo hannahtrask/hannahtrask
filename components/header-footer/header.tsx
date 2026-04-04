@@ -51,18 +51,7 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation - Under Construction Mode */}
           <nav className='hidden md:flex items-center space-x-8'>
-            <Link
-              href='/'
-              className={`text-base tracking-wide transition-colors ${
-                isScrolled
-                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
-                  : 'text-white/80 hover:text-white'
-              }`}
-            >
-              home
-            </Link>
             <Link
               href='/services'
               className={`text-base tracking-wide transition-colors ${

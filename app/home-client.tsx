@@ -2,10 +2,9 @@
 
 import Hero from '@/components/hero/hero'
 import ContactForm from '@/components/contact/contact-form'
-import FAQSection from '@/components/faqs/faq-section'
 import Typewriter from '@/components/ui/typewriter'
 import Link from 'next/link'
-import Image from 'next/image'
+import { ArrowRight } from 'lucide-react'
 
 export default function HomeClient() {
   return (
@@ -43,56 +42,37 @@ export default function HomeClient() {
             pauseDuration={2500}
             showCursor={true}
           />
-          <p className='text-sm leading-relaxed text-white/90'>
-            web design and development for searchers, makers and dreamers
+          <p className='text-sm leading-relaxed text-white/90 mb-8'>
+            web design and development based in Jackson Hole, Wyoming
           </p>
+          <Link
+            href='/contact'
+            className='inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white font-medium transition-colors duration-200'
+          >
+            work with me
+            <ArrowRight className='w-4 h-4' />
+          </Link>
         </div>
       </Hero>
 
-      {/* Meet Hannah Section */}
-      <div className='bg-white dark:bg-desert-800 pt-10'>
+      {/* Tagline */}
+      <div className='bg-white dark:bg-desert-800'>
         <div className='container mx-auto px-4'>
           <div className='max-w-6xl mx-auto'>
             {/* SEO-friendly hidden H2 */}
             <h2 className='sr-only'>
-              About Hannah Trask - Jackson Hole Web Developer and Freelance Web
-              Designer
+              Sagebrush Web Studio - Jackson Hole Web Development and Web Design
             </h2>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-              {/* Image */}
-              <div className='order-2 lg:order-1'>
-                <div className='relative'>
-                  <Image
-                    src='/HANNAH_TRASK.png'
-                    alt='Hannah Trask - Founder of Sagebrush Web Studio'
-                    width={600}
-                    height={600}
-                    className='w-full h-auto object-cover'
-                  />
-                </div>
-              </div>
 
-              {/* Text Content */}
-              <div className='order-1 lg:order-2 space-y-6'>
+            <div className='container mx-auto px-4 py-12 md:py-16 lg:py-20'>
+              <div className='max-w-4xl mx-auto text-center'>
                 <h3 className='text-xl md:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white'>
-                  ABOUT SAGEBRUSH WEB STUDIO
+                  SAGEBRUSH WEB STUDIO
                 </h3>
-                <div className='w-16 h-px bg-brand-sage'></div>
+                <div className='w-16 h-px bg-brand-sage mx-auto m-2'></div>
                 <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
-                  Hey, I&apos;m Hannah, the founder and owner of Sagebrush
-                  Studio. My passion is helping locals, creatives, and
-                  community-driven businesses establish a strong online presence
-                  so they can focus on their work.
-                  <br />
-                  <br />I have 5+ years of experience in web development and
-                  specialize in creating and enhancing websites that not only
-                  look beautiful but also are intuitive and easy to use, work
-                  for your business and engage your audience.
-                </p>
-                <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
-                  When I'm not coding, building websites or writing, you&apos;ll
-                  find me exploring outside, learning a new thing or teaching at
-                  a local yoga studio.
+                  Everything from setup to scaling. Web development, web design,
+                  and optimization based in Jackson, WY.
                 </p>
               </div>
             </div>
@@ -101,7 +81,7 @@ export default function HomeClient() {
       </div>
 
       {/* Services Section */}
-      <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-900 py-16'>
+      <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-900 py-8'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             {/* SEO-friendly hidden H2 */}
@@ -109,15 +89,10 @@ export default function HomeClient() {
               Web Development Services in Jackson WY - Squarespace, Shopify,
               WordPress, Wix
             </h2>
-            <p className='text-lg md:text-xl lg:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4 leading-tight'>
-              Sagebrush Web Studio builds thoughtful websites and web tools for
-              locals, creatives, and community-driven businesses.
+            <p className='text-lg md:text-xl lg:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white leading-tight'>
+              Some of what we do
             </p>
-            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
-              Work with me for full website projects, focused new builds, or
-              hourly support for updates, improvements, and technical help.
-            </p>
-            <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-12'></div>
+            <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 text-left'>
               <div className='space-y-4'>
@@ -127,11 +102,11 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      WordPress, Wix or Squarespace Sites
+                      Web Strategy & Setup
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      New website builds, redesigns, and updates on WordPress,
-                      Wix, and Squarespace.
+                      New websites, redesigns, migrations, and platform
+                      transitions.
                     </p>
                   </div>
                 </div>
@@ -142,11 +117,11 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Custom WordPress Themes
+                      Performance & Visibility
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      Custom theme development and theme customization tailored
-                      to your brand and content needs.
+                      SEO optimization, Core Web Vitals improvements, and
+                      AI-ready content structure.
                     </p>
                   </div>
                 </div>
@@ -159,11 +134,10 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Shopify / E-commerce Setup
+                      Ongoing Support
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      Shopify stores, product setup, and e-commerce workflows
-                      built to support smooth day-to-day operations.
+                      Monthly maintenance, updates, and retainer partnerships.
                     </p>
                   </div>
                 </div>
@@ -174,11 +148,11 @@ export default function HomeClient() {
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Internal Apps
+                      Custom Development
                     </h3>
                     <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      Custom dashboards and internal tools to streamline
-                      operations and help you work more efficiently.
+                      WordPress themes, Shopify stores, internal apps, and
+                      automation workflows.
                     </p>
                   </div>
                 </div>
@@ -186,12 +160,19 @@ export default function HomeClient() {
             </div>
           </div>
         </div>
+        <div className='container mx-auto px-4 pt-6'>
+          <div className='max-w-4xl mx-auto text-center'>
+            <p className='text-sm md:text-sm lg:text-md mx-auto text-desert-800 dark:text-white leading-tight'>
+              Not sure if we can help? Reach out, we probably can.
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* FAQ Section */}
+      {/* FAQ Section
       <div className='bg-white dark:bg-desert-900'>
         <FAQSection />
-      </div>
+      </div> */}
 
       {/* Contact Section */}
       <div
@@ -201,18 +182,18 @@ export default function HomeClient() {
         <div className='px-4 sm:px-6'>
           <div className='text-center mb-12'>
             <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
-              LET'S WORK TOGETHER
+              Let&apos;s work together
             </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-8'></div>
             <p className='text-sm text-desert-600 dark:text-desert-300 max-w-2xl mx-auto leading-relaxed'>
-              Want to talk more about what you need? Shoot me an email at{' '}
+              Get in touch at{' '}
               <Link
                 href='mailto:hello@wearesagebrush.com'
                 className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-sand-500 dark:hover:text-gray-200'
               >
                 hello@wearesagebrush.com
               </Link>{' '}
-              or fill out the form below and I&apos;ll get in touch within 24-48
+              or fill out the form below. Typical response time is within 24
               hours.
             </p>
           </div>
