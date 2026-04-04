@@ -171,7 +171,7 @@ export default function WorkPage() {
         </div>
       </div>
 
-      <div className='container mx-auto px-4 py-8 md:py-10 bg-white dark:bg-desert-900 rounded-lg shadow-sm'>
+      <div className='container mx-auto px-4 py-8 md:py-10 dark:bg-desert-900 rounded-lg shadow-sm'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
           <WorkShowcaseSection
             title='Website Design & Build'
