@@ -73,7 +73,9 @@ export default function WorkPage() {
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              Web projects can feel overwhelming. I work with you one-on-one to plan, build, and improve your site with clear communication and recommendations tailored to your goals.
+              Web projects can feel overwhelming. I work with you one-on-one to
+              plan, build, and improve your site with clear communication and
+              recommendations tailored to your goals.
             </p>
           </div>
         </div>
@@ -131,8 +133,8 @@ export default function WorkPage() {
                   $1500 total.
                 </p>
                 <p className='text-sm font-medium text-desert-800 dark:text-desert-100 leading-relaxed'>
-                  No money is paid upfront. Payment is split as 50% by the date of your
-                  kick-off call and 50% at project completion.
+                  No money is paid upfront. Payment is split as 50% by the date
+                  of your kick-off call and 50% at project completion.
                 </p>
               </div>
             </div>
@@ -153,8 +155,7 @@ export default function WorkPage() {
             </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
             <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed'>
-              Need something else?{' '}
-              <br className='sm:hidden' />
+              Need something else? <br className='sm:hidden' />
               See our full services below, or{' '}
               <a
                 href='/contact'

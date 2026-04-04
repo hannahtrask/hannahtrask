@@ -26,8 +26,8 @@ export default function WebsiteInWeekBooking() {
 
     const initHoneyBook = () => {
       if (typeof window === 'undefined') return
-        ; (window as any)._HB_ = (window as any)._HB_ || {}
-        ; (window as any)._HB_.pid = HONEYBOOK_PID
+      ;(window as any)._HB_ = (window as any)._HB_ || {}
+      ;(window as any)._HB_.pid = HONEYBOOK_PID
     }
 
     const loadScript = (): Promise<void> => {
@@ -38,7 +38,7 @@ export default function WebsiteInWeekBooking() {
 
         if (existingScript) {
           if ((window as any)._HB_?.init) {
-            ; (window as any)._HB_.init()
+            ;(window as any)._HB_.init()
           }
           resolve()
           return
@@ -99,7 +99,7 @@ export default function WebsiteInWeekBooking() {
             `script[src="${HONEYBOOK_SCRIPT_URL}"]`
           )
           existingScript?.remove()
-            ; (window as any)._HB_ = {}
+          ;(window as any)._HB_ = {}
           retryTimeout = setTimeout(attemptLoad, 1000)
         } else {
           setIsLoading(false)
@@ -133,7 +133,7 @@ export default function WebsiteInWeekBooking() {
       `script[src="${HONEYBOOK_SCRIPT_URL}"]`
     )
     existingScript?.remove()
-      ; (window as any)._HB_ = {}
+    ;(window as any)._HB_ = {}
     if (containerRef.current) {
       containerRef.current.innerHTML = ''
     }
@@ -153,8 +153,14 @@ export default function WebsiteInWeekBooking() {
           aria-controls='website-in-week-booking-panel'
           className='inline-flex items-center justify-center gap-2 rounded-none bg-brand-sage px-4 py-2 text-sm text-white transition-opacity hover:opacity-90'
         >
-          <span>{isOpen ? 'Hide booking options' : 'Open booking options'}</span>
-          {isOpen ? <ChevronUp className='h-4 w-4' /> : <ChevronDown className='h-4 w-4' />}
+          <span>
+            {isOpen ? 'Hide booking options' : 'Open booking options'}
+          </span>
+          {isOpen ? (
+            <ChevronUp className='h-4 w-4' />
+          ) : (
+            <ChevronDown className='h-4 w-4' />
+          )}
         </button>
       </div>
 
