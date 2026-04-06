@@ -215,10 +215,8 @@ export default function HomeClient() {
                 Need a professional site fast?
               </p>
               <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-8'>
-                A complete Squarespace website built and launched in one week.{' '}
-                <span className='font-semibold text-desert-800 dark:text-white'>
-                  $1500. No upfront costs.
-                </span>
+                Get a complete, beautiful Squarespace website built for SEO/AIO
+                optimization and launched in one week.
               </p>
               <Link
                 href='/services#build-my-website-in-a-week'
@@ -239,7 +237,7 @@ export default function HomeClient() {
           <div className='flex-1 relative min-h-64 md:min-h-0 p-8 md:p-10'>
             <div className='relative h-full min-h-64 rounded-2xl overflow-hidden shadow-md'>
               <Image
-                src='/page-images/workspace-image.jpg'
+                src='/page-images/website-in-a-week.png'
                 alt='Web design workspace'
                 fill
                 className='object-cover'
@@ -256,11 +254,11 @@ export default function HomeClient() {
       >
         <div className='px-4 sm:px-6'>
           <div className='text-center mb-12'>
-            <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-6'>
+            <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-2'>
               Let&apos;s work together
             </h2>
-            <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-8'></div>
-            <p className='text-sm text-desert-600 dark:text-desert-300 max-w-2xl mx-auto leading-relaxed'>
+
+            <p className='text-sm text-desert-600 dark:text-desert-300 max-w-3xl mx-auto leading-relaxed'>
               Get in touch at{' '}
               <Link
                 href='mailto:hello@wearesagebrush.com'
@@ -295,7 +293,7 @@ export default function HomeClient() {
               href='https://www.instagram.com/sagebrushwebstudio/'
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white font-medium transition-colors duration-200'
+              className='font-first-rodeo inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white font-medium transition-colors duration-200'
             >
               follow @sagebrushwebstudio
               <ArrowRight className='w-4 h-4' />
