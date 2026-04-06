@@ -19,8 +19,9 @@ const config = {
     },
     extend: {
       fontFamily: {
-        'cormorant-sc': ['var(--font-cormorant-sc)'],
         montserrat: ['var(--font-montserrat)'],
+        miroa: ['var(--font-miroa)'],
+        'first-rodeo': ['var(--font-first-rodeo)'],
         sans: ['var(--font-montserrat)'],
       },
       colors: {

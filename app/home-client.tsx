@@ -17,45 +17,49 @@ export default function HomeClient() {
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         animateContent={true}
-        titleClassName='text-5xl md:text-7xl font-cormorant-sc mb-6 text-white'
+        titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
           name: 'Nick Sulzer',
           url: 'https://www.nicksulzer.com/',
         }}
       >
-        <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
-          {/* SEO-friendly hidden H1 */}
-          <h1 className='sr-only'>
-            Hannah Trask - Jackson WY Web Developer & Designer | Sagebrush
-            Studio Web Development
-          </h1>
-          <Typewriter
-            lines={[
-              'web development',
-              'web design',
-              'migrations',
-              'internal applications',
-              'technical consulting',
-            ]}
-            className='text-lg sm:text-xl md:text-2xl font-cormorant-sc mb-6 text-white leading-tight px-2'
-            typingSpeed={80}
-            deletingSpeed={40}
-            pauseDuration={2500}
-            showCursor={true}
-          />
-          <p className='text-sm leading-relaxed text-white/90 mb-8'>
-            web design and development based in Jackson Hole, Wyoming
-          </p>
-          <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+        <div className='relative h-full flex items-center justify-center'>
+          <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
+            {/* SEO-friendly hidden H1 */}
+            <h1 className='sr-only'>
+              Hannah Trask - Jackson WY Web Developer & Designer | Sagebrush
+              Studio Web Development
+            </h1>
+            <Typewriter
+              lines={[
+                'web development',
+                'web design',
+                'migrations',
+                'internal applications',
+                'technical consulting',
+              ]}
+              className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
+              typingSpeed={80}
+              deletingSpeed={40}
+              pauseDuration={2500}
+              showCursor={true}
+            />
+            <p className='text-sm leading-relaxed text-white/90 mb-8'>
+              web design and development based in Jackson Hole, Wyoming
+            </p>
+          </div>
+
+          {/* Buttons pinned to bottom of viewport */}
+          <div className='absolute bottom-10 left-0 right-0 flex flex-col sm:flex-row items-center justify-center gap-4 px-4'>
             <Link
               href='/contact'
-              className='inline-flex items-center justify-center gap-2 w-64 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white transition-colors duration-200'
+              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-white text-white hover:bg-white hover:text-brand-sage transition-colors duration-200'
             >
               work with me
             </Link>
             <Link
               href='/services#build-my-website-in-a-week'
-              className='inline-flex items-center justify-center gap-2 w-64 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white transition-colors duration-200'
+              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-white text-white hover:bg-white hover:text-brand-sage transition-colors duration-200'
             >
               website in a week
             </Link>
@@ -74,7 +78,7 @@ export default function HomeClient() {
 
             <div className='container mx-auto px-4 py-12 md:py-16 lg:py-20'>
               <div className='max-w-4xl mx-auto text-center'>
-                <h3 className='text-xl md:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white'>
+                <h3 className='text-xl md:text-2xl font-bold text-desert-800 dark:text-white'>
                   SAGEBRUSH WEB STUDIO
                 </h3>
                 <div className='w-16 h-px bg-brand-sage mx-auto m-2'></div>
@@ -97,9 +101,9 @@ export default function HomeClient() {
               Web Development Services in Jackson WY - Squarespace, Shopify,
               WordPress, Wix
             </h2>
-            <p className='text-lg md:text-xl lg:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white leading-tight'>
+            <h3 className='text-lg md:text-xl lg:text-2xl font-bold text-desert-800 dark:text-white leading-tight'>
               Some of what we do
-            </p>
+            </h3>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 text-left'>
@@ -186,7 +190,7 @@ export default function HomeClient() {
       <div className='bg-white dark:bg-desert-800 py-16'>
         <div className='container mx-auto px-4'>
           <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+            <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-4'>
               Website in a Week
             </h2>
             <div className='w-16 h-px bg-brand-sage mx-auto mb-6'></div>
@@ -222,7 +226,7 @@ export default function HomeClient() {
       >
         <div className='px-4 sm:px-6'>
           <div className='text-center mb-12'>
-            <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
+            <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-6'>
               Let&apos;s work together
             </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-8'></div>
@@ -246,7 +250,7 @@ export default function HomeClient() {
       <div className='bg-desert-50 dark:bg-desert-900 py-12'>
         <div className='container mx-auto px-4'>
           <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+            <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-4'>
               Follow our work
             </h2>
             <div className='w-16 h-px bg-brand-sage mx-auto mb-6'></div>

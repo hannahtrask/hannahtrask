@@ -1,6 +1,7 @@
 import type React from 'react'
 import type { Metadata } from 'next'
-import { Cormorant_SC, Montserrat } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/header-footer/header'
 import Footer from '@/components/header-footer/footer'
@@ -14,16 +15,20 @@ import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import SmoothHashScroll from '@/components/scroll/smooth-hash-scroll'
 
-const cormorantSC = Cormorant_SC({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-cormorant-sc',
-})
-
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-montserrat',
+})
+
+const miroa = localFont({
+  src: '../public/fonts/Miroa.otf',
+  variable: '--font-miroa',
+})
+
+const firstRodeo = localFont({
+  src: '../public/fonts/FirstRodeo.otf',
+  variable: '--font-first-rodeo',
 })
 
 const iconMetadata: Metadata = {
@@ -90,7 +95,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${cormorantSC.variable} ${montserrat.variable} min-h-screen font-montserrat`}
+        className={`${montserrat.variable} ${miroa.variable} ${firstRodeo.variable} min-h-screen font-montserrat`}
       >
         <SpeedInsights />
         <ThemeProvider

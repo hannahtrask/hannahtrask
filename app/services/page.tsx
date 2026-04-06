@@ -34,7 +34,7 @@ export default function WorkPage() {
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
         animateContent={true}
-        titleClassName='text-5xl md:text-7xl font-cormorant-sc mb-6 text-white'
+        titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
           name: 'Nick Sulzer',
           url: 'https://www.nicksulzer.com/',
@@ -54,7 +54,7 @@ export default function WorkPage() {
               'internal applications',
               'e-commerce solutions',
             ]}
-            className='text-lg sm:text-xl md:text-2xl font-cormorant-sc mb-6 text-white leading-tight px-2'
+            className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
             typingSpeed={80}
             deletingSpeed={40}
             pauseDuration={2500}
@@ -70,7 +70,7 @@ export default function WorkPage() {
       <div className='bg-desert-50 dark:bg-desert-900 py-10'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
-            <h2 className='text-2xl md:text-3xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-6'>
+            <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-6'>
               Direct support from start to finish
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
@@ -92,7 +92,7 @@ export default function WorkPage() {
           <div className='max-w-5xl mx-auto'>
             <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start mb-8'>
               <div className='text-center lg:text-left'>
-                <h2 className='text-3xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+                <h2 className='text-3xl md:text-5xl font-bold text-desert-800 dark:text-white mb-4'>
                   Website in a Week
                 </h2>
                 <p className='text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6'>
@@ -112,7 +112,7 @@ export default function WorkPage() {
               </div>
 
               <div className='rounded-xl border border-desert-200 dark:border-desert-700 bg-white/80 dark:bg-desert-800/70 p-6'>
-                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+                <h3 className='text-xl font-bold text-desert-800 dark:text-white mb-4'>
                   Is this for me?
                 </h3>
                 <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4'>
@@ -121,14 +121,14 @@ export default function WorkPage() {
                   months-long timeline.
                 </p>
 
-                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-2'>
+                <h3 className='text-xl font-bold text-desert-800 dark:text-white mb-2'>
                   Timeline
                 </h3>
                 <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-4'>
                   One week from your scheduled kick-off to launch-ready.
                 </p>
 
-                <h3 className='text-xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-2'>
+                <h3 className='text-xl font-bold text-desert-800 dark:text-white mb-2'>
                   Investment
                 </h3>
                 <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2'>
@@ -152,7 +152,7 @@ export default function WorkPage() {
       <div className='bg-white dark:bg-desert-900 py-10'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
-            <h2 className='text-xl md:text-2xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-4'>
+            <h2 className='text-xl md:text-2xl font-bold text-desert-800 dark:text-white mb-4'>
               Looking for something else? Here&apos;s what else we do
             </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>

@@ -90,20 +90,26 @@
   }
 
   h1,
-  h2,
+  h2 {
+    @apply font-miroa;
+  }
+
   h3,
   h4,
   h5,
   h6 {
-    @apply font-cormorant-sc;
+    @apply font-first-rodeo;
   }
 
   p,
   a,
   li,
-  span,
-  button {
+  span {
     @apply font-montserrat;
+  }
+
+  button {
+    @apply font-first-rodeo;
   }
 }
 

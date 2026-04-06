@@ -54,7 +54,7 @@ export default function Header() {
           <nav className='hidden md:flex items-center space-x-8'>
             <Link
               href='/services'
-              className={`text-base tracking-wide transition-colors ${
+              className={`font-first-rodeo text-base tracking-wide transition-colors ${
                 isScrolled
                   ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
                   : 'text-white/80 hover:text-white'
@@ -64,7 +64,7 @@ export default function Header() {
             </Link>
             <Link
               href='/contact'
-              className={`text-base tracking-wide transition-colors ${
+              className={`font-first-rodeo text-base tracking-wide transition-colors ${
                 isScrolled
                   ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
                   : 'text-white/80 hover:text-white'
@@ -90,21 +90,21 @@ export default function Header() {
           <nav className='md:hidden py-6 space-y-6 mt-4 bg-white dark:bg-gray-900 rounded-md shadow-lg'>
             <Link
               href='/'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
+              className='block px-4 font-first-rodeo text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
               onClick={() => setIsMenuOpen(false)}
             >
               home
             </Link>
             <Link
               href='/services'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
+              className='block px-4 font-first-rodeo text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
               onClick={() => setIsMenuOpen(false)}
             >
               services
             </Link>
             <Link
               href='/contact'
-              className='block px-4 text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
+              className='block px-4 font-first-rodeo text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
               onClick={() => setIsMenuOpen(false)}
             >
               contact

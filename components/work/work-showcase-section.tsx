@@ -170,7 +170,7 @@ export default function WorkShowcaseSection({
           >
             <div className={showImage ? 'max-w-xl' : 'max-w-none'}>
               <h2
-                className={`text-2xl md:text-3xl font-cormorant-sc font-bold ${textColor} mb-4 leading-tight`}
+                className={`text-2xl md:text-3xl font-bold ${textColor} mb-4 leading-tight`}
               >
                 {title}
               </h2>

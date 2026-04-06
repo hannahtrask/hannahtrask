@@ -15,7 +15,7 @@ export default function TermsPage() {
     <div className='min-h-screen bg-desert-50 dark:bg-desert-900 pt-32 pb-20'>
       <div className='container mx-auto px-4'>
         <div className='max-w-3xl mx-auto'>
-          <h1 className='text-4xl md:text-5xl font-cormorant-sc font-bold text-desert-800 dark:text-white mb-8'>
+          <h1 className='text-4xl md:text-5xl font-bold text-desert-800 dark:text-white mb-8'>
             Terms &amp; Conditions
           </h1>
           <p className='text-sm text-gray-600 dark:text-gray-400 mb-8'>
@@ -24,7 +24,7 @@ export default function TermsPage() {
 
           <div className='prose prose-sm dark:prose-invert max-w-none space-y-8'>
             <section>
-              <h2 className='text-2xl font-cormorant-sc font-semibold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-2xl font-semibold text-desert-800 dark:text-white mb-4'>
                 Agreement to Terms
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
@@ -36,7 +36,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-cormorant-sc font-semibold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-2xl font-semibold text-desert-800 dark:text-white mb-4'>
                 Services
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
@@ -48,7 +48,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-cormorant-sc font-semibold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-2xl font-semibold text-desert-800 dark:text-white mb-4'>
                 Intellectual Property
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
@@ -60,7 +60,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-cormorant-sc font-semibold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-2xl font-semibold text-desert-800 dark:text-white mb-4'>
                 User Responsibilities
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed mb-4'>
@@ -80,7 +80,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-cormorant-sc font-semibold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-2xl font-semibold text-desert-800 dark:text-white mb-4'>
                 Limitation of Liability
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
@@ -92,7 +92,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-cormorant-sc font-semibold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-2xl font-semibold text-desert-800 dark:text-white mb-4'>
                 Disclaimer
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
@@ -104,7 +104,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-cormorant-sc font-semibold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-2xl font-semibold text-desert-800 dark:text-white mb-4'>
                 Governing Law
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
@@ -115,7 +115,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-cormorant-sc font-semibold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-2xl font-semibold text-desert-800 dark:text-white mb-4'>
                 Changes to Terms
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
@@ -127,7 +127,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className='text-2xl font-cormorant-sc font-semibold text-desert-800 dark:text-white mb-4'>
+              <h2 className='text-2xl font-semibold text-desert-800 dark:text-white mb-4'>
                 Contact Us
               </h2>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>

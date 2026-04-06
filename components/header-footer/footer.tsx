@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
             <Link
               href='mailto:hello@wearesagebrush.com'
-              className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-white dark:hover:text-gray-200'
+              className='font-first-rodeo text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-white dark:hover:text-gray-200'
             >
               hello@wearesagebrush.com
             </Link>
@@ -30,7 +30,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/'
-                    className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='font-first-rodeo text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     home
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/work'
-                    className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='font-first-rodeo text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     services
@@ -48,7 +48,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/contact'
-                    className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='font-first-rodeo text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     contact
@@ -99,13 +99,13 @@ export default function Footer() {
           <div className='flex space-x-4'>
             <Link
               href='/privacy'
-              className='text-desert-50 dark:text-desert-300 hover:text-white dark:hover:text-gray-200 text-xs'
+              className='font-first-rodeo text-desert-50 dark:text-desert-300 hover:text-white dark:hover:text-gray-200 text-xs'
             >
               Privacy Policy
             </Link>
             <Link
               href='/terms'
-              className='text-desert-50 dark:text-desert-300 hover:text-white dark:hover:text-gray-200 text-xs'
+              className='font-first-rodeo text-desert-50 dark:text-desert-300 hover:text-white dark:hover:text-gray-200 text-xs'
             >
               Terms & Conditions
             </Link>

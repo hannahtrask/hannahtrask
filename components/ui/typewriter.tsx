@@ -94,9 +94,9 @@ export default function Typewriter({
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className={className}
+      className={`!font-first-rodeo ${className}`}
     >
-      <span>{currentText}</span>
+      <span className='!font-first-rodeo'>{currentText}</span>
       {showCursor && (
         <span
           className={`inline-block w-0.5 bg-current ml-1 animate-pulse ${cursorClassName}`}

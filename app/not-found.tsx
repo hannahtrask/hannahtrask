@@ -15,9 +15,7 @@ export default function NotFound() {
       photoCredit={{ name: 'Nick Sulzer', url: 'https://www.nicksulzer.com/' }}
     >
       <div className='text-center text-white'>
-        <h1 className='text-5xl md:text-7xl font-cormorant-sc mb-6 text-white'>
-          OOPS
-        </h1>
+        <h1 className='text-5xl md:text-7xl mb-6 text-white'>OOPS</h1>
         <h2 className='text-md font-montserrat md:text-md font-light mb-8 tracking-wide text-white'>
           looks like you ended up somewhere that doesn&apos;t exist
         </h2>
