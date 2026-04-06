@@ -70,7 +70,6 @@ export default function HomeClient() {
 
       {/* Tagline + Services Side by Side */}
       <div className='relative flex flex-col md:flex-row'>
-
         {/* Tagline Column */}
         <div className='bg-white dark:bg-desert-800 flex-1 px-8 py-12 md:py-16 lg:py-20'>
           <div className='max-w-sm mx-auto text-center'>
@@ -83,12 +82,11 @@ export default function HomeClient() {
             </h3>
             <div className='w-16 h-px bg-brand-sage mx-auto m-2'></div>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
-              Everything from setup to scaling. Web development, web design,
-              and optimization based in Jackson, WY.
+              Everything from setup to scaling. Web development, web design, and
+              optimization based in Jackson, WY.
             </p>
           </div>
         </div>
-
 
         {/* Services Column */}
         <div className='bg-desert-50 dark:bg-desert-900 flex-1 px-8 py-8 md:py-16 lg:py-20'>
@@ -182,7 +180,6 @@ export default function HomeClient() {
             </div>
           </div>
         </div>
-
       </div>
 
       {/* CTA strip — split background centers button on the column divide, desktop only */}
@@ -207,7 +204,6 @@ export default function HomeClient() {
       {/* Website in a Week Section */}
       <div className='bg-sand-100 dark:bg-desert-800 py-16 px-4 md:px-8'>
         <div className='flex flex-col md:flex-row min-h-80'>
-
           {/* Left: copy */}
           <div className='flex-1 px-8 py-16 md:py-20 flex flex-col justify-center'>
             <div className='max-w-sm mx-auto md:mx-0 md:ml-auto md:pr-12'>
@@ -250,7 +246,6 @@ export default function HomeClient() {
               />
             </div>
           </div>
-
         </div>
       </div>
 
