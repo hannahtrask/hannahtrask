@@ -45,15 +45,6 @@ export default function Footer() {
                     services
                   </Link>
                 </li>
-                {/* <li>
-                  <Link
-                    href='/featured-projects'
-                    className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
-                  >
-                    <MapPin className='h-3 w-3 mr-2' />
-                    projects
-                  </Link>
-                </li>{' '} */}
                 <li>
                   <Link
                     href='/contact'
@@ -87,7 +78,7 @@ export default function Footer() {
                   <span className='sr-only'>LinkedIn</span>
                 </Link>
                 <Link
-                  href='https://www.instagram.com/sagebrush.dev'
+                  href='https://www.instagram.com/sagebrushwebstudio'
                   className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
                   target='_blank'
                   rel='noopener noreferrer'

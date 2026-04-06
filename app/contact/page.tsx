@@ -106,7 +106,7 @@ export default function ContactPage() {
                 <span className='sr-only'>LinkedIn</span>
               </Link>
               <Link
-                href='https://www.instagram.com/sagebrush.dev'
+                href='https://www.instagram.com/sagebrushwebstudio'
                 className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white transition-colors'
                 target='_blank'
                 rel='noopener noreferrer'

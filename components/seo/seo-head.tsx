@@ -98,7 +98,7 @@ export function generateSEOMetadata({
       title: fullTitle,
       description: fullDescription,
       images: [fullImage],
-      creator: '@sagebrush.dev',
+      creator: '@sagebrushwebstudio',
     },
     icons: {
       icon: [
@@ -214,7 +214,7 @@ export function generateBusinessStructuredData() {
       contactType: 'Customer Service',
       email: 'hctrask@gmail.com',
     },
-    sameAs: ['https://instagram.com/sagebrush.dev'],
+    sameAs: ['https://instagram.com/sagebrushwebstudio'],
   }
 }
 

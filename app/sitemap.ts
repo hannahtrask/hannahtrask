@@ -23,12 +23,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/featured-projects`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -48,15 +42,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  // Dynamic case study pages
-  const caseStudyPages: MetadataRoute.Sitemap = caseStudySlugs.map(
-    ({ slug }) => ({
-      url: `${baseUrl}/featured-projects/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    })
-  )
-
-  return [...staticPages, ...caseStudyPages]
+  return [...staticPages]
 }
