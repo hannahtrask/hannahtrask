@@ -1,12 +1,8 @@
 import { MetadataRoute } from 'next'
-import { getAllCaseStudySlugs } from '@/sanity/lib/caseStudies'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || 'https://wearesagebrush.com'
-
-  // Fetch case study slugs from Sanity
-  const caseStudySlugs = await getAllCaseStudySlugs()
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
