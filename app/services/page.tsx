@@ -105,7 +105,7 @@ export default function WorkPage() {
                 </p>
                 <a
                   href='#book-website-in-a-week'
-                  className='inline-flex items-center justify-center rounded-none bg-brand-sage px-6 py-3 text-white text-sm md:text-base font-medium hover:opacity-90 transition-opacity'
+                  className='font-first-rodeo inline-flex items-center justify-center rounded-none bg-brand-sage px-6 py-3 text-white text-sm md:text-base font-medium hover:opacity-90 transition-opacity'
                 >
                   Let&apos;s build it
                 </a>
