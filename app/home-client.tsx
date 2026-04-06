@@ -4,6 +4,7 @@ import Hero from '@/components/hero/hero'
 import ContactForm from '@/components/contact/contact-form'
 import Typewriter from '@/components/ui/typewriter'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 
 export default function HomeClient() {
@@ -67,35 +68,31 @@ export default function HomeClient() {
         </div>
       </Hero>
 
-      {/* Tagline */}
-      <div className='bg-white dark:bg-desert-800'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-6xl mx-auto'>
+      {/* Tagline + Services Side by Side */}
+      <div className='relative flex flex-col md:flex-row'>
+
+        {/* Tagline Column */}
+        <div className='bg-white dark:bg-desert-800 flex-1 px-8 py-12 md:py-16 lg:py-20'>
+          <div className='max-w-sm mx-auto text-center'>
             {/* SEO-friendly hidden H2 */}
             <h2 className='sr-only'>
               Sagebrush Web Studio - Jackson Hole Web Development and Web Design
             </h2>
-
-            <div className='container mx-auto px-4 py-12 md:py-16 lg:py-20'>
-              <div className='max-w-4xl mx-auto text-center'>
-                <h3 className='text-xl md:text-2xl font-bold text-desert-800 dark:text-white'>
-                  SAGEBRUSH WEB STUDIO
-                </h3>
-                <div className='w-16 h-px bg-brand-sage mx-auto m-2'></div>
-                <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
-                  Everything from setup to scaling. Web development, web design,
-                  and optimization based in Jackson, WY.
-                </p>
-              </div>
-            </div>
+            <h3 className='text-xl md:text-2xl font-bold text-desert-800 dark:text-white'>
+              SAGEBRUSH WEB STUDIO
+            </h3>
+            <div className='w-16 h-px bg-brand-sage mx-auto m-2'></div>
+            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
+              Everything from setup to scaling. Web development, web design,
+              and optimization based in Jackson, WY.
+            </p>
           </div>
         </div>
-      </div>
 
-      {/* Services Section */}
-      <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-900 py-8'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto text-center'>
+
+        {/* Services Column */}
+        <div className='bg-desert-50 dark:bg-desert-900 flex-1 px-8 py-8 md:py-16 lg:py-20'>
+          <div className='max-w-lg mx-auto text-center'>
             {/* SEO-friendly hidden H2 */}
             <h2 className='sr-only'>
               Web Development Services in Jackson WY - Squarespace, Shopify,
@@ -104,6 +101,7 @@ export default function HomeClient() {
             <h3 className='text-lg md:text-xl lg:text-2xl font-bold text-desert-800 dark:text-white leading-tight'>
               Some of what we do
             </h3>
+            <div className='w-16 h-px bg-brand-sage mx-auto m-2'></div>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 text-left'>
@@ -170,14 +168,34 @@ export default function HomeClient() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className='container mx-auto px-4 pt-6'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <p className='text-sm md:text-sm lg:text-md mx-auto text-desert-800 dark:text-white leading-tight'>
+            <p className='text-sm md:text-sm lg:text-md mx-auto text-desert-800 dark:text-white leading-tight pt-6'>
               Not sure if we can help? Reach out, we probably can.
             </p>
+            {/* Mobile-only CTA button */}
+            <div className='md:hidden mt-6'>
+              <Link
+                href='#contact'
+                className='font-first-rodeo inline-flex items-center justify-center w-full px-8 py-3 border-2 border-brand-sage text-brand-sage hover:bg-brand-sage hover:text-white transition-colors duration-200'
+              >
+                work with me
+              </Link>
+            </div>
           </div>
+        </div>
+
+      </div>
+
+      {/* CTA strip — split background centers button on the column divide, desktop only */}
+      <div className='relative hidden md:flex'>
+        <div className='flex-1 bg-white dark:bg-desert-800 h-18' />
+        <div className='flex-1 bg-desert-50 dark:bg-desert-900 h-18' />
+        <div className='absolute inset-0 flex items-center justify-center'>
+          <Link
+            href='#contact'
+            className='font-first-rodeo inline-flex items-center justify-center px-10 py-3 border-2 border-brand-sage text-brand-sage bg-white dark:bg-desert-800 hover:bg-brand-sage hover:text-white transition-colors duration-200 shadow-md whitespace-nowrap'
+          >
+            work with me
+          </Link>
         </div>
       </div>
 
@@ -187,35 +205,52 @@ export default function HomeClient() {
       </div> */}
 
       {/* Website in a Week Section */}
-      <div className='bg-white dark:bg-desert-800 py-16'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-4'>
-              Website in a Week
-            </h2>
-            <div className='w-16 h-px bg-brand-sage mx-auto mb-6'></div>
-            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-2'>
-              Need a professional site fast?
-            </p>
-            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-8'>
-              A complete Squarespace website built and launched in one week.{' '}
-              <span className='font-semibold text-desert-800 dark:text-white'>
-                $1500. No upfront costs.
-              </span>
-            </p>
-            <Link
-              href='/services#build-my-website-in-a-week'
-              className='inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white font-medium transition-colors duration-200 mb-10'
-            >
-              See how it works
-              <ArrowRight className='w-4 h-4' />
-            </Link>
-            <p className='text-xs text-desert-600 dark:text-desert-300 mt-8'>
-              <span className='font-semibold'>Perfect for:</span> Service
-              businesses, freelancers, small shops, and anyone who needs to
-              launch now, not in 3 months.
-            </p>
+      <div className='bg-sand-100 dark:bg-desert-800 py-16 px-4 md:px-8'>
+        <div className='flex flex-col md:flex-row min-h-80'>
+
+          {/* Left: copy */}
+          <div className='flex-1 px-8 py-16 md:py-20 flex flex-col justify-center'>
+            <div className='max-w-sm mx-auto md:mx-0 md:ml-auto md:pr-12'>
+              <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-4'>
+                Website in a Week
+              </h2>
+              <div className='w-16 h-px bg-brand-sage mb-6'></div>
+              <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-2'>
+                Need a professional site fast?
+              </p>
+              <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-8'>
+                A complete Squarespace website built and launched in one week.{' '}
+                <span className='font-semibold text-desert-800 dark:text-white'>
+                  $1500. No upfront costs.
+                </span>
+              </p>
+              <Link
+                href='/services#build-my-website-in-a-week'
+                className='font-first-rodeo inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white transition-colors duration-200 mb-8'
+              >
+                See how it works
+                <ArrowRight className='w-4 h-4' />
+              </Link>
+              <p className='text-xs text-desert-600 dark:text-desert-300'>
+                <span className='font-semibold'>Perfect for:</span> Service
+                businesses, freelancers, small shops, and anyone who needs to
+                launch now, not in 3 months.
+              </p>
+            </div>
           </div>
+
+          {/* Right: image */}
+          <div className='flex-1 relative min-h-64 md:min-h-0 p-8 md:p-10'>
+            <div className='relative h-full min-h-64 rounded-2xl overflow-hidden shadow-md'>
+              <Image
+                src='/page-images/workspace-image.jpg'
+                alt='Web design workspace'
+                fill
+                className='object-cover'
+              />
+            </div>
+          </div>
+
         </div>
       </div>
 

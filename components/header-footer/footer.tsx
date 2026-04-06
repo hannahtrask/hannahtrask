@@ -38,7 +38,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href='/work'
+                    href='/services'
                     className='font-first-rodeo text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
