@@ -1,10 +1,34 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Hero from '@/components/hero/hero'
 import WorkShowcaseSection from '@/components/work/work-showcase-section'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
 import Typewriter from '@/components/ui/typewriter'
 import WebsiteInWeekBooking from '@/components/services/website-in-week-booking'
 import FAQSection from '@/components/faq-section'
+import athenaImage from '@/public/page-images/athena.png'
+import canopyImage from '@/public/page-images/canopy.png'
+import foggImage from '@/public/page-images/fogg.png'
+import willowImage from '@/public/page-images/willow.png'
+
+const websiteInAWeekSamples = [
+  {
+    name: 'Athena',
+    image: athenaImage,
+  },
+  {
+    name: 'Canopy',
+    image: canopyImage,
+  },
+  {
+    name: 'Fogg',
+    image: foggImage,
+  },
+  {
+    name: 'Willow',
+    image: willowImage,
+  },
+] as const
 
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Work - Jackson WY Web Design Portfolio',
@@ -143,6 +167,32 @@ export default function WorkPage() {
 
             <div id='book-website-in-a-week'>
               <WebsiteInWeekBooking />
+            </div>
+
+            <div className='mt-12'>
+              <div className='mb-6'>
+                <p className='font-first-rodeo text-sm md:text-base font-medium text-desert-800 dark:text-desert-100'>
+                  Some recent templates:
+                </p>
+              </div>
+
+              <div className='grid grid-cols-2 justify-items-center gap-4 lg:grid-cols-4'>
+                {websiteInAWeekSamples.map(sample => (
+                  <figure
+                    key={sample.name}
+                    className='w-full max-w-[11.5rem] bg-[#f7f1e7] p-3 pb-6 shadow-[0_18px_36px_rgba(88,47,14,0.16)] ring-1 ring-[#e4d7c5] transition-transform duration-300 hover:scale-[1.03] sm:max-w-[13rem] lg:max-w-[14rem]'
+                  >
+                    <div className='h-[19rem] overflow-hidden bg-white shadow-inner sm:h-[20rem] lg:h-[21rem]'>
+                      <Image
+                        src={sample.image}
+                        alt={`${sample.name} website layout example`}
+                        className='h-full w-full object-cover object-top'
+                        sizes='(min-width: 1024px) 14rem, (min-width: 640px) 13rem, 11.5rem'
+                      />
+                    </div>
+                  </figure>
+                ))}
+              </div>
             </div>
           </div>
         </div>

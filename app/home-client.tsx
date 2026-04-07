@@ -6,6 +6,7 @@ import Typewriter from '@/components/ui/typewriter'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import websiteInAWeekImage from '@/public/page-images/website-in-a-week.png'
 
 export default function HomeClient() {
   return (
@@ -203,14 +204,14 @@ export default function HomeClient() {
 
       {/* Website in a Week Section */}
       <div className='bg-sand-100 dark:bg-desert-800 py-16 px-4 md:px-8'>
-        <div className='flex flex-col md:flex-row min-h-80'>
+        <div className='flex flex-col xl:flex-row min-h-80'>
           {/* Left: copy */}
           <div className='flex-1 px-8 py-16 md:py-20 flex flex-col justify-center'>
-            <div className='max-w-sm mx-auto md:mx-0 md:ml-auto md:pr-12'>
+            <div className='max-w-sm mx-auto text-center xl:mx-0 xl:ml-auto xl:pr-12 xl:text-left'>
               <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-4'>
                 Website in a Week
               </h2>
-              <div className='w-16 h-px bg-brand-sage mb-6'></div>
+              <div className='w-16 h-px bg-brand-sage mx-auto mb-6 xl:mx-0'></div>
               <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-2'>
                 Need a professional site fast?
               </p>
@@ -234,13 +235,12 @@ export default function HomeClient() {
           </div>
 
           {/* Right: image */}
-          <div className='flex-1 relative min-h-64 md:min-h-0 p-8 md:p-10'>
-            <div className='relative h-full min-h-64 rounded-2xl overflow-hidden shadow-md'>
+          <div className='flex-1 p-8 md:p-10'>
+            <div className='mx-auto w-full max-w-2xl rounded-2xl overflow-hidden shadow-md'>
               <Image
-                src='/page-images/website-in-a-week.png'
+                src={websiteInAWeekImage}
                 alt='Web design workspace'
-                fill
-                className='object-cover'
+                className='block h-auto w-full object-contain'
               />
             </div>
           </div>
