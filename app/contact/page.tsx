@@ -32,7 +32,7 @@ export default function ContactPage() {
         backgroundImageAlt='A wolf faces a man in the Tetons.'
         enableParallax={true}
         overlayType='custom'
-        overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
+        overlayClassName='absolute inset-0 bg-[#33352a]/[0.54] dark:bg-[#33352a]/[0.40]'
         animateContent={true}
         titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
@@ -54,7 +54,7 @@ export default function ContactPage() {
             pauseDuration={2500}
             showCursor={true}
           />
-          <p className='text-sm leading-relaxed text-white/90'>
+          <p className='text-sm leading-relaxed text-[#ECD9B9]/90'>
             let&apos;s connect
           </p>
         </div>

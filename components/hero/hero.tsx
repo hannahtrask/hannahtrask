@@ -64,15 +64,15 @@ export default function Hero({
 
     switch (overlayType) {
       case 'gradient':
-        return 'absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-brand-sage/60 dark:from-black/60 dark:via-black/75 dark:to-black/80'
+        return 'absolute inset-0 bg-gradient-to-b from-[#c56f53]/[0.78] via-[#33352a]/[0.86] to-[#33352a]/[0.92] dark:from-[#c56f53]/[0.82] dark:via-[#33352a]/[0.90] dark:to-[#33352a]/[0.94]'
       case 'dark':
-        return 'absolute inset-0 bg-black/50 dark:bg-black/70 backdrop-blur-[1px]'
+        return 'absolute inset-0 bg-[#33352a]/[0.84] dark:bg-[#33352a]/[0.90] backdrop-blur-[1px]'
       case 'light':
         return 'absolute inset-0 bg-white/20'
       case 'custom':
         return ''
       default:
-        return 'absolute inset-0 bg-gradient-to-b from-black/30 via-black/45 to-brand-sage/60 dark:from-black/60 dark:via-black/75 dark:to-black/80'
+        return 'absolute inset-0 bg-gradient-to-b from-[#c56f53]/[0.78] via-[#33352a]/[0.86] to-[#33352a]/[0.92] dark:from-[#c56f53]/[0.82] dark:via-[#33352a]/[0.90] dark:to-[#33352a]/[0.94]'
     }
   }
 
@@ -197,7 +197,7 @@ export default function Hero({
                 href={photoCredit.url}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='hover:text-white/90 underline'
+                className='text-white/70 hover:text-white/90 underline'
               >
                 {photoCredit.name}
               </a>

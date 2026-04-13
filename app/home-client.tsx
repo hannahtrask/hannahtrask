@@ -17,7 +17,7 @@ export default function HomeClient() {
         backgroundImageAlt='Bison graze in front of the Tetons. Photos by Nick Sulzer.'
         enableParallax={true}
         overlayType='custom'
-        overlayClassName='absolute inset-0 bg-black/60 dark:bg-black/80'
+        overlayClassName='absolute inset-0 bg-[#33352a]/[0.54] dark:bg-[#33352a]/[0.40]'
         animateContent={true}
         titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
@@ -221,12 +221,12 @@ export default function HomeClient() {
               </p>
               <Link
                 href='/services#build-my-website-in-a-week'
-                className='font-first-rodeo inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white transition-colors duration-200 mb-8'
+                className='font-first-rodeo inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/70 text-white transition-colors duration-200 mb-8'
               >
                 See how it works
                 <ArrowRight className='w-4 h-4' />
               </Link>
-              <p className='text-xs text-desert-600 dark:text-desert-300'>
+              <p className='text-xs text-desert-800 dark:text-desert-200'>
                 <span className='font-semibold'>Perfect for:</span> Service
                 businesses, freelancers, small shops, and anyone who needs to
                 launch now, not in 3 months.
