@@ -53,13 +53,13 @@ function FAQItemComponent({ item, index }: { item: FAQItem; index: number }) {
       initial={{ opacity: 0, y: 20 }}
       animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className='border-b border-desert-200 dark:border-desert-700 last:border-b-0'
+      className='my-2 border-b border-desert-50 dark:border-desert-600 last:border-b-0'
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='w-full py-6 flex items-center justify-between text-left hover:bg-desert-50 dark:hover:bg-desert-800/50 transition-colors duration-200 px-4 -mx-4 rounded-lg'
+        className='w-full py-6 flex items-center justify-between text-left hover:bg-desert-200 dark:hover:bg-desert-800/50 transition-colors duration-200 px-4 -mx-4 rounded-lg'
       >
-        <h3 className='text-lg md:text-xl font-semibold text-desert-800 dark:text-white pr-4'>
+        <h3 className='pr-4 text-lg font-semibold text-white md:text-xl'>
           {item.question}
         </h3>
         <div className='flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-desert-100 dark:bg-desert-700 transition-colors duration-200'>
@@ -80,7 +80,7 @@ function FAQItemComponent({ item, index }: { item: FAQItem; index: number }) {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className='overflow-hidden'
           >
-            <div className='pb-6 px-4 -mx-4'>
+            <div className='px-6 pb-8 pt-2 md:px-8'>
               <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
                 {item.answer}
               </p>
@@ -108,10 +108,10 @@ export default function FAQSection() {
           <h2 className='text-4xl md:text-5xl font-bold text-desert-800 dark:text-white mb-4'>
             FREQUENTLY ASKED QUESTIONS
           </h2>
-          <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
+          <div className='mx-auto mb-6 h-px w-24 bg-desert-200 dark:bg-desert-500'></div>
           <p className='text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed'>
-            Got questions? Here's answers. Here are some of the most common
-            questions about our services.
+            Got questions? Here are some of the most common questions about our
+            services.
           </p>
         </motion.div>
 

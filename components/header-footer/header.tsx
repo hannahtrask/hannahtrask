@@ -2,73 +2,35 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   return (
-    <header
-      className={`fixed left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'top-0 py-4 bg-white/90 dark:bg-desert-900/90 backdrop-blur-md shadow-sm'
-          : 'top-0 py-6 bg-transparent'
-      }`}
-    >
+    <header className='fixed top-0 left-0 right-0 z-40 border-b-[3px] border-[#ECD9B9] bg-[#c56f53] py-4'>
       <div className='container mx-auto px-4 text-md mid:text-base'>
         <div className='flex items-center justify-between'>
-          <Link href='/' className='relative h-10 w-56'>
+          <Link href='/' className='relative h-24 w-56'>
             <Image
-              src='/site-title/site-title-light.png'
+              src='/site-title/SagebrushPrimaryLogo-03.png'
               alt='Sagebrush Web Studio'
               fill
-              className={`object-contain transition-opacity duration-300 ${
-                isScrolled ? 'opacity-0 dark:opacity-100' : 'opacity-100'
-              }`}
-            />
-            <Image
-              src='/site-title/site-title-dark.png'
-              alt='Sagebrush Web Studio'
-              fill
-              className={`object-contain transition-opacity duration-300 ${
-                isScrolled ? 'opacity-100 dark:opacity-0' : 'opacity-0'
-              }`}
+              className='object-contain'
             />
           </Link>
 
           <nav className='hidden md:flex items-center space-x-8'>
             <Link
               href='/services'
-              className={`font-first-rodeo text-base tracking-wide transition-colors ${
-                isScrolled
-                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
-                  : 'text-white/80 hover:text-white'
-              }`}
+              className='font-first-rodeo text-base tracking-wide text-[#ecd9b9] transition-colors hover:text-[#33352a]'
             >
               services
             </Link>
             <Link
               href='/contact'
-              className={`font-first-rodeo text-base tracking-wide transition-colors ${
-                isScrolled
-                  ? 'text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white'
-                  : 'text-white/80 hover:text-white'
-              }`}
+              className='font-first-rodeo text-base tracking-wide text-[#ecd9b9] transition-colors hover:text-[#33352a]'
             >
               contact
             </Link>
@@ -78,7 +40,7 @@ export default function Header() {
           <div className='flex items-center md:hidden'>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`ml-2 p-2 ${isScrolled ? 'text-gray-700 dark:text-gray-300' : 'text-white'}`}
+              className='ml-2 p-2 text-[#33352a]'
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -87,24 +49,24 @@ export default function Header() {
 
         {/* Mobile Navigation - Under Construction Mode */}
         {isMenuOpen && (
-          <nav className='md:hidden py-6 space-y-6 mt-4 bg-white dark:bg-gray-900 rounded-md shadow-lg'>
+          <nav className='mt-4 space-y-6 rounded-md bg-[#ecd9b9] py-6 shadow-lg md:hidden'>
             <Link
               href='/'
-              className='block px-4 font-first-rodeo text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
+              className='block px-4 font-first-rodeo text-base tracking-wide text-[#33352a] hover:text-[#f09664]'
               onClick={() => setIsMenuOpen(false)}
             >
               home
             </Link>
             <Link
               href='/services'
-              className='block px-4 font-first-rodeo text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
+              className='block px-4 font-first-rodeo text-base tracking-wide text-[#33352a] hover:text-[#f09664]'
               onClick={() => setIsMenuOpen(false)}
             >
               services
             </Link>
             <Link
               href='/contact'
-              className='block px-4 font-first-rodeo text-gray-800 hover:text-desert-600 dark:text-gray-300 dark:hover:text-white text-base tracking-wide'
+              className='block px-4 font-first-rodeo text-base tracking-wide text-[#33352a] hover:text-[#f09664]'
               onClick={() => setIsMenuOpen(false)}
             >
               contact

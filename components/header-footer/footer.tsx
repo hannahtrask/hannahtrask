@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className='py-16 px-4 md:px-8 bg-sand-500 dark:bg-sand-800 text-white'>
+    <footer className='bg-[#c56f53] px-4 py-16 text-[#33352a] md:px-8'>
       <div className='container mx-auto'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0'>
           <div>
@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
             <Link
               href='mailto:hello@wearesagebrush.com'
-              className='font-first-rodeo text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-white dark:hover:text-gray-200'
+              className='max-w-xs text-sm font-first-rodeo text-[#33352a] transition-colors hover:text-[#ecd9b9]'
             >
               hello@wearesagebrush.com
             </Link>
@@ -30,7 +30,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/'
-                    className='font-first-rodeo text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='flex items-center text-sm font-first-rodeo text-[#33352a] transition-colors hover:text-[#ecd9b9]'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     home
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/services'
-                    className='font-first-rodeo text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='flex items-center text-sm font-first-rodeo text-[#33352a] transition-colors hover:text-[#ecd9b9]'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     services
@@ -48,7 +48,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/contact'
-                    className='font-first-rodeo text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200 text-sm flex items-center'
+                    className='flex items-center text-sm font-first-rodeo text-[#33352a] transition-colors hover:text-[#ecd9b9]'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     contact
@@ -61,7 +61,7 @@ export default function Footer() {
               <div className='flex space-x-4'>
                 <Link
                   href='https://github.com/hannahtrask'
-                  className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                  className='text-[#33352a] transition-colors hover:text-[#ecd9b9]'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -70,7 +70,7 @@ export default function Footer() {
                 </Link>
                 <Link
                   href='https://www.linkedin.com/in/hannahtrask/'
-                  className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                  className='text-[#33352a] transition-colors hover:text-[#ecd9b9]'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -79,7 +79,7 @@ export default function Footer() {
                 </Link>
                 <Link
                   href='https://www.instagram.com/sagebrushwebstudio'
-                  className='text-sage-50 dark:text-desert-200 hover:text-white dark:hover:text-gray-200'
+                  className='text-[#33352a] transition-colors hover:text-[#ecd9b9]'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -91,21 +91,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className='mt-16 pt-8 border-t border-desert-900 dark:border-desert-600 flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0'>
-          <p className='text-desert-50 dark:text-desert-300 text-xs'>
+        <div className='mt-16 flex flex-col items-start justify-between space-y-4 border-t border-[#ecd9b9] pt-8 md:flex-row md:items-center md:space-y-0'>
+          <p className='text-xs text-[#33352a]'>
             © {new Date().getFullYear()} Sun & Sagebrush LLC. All rights
             reserved.
           </p>
           <div className='flex space-x-4'>
             <Link
               href='/privacy'
-              className='font-first-rodeo text-desert-50 dark:text-desert-300 hover:text-white dark:hover:text-gray-200 text-xs'
+              className='text-xs font-first-rodeo text-[#33352a] transition-colors hover:text-[#ecd9b9]'
             >
               Privacy Policy
             </Link>
             <Link
               href='/terms'
-              className='font-first-rodeo text-desert-50 dark:text-desert-300 hover:text-white dark:hover:text-gray-200 text-xs'
+              className='text-xs font-first-rodeo text-[#33352a] transition-colors hover:text-[#ecd9b9]'
             >
               Terms & Conditions
             </Link>

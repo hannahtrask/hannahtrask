@@ -102,11 +102,19 @@ export function generateSEOMetadata({
     },
     icons: {
       icon: [
-        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        {
+          url: '/SagebrushSubmark-01.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          url: '/SagebrushSubmark-01.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
       ],
-      shortcut: '/favicon.ico',
-      apple: '/favicon.ico',
+      shortcut: '/SagebrushSubmark-01.png',
+      apple: '/SagebrushSubmark-01.png',
     },
   }
 
@@ -136,7 +144,7 @@ export function generateBusinessStructuredData() {
     description:
       'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio helping locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley establish a strong online presence.',
     url: baseUrl,
-    logo: `${baseUrl}/favicon.ico`,
+    logo: `${baseUrl}/SagebrushSubmark-01.png`,
     image: `${baseUrl}/hero-images/tetons-backdrop.jpg`,
     founder: {
       '@type': 'Person',

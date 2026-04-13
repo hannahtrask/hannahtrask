@@ -33,8 +33,8 @@ const firstRodeo = localFont({
 
 const iconMetadata: Metadata = {
   icons: {
-    icon: '/favicon-512x512.png',
-    apple: '/favicon-512x512.png',
+    icon: '/SagebrushSubmark-01.png',
+    apple: '/SagebrushSubmark-01.png',
   },
 }
 

@@ -46,7 +46,7 @@ export default function HomeClient() {
               pauseDuration={2500}
               showCursor={true}
             />
-            <p className='text-sm leading-relaxed text-white/90 mb-8'>
+            <p className='text-sm leading-relaxed text-[#ecd9b9]/90 mb-8'>
               web design and development based in Jackson Hole, Wyoming
             </p>
           </div>
@@ -55,13 +55,13 @@ export default function HomeClient() {
           <div className='absolute bottom-10 left-0 right-0 flex flex-col sm:flex-row items-center justify-center gap-4 px-4'>
             <Link
               href='/contact'
-              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-white text-white hover:bg-white hover:text-brand-sage transition-colors duration-200'
+              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage transition-colors duration-200'
             >
               work with me
             </Link>
             <Link
               href='/services#build-my-website-in-a-week'
-              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-white text-white hover:bg-white hover:text-brand-sage transition-colors duration-200'
+              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage transition-colors duration-200'
             >
               website in a week
             </Link>
@@ -82,7 +82,7 @@ export default function HomeClient() {
               SAGEBRUSH WEB STUDIO
             </h3>
             <div className='w-16 h-px bg-brand-sage mx-auto m-2'></div>
-            <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300'>
+            <p className='text-sm leading-relaxed text-desert-800 dark:text-gray-300'>
               Everything from setup to scaling. Web development, web design, and
               optimization based in Jackson, WY.
             </p>
@@ -100,8 +100,8 @@ export default function HomeClient() {
             <h3 className='text-lg md:text-xl lg:text-2xl font-bold text-desert-800 dark:text-white leading-tight'>
               Some of what we do
             </h3>
-            <div className='w-16 h-px bg-brand-sage mx-auto m-2'></div>
-            <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
+
+            <div className='w-24 h-px bg-desert-800 dark:bg-desert-600 mx-auto mt-4 mb-6'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 text-left'>
               <div className='space-y-4'>
@@ -113,7 +113,7 @@ export default function HomeClient() {
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
                       Web Strategy & Setup
                     </h3>
-                    <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
+                    <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       New websites, redesigns, migrations, and platform
                       transitions.
                     </p>
@@ -121,14 +121,14 @@ export default function HomeClient() {
                 </div>
 
                 <div className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
+                  <span className='text-desert-800 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
                     •
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
                       Performance & Visibility
                     </h3>
-                    <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
+                    <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       SEO optimization, Core Web Vitals improvements, and
                       AI-ready content structure.
                     </p>
@@ -145,21 +145,21 @@ export default function HomeClient() {
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
                       Ongoing Support
                     </h3>
-                    <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
+                    <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       Monthly maintenance, updates, and retainer partnerships.
                     </p>
                   </div>
                 </div>
 
                 <div className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
+                  <span className='text-desert-800 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
                     •
                   </span>
                   <div>
                     <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
                       Custom Development
                     </h3>
-                    <p className='text-desert-600 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
+                    <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                       WordPress themes, Shopify stores, internal apps, and
                       automation workflows.
                     </p>
@@ -258,11 +258,11 @@ export default function HomeClient() {
               Let&apos;s work together
             </h2>
 
-            <p className='text-sm text-desert-600 dark:text-desert-300 max-w-3xl mx-auto leading-relaxed'>
+            <p className='text-sm text-desert-800 dark:text-desert-300 max-w-3xl mx-auto leading-relaxed'>
               Get in touch at{' '}
               <Link
                 href='mailto:hello@wearesagebrush.com'
-                className='text-desert-100 dark:text-desert-200 text-sm max-w-xs hover:text-sand-500 dark:hover:text-gray-200'
+                className='text-desert-500 dark:text-desert-200 text-sm max-w-xs hover:text-sand-100 dark:hover:text-gray-200'
               >
                 hello@wearesagebrush.com
               </Link>{' '}
