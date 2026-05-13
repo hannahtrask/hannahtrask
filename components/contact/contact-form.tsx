@@ -7,7 +7,8 @@ const HONEYBOOK_SCRIPT_URL =
   'https://widget.honeybook.com/assets_users_production/websiteplacements/placement-controller.min.js'
 
 export default function ContactForm() {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const consultationContainerRef = useRef<HTMLDivElement>(null)
+  const readyToWorkContainerRef = useRef<HTMLDivElement>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 
@@ -53,9 +54,17 @@ export default function ContactForm() {
     }
 
     const checkWidgetLoaded = (): boolean => {
-      if (!containerRef.current) return false
-      // Check if HoneyBook has injected content into the container
-      return containerRef.current.children.length > 0
+      if (
+        !consultationContainerRef.current ||
+        !readyToWorkContainerRef.current
+      ) {
+        return false
+      }
+
+      return (
+        consultationContainerRef.current.children.length > 0 &&
+        readyToWorkContainerRef.current.children.length > 0
+      )
     }
 
     const waitForWidget = (): Promise<boolean> => {
@@ -137,13 +146,6 @@ export default function ContactForm() {
   return (
     <div className='bg-white dark:bg-desert-800 py-4 md:p-4 shadow-sm'>
       <div className='max-w-8xl mx-auto'>
-        <div className='text-center mb-8'>
-          <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
-            This is a no-commitment connection, let&apos;s just see if
-            we&apos;re a good fit.
-          </p>
-        </div>
-
         {/* Loading state */}
         {isLoading && (
           <div className='flex justify-center items-center py-12'>
@@ -177,11 +179,43 @@ export default function ContactForm() {
           </div>
         )}
 
-        {/* HoneyBook Contact Form Widget */}
         <div
-          ref={containerRef}
-          className={`w-full hb-p-68ab7f800c8dd7002e944c41-2 ${hasError ? 'hidden' : ''}`}
-        ></div>
+          className={`grid grid-cols-1 gap-8 lg:grid-cols-2 ${hasError ? 'hidden' : ''}`}
+        >
+          <div className='rounded-xl border border-desert-200 bg-desert-50/60 p-6 dark:border-desert-700 dark:bg-desert-900/40'>
+            <div className='mb-6 text-center lg:text-left'>
+              <h3 className='text-xl font-bold text-desert-800 dark:text-white mb-2'>
+                I'm not sure what I want, can we chat?
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
+                This is a free consultation, let&apos;s just see if we&apos;re a
+                good fit.
+              </p>
+            </div>
+
+            <div
+              ref={consultationContainerRef}
+              className='min-h-[320px] w-full hb-p-68ab7f800c8dd7002e944c41-1'
+            ></div>
+          </div>
+
+          <div className='rounded-xl border border-desert-200 bg-desert-50/60 p-6 dark:border-desert-700 dark:bg-desert-900/40'>
+            <div className='mb-6 text-center lg:text-left'>
+              <h3 className='text-xl font-bold text-desert-800 dark:text-white mb-2'>
+                I need a website and I know what I want
+              </h3>
+              <p className='text-gray-600 dark:text-gray-300 font-light leading-relaxed'>
+                Ready to move forward? Use this option if you already know you
+                want to get started.
+              </p>
+            </div>
+
+            <div
+              ref={readyToWorkContainerRef}
+              className='min-h-[320px] w-full hb-p-68ab7f800c8dd7002e944c41-2'
+            ></div>
+          </div>
+        </div>
 
         {/* HoneyBook tracking pixel */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
