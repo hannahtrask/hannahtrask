@@ -226,7 +226,7 @@ export default function WorkPage() {
           <WorkShowcaseSection
             title='Website Design & Build'
             description='Everything from concept to launch. New websites, redesigns, and full builds—on WordPress, Shopify, Squarespace, or whatever works best for you.'
-            startingPrice='$3,500'
+            startingPrice='$2,500'
             showImage={false}
             features={[
               'Strategy and planning',
@@ -272,7 +272,7 @@ export default function WorkPage() {
           <WorkShowcaseSection
             title='Internal Apps & Automations'
             description='Custom tools to streamline your operations. Dashboards, workflows, Zapier automations, and integrations that cut manual work.'
-            startingPrice='$1,500'
+            startingPrice='$1,750'
             showImage={false}
             features={[
               'Internal dashboards and portals',
