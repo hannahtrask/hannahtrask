@@ -11,6 +11,7 @@ export default function ContactForm() {
   const readyToWorkContainerRef = useRef<HTMLDivElement>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
+  const [reloadKey, setReloadKey] = useState(0)
 
   useEffect(() => {
     let retryCount = 0
@@ -90,6 +91,8 @@ export default function ContactForm() {
 
     const attemptLoad = async () => {
       try {
+        consultationContainerRef.current?.replaceChildren()
+        readyToWorkContainerRef.current?.replaceChildren()
         initHoneyBook()
         await loadScript()
 
@@ -129,18 +132,20 @@ export default function ContactForm() {
     return () => {
       if (retryTimeout) clearTimeout(retryTimeout)
     }
-  }, [])
+  }, [reloadKey])
 
   const handleRetry = () => {
     setIsLoading(true)
     setHasError(false)
+    consultationContainerRef.current?.replaceChildren()
+    readyToWorkContainerRef.current?.replaceChildren()
     // Remove existing script to force a fresh load
     const existingScript = document.querySelector(
       'script[src*="honeybook.com"]'
     )
     existingScript?.remove()
-    // Re-trigger the effect by updating state
-    window.location.reload()
+    ;(window as any)._HB_ = {}
+    setReloadKey(currentKey => currentKey + 1)
   }
 
   return (
@@ -148,11 +153,13 @@ export default function ContactForm() {
       <div className='max-w-8xl mx-auto'>
         {/* Loading state */}
         {isLoading && (
-          <div className='flex justify-center items-center py-12'>
-            <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-desert-600'></div>
-            <span className='ml-3 text-gray-600 dark:text-gray-300'>
-              Loading contact form...
-            </span>
+          <div className='flex flex-col items-center justify-center py-12 text-center'>
+            <div className='flex items-center justify-center'>
+              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-desert-600'></div>
+              <span className='ml-3 text-gray-600 dark:text-gray-300'>
+                Loading contact form...
+              </span>
+            </div>
           </div>
         )}
 
