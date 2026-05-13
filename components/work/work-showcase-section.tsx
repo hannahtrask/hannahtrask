@@ -17,6 +17,7 @@ interface WorkShowcaseSectionProps {
   textColor: string
   accentColor: string
   index: number
+  startingPrice?: string
 }
 
 export default function WorkShowcaseSection({
@@ -31,6 +32,7 @@ export default function WorkShowcaseSection({
   textColor,
   accentColor,
   index,
+  startingPrice,
 }: WorkShowcaseSectionProps) {
   const { ref, isVisible } = useScrollAnimation(0.2)
   const [isMobile, setIsMobile] = useState<boolean | null>(null)
@@ -181,10 +183,17 @@ export default function WorkShowcaseSection({
               ></div>
 
               <p
-                className={`text-sm leading-relaxed ${textColor} opacity-90 mb-6`}
+                className={`text-sm leading-relaxed ${textColor} opacity-90 mb-4`}
               >
                 {description}
               </p>
+
+              {startingPrice && (
+                <p className={`text-sm font-semibold ${textColor} mb-6`}>
+                  Starting at{' '}
+                  <span style={{ color: accentColor }}>{startingPrice}</span>
+                </p>
+              )}
 
               <div className='space-y-4'>
                 {features.map((feature, i) => (
