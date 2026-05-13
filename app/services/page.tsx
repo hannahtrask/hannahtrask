@@ -125,7 +125,7 @@ export default function WorkPage() {
                   fast.
                 </p>
                 <p className='text-sm md:text-base font-semibold text-desert-800 dark:text-white mb-8 tracking-wide'>
-                  $1500 &nbsp;|&nbsp; 1 Week &nbsp;|&nbsp; Launch-Ready
+                  $2000 &nbsp;|&nbsp; 1 Week &nbsp;|&nbsp; Launch-Ready
                 </p>
                 <a
                   href='#book-website-in-a-week'
@@ -156,7 +156,7 @@ export default function WorkPage() {
                   Investment
                 </h3>
                 <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2'>
-                  $1500 total.
+                  $2000 total.
                 </p>
                 <p className='text-sm font-medium text-desert-800 dark:text-desert-100 leading-relaxed'>
                   No money is paid upfront. Payment is split as 50% by the date
