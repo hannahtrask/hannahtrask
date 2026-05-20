@@ -120,7 +120,7 @@ export default function ContactPage() {
       </div>
 
       {/* Contact Form Section */}
-      <div className='bg-white dark:bg-desert-800 py-10 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]'>
+      <div className='bg-white dark:bg-desert-800 py-10 w-full'>
         <div className='px-4 sm:px-6'>
           <div className='text-center mb-12'>
             <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-2'>

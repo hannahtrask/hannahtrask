@@ -189,7 +189,7 @@ export default function ContactForm() {
         <div
           className={`grid grid-cols-1 gap-8 lg:grid-cols-2 ${hasError ? 'hidden' : ''}`}
         >
-          <div className='rounded-xl border border-desert-200 bg-desert-50/60 p-6 dark:border-desert-700 dark:bg-desert-900/40'>
+          <div className='overflow-hidden rounded-xl border border-desert-200 bg-desert-50/60 p-6 dark:border-desert-700 dark:bg-desert-900/40'>
             <div className='mb-6 text-center lg:text-left'>
               <h3 className='text-xl font-bold text-desert-800 dark:text-white mb-2'>
                 I'm not sure what I want, can we chat?
@@ -202,11 +202,11 @@ export default function ContactForm() {
 
             <div
               ref={consultationContainerRef}
-              className='min-h-[320px] w-full hb-p-68ab7f800c8dd7002e944c41-1'
+              className='min-h-[320px] w-full overflow-x-auto hb-p-68ab7f800c8dd7002e944c41-1'
             ></div>
           </div>
 
-          <div className='rounded-xl border border-desert-200 bg-desert-50/60 p-6 dark:border-desert-700 dark:bg-desert-900/40'>
+          <div className='overflow-hidden rounded-xl border border-desert-200 bg-desert-50/60 p-6 dark:border-desert-700 dark:bg-desert-900/40'>
             <div className='mb-6 text-center lg:text-left'>
               <h3 className='text-xl font-bold text-desert-800 dark:text-white mb-2'>
                 I need a website and I know what I want
@@ -219,7 +219,7 @@ export default function ContactForm() {
 
             <div
               ref={readyToWorkContainerRef}
-              className='min-h-[320px] w-full hb-p-68ab7f800c8dd7002e944c41-2'
+              className='min-h-[320px] w-full overflow-x-auto hb-p-68ab7f800c8dd7002e944c41-2'
             ></div>
           </div>
         </div>

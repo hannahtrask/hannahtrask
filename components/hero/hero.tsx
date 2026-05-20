@@ -110,7 +110,7 @@ export default function Hero({
 
   return (
     <div
-      className={`relative h-screen w-full flex items-center overflow-hidden ${className}`}
+      className={`relative min-h-[100svh] md:min-h-screen w-full flex items-center overflow-hidden ${className}`}
     >
       <div className='absolute inset-0 z-0'>
         {enableParallax ? (
@@ -144,7 +144,7 @@ export default function Hero({
 
       {/* Hero content */}
       <div
-        className={`container mx-auto px-4 relative z-10 ${containerClassName} ${getContentAlignmentClasses()}`}
+        className={`container mx-auto px-4 pt-24 sm:pt-28 md:pt-0 relative z-10 ${containerClassName} ${getContentAlignmentClasses()}`}
       >
         {children ? (
           children

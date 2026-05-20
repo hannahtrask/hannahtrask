@@ -9,10 +9,13 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className='fixed top-0 left-0 right-0 z-40 border-b-[3px] border-[#8c7e49] bg-[#ECD9B9] py-4'>
+    <header className='fixed top-0 left-0 right-0 z-40 border-b-[3px] border-[#8c7e49] bg-[#ECD9B9] py-2 sm:py-3 md:py-4'>
       <div className='container mx-auto px-4 text-md mid:text-base'>
         <div className='flex items-center justify-between'>
-          <Link href='/' className='relative h-24 w-56'>
+          <Link
+            href='/'
+            className='relative h-16 w-40 sm:h-20 sm:w-48 md:h-24 md:w-56'
+          >
             <Image
               src='/site-title/SagebrushPrimaryLogo-01.png'
               alt='Sagebrush Web Studio'

@@ -52,6 +52,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -69,6 +70,7 @@
     background: #ecd9b9;
     color: #33352a;
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   .dark body {
@@ -100,6 +102,10 @@
     @apply font-first-rodeo;
     background-color: #8799a7;
     color: #33352a;
+  }
+
+  iframe {
+    max-width: 100%;
   }
 }
 

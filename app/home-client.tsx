@@ -25,7 +25,7 @@ export default function HomeClient() {
           url: 'https://www.nicksulzer.com/',
         }}
       >
-        <div className='relative h-full flex items-center justify-center'>
+        <div className='relative h-full flex items-center justify-center pb-28 sm:pb-24 md:pb-20'>
           <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
             {/* SEO-friendly hidden H1 */}
             <h1 className='sr-only'>
@@ -52,7 +52,7 @@ export default function HomeClient() {
           </div>
 
           {/* Buttons pinned to bottom of viewport */}
-          <div className='absolute bottom-10 left-0 right-0 flex flex-col sm:flex-row items-center justify-center gap-4 px-4'>
+          <div className='absolute bottom-4 sm:bottom-10 left-0 right-0 flex flex-col sm:flex-row items-center justify-center gap-4 px-4'>
             <Link
               href='/contact'
               className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage transition-colors duration-200'
@@ -250,7 +250,7 @@ export default function HomeClient() {
       {/* Contact Section */}
       <div
         id='contact'
-        className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white dark:bg-desert-900 py-16'
+        className='relative w-full bg-white dark:bg-desert-900 py-16'
       >
         <div className='px-4 sm:px-6'>
           <div className='text-center mb-12'>
