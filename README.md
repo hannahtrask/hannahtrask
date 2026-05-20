@@ -72,7 +72,6 @@ Hey there! I'm Hannah, a freelance web developer with a passion for creating bea
 
 ### Email & Communication
 
-- **Resend** – Modern email API for contact form submissions
 - **Sonner** – Beautiful toast notifications with custom styling
 
 ### Theming & Accessibility
