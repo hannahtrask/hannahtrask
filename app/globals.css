@@ -107,6 +107,23 @@
   iframe {
     max-width: 100%;
   }
+
+  .hb-p-68ab7f800c8dd7002e944c41-1,
+  .hb-p-68ab7f800c8dd7002e944c41-2,
+  .hb-p-68ab7f800c8dd7002e944c41-3 {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .hb-p-68ab7f800c8dd7002e944c41-1 iframe,
+  .hb-p-68ab7f800c8dd7002e944c41-2 iframe,
+  .hb-p-68ab7f800c8dd7002e944c41-3 iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
 }
 
 /* Line clamp utilities */
