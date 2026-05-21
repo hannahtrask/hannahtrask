@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Hero from '@/components/hero/hero'
 import ContactForm from '@/components/contact/contact-form'
 import Typewriter from '@/components/ui/typewriter'
@@ -9,16 +10,31 @@ import { ArrowRight } from 'lucide-react'
 import websiteInAWeekImage from '@/public/page-images/website-in-a-week.png'
 
 export default function HomeClient() {
+  const [isDesktop, setIsDesktop] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)')
+
+    const updateViewport = () => {
+      setIsDesktop(mediaQuery.matches)
+    }
+
+    updateViewport()
+    mediaQuery.addEventListener('change', updateViewport)
+
+    return () => mediaQuery.removeEventListener('change', updateViewport)
+  }, [])
+
   return (
     <>
       {/* Home Hero Section */}
       <Hero
         backgroundImage='/hero-images/bison-grand.jpg'
         backgroundImageAlt='Bison graze in front of the Tetons. Photos by Nick Sulzer.'
-        enableParallax={true}
+        enableParallax={isDesktop}
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-[#33352a]/[0.54] dark:bg-[#33352a]/[0.40]'
-        animateContent={true}
+        animateContent={isDesktop}
         titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
           name: 'Nick Sulzer',
@@ -32,20 +48,26 @@ export default function HomeClient() {
               Hannah Trask - Jackson WY Web Developer & Designer | Sagebrush
               Studio Web Development
             </h1>
-            <Typewriter
-              lines={[
-                'web development',
-                'web design',
-                'migrations',
-                'internal applications',
-                'technical consulting',
-              ]}
-              className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
-              typingSpeed={80}
-              deletingSpeed={40}
-              pauseDuration={2500}
-              showCursor={true}
-            />
+            {isDesktop ? (
+              <Typewriter
+                lines={[
+                  'web development',
+                  'web design',
+                  'migrations',
+                  'internal applications',
+                  'technical consulting',
+                ]}
+                className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
+                typingSpeed={80}
+                deletingSpeed={40}
+                pauseDuration={2500}
+                showCursor={true}
+              />
+            ) : (
+              <p className='font-first-rodeo text-lg sm:text-xl mb-6 leading-tight px-2 text-[#ecd9b9] drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]'>
+                web design + development
+              </p>
+            )}
             <p className='text-sm leading-relaxed text-[#ecd9b9]/90 mb-8'>
               web design and development based in Jackson Hole, Wyoming
             </p>
@@ -270,7 +292,7 @@ export default function HomeClient() {
               hours.
             </p>
           </div>
-          <ContactForm />
+          <ContactForm autoload={isDesktop} />
         </div>
       </div>
 

@@ -6,14 +6,28 @@ const HONEYBOOK_PID = '68ab7f800c8dd7002e944c41'
 const HONEYBOOK_SCRIPT_URL =
   'https://widget.honeybook.com/assets_users_production/websiteplacements/placement-controller.min.js'
 
-export default function ContactForm() {
+interface ContactFormProps {
+  autoload?: boolean
+}
+
+export default function ContactForm({ autoload = true }: ContactFormProps) {
   const consultationContainerRef = useRef<HTMLDivElement>(null)
   const readyToWorkContainerRef = useRef<HTMLDivElement>(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [shouldLoad, setShouldLoad] = useState(autoload)
+  const [isLoading, setIsLoading] = useState(autoload)
   const [hasError, setHasError] = useState(false)
   const [reloadKey, setReloadKey] = useState(0)
 
   useEffect(() => {
+    if (autoload) {
+      setShouldLoad(true)
+      setIsLoading(true)
+    }
+  }, [autoload])
+
+  useEffect(() => {
+    if (!shouldLoad) return
+
     let retryCount = 0
     const maxRetries = 3
     let retryTimeout: NodeJS.Timeout
@@ -132,9 +146,10 @@ export default function ContactForm() {
     return () => {
       if (retryTimeout) clearTimeout(retryTimeout)
     }
-  }, [reloadKey])
+  }, [reloadKey, shouldLoad])
 
   const handleRetry = () => {
+    setShouldLoad(true)
     setIsLoading(true)
     setHasError(false)
     consultationContainerRef.current?.replaceChildren()
@@ -151,8 +166,37 @@ export default function ContactForm() {
   return (
     <div className='bg-white dark:bg-desert-800 py-4 md:p-4 shadow-sm'>
       <div className='max-w-8xl mx-auto'>
+        {!shouldLoad && !hasError && (
+          <div className='rounded-xl border border-desert-200 bg-desert-50/60 p-6 text-center dark:border-desert-700 dark:bg-desert-900/40'>
+            <h3 className='text-xl font-bold text-desert-800 dark:text-white mb-3'>
+              Load the contact form
+            </h3>
+            <p className='mx-auto mb-6 max-w-2xl text-sm leading-relaxed text-gray-600 dark:text-gray-300'>
+              On mobile, the full scheduler is deferred to keep the page lighter
+              and more stable during the first load.
+            </p>
+            <div className='flex flex-col items-center justify-center gap-3 sm:flex-row'>
+              <button
+                onClick={() => {
+                  setShouldLoad(true)
+                  setIsLoading(true)
+                }}
+                className='inline-flex items-center justify-center bg-desert-600 px-6 py-3 text-white transition-colors hover:bg-desert-700'
+              >
+                Open contact form
+              </button>
+              <a
+                href='mailto:hello@wearesagebrush.com'
+                className='inline-flex items-center justify-center px-6 py-3 text-desert-700 underline-offset-4 hover:underline dark:text-desert-200'
+              >
+                Email hello@wearesagebrush.com
+              </a>
+            </div>
+          </div>
+        )}
+
         {/* Loading state */}
-        {isLoading && (
+        {shouldLoad && isLoading && (
           <div className='flex flex-col items-center justify-center py-12 text-center'>
             <div className='flex items-center justify-center'>
               <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-desert-600'></div>
@@ -164,7 +208,7 @@ export default function ContactForm() {
         )}
 
         {/* Error state with fallback */}
-        {hasError && (
+        {shouldLoad && hasError && (
           <div className='text-center py-8'>
             <p className='text-gray-600 dark:text-gray-300 mb-4'>
               The contact form couldn&apos;t load. You can try again or reach
@@ -187,7 +231,7 @@ export default function ContactForm() {
         )}
 
         <div
-          className={`grid grid-cols-1 gap-8 lg:grid-cols-2 ${hasError ? 'hidden' : ''}`}
+          className={`grid grid-cols-1 gap-8 lg:grid-cols-2 ${hasError || !shouldLoad ? 'hidden' : ''}`}
         >
           <div className='overflow-hidden rounded-xl border border-desert-200 bg-desert-50/60 p-6 dark:border-desert-700 dark:bg-desert-900/40'>
             <div className='mb-6 text-center lg:text-left'>
