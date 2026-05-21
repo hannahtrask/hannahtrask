@@ -74,8 +74,8 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
     const initHoneyBook = () => {
       if (typeof window === 'undefined')
         return // Always set/reset the HoneyBook config
-          ; (window as any)._HB_ = (window as any)._HB_ || {}
-        ; (window as any)._HB_.pid = HONEYBOOK_PID
+      ;(window as any)._HB_ = (window as any)._HB_ || {}
+      ;(window as any)._HB_.pid = HONEYBOOK_PID
     }
 
     const loadScript = (): Promise<void> => {
@@ -88,7 +88,7 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
         if (existingScript) {
           // Script exists - try to re-trigger widget initialization
           if ((window as any)._HB_?.init) {
-            ; (window as any)._HB_.init()
+            ;(window as any)._HB_.init()
           }
           resolve()
           return
@@ -162,8 +162,8 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
             'script[src*="honeybook.com"]'
           )
           existingScript?.remove()
-            // Also clear HoneyBook state
-            ; (window as any)._HB_ = {}
+          // Also clear HoneyBook state
+          ;(window as any)._HB_ = {}
           retryTimeout = setTimeout(attemptLoad, 1000)
         } else {
           setIsLoading(false)
@@ -198,7 +198,7 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
       'script[src*="honeybook.com"]'
     )
     existingScript?.remove()
-      ; (window as any)._HB_ = {}
+    ;(window as any)._HB_ = {}
     setReloadKey(currentKey => currentKey + 1)
     queueWidgetLoad()
   }
