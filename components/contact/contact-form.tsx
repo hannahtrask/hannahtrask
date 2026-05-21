@@ -187,10 +187,11 @@ function BookingCard({
       <div
         id={panelId}
         aria-hidden={!isOpen}
-        className={`w-full min-w-0 max-w-full overflow-hidden transition-all duration-800 ease-out ${isOpen
+        className={`w-full min-w-0 max-w-full overflow-hidden transition-all duration-800 ease-out ${
+          isOpen
             ? 'mt-6 max-h-[2200px] translate-y-0 opacity-100'
             : 'mt-0 max-h-0 -translate-y-1 opacity-0 pointer-events-none'
-          }`}
+        }`}
       >
         {isLoading && !isLoaded && !hasError && (
           <div className='flex items-center justify-center py-12 text-center'>
@@ -224,8 +225,9 @@ function BookingCard({
 
         <div
           ref={containerRef}
-          className={`${widgetClassName} min-h-[320px] w-full max-w-full min-w-0 overflow-hidden ${isLoaded && !hasError ? 'block' : 'hidden'
-            }`}
+          className={`${widgetClassName} min-h-[320px] w-full max-w-full min-w-0 overflow-hidden ${
+            isLoaded && !hasError ? 'block' : 'hidden'
+          }`}
         />
       </div>
     </div>
