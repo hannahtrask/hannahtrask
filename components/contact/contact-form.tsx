@@ -13,15 +13,54 @@ interface ContactFormProps {
 export default function ContactForm({ autoload = true }: ContactFormProps) {
   const consultationContainerRef = useRef<HTMLDivElement>(null)
   const readyToWorkContainerRef = useRef<HTMLDivElement>(null)
+  const scheduledLoadRef = useRef<number | null>(null)
   const [shouldLoad, setShouldLoad] = useState(autoload)
   const [isLoading, setIsLoading] = useState(autoload)
   const [hasError, setHasError] = useState(false)
   const [reloadKey, setReloadKey] = useState(0)
 
+  const clearScheduledLoad = () => {
+    if (scheduledLoadRef.current === null) return
+
+    if (typeof window !== 'undefined' && window.cancelIdleCallback) {
+      window.cancelIdleCallback(scheduledLoadRef.current)
+    } else {
+      window.clearTimeout(scheduledLoadRef.current)
+    }
+
+    scheduledLoadRef.current = null
+  }
+
+  const queueWidgetLoad = () => {
+    clearScheduledLoad()
+    setHasError(false)
+    setIsLoading(true)
+
+    if (typeof window === 'undefined') {
+      setShouldLoad(true)
+      return
+    }
+
+    const startLoad = () => {
+      scheduledLoadRef.current = null
+      setShouldLoad(true)
+    }
+
+    if (window.requestIdleCallback) {
+      scheduledLoadRef.current = window.requestIdleCallback(startLoad, {
+        timeout: 250,
+      })
+      return
+    }
+
+    scheduledLoadRef.current = window.setTimeout(startLoad, 32)
+  }
+
   useEffect(() => {
     if (autoload) {
-      setShouldLoad(true)
+      setHasError(false)
       setIsLoading(true)
+      setShouldLoad(true)
     }
   }, [autoload])
 
@@ -35,8 +74,8 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
     const initHoneyBook = () => {
       if (typeof window === 'undefined')
         return // Always set/reset the HoneyBook config
-      ;(window as any)._HB_ = (window as any)._HB_ || {}
-      ;(window as any)._HB_.pid = HONEYBOOK_PID
+          ; (window as any)._HB_ = (window as any)._HB_ || {}
+        ; (window as any)._HB_.pid = HONEYBOOK_PID
     }
 
     const loadScript = (): Promise<void> => {
@@ -49,7 +88,7 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
         if (existingScript) {
           // Script exists - try to re-trigger widget initialization
           if ((window as any)._HB_?.init) {
-            ;(window as any)._HB_.init()
+            ; (window as any)._HB_.init()
           }
           resolve()
           return
@@ -123,8 +162,8 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
             'script[src*="honeybook.com"]'
           )
           existingScript?.remove()
-          // Also clear HoneyBook state
-          ;(window as any)._HB_ = {}
+            // Also clear HoneyBook state
+            ; (window as any)._HB_ = {}
           retryTimeout = setTimeout(attemptLoad, 1000)
         } else {
           setIsLoading(false)
@@ -145,13 +184,13 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
 
     return () => {
       if (retryTimeout) clearTimeout(retryTimeout)
+      clearScheduledLoad()
     }
   }, [reloadKey, shouldLoad])
 
   const handleRetry = () => {
-    setShouldLoad(true)
-    setIsLoading(true)
-    setHasError(false)
+    clearScheduledLoad()
+    setShouldLoad(false)
     consultationContainerRef.current?.replaceChildren()
     readyToWorkContainerRef.current?.replaceChildren()
     // Remove existing script to force a fresh load
@@ -159,8 +198,9 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
       'script[src*="honeybook.com"]'
     )
     existingScript?.remove()
-    ;(window as any)._HB_ = {}
+      ; (window as any)._HB_ = {}
     setReloadKey(currentKey => currentKey + 1)
+    queueWidgetLoad()
   }
 
   return (
@@ -177,10 +217,8 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
             </p>
             <div className='flex flex-col items-center justify-center gap-3 sm:flex-row'>
               <button
-                onClick={() => {
-                  setShouldLoad(true)
-                  setIsLoading(true)
-                }}
+                type='button'
+                onClick={queueWidgetLoad}
                 className='inline-flex items-center justify-center bg-desert-600 px-6 py-3 text-white transition-colors hover:bg-desert-700'
               >
                 Open contact form
@@ -222,6 +260,7 @@ export default function ContactForm({ autoload = true }: ContactFormProps) {
             </a>
             <br />
             <button
+              type='button'
               onClick={handleRetry}
               className='text-desert-600 dark:text-desert-300 hover:underline text-sm mt-2'
             >
