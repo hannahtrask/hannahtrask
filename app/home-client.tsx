@@ -54,9 +54,15 @@ export default function HomeClient() {
     }
 
     updateViewport()
-    mediaQuery.addEventListener('change', updateViewport)
 
-    return () => mediaQuery.removeEventListener('change', updateViewport)
+    // Safari < 14 only supports addListener/removeListener on MediaQueryList.
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', updateViewport)
+      return () => mediaQuery.removeEventListener('change', updateViewport)
+    }
+
+    mediaQuery.addListener(updateViewport)
+    return () => mediaQuery.removeListener(updateViewport)
   }, [])
 
   return (
