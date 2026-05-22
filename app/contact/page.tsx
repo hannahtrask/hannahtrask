@@ -118,19 +118,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-
-      {/* Contact Form Section */}
-      <div className='bg-white dark:bg-desert-800 py-10 w-full'>
-        <div className='px-4 sm:px-6'>
-          <div className='text-center mb-12'>
-            <h2 className='text-2xl md:text-3xl font-bold text-desert-800 dark:text-white mb-2'>
-              Get in touch
-            </h2>
-            <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto'></div>
-          </div>
-          <ContactForm />
-        </div>
-      </div>
     </>
   )
 }
