@@ -53,8 +53,8 @@ export default function ClientErrorLogger() {
         typeof navigator.sendBeacon === 'function'
       ) {
         const blob = new Blob([body], { type: 'application/json' })
-        navigator.sendBeacon(CLIENT_ERROR_ENDPOINT, blob)
-        return
+        const beaconSent = navigator.sendBeacon(CLIENT_ERROR_ENDPOINT, blob)
+        if (beaconSent) return
       }
 
       void fetch(CLIENT_ERROR_ENDPOINT, {

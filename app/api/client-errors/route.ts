@@ -26,7 +26,11 @@ export async function POST(request: NextRequest) {
 
   try {
     body = (await request.json()) as ClientErrorBody
-  } catch {
+  } catch (error) {
+    console.error('[client-runtime-error][invalid-json]', {
+      message: error instanceof Error ? error.message : String(error),
+    })
+
     return NextResponse.json(
       { ok: false, error: 'invalid_json' },
       { status: 400 }
