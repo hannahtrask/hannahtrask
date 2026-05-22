@@ -13,6 +13,19 @@ interface SEOProps {
   noIndex?: boolean
 }
 
+interface ProjectStructuredDataInput {
+  title: string
+  description: string
+  slug?: {
+    current?: string
+  }
+  heroImage?: string
+  _createdAt?: string
+  _updatedAt?: string
+  category?: string
+  technologies?: string[]
+}
+
 export function generateSEOMetadata({
   title,
   description,
@@ -226,7 +239,9 @@ export function generateBusinessStructuredData() {
   }
 }
 
-export function generateProjectStructuredData(project: any) {
+export function generateProjectStructuredData(
+  project: ProjectStructuredDataInput
+) {
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || 'https://wearesagebrush.com'
 

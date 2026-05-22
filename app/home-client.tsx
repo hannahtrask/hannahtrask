@@ -9,6 +9,40 @@ import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import websiteInAWeekImage from '@/public/page-images/website-in-a-week.png'
 
+const heroTypewriterLines = [
+  'web development',
+  'web design',
+  'migrations',
+  'internal applications',
+  'technical consulting',
+]
+
+const servicesColumns = [
+  [
+    {
+      title: 'Web Strategy & Setup',
+      description:
+        'New websites, redesigns, migrations, and platform transitions.',
+    },
+    {
+      title: 'Performance & Visibility',
+      description:
+        'SEO optimization, Core Web Vitals improvements, and AI-ready content structure.',
+    },
+  ],
+  [
+    {
+      title: 'Ongoing Support',
+      description: 'Monthly maintenance, updates, and retainer partnerships.',
+    },
+    {
+      title: 'Custom Development',
+      description:
+        'WordPress themes, Shopify stores, internal apps, and automation workflows.',
+    },
+  ],
+] as const
+
 export default function HomeClient() {
   const [isDesktop, setIsDesktop] = useState(false)
 
@@ -50,13 +84,7 @@ export default function HomeClient() {
             </h1>
             {isDesktop ? (
               <Typewriter
-                lines={[
-                  'web development',
-                  'web design',
-                  'migrations',
-                  'internal applications',
-                  'technical consulting',
-                ]}
+                lines={heroTypewriterLines}
                 className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
                 typingSpeed={80}
                 deletingSpeed={40}
@@ -126,68 +154,25 @@ export default function HomeClient() {
             <div className='w-24 h-px bg-desert-800 dark:bg-desert-600 mx-auto mt-4 mb-6'></div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 text-left'>
-              <div className='space-y-4'>
-                <div className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
-                    •
-                  </span>
-                  <div>
-                    <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Web Strategy & Setup
-                    </h3>
-                    <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      New websites, redesigns, migrations, and platform
-                      transitions.
-                    </p>
-                  </div>
+              {servicesColumns.map((column, columnIndex) => (
+                <div key={columnIndex} className='space-y-4'>
+                  {column.map(item => (
+                    <div key={item.title} className='flex items-start'>
+                      <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
+                        •
+                      </span>
+                      <div>
+                        <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
+                          {item.title}
+                        </h3>
+                        <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-
-                <div className='flex items-start'>
-                  <span className='text-desert-800 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
-                    •
-                  </span>
-                  <div>
-                    <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Performance & Visibility
-                    </h3>
-                    <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      SEO optimization, Core Web Vitals improvements, and
-                      AI-ready content structure.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className='space-y-4'>
-                <div className='flex items-start'>
-                  <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
-                    •
-                  </span>
-                  <div>
-                    <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Ongoing Support
-                    </h3>
-                    <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      Monthly maintenance, updates, and retainer partnerships.
-                    </p>
-                  </div>
-                </div>
-
-                <div className='flex items-start'>
-                  <span className='text-desert-800 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
-                    •
-                  </span>
-                  <div>
-                    <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
-                      Custom Development
-                    </h3>
-                    <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
-                      WordPress themes, Shopify stores, internal apps, and
-                      automation workflows.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
             <p className='text-sm md:text-sm lg:text-md mx-auto text-desert-800 dark:text-white leading-tight pt-6'>
               Not sure if we can help? Reach out, we probably can.

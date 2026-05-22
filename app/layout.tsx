@@ -1,5 +1,6 @@
 import type React from 'react'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Montserrat } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
@@ -73,17 +74,22 @@ export default function RootLayout({
         <title>
           Sagebrush Web Studio - Jackson WY Web Design & Development
         </title>
-        <script
+        <Script
           type='application/ld+json'
+          id='business-structured-data'
+          strategy='beforeInteractive'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(businessStructuredData),
           }}
         />
-        <script
-          async
+        <Script
+          id='google-analytics-src'
           src='https://www.googletagmanager.com/gtag/js?id=G-H27HPKYH03'
+          strategy='afterInteractive'
         />
-        <script
+        <Script
+          id='google-analytics-config'
+          strategy='afterInteractive'
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
