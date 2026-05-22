@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 type ClientErrorBody = {
-  kind?: 'error' | 'unhandledrejection' | 'manual_test'
+  kind?:
+    | 'error'
+    | 'unhandledrejection'
+    | 'manual_test'
+    | 'early_error'
+    | 'early_unhandledrejection'
+    | 'navigation'
+    | 'global_error'
   message?: string
   stack?: string
   source?: string
@@ -14,6 +21,10 @@ type ClientErrorBody = {
     height?: number
   }
   timestamp?: string
+  phase?: string
+  navType?: string
+  referrer?: string
+  digest?: string
 }
 
 const truncate = (value: unknown, max = 2000) => {
@@ -53,6 +64,10 @@ export async function POST(request: NextRequest) {
         ? { width: body.viewport.width, height: body.viewport.height }
         : undefined,
     timestamp: truncate(body.timestamp, 100),
+    phase: truncate(body.phase, 100),
+    navType: truncate(body.navType, 50),
+    referrer: truncate(body.referrer, 2000),
+    digest: truncate(body.digest, 200),
     serverReceivedAt: new Date().toISOString(),
     ip: request.headers.get('x-forwarded-for') ?? undefined,
   }
