@@ -6,7 +6,14 @@ import { usePathname } from 'next/navigation'
 function scrollToHash() {
   if (typeof window === 'undefined' || !window.location.hash) return
 
-  const hash = decodeURIComponent(window.location.hash.slice(1))
+  let hash = ''
+  try {
+    hash = decodeURIComponent(window.location.hash.slice(1))
+  } catch {
+    return
+  }
+
+  if (!hash) return
   const target = document.getElementById(hash)
   if (!target) return
 

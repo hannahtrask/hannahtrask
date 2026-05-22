@@ -47,22 +47,42 @@ export default function HomeClient() {
   const [isDesktop, setIsDesktop] = useState(false)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 768px)')
+    if (
+      typeof window === 'undefined' ||
+      typeof window.matchMedia !== 'function'
+    ) {
+      return
+    }
+
+    const desktopQuery = window.matchMedia('(min-width: 768px)')
+    const coarsePointerQuery = window.matchMedia('(pointer: coarse)')
 
     const updateViewport = () => {
-      setIsDesktop(mediaQuery.matches)
+      setIsDesktop(desktopQuery.matches && !coarsePointerQuery.matches)
+    }
+
+    const addQueryListener = (query: MediaQueryList, callback: () => void) => {
+      if (typeof query.addEventListener === 'function') {
+        query.addEventListener('change', callback)
+        return () => query.removeEventListener('change', callback)
+      }
+
+      query.addListener(callback)
+      return () => query.removeListener(callback)
     }
 
     updateViewport()
 
-    // Safari < 14 only supports addListener/removeListener on MediaQueryList.
-    if (typeof mediaQuery.addEventListener === 'function') {
-      mediaQuery.addEventListener('change', updateViewport)
-      return () => mediaQuery.removeEventListener('change', updateViewport)
-    }
+    const removeDesktopListener = addQueryListener(desktopQuery, updateViewport)
+    const removePointerListener = addQueryListener(
+      coarsePointerQuery,
+      updateViewport
+    )
 
-    mediaQuery.addListener(updateViewport)
-    return () => mediaQuery.removeListener(updateViewport)
+    return () => {
+      removeDesktopListener()
+      removePointerListener()
+    }
   }, [])
 
   return (
