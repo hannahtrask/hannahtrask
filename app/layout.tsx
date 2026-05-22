@@ -15,6 +15,7 @@ import {
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import SmoothHashScroll from '@/components/scroll/smooth-hash-scroll'
+import ClientErrorLogger from '@/components/monitoring/client-error-logger'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -110,6 +111,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ClientErrorLogger />
           <SmoothHashScroll />
           <div className='flex flex-col min-h-screen'>
             <Header />
