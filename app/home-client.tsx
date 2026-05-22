@@ -219,11 +219,6 @@ export default function HomeClient() {
         </div>
       </div>
 
-      {/* FAQ Section
-      <div className='bg-white dark:bg-desert-900'>
-        <FAQSection />
-      </div> */}
-
       {/* Website in a Week Section */}
       <div className='bg-sand-100 dark:bg-desert-800 py-16 px-4 md:px-8'>
         <div className='flex flex-col xl:flex-row min-h-80'>
@@ -292,7 +287,7 @@ export default function HomeClient() {
               hours.
             </p>
           </div>
-          <ContactForm autoload={isDesktop} />
+          <ContactForm />
         </div>
       </div>
 

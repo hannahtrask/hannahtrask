@@ -17,10 +17,10 @@ declare global {
 }
 
 interface ContactFormProps {
-  autoload?: boolean
+  className?: string
 }
 
-function BookingCard({
+export function BookingCard({
   title,
   description,
   panelId,
@@ -234,11 +234,13 @@ function BookingCard({
   )
 }
 
-export default function ContactForm({ autoload }: ContactFormProps) {
-  void autoload
-
+export default function ContactForm({ className }: ContactFormProps) {
   return (
-    <div className='bg-white py-4 shadow-sm dark:bg-desert-800 md:p-4'>
+    <div
+      className={
+        className ?? 'bg-white py-4 shadow-sm dark:bg-desert-800 md:p-4'
+      }
+    >
       <div className='max-w-8xl mx-auto'>
         <div className='grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-2'>
           <BookingCard

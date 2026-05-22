@@ -1,9 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    unoptimized: false,
-    domains: ['cdn.sanity.io'],
-  },
-}
+const nextConfig = {}
 
 export default nextConfig
