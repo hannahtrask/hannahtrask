@@ -15,7 +15,6 @@ import {
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import SmoothHashScroll from '@/components/scroll/smooth-hash-scroll'
-import ClientErrorLogger from '@/components/monitoring/client-error-logger'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -68,95 +67,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const businessStructuredData = generateBusinessStructuredData()
-  const earlyClientLoggerScript = `
-    (function () {
-      if (typeof window === 'undefined') return;
-      if (window.__sagebrushEarlyLoggerInstalled) return;
-      window.__sagebrushEarlyLoggerInstalled = true;
-
-      var endpoint = '/api/client-errors';
-
-      function send(payload) {
-        try {
-          var body = JSON.stringify(payload);
-          if (navigator && typeof navigator.sendBeacon === 'function') {
-            var blob = new Blob([body], { type: 'application/json' });
-            var sent = navigator.sendBeacon(endpoint, blob);
-            if (sent) return;
-          }
-
-          fetch(endpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: body,
-            keepalive: true,
-          });
-        } catch (_err) {
-          // Swallow logger failures to avoid cascading errors.
-        }
-      }
-
-      function basePayload() {
-        return {
-          url: window.location.href,
-          userAgent: navigator && navigator.userAgent ? navigator.userAgent : 'unknown',
-          viewport: {
-            width: window.innerWidth,
-            height: window.innerHeight,
-          },
-          timestamp: new Date().toISOString(),
-        };
-      }
-
-      window.addEventListener('error', function (event) {
-        send(Object.assign(basePayload(), {
-          kind: 'early_error',
-          message: event && event.message ? event.message : 'Unknown early window error',
-          source: event && event.filename ? event.filename : undefined,
-          line: event && typeof event.lineno === 'number' ? event.lineno : undefined,
-          column: event && typeof event.colno === 'number' ? event.colno : undefined,
-          stack: event && event.error && event.error.stack ? event.error.stack : undefined,
-          phase: 'pre_hydration',
-        }));
-      });
-
-      window.addEventListener('unhandledrejection', function (event) {
-        var reason = event ? event.reason : undefined;
-        var message = 'Unknown rejection reason';
-        var stack;
-
-        if (typeof reason === 'string') {
-          message = reason;
-        } else if (reason && typeof reason === 'object') {
-          if (typeof reason.message === 'string') message = reason.message;
-          if (typeof reason.stack === 'string') stack = reason.stack;
-        }
-
-        send(Object.assign(basePayload(), {
-          kind: 'early_unhandledrejection',
-          message: message,
-          stack: stack,
-          phase: 'pre_hydration',
-        }));
-      });
-
-      try {
-        var params = new URLSearchParams(window.location.search);
-        if (params.get('log_nav') === '1') {
-          var navEntry = performance && performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : undefined;
-          send(Object.assign(basePayload(), {
-            kind: 'navigation',
-            message: 'Navigation diagnostic',
-            navType: navEntry && navEntry.type ? navEntry.type : 'unknown',
-            referrer: document.referrer || undefined,
-            phase: 'startup',
-          }));
-        }
-      } catch (_err) {
-        // Ignore diagnostics parse failures.
-      }
-    })();
-  `
 
   return (
     <html lang='en' suppressHydrationWarning>
@@ -170,13 +80,6 @@ export default function RootLayout({
           strategy='beforeInteractive'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(businessStructuredData),
-          }}
-        />
-        <Script
-          id='early-client-runtime-logger'
-          strategy='beforeInteractive'
-          dangerouslySetInnerHTML={{
-            __html: earlyClientLoggerScript,
           }}
         />
         <Script
@@ -207,7 +110,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ClientErrorLogger />
           <SmoothHashScroll />
           <div className='flex flex-col min-h-screen'>
             <Header />
