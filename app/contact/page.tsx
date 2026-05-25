@@ -30,8 +30,6 @@ export default function ContactPage() {
         backgroundImage='/hero-images/wolf.jpg'
         backgroundImageAlt='A wolf faces a man in the Tetons.'
         enableParallax={true}
-        overlayType='custom'
-        overlayClassName='absolute inset-0 bg-[#33352a]/[0.54] dark:bg-[#33352a]/[0.40]'
         titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
           name: 'Nick Sulzer',

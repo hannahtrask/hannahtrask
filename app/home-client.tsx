@@ -154,8 +154,6 @@ export default function HomeClient() {
         backgroundImageAlt='Bison graze in front of the Tetons. Photos by Nick Sulzer.'
         priority={true}
         enableParallax={hasMounted && isDesktop}
-        overlayType='custom'
-        overlayClassName='absolute inset-0 bg-[#33352a]/[0.54] dark:bg-[#33352a]/[0.40]'
         titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
           name: 'Nick Sulzer',

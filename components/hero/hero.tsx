@@ -14,10 +14,7 @@ interface HeroProps {
   title?: string
   subtitle?: string
   description?: string
-  contentAlignment?: 'center' | 'bottom' | 'custom'
   enableParallax?: boolean
-  overlayType?: 'gradient' | 'dark' | 'light' | 'custom'
-  overlayClassName?: string
   children?: React.ReactNode
   className?: string
   titleClassName?: string
@@ -34,16 +31,9 @@ export default function Hero({
   title,
   subtitle,
   description,
-  contentAlignment = 'center',
   enableParallax = false,
-  overlayType = 'gradient',
-  overlayClassName,
   children,
   className = '',
-  titleClassName = '',
-  subtitleClassName = '',
-  descriptionClassName = '',
-  containerClassName = '',
   photoCredit,
   priority = false,
 }: HeroProps) {
@@ -101,56 +91,6 @@ export default function Hero({
     }
   }, [shouldParallax])
 
-  // Default overlay styles based on type
-  const getOverlayClassName = () => {
-    if (overlayClassName) return overlayClassName
-
-    switch (overlayType) {
-      case 'gradient':
-        return 'absolute inset-0 bg-gradient-to-b from-[#c56f53]/[0.78] via-[#33352a]/[0.86] to-[#33352a]/[0.92] dark:from-[#c56f53]/[0.82] dark:via-[#33352a]/[0.90] dark:to-[#33352a]/[0.94]'
-      case 'dark':
-        return 'absolute inset-0 bg-[#33352a]/[0.84] dark:bg-[#33352a]/[0.90] backdrop-blur-[1px]'
-      case 'light':
-        return 'absolute inset-0 bg-white/20'
-      case 'custom':
-        return ''
-      default:
-        return 'absolute inset-0 bg-gradient-to-b from-[#c56f53]/[0.78] via-[#33352a]/[0.86] to-[#33352a]/[0.92] dark:from-[#c56f53]/[0.82] dark:via-[#33352a]/[0.90] dark:to-[#33352a]/[0.94]'
-    }
-  }
-
-  // Content alignment classes
-  const getContentAlignmentClasses = () => {
-    switch (contentAlignment) {
-      case 'center':
-        return 'flex items-center justify-center h-full text-center'
-      case 'bottom':
-        return 'flex items-end h-full pb-16'
-      case 'custom':
-        return 'h-full'
-      default:
-        return 'flex items-center justify-center h-full text-center'
-    }
-  }
-
-  // Default title classes
-  const getDefaultTitleClasses = () => {
-    if (titleClassName) return titleClassName
-    return 'text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'
-  }
-
-  // Default subtitle classes
-  const getDefaultSubtitleClasses = () => {
-    if (subtitleClassName) return subtitleClassName
-    return 'text-lg font-medium text-white/90 uppercase tracking-wide mb-4 block'
-  }
-
-  // Default description classes
-  const getDefaultDescriptionClasses = () => {
-    if (descriptionClassName) return descriptionClassName
-    return 'text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed'
-  }
-
   return (
     <div
       className={`relative min-h-[100svh] md:min-h-screen w-full flex items-center overflow-hidden ${className}`}
@@ -184,25 +124,31 @@ export default function Hero({
             />
           </div>
         )}
-        <div className={getOverlayClassName()}></div>
+        <div className='absolute inset-0 bg-graphite/60'></div>
       </div>
 
       {/* Hero content */}
       <div
-        className={`container mx-auto px-4 pt-24 sm:pt-28 md:pt-0 relative z-10 ${containerClassName} ${getContentAlignmentClasses()}`}
+        className={`container mx-auto px-4 pt-24 sm:pt-28 md:pt-0 relative z-10 flex items-center justify-center h-full text-center`}
       >
         {children ? (
           children
         ) : (
           <div className='text-white'>
             {subtitle && (
-              <span className={getDefaultSubtitleClasses()}>{subtitle}</span>
+              <span className='text-lg font-medium text-white/90 uppercase tracking-wide mb-4 block'>
+                {subtitle}
+              </span>
             )}
 
-            <h1 className={getDefaultTitleClasses()}>{title}</h1>
+            <h1 className='text-5xl md:text-6xl font-julius-sans-one font-light text-white mb-6'>
+              {title}
+            </h1>
 
             {description && (
-              <p className={getDefaultDescriptionClasses()}>{description}</p>
+              <p className='text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed'>
+                {description}
+              </p>
             )}
           </div>
         )}

@@ -55,8 +55,6 @@ export default function WorkPage() {
         backgroundImage='/hero-images/elk-background.jpg'
         backgroundImageAlt='Bison lingering in a field in front of mountains'
         enableParallax={true}
-        overlayType='custom'
-        overlayClassName='absolute inset-0 bg-[#33352a]/[0.54] dark:bg-[#33352a]/[0.40]'
         titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
           name: 'Nick Sulzer',
