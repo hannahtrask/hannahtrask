@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 interface PhotoCredit {
@@ -27,6 +26,7 @@ interface HeroProps {
   containerClassName?: string
   animateContent?: boolean
   photoCredit?: PhotoCredit
+  priority?: boolean
 }
 
 export default function Hero({
@@ -47,16 +47,61 @@ export default function Hero({
   containerClassName = '',
   animateContent = true,
   photoCredit,
+  priority = false,
 }: HeroProps) {
   const [scrollY, setScrollY] = useState(0)
+  const [shouldParallax, setShouldParallax] = useState(false)
 
   useEffect(() => {
-    if (!enableParallax) return
+    if (!enableParallax || typeof window === 'undefined') {
+      setShouldParallax(current => (current ? false : current))
+      return
+    }
 
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const safeMatch = (query: string) => {
+      try {
+        return window.matchMedia(query).matches
+      } catch {
+        return false
+      }
+    }
+
+    const prefersReducedMotion = safeMatch('(prefers-reduced-motion: reduce)')
+    const hasCoarsePointer = safeMatch('(pointer: coarse)')
+    const isSmallViewport = window.innerWidth < 1024
+
+    const nextShouldParallax =
+      !prefersReducedMotion && !hasCoarsePointer && !isSmallViewport
+    setShouldParallax(current =>
+      current === nextShouldParallax ? current : nextShouldParallax
+    )
   }, [enableParallax])
+
+  useEffect(() => {
+    if (!shouldParallax || typeof window === 'undefined') return
+
+    let frameId: number | null = null
+
+    const handleScroll = () => {
+      if (frameId !== null) return
+
+      frameId = window.requestAnimationFrame(() => {
+        const nextScrollY = window.scrollY
+        setScrollY(current => (current === nextScrollY ? current : nextScrollY))
+        frameId = null
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      if (frameId !== null) {
+        window.cancelAnimationFrame(frameId)
+      }
+    }
+  }, [shouldParallax])
 
   // Default overlay styles based on type
   const getOverlayClassName = () => {
@@ -113,10 +158,10 @@ export default function Hero({
       className={`relative min-h-[100svh] md:min-h-screen w-full flex items-center overflow-hidden ${className}`}
     >
       <div className='absolute inset-0 z-0'>
-        {enableParallax ? (
-          <motion.div
+        {shouldParallax ? (
+          <div
             style={{
-              transform: `translateY(${scrollY * 0.5}px)`,
+              transform: `translateY(${scrollY * 0.25}px)`,
             }}
             className='w-full h-[120%]'
           >
@@ -124,17 +169,19 @@ export default function Hero({
               src={backgroundImage}
               alt={backgroundImageAlt}
               fill
-              priority
+              priority={priority}
+              sizes='100vw'
               className='object-cover'
             />
-          </motion.div>
+          </div>
         ) : (
           <div className='w-full h-[120%]'>
             <Image
               src={backgroundImage}
               alt={backgroundImageAlt}
               fill
-              priority
+              priority={priority}
+              sizes='100vw'
               className='object-cover'
             />
           </div>
@@ -151,37 +198,13 @@ export default function Hero({
         ) : (
           <div className='text-white'>
             {subtitle && (
-              <motion.span
-                initial={animateContent ? { opacity: 0, y: 30 } : {}}
-                animate={animateContent ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className={getDefaultSubtitleClasses()}
-              >
-                {subtitle}
-              </motion.span>
+              <span className={getDefaultSubtitleClasses()}>{subtitle}</span>
             )}
 
-            <motion.h1
-              initial={animateContent ? { opacity: 0, y: 50 } : {}}
-              animate={animateContent ? { opacity: 1, y: 0 } : {}}
-              transition={{
-                duration: 0.8,
-                delay: animateContent ? (subtitle ? 0.3 : 0.1) : 0,
-              }}
-              className={getDefaultTitleClasses()}
-            >
-              {title}
-            </motion.h1>
+            <h1 className={getDefaultTitleClasses()}>{title}</h1>
 
             {description && (
-              <motion.p
-                initial={animateContent ? { opacity: 0, y: 30 } : {}}
-                animate={animateContent ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className={getDefaultDescriptionClasses()}
-              >
-                {description}
-              </motion.p>
+              <p className={getDefaultDescriptionClasses()}>{description}</p>
             )}
           </div>
         )}

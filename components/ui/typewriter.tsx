@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 
 interface TypewriterProps {
   lines: string[]
@@ -24,34 +23,60 @@ export default function Typewriter({
   cursorClassName = '',
   loop = true,
 }: TypewriterProps) {
+  const [isLiteMode, setIsLiteMode] = useState(true)
   const [currentLineIndex, setCurrentLineIndex] = useState(0)
-  const [currentText, setCurrentText] = useState('')
+  const [currentText, setCurrentText] = useState(lines[0] ?? '')
   const [isTyping, setIsTyping] = useState(true)
   const [isDeleting, setIsDeleting] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
 
   useEffect(() => {
-    if (lines.length === 0) return
+    if (typeof window === 'undefined') return
+
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches
+    const hasCoarsePointer = window.matchMedia('(pointer: coarse)').matches
+    const isSmallViewport = window.innerWidth < 900
+
+    const lite = prefersReducedMotion || hasCoarsePointer || isSmallViewport
+    setIsLiteMode(lite)
+
+    if (lite) {
+      setCurrentText(lines[0] ?? '')
+      setCurrentLineIndex(0)
+      setIsTyping(false)
+      setIsDeleting(false)
+      setIsPaused(false)
+      return
+    }
+
+    setCurrentText('')
+    setCurrentLineIndex(0)
+    setIsTyping(true)
+    setIsDeleting(false)
+    setIsPaused(false)
+  }, [lines])
+
+  useEffect(() => {
+    if (isLiteMode || lines.length === 0) return
 
     const currentLine = lines[currentLineIndex]
-    let timeout: NodeJS.Timeout
+    let timeoutId: ReturnType<typeof window.setTimeout> | null = null
 
     if (isPaused) {
-      // Pause after typing complete line
-      timeout = setTimeout(() => {
+      timeoutId = window.setTimeout(() => {
         setIsPaused(false)
         if (loop || currentLineIndex < lines.length - 1) {
           setIsDeleting(true)
         }
       }, pauseDuration)
     } else if (isDeleting) {
-      // Deleting characters
       if (currentText.length > 0) {
-        timeout = setTimeout(() => {
+        timeoutId = window.setTimeout(() => {
           setCurrentText(currentText.slice(0, -1))
         }, deletingSpeed)
       } else {
-        // Finished deleting, move to next line
         setIsDeleting(false)
         setIsTyping(true)
         setCurrentLineIndex(prev => {
@@ -63,20 +88,23 @@ export default function Typewriter({
         })
       }
     } else if (isTyping) {
-      // Typing characters
       if (currentText.length < currentLine.length) {
-        timeout = setTimeout(() => {
+        timeoutId = window.setTimeout(() => {
           setCurrentText(currentLine.slice(0, currentText.length + 1))
         }, typingSpeed)
       } else {
-        // Finished typing current line
         setIsTyping(false)
         setIsPaused(true)
       }
     }
 
-    return () => clearTimeout(timeout)
+    return () => {
+      if (timeoutId !== null) {
+        window.clearTimeout(timeoutId)
+      }
+    }
   }, [
+    isLiteMode,
     currentText,
     currentLineIndex,
     isTyping,
@@ -89,13 +117,18 @@ export default function Typewriter({
     loop,
   ])
 
+  if (isLiteMode) {
+    return (
+      <h1 className={`!font-first-rodeo ${className}`}>
+        <span className='!font-first-rodeo text-[#ecd9b9] drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]'>
+          {lines[0] ?? ''}
+        </span>
+      </h1>
+    )
+  }
+
   return (
-    <motion.h1
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
-      className={`!font-first-rodeo ${className}`}
-    >
+    <h1 className={`!font-first-rodeo ${className}`}>
       <span className='!font-first-rodeo text-[#ecd9b9] drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]'>
         {currentText}
       </span>
@@ -107,6 +140,6 @@ export default function Typewriter({
           |
         </span>
       )}
-    </motion.h1>
+    </h1>
   )
 }

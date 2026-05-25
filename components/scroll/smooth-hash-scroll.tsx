@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
-function scrollToHash() {
+function scrollToHash(lastHandledHashRef: { current: string }) {
   if (typeof window === 'undefined' || !window.location.hash) return
 
   let hash = ''
@@ -14,20 +14,38 @@ function scrollToHash() {
   }
 
   if (!hash) return
+  if (lastHandledHashRef.current === hash) return
+
   const target = document.getElementById(hash)
   if (!target) return
 
+  lastHandledHashRef.current = hash
+
+  const useSmoothBehavior = !window.matchMedia('(pointer: coarse)').matches
+
   requestAnimationFrame(() => {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    target.scrollIntoView({
+      behavior: useSmoothBehavior ? 'smooth' : 'auto',
+      block: 'start',
+    })
   })
 }
 
 export default function SmoothHashScroll() {
   const pathname = usePathname()
+  const lastHandledHashRef = useRef('')
 
   useEffect(() => {
-    const onHashChange = () => scrollToHash()
-    const timeoutId = window.setTimeout(scrollToHash, 80)
+    const onHashChange = () => {
+      // Allow navigation to same hash after URL changes.
+      lastHandledHashRef.current = ''
+      scrollToHash(lastHandledHashRef)
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      lastHandledHashRef.current = ''
+      scrollToHash(lastHandledHashRef)
+    }, 80)
 
     window.addEventListener('hashchange', onHashChange)
 

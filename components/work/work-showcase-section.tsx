@@ -49,6 +49,7 @@ export default function WorkShowcaseSection({
 
   // Don't animate until we know if it's mobile or not
   const shouldAnimate = isMobile === false
+  const shouldRenderTexture = isMobile === false
 
   const imageVariants: Variants = {
     hidden: {
@@ -109,22 +110,24 @@ export default function WorkShowcaseSection({
 
   return (
     <div className={sectionClassName}>
-      {/* Decorative SVG noise filter for texture */}
-      <svg
-        className='absolute inset-0 w-full h-full opacity-10'
-        style={{ filter: 'contrast(170%) brightness(1000%)' }}
-      >
-        <filter id={`noise-${index}`}>
-          <feTurbulence baseFrequency='0.65' numOctaves='3' result='noise' />
-          <feColorMatrix in='noise' type='saturate' values='0' />
-        </filter>
-        <rect
-          width='100%'
-          height='100%'
-          fill={accentColor}
-          filter={`url(#noise-${index})`}
-        />
-      </svg>
+      {shouldRenderTexture && (
+        /* Decorative SVG noise filter for texture */
+        <svg
+          className='absolute inset-0 w-full h-full opacity-10'
+          style={{ filter: 'contrast(170%) brightness(1000%)' }}
+        >
+          <filter id={`noise-${index}`}>
+            <feTurbulence baseFrequency='0.65' numOctaves='3' result='noise' />
+            <feColorMatrix in='noise' type='saturate' values='0' />
+          </filter>
+          <rect
+            width='100%'
+            height='100%'
+            fill={accentColor}
+            filter={`url(#noise-${index})`}
+          />
+        </svg>
+      )}
 
       <div className={contentWrapperClassName}>
         <motion.div
@@ -149,7 +152,11 @@ export default function WorkShowcaseSection({
                   alt={imageAlt}
                   width={600}
                   height={400}
-                  className='w-full h-auto object-cover transition-transform duration-700 hover:scale-105'
+                  className={`w-full h-auto object-cover ${
+                    shouldAnimate
+                      ? 'transition-transform duration-700 hover:scale-105'
+                      : ''
+                  }`}
                   priority={index === 0}
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent'></div>

@@ -1,13 +1,22 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Hero from '@/components/hero/hero'
-import ContactForm from '@/components/contact/contact-form'
 import Typewriter from '@/components/ui/typewriter'
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import { ArrowRight } from 'lucide-react'
 import websiteInAWeekImage from '@/public/page-images/website-in-a-week.png'
+
+const ContactForm = dynamic(() => import('@/components/contact/contact-form'), {
+  ssr: false,
+  loading: () => (
+    <div className='mx-auto max-w-2xl rounded-xl border border-desert-200 bg-desert-50/60 p-8 text-center text-sm text-desert-700 dark:border-desert-700 dark:bg-desert-900/40 dark:text-desert-200'>
+      Loading booking form...
+    </div>
+  ),
+})
 
 const heroTypewriterLines = [
   'web development',
@@ -45,6 +54,13 @@ const servicesColumns = [
 
 export default function HomeClient() {
   const [isDesktop, setIsDesktop] = useState(false)
+  const [hasMounted, setHasMounted] = useState(false)
+  const [shouldMountContactForm, setShouldMountContactForm] = useState(false)
+  const contactSectionRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
 
   useEffect(() => {
     if (
@@ -54,11 +70,20 @@ export default function HomeClient() {
       return
     }
 
-    const desktopQuery = window.matchMedia('(min-width: 768px)')
+    const desktopQuery = window.matchMedia('(min-width: 1024px)')
     const coarsePointerQuery = window.matchMedia('(pointer: coarse)')
+    const reducedMotionQuery = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    )
 
     const updateViewport = () => {
-      setIsDesktop(desktopQuery.matches && !coarsePointerQuery.matches)
+      const nextIsDesktop =
+        desktopQuery.matches &&
+        !coarsePointerQuery.matches &&
+        !reducedMotionQuery.matches
+      setIsDesktop(current =>
+        current === nextIsDesktop ? current : nextIsDesktop
+      )
     }
 
     const addQueryListener = (query: MediaQueryList, callback: () => void) => {
@@ -78,11 +103,47 @@ export default function HomeClient() {
       coarsePointerQuery,
       updateViewport
     )
+    const removeReducedMotionListener = addQueryListener(
+      reducedMotionQuery,
+      updateViewport
+    )
 
     return () => {
       removeDesktopListener()
       removePointerListener()
+      removeReducedMotionListener()
     }
+  }, [])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    if (typeof window.IntersectionObserver !== 'function') {
+      setShouldMountContactForm(true)
+      return
+    }
+
+    const target = contactSectionRef.current
+    if (!target) return
+
+    const observer = new IntersectionObserver(
+      entries => {
+        const isIntersecting = entries.some(entry => entry.isIntersecting)
+        if (isIntersecting) {
+          setShouldMountContactForm(true)
+          observer.disconnect()
+        }
+      },
+      {
+        root: null,
+        rootMargin: '300px 0px',
+        threshold: 0.01,
+      }
+    )
+
+    observer.observe(target)
+
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -91,10 +152,11 @@ export default function HomeClient() {
       <Hero
         backgroundImage='/hero-images/bison-grand.jpg'
         backgroundImageAlt='Bison graze in front of the Tetons. Photos by Nick Sulzer.'
-        enableParallax={isDesktop}
+        priority={true}
+        enableParallax={hasMounted && isDesktop}
         overlayType='custom'
         overlayClassName='absolute inset-0 bg-[#33352a]/[0.54] dark:bg-[#33352a]/[0.40]'
-        animateContent={isDesktop}
+        animateContent={hasMounted && isDesktop}
         titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
           name: 'Nick Sulzer',
@@ -108,7 +170,7 @@ export default function HomeClient() {
               Hannah Trask - Jackson WY Web Developer & Designer | Sagebrush
               Studio Web Development
             </h1>
-            {isDesktop ? (
+            {hasMounted && isDesktop ? (
               <Typewriter
                 lines={heroTypewriterLines}
                 className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
@@ -277,6 +339,7 @@ export default function HomeClient() {
 
       {/* Contact Section */}
       <div
+        ref={contactSectionRef}
         id='contact'
         className='relative w-full bg-white dark:bg-desert-900 py-16'
       >
@@ -298,7 +361,13 @@ export default function HomeClient() {
               hours.
             </p>
           </div>
-          <ContactForm />
+          {shouldMountContactForm ? (
+            <ContactForm />
+          ) : (
+            <div className='mx-auto max-w-2xl rounded-xl border border-desert-200 bg-desert-50/60 p-8 text-center text-sm text-desert-700 dark:border-desert-700 dark:bg-desert-900/40 dark:text-desert-200'>
+              Booking form will load when this section is in view.
+            </div>
+          )}
         </div>
       </div>
 

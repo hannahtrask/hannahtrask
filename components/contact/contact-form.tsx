@@ -34,6 +34,9 @@ export function BookingCard({
   loadingLabel: string
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
+  const retryTimeoutRef = useRef<number | null>(null)
+  const pollTimeoutRef = useRef<number | null>(null)
+  const isAttemptingRef = useRef(false)
   const [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -45,7 +48,13 @@ export function BookingCard({
     let cancelled = false
     let retryCount = 0
     const maxRetries = 3
-    let timeoutId: number | null = null
+
+    const queueRetry = (callback: () => void) => {
+      if (retryTimeoutRef.current !== null) {
+        window.clearTimeout(retryTimeoutRef.current)
+      }
+      retryTimeoutRef.current = window.setTimeout(callback, 1000)
+    }
 
     const initHoneyBook = () => {
       window._HB_ = window._HB_ || {}
@@ -96,13 +105,17 @@ export function BookingCard({
             return
           }
 
-          window.setTimeout(poll, 500)
+          pollTimeoutRef.current = window.setTimeout(poll, 500)
         }
 
         poll()
       })
 
     const attemptLoad = async () => {
+      if (cancelled || isAttemptingRef.current) return
+
+      isAttemptingRef.current = true
+
       try {
         containerRef.current?.replaceChildren()
         setHasError(false)
@@ -122,11 +135,7 @@ export function BookingCard({
 
         if (retryCount < maxRetries) {
           retryCount += 1
-          document
-            .querySelector(`script[src="${HONEYBOOK_SCRIPT_URL}"]`)
-            ?.remove()
-          window._HB_ = undefined
-          timeoutId = window.setTimeout(attemptLoad, 1000)
+          queueRetry(attemptLoad)
           return
         }
 
@@ -137,12 +146,14 @@ export function BookingCard({
 
         if (retryCount < maxRetries) {
           retryCount += 1
-          timeoutId = window.setTimeout(attemptLoad, 1000)
+          queueRetry(attemptLoad)
           return
         }
 
         setIsLoading(false)
         setHasError(true)
+      } finally {
+        isAttemptingRef.current = false
       }
     }
 
@@ -150,8 +161,14 @@ export function BookingCard({
 
     return () => {
       cancelled = true
-      if (timeoutId !== null) {
-        window.clearTimeout(timeoutId)
+      isAttemptingRef.current = false
+      if (retryTimeoutRef.current !== null) {
+        window.clearTimeout(retryTimeoutRef.current)
+        retryTimeoutRef.current = null
+      }
+      if (pollTimeoutRef.current !== null) {
+        window.clearTimeout(pollTimeoutRef.current)
+        pollTimeoutRef.current = null
       }
     }
   }, [isOpen, isLoaded])
