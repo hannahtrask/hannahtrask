@@ -97,7 +97,6 @@ Hey there! I'm Hannah, a freelance web developer with a passion for creating bea
 ### Animation Features
 
 - **Scroll-triggered Animations** – Custom hook for intersection observer-based animations
-- **Parallax Effects** – Smooth parallax scrolling on project cards
 - **Slide-in Animations** – Framer Motion powered entrance animations
 - **Hover Effects** – CSS transitions and transforms for interactive elements
 

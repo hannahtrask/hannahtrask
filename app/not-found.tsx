@@ -7,7 +7,6 @@ export default function NotFound() {
     <Hero
       backgroundImage='/hero-images/grand-teton.jpg'
       backgroundImageAlt='The Grand Teton in the sunlight. Photo by Nick Sulzer.'
-      enableParallax={true}
       title='404'
       photoCredit={{ name: 'Nick Sulzer', url: 'https://www.nicksulzer.com/' }}
     >

@@ -29,7 +29,6 @@ export default function ContactPage() {
       <Hero
         backgroundImage='/hero-images/wolf.jpg'
         backgroundImageAlt='A wolf faces a man in the Tetons.'
-        enableParallax={true}
         titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
           name: 'Nick Sulzer',

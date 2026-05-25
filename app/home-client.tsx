@@ -121,7 +121,6 @@ export default function HomeClient() {
         backgroundImage='/hero-images/bison-grand.jpg'
         backgroundImageAlt='Bison graze in front of the Tetons. Photos by Nick Sulzer.'
         priority={true}
-        enableParallax={hasMounted && isDesktop}
         titleClassName='text-5xl md:text-7xl mb-6 text-white'
         photoCredit={{
           name: 'Nick Sulzer',

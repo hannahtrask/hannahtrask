@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 
 interface PhotoCredit {
   name: string
@@ -14,7 +13,6 @@ interface HeroProps {
   title?: string
   subtitle?: string
   description?: string
-  enableParallax?: boolean
   children?: React.ReactNode
   className?: string
   titleClassName?: string
@@ -31,99 +29,26 @@ export default function Hero({
   title,
   subtitle,
   description,
-  enableParallax = false,
   children,
   className = '',
   photoCredit,
   priority = false,
 }: HeroProps) {
-  const [scrollY, setScrollY] = useState(0)
-  const [shouldParallax, setShouldParallax] = useState(false)
-
-  useEffect(() => {
-    if (!enableParallax || typeof window === 'undefined') {
-      setShouldParallax(current => (current ? false : current))
-      return
-    }
-
-    const safeMatch = (query: string) => {
-      try {
-        return window.matchMedia(query).matches
-      } catch {
-        return false
-      }
-    }
-
-    const prefersReducedMotion = safeMatch('(prefers-reduced-motion: reduce)')
-    const hasCoarsePointer = safeMatch('(pointer: coarse)')
-    const isSmallViewport = window.innerWidth < 1024
-
-    const nextShouldParallax =
-      !prefersReducedMotion && !hasCoarsePointer && !isSmallViewport
-    setShouldParallax(current =>
-      current === nextShouldParallax ? current : nextShouldParallax
-    )
-  }, [enableParallax])
-
-  useEffect(() => {
-    if (!shouldParallax || typeof window === 'undefined') return
-
-    let frameId: number | null = null
-
-    const handleScroll = () => {
-      if (frameId !== null) return
-
-      frameId = window.requestAnimationFrame(() => {
-        const nextScrollY = window.scrollY
-        setScrollY(current => (current === nextScrollY ? current : nextScrollY))
-        frameId = null
-      })
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      if (frameId !== null) {
-        window.cancelAnimationFrame(frameId)
-      }
-    }
-  }, [shouldParallax])
-
   return (
     <div
       className={`relative min-h-[100svh] md:min-h-screen w-full flex items-center overflow-hidden ${className}`}
     >
       <div className='absolute inset-0 z-0'>
-        {shouldParallax ? (
-          <div
-            style={{
-              transform: `translateY(${scrollY * 0.25}px)`,
-            }}
-            className='w-full h-[120%]'
-          >
-            <Image
-              src={backgroundImage}
-              alt={backgroundImageAlt}
-              fill
-              priority={priority}
-              sizes='100vw'
-              className='object-cover'
-            />
-          </div>
-        ) : (
-          <div className='w-full h-[120%]'>
-            <Image
-              src={backgroundImage}
-              alt={backgroundImageAlt}
-              fill
-              priority={priority}
-              sizes='100vw'
-              className='object-cover'
-            />
-          </div>
-        )}
+        <div className='w-full h-[120%]'>
+          <Image
+            src={backgroundImage}
+            alt={backgroundImageAlt}
+            fill
+            priority={priority}
+            sizes='100vw'
+            className='object-cover'
+          />
+        </div>
         <div className='absolute inset-0 bg-graphite/60'></div>
       </div>
 
