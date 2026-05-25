@@ -2,11 +2,25 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : ''
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
 
   return (
     <header className='fixed top-0 left-0 right-0 z-40 border-b-[3px] border-[#8c7e49] bg-[#ECD9B9] py-2 sm:py-3 md:py-4'>
@@ -42,17 +56,24 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <div className='flex items-center md:hidden'>
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className='ml-2 p-2 text-[#33352a]'
+              type='button'
+              aria-label='Toggle navigation menu'
+              aria-expanded={isMenuOpen}
+              aria-controls='mobile-nav'
+              onClick={() => setIsMenuOpen(current => !current)}
+              className='ml-2 p-2 text-[#33352a] bg-transparent'
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation - Under Construction Mode */}
+        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className='mt-4 space-y-6 rounded-md bg-[#ecd9b9] py-6 shadow-lg md:hidden'>
+          <nav
+            id='mobile-nav'
+            className='absolute left-0 right-0 top-full z-50 mt-2 space-y-6 border-y border-[#8c7e49]/30 bg-[#ecd9b9] py-6 shadow-lg md:hidden'
+          >
             <Link
               href='/'
               className='block px-4 font-first-rodeo text-base tracking-wide text-[#33352a] hover:text-[#f09664]'

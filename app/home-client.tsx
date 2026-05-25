@@ -55,7 +55,6 @@ const servicesColumns = [
 export default function HomeClient() {
   const [isDesktop, setIsDesktop] = useState(false)
   const [hasMounted, setHasMounted] = useState(false)
-  const [shouldMountContactForm, setShouldMountContactForm] = useState(false)
   const contactSectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -113,37 +112,6 @@ export default function HomeClient() {
       removePointerListener()
       removeReducedMotionListener()
     }
-  }, [])
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    if (typeof window.IntersectionObserver !== 'function') {
-      setShouldMountContactForm(true)
-      return
-    }
-
-    const target = contactSectionRef.current
-    if (!target) return
-
-    const observer = new IntersectionObserver(
-      entries => {
-        const isIntersecting = entries.some(entry => entry.isIntersecting)
-        if (isIntersecting) {
-          setShouldMountContactForm(true)
-          observer.disconnect()
-        }
-      },
-      {
-        root: null,
-        rootMargin: '300px 0px',
-        threshold: 0.01,
-      }
-    )
-
-    observer.observe(target)
-
-    return () => observer.disconnect()
   }, [])
 
   return (
@@ -358,13 +326,7 @@ export default function HomeClient() {
               hours.
             </p>
           </div>
-          {shouldMountContactForm ? (
-            <ContactForm />
-          ) : (
-            <div className='mx-auto max-w-2xl rounded-xl border border-desert-200 bg-desert-50/60 p-8 text-center text-sm text-desert-700 dark:border-desert-700 dark:bg-desert-900/40 dark:text-desert-200'>
-              Booking form will load when this section is in view.
-            </div>
-          )}
+          <ContactForm />
         </div>
       </div>
 
