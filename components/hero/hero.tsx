@@ -24,7 +24,6 @@ interface HeroProps {
   subtitleClassName?: string
   descriptionClassName?: string
   containerClassName?: string
-  animateContent?: boolean
   photoCredit?: PhotoCredit
   priority?: boolean
 }
@@ -45,7 +44,6 @@ export default function Hero({
   subtitleClassName = '',
   descriptionClassName = '',
   containerClassName = '',
-  animateContent = true,
   photoCredit,
   priority = false,
 }: HeroProps) {

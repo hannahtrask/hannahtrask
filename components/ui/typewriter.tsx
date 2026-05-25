@@ -62,7 +62,7 @@ export default function Typewriter({
     if (isLiteMode || lines.length === 0) return
 
     const currentLine = lines[currentLineIndex]
-    let timeoutId: ReturnType<typeof window.setTimeout> | null = null
+    let timeoutId: number | null = null
 
     if (isPaused) {
       timeoutId = window.setTimeout(() => {

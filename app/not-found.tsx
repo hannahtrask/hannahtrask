@@ -11,7 +11,6 @@ export default function NotFound() {
       title='404'
       overlayType='custom'
       overlayClassName='absolute inset-0 bg-[#33352a]/[0.84] dark:bg-[#33352a]/[0.90]'
-      animateContent={true}
       photoCredit={{ name: 'Nick Sulzer', url: 'https://www.nicksulzer.com/' }}
     >
       <div className='text-center text-white'>
