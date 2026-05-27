@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import Hero from '@/components/hero/hero'
 import Typewriter from '@/components/ui/typewriter'
 import Link from 'next/link'
@@ -53,66 +53,7 @@ const servicesColumns = [
 ] as const
 
 export default function HomeClient() {
-  const [isDesktop, setIsDesktop] = useState(false)
-  const [hasMounted, setHasMounted] = useState(false)
   const contactSectionRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    setHasMounted(true)
-  }, [])
-
-  useEffect(() => {
-    if (
-      typeof window === 'undefined' ||
-      typeof window.matchMedia !== 'function'
-    ) {
-      return
-    }
-
-    const desktopQuery = window.matchMedia('(min-width: 1024px)')
-    const coarsePointerQuery = window.matchMedia('(pointer: coarse)')
-    const reducedMotionQuery = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    )
-
-    const updateViewport = () => {
-      const nextIsDesktop =
-        desktopQuery.matches &&
-        !coarsePointerQuery.matches &&
-        !reducedMotionQuery.matches
-      setIsDesktop(current =>
-        current === nextIsDesktop ? current : nextIsDesktop
-      )
-    }
-
-    const addQueryListener = (query: MediaQueryList, callback: () => void) => {
-      if (typeof query.addEventListener === 'function') {
-        query.addEventListener('change', callback)
-        return () => query.removeEventListener('change', callback)
-      }
-
-      query.addListener(callback)
-      return () => query.removeListener(callback)
-    }
-
-    updateViewport()
-
-    const removeDesktopListener = addQueryListener(desktopQuery, updateViewport)
-    const removePointerListener = addQueryListener(
-      coarsePointerQuery,
-      updateViewport
-    )
-    const removeReducedMotionListener = addQueryListener(
-      reducedMotionQuery,
-      updateViewport
-    )
-
-    return () => {
-      removeDesktopListener()
-      removePointerListener()
-      removeReducedMotionListener()
-    }
-  }, [])
 
   return (
     <>
@@ -134,20 +75,14 @@ export default function HomeClient() {
               Hannah Trask - Jackson WY Web Developer & Designer | Sagebrush
               Studio Web Development
             </h1>
-            {hasMounted && isDesktop ? (
-              <Typewriter
-                lines={heroTypewriterLines}
-                className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
-                typingSpeed={80}
-                deletingSpeed={40}
-                pauseDuration={2500}
-                showCursor={true}
-              />
-            ) : (
-              <p className='font-first-rodeo text-lg sm:text-xl mb-6 leading-tight px-2 text-[#ecd9b9] drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]'>
-                web design + development
-              </p>
-            )}
+            <Typewriter
+              lines={heroTypewriterLines}
+              className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
+              typingSpeed={80}
+              deletingSpeed={40}
+              pauseDuration={2500}
+              showCursor={true}
+            />
             <p className='text-sm leading-relaxed text-[#ecd9b9]/90 mb-8'>
               web design and development based in Jackson Hole, Wyoming
             </p>
