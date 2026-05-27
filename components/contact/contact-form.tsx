@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 
 const HONEYBOOK_PID = '68ab7f800c8dd7002e944c41'
@@ -20,6 +20,49 @@ interface ContactFormProps {
   className?: string
 }
 
+let honeyBookScriptPromise: Promise<void> | null = null
+
+function loadHoneyBookScript() {
+  if (typeof window === 'undefined') {
+    return Promise.reject(new Error('HoneyBook can only load in the browser'))
+  }
+
+  if (honeyBookScriptPromise) return honeyBookScriptPromise
+
+  honeyBookScriptPromise = new Promise<void>((resolve, reject) => {
+    const existingScript = document.querySelector(
+      `script[src="${HONEYBOOK_SCRIPT_URL}"]`
+    ) as HTMLScriptElement | null
+
+    if (existingScript) {
+      if ((existingScript as HTMLScriptElement).dataset.loaded === 'true') {
+        resolve()
+        return
+      }
+
+      existingScript.addEventListener('load', () => resolve(), { once: true })
+      existingScript.addEventListener(
+        'error',
+        () => reject(new Error('Failed to load HoneyBook script')),
+        { once: true }
+      )
+      return
+    }
+
+    const script = document.createElement('script')
+    script.async = true
+    script.src = HONEYBOOK_SCRIPT_URL
+    script.onload = () => {
+      script.dataset.loaded = 'true'
+      resolve()
+    }
+    script.onerror = () => reject(new Error('Failed to load HoneyBook script'))
+    document.head.appendChild(script)
+  })
+
+  return honeyBookScriptPromise
+}
+
 export function BookingCard({
   title,
   description,
@@ -33,145 +76,38 @@ export function BookingCard({
   widgetClassName: string
   loadingLabel: string
 }) {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const retryTimeoutRef = useRef<number | null>(null)
-  const pollTimeoutRef = useRef<number | null>(null)
-  const isAttemptingRef = useRef(false)
+  const [status, setStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>(
+    'idle'
+  )
   const [isOpen, setIsOpen] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
-    if (!isOpen || isLoaded) return
+    if (!isOpen || status === 'loading' || status === 'ready') return
 
     let cancelled = false
-    let retryCount = 0
-    const maxRetries = 3
-
-    const queueRetry = (callback: () => void) => {
-      if (retryTimeoutRef.current !== null) {
-        window.clearTimeout(retryTimeoutRef.current)
-      }
-      retryTimeoutRef.current = window.setTimeout(callback, 1000)
-    }
-
-    const initHoneyBook = () => {
-      window._HB_ = window._HB_ || {}
-      window._HB_.pid = HONEYBOOK_PID
-    }
-
-    const loadScript = () => {
-      return new Promise<void>((resolve, reject) => {
-        const existingScript = document.querySelector(
-          `script[src="${HONEYBOOK_SCRIPT_URL}"]`
-        ) as HTMLScriptElement | null
-
-        if (existingScript) {
-          if (window._HB_?.init) {
-            window._HB_.init()
-          }
-          resolve()
-          return
-        }
-
-        const script = document.createElement('script')
-        script.async = true
-        script.src = HONEYBOOK_SCRIPT_URL
-        script.onload = () => resolve()
-        script.onerror = () =>
-          reject(new Error('Failed to load HoneyBook script'))
-        document.head.appendChild(script)
-      })
-    }
-
-    const waitForWidget = () =>
-      new Promise<boolean>(resolve => {
-        let polls = 0
-        const poll = () => {
-          if (cancelled) {
-            resolve(false)
-            return
-          }
-
-          if (containerRef.current?.children.length) {
-            resolve(true)
-            return
-          }
-
-          polls += 1
-          if (polls >= 20) {
-            resolve(false)
-            return
-          }
-
-          pollTimeoutRef.current = window.setTimeout(poll, 500)
-        }
-
-        poll()
-      })
-
-    const attemptLoad = async () => {
-      if (cancelled || isAttemptingRef.current) return
-
-      isAttemptingRef.current = true
-
+    const loadWidget = async () => {
       try {
-        containerRef.current?.replaceChildren()
-        setHasError(false)
-        setIsLoading(true)
-        initHoneyBook()
-        await loadScript()
-
-        const loaded = await waitForWidget()
-
+        setStatus('loading')
+        await loadHoneyBookScript()
         if (cancelled) return
 
-        if (loaded) {
-          setIsLoaded(true)
-          setIsLoading(false)
-          return
-        }
+        window._HB_ = window._HB_ || {}
+        window._HB_.pid = HONEYBOOK_PID
+        window._HB_.init?.()
 
-        if (retryCount < maxRetries) {
-          retryCount += 1
-          queueRetry(attemptLoad)
-          return
-        }
-
-        setIsLoading(false)
-        setHasError(true)
+        setStatus('ready')
       } catch {
         if (cancelled) return
-
-        if (retryCount < maxRetries) {
-          retryCount += 1
-          queueRetry(attemptLoad)
-          return
-        }
-
-        setIsLoading(false)
-        setHasError(true)
-      } finally {
-        isAttemptingRef.current = false
+        setStatus('error')
       }
     }
 
-    attemptLoad()
+    loadWidget()
 
     return () => {
       cancelled = true
-      isAttemptingRef.current = false
-      if (retryTimeoutRef.current !== null) {
-        window.clearTimeout(retryTimeoutRef.current)
-        retryTimeoutRef.current = null
-      }
-      if (pollTimeoutRef.current !== null) {
-        window.clearTimeout(pollTimeoutRef.current)
-        pollTimeoutRef.current = null
-      }
     }
-  }, [isOpen, isLoaded])
+  }, [isOpen, status])
 
   return (
     <div className='min-w-0 overflow-hidden rounded-xl border border-desert-200 bg-desert-50/60 p-6 dark:border-desert-700 dark:bg-desert-900/40'>
@@ -210,8 +146,14 @@ export function BookingCard({
             : 'mt-0 max-h-0 -translate-y-1 opacity-0 pointer-events-none'
         }`}
       >
-        {isLoading && !isLoaded && !hasError && (
-          <div className='flex items-center justify-center py-12 text-center'>
+        {isOpen && (
+          <div
+            className={`${widgetClassName} relative min-h-[320px] w-full max-w-full min-w-0 overflow-hidden`}
+          />
+        )}
+
+        {status === 'loading' && (
+          <div className='flex items-center justify-center py-8 text-center'>
             <div className='h-8 w-8 animate-spin rounded-full border-b-2 border-desert-600'></div>
             <span className='ml-3 text-gray-600 dark:text-gray-300'>
               {loadingLabel}
@@ -219,7 +161,7 @@ export function BookingCard({
           </div>
         )}
 
-        {hasError && (
+        {status === 'error' && (
           <div className='py-8 text-center'>
             <p className='mb-4 text-gray-600 dark:text-gray-300'>
               This scheduler couldn&apos;t load. You can try again or email
@@ -228,9 +170,7 @@ export function BookingCard({
             <button
               type='button'
               onClick={() => {
-                setIsLoaded(false)
-                setHasError(false)
-                setIsLoading(true)
+                setStatus('idle')
                 setIsOpen(true)
               }}
               className='text-sm text-desert-600 hover:underline dark:text-desert-300'
@@ -239,13 +179,6 @@ export function BookingCard({
             </button>
           </div>
         )}
-
-        <div
-          ref={containerRef}
-          className={`${widgetClassName} min-h-[320px] w-full max-w-full min-w-0 overflow-hidden ${
-            isLoaded && !hasError ? 'block' : 'hidden'
-          }`}
-        />
       </div>
     </div>
   )
@@ -259,7 +192,7 @@ export default function ContactForm({ className }: ContactFormProps) {
       }
     >
       <div className='max-w-8xl mx-auto'>
-        <div className='grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-2'>
+        <div className='grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-1'>
           {/* <BookingCard
             title="I'm not sure what I want, can we chat?"
             description="This is a free consultation, let's just see if we're a good fit."
