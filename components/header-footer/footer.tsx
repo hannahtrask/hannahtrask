@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
             <Link
               href='mailto:hello@wearesagebrush.com'
-              className='max-w-xs text-sm font-first-rodeo text-[#ECD9B9] transition-colors hover:text-[#F09664]'
+              className='max-w-xs text-sm font-first-rodeo text-[#ECD9B9] hover:text-[#F09664]'
             >
               hello@wearesagebrush.com
             </Link>
@@ -30,7 +30,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/'
-                    className='flex items-center text-sm font-first-rodeo text-[#ECD9B9] transition-colors hover:text-[#F09664]'
+                    className='flex items-center text-sm font-first-rodeo text-[#ECD9B9] hover:text-[#F09664]'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     home
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/services'
-                    className='flex items-center text-sm font-first-rodeo text-[#ECD9B9] transition-colors hover:text-[#F09664]'
+                    className='flex items-center text-sm font-first-rodeo text-[#ECD9B9] hover:text-[#F09664]'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     services
@@ -48,7 +48,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href='/contact'
-                    className='flex items-center text-sm font-first-rodeo text-[#ECD9B9] transition-colors hover:text-[#F09664]'
+                    className='flex items-center text-sm font-first-rodeo text-[#ECD9B9] hover:text-[#F09664]'
                   >
                     <MapPin className='h-3 w-3 mr-2' />
                     contact
@@ -61,7 +61,7 @@ export default function Footer() {
               <div className='flex space-x-4'>
                 <Link
                   href='https://github.com/hannahtrask'
-                  className='text-[#ECD9B9] transition-colors hover:text-[#F09664]'
+                  className='text-[#ECD9B9] hover:text-[#F09664]'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -70,7 +70,7 @@ export default function Footer() {
                 </Link>
                 <Link
                   href='https://www.linkedin.com/in/hannahtrask/'
-                  className='text-[#ECD9B9] transition-colors hover:text-[#F09664]'
+                  className='text-[#ECD9B9] hover:text-[#F09664]'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -79,7 +79,7 @@ export default function Footer() {
                 </Link>
                 <Link
                   href='https://www.instagram.com/sagebrushwebstudio'
-                  className='text-[#ECD9B9] transition-colors hover:text-[#F09664]'
+                  className='text-[#ECD9B9] hover:text-[#F09664]'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
@@ -99,13 +99,13 @@ export default function Footer() {
           <div className='flex space-x-4'>
             <Link
               href='/privacy'
-              className='text-xs font-first-rodeo text-[#33352a] transition-colors hover:text-[#ecd9b9]'
+              className='text-xs font-first-rodeo text-[#33352a] hover:text-[#ecd9b9]'
             >
               Privacy Policy
             </Link>
             <Link
               href='/terms'
-              className='text-xs font-first-rodeo text-[#33352a] transition-colors hover:text-[#ecd9b9]'
+              className='text-xs font-first-rodeo text-[#33352a] hover:text-[#ecd9b9]'
             >
               Terms & Conditions
             </Link>

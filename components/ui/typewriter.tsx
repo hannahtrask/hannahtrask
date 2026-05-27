@@ -150,7 +150,7 @@ export default function Typewriter({
       </span>
       {showCursor && (
         <span
-          className={`ml-1 inline-block w-0.5 animate-pulse bg-[#ecd9b9] drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] ${cursorClassName}`}
+          className={`typewriter-cursor ml-1 inline-block w-0.5 bg-[#ecd9b9] drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] ${cursorClassName}`}
           style={{ height: '1em' }}
         >
           |

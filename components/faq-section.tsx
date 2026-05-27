@@ -1,9 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Plus, Minus } from 'lucide-react'
-import { useScrollAnimation } from '@/hooks/use-scroll-animation'
 
 interface FAQItem {
   id: string
@@ -43,26 +41,19 @@ const faqItems: FAQItem[] = [
   },
 ]
 
-function FAQItemComponent({ item, index }: { item: FAQItem; index: number }) {
+function FAQItemComponent({ item }: { item: FAQItem }) {
   const [isOpen, setIsOpen] = useState(false)
-  const { ref, isVisible } = useScrollAnimation(0.2)
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className='my-2 border-b border-desert-50 dark:border-desert-600 last:border-b-0'
-    >
+    <div className='my-2 border-b border-desert-50 dark:border-desert-600 last:border-b-0'>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='w-full py-6 flex items-center justify-between text-left hover:bg-desert-200 dark:hover:bg-desert-800/50 transition-colors duration-200 px-4 -mx-4 rounded-lg'
+        className='w-full py-6 flex items-center justify-between text-left hover:bg-desert-200 dark:hover:bg-desert-800/50 px-4 -mx-4 rounded-lg'
       >
         <h3 className='pr-4 text-lg font-semibold text-white md:text-xl'>
           {item.question}
         </h3>
-        <div className='flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-desert-100 dark:bg-desert-700 transition-colors duration-200'>
+        <div className='flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-desert-100 dark:bg-desert-700'>
           {isOpen ? (
             <Minus className='w-4 h-4 text-desert-600 dark:text-desert-300' />
           ) : (
@@ -71,40 +62,22 @@ function FAQItemComponent({ item, index }: { item: FAQItem; index: number }) {
         </div>
       </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className='overflow-hidden'
-          >
-            <div className='px-6 pb-8 pt-2 md:px-8'>
-              <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
-                {item.answer}
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+      {isOpen && (
+        <div className='px-6 pb-8 pt-2 md:px-8'>
+          <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
+            {item.answer}
+          </p>
+        </div>
+      )}
+    </div>
   )
 }
 
 export default function FAQSection() {
-  const { ref, isVisible } = useScrollAnimation(0.1)
-
   return (
     <div className='relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-desert-50 dark:bg-desert-800 py-16'>
       <div className='container mx-auto px-4'>
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-12'
-        >
+        <div className='text-center mb-12'>
           <h2 className='text-4xl md:text-5xl font-bold text-desert-800 dark:text-white mb-4'>
             FREQUENTLY ASKED QUESTIONS
           </h2>
@@ -113,12 +86,12 @@ export default function FAQSection() {
             Got questions? Here are some of the most common questions about our
             services.
           </p>
-        </motion.div>
+        </div>
 
         <div className='max-w-4xl mx-auto'>
           <div className='bg-white dark:bg-desert-900 rounded-lg shadow-sm p-8'>
-            {faqItems.map((item, index) => (
-              <FAQItemComponent key={item.id} item={item} index={index} />
+            {faqItems.map(item => (
+              <FAQItemComponent key={item.id} item={item} />
             ))}
           </div>
         </div>

@@ -74,7 +74,7 @@ export default function ContactPage() {
             <div className='mb-8'>
               <Link
                 href='mailto:hello@wearesagebrush.com'
-                className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white text-lg font-medium transition-colors'
+                className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white text-lg font-medium'
               >
                 hello@wearesagebrush.com
               </Link>
@@ -84,7 +84,7 @@ export default function ContactPage() {
             <div className='flex justify-center space-x-6'>
               <Link
                 href='https://github.com/hannahtrask'
-                className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white transition-colors'
+                className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -93,7 +93,7 @@ export default function ContactPage() {
               </Link>
               <Link
                 href='https://www.linkedin.com/in/hannahtrask/'
-                className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white transition-colors'
+                className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white'
                 target='_blank'
                 rel='noopener noreferrer'
               >
@@ -102,7 +102,7 @@ export default function ContactPage() {
               </Link>
               <Link
                 href='https://www.instagram.com/sagebrushwebstudio'
-                className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white transition-colors'
+                className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white'
                 target='_blank'
                 rel='noopener noreferrer'
               >

@@ -92,13 +92,13 @@ export default function HomeClient() {
           <div className='absolute bottom-4 sm:bottom-10 left-0 right-0 flex flex-col sm:flex-row items-center justify-center gap-4 px-4'>
             <Link
               href='/contact'
-              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage transition-colors duration-200'
+              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
             >
               work with me
             </Link>
             <Link
               href='/services#build-my-website-in-a-week'
-              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage transition-colors duration-200'
+              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
             >
               website in a week
             </Link>
@@ -168,7 +168,7 @@ export default function HomeClient() {
             <div className='md:hidden mt-6'>
               <Link
                 href='#contact'
-                className='font-first-rodeo inline-flex items-center justify-center w-full px-8 py-3 border-2 border-brand-sage text-brand-sage hover:bg-brand-sage hover:text-white transition-colors duration-200'
+                className='font-first-rodeo inline-flex items-center justify-center w-full px-8 py-3 border-2 border-brand-sage text-brand-sage hover:bg-brand-sage hover:text-white'
               >
                 work with me
               </Link>
@@ -184,7 +184,7 @@ export default function HomeClient() {
         <div className='absolute inset-0 flex items-center justify-center'>
           <Link
             href='#contact'
-            className='font-first-rodeo inline-flex items-center justify-center px-10 py-3 border-2 border-brand-sage text-brand-sage bg-white dark:bg-desert-800 hover:bg-brand-sage hover:text-white transition-colors duration-200 shadow-md whitespace-nowrap'
+            className='font-first-rodeo inline-flex items-center justify-center px-10 py-3 border-2 border-brand-sage text-brand-sage bg-white dark:bg-desert-800 hover:bg-brand-sage hover:text-white shadow-md whitespace-nowrap'
           >
             work with me
           </Link>
@@ -210,7 +210,7 @@ export default function HomeClient() {
               </p>
               <Link
                 href='/services#build-my-website-in-a-week'
-                className='font-first-rodeo inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/70 text-white transition-colors duration-200 mb-8'
+                className='font-first-rodeo inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/70 text-white mb-8'
               >
                 See how it works
                 <ArrowRight className='w-4 h-4' />
@@ -283,7 +283,7 @@ export default function HomeClient() {
               href='https://www.instagram.com/sagebrushwebstudio/'
               target='_blank'
               rel='noopener noreferrer'
-              className='font-first-rodeo inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white font-medium transition-colors duration-200'
+              className='font-first-rodeo inline-flex items-center gap-2 px-8 py-3 bg-brand-sage hover:bg-brand-sage/90 text-white font-medium'
             >
               follow @sagebrushwebstudio
               <ArrowRight className='w-4 h-4' />

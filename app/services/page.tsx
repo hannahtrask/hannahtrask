@@ -125,7 +125,7 @@ export default function WorkPage() {
                 </p>
                 <a
                   href='#book-website-in-a-week'
-                  className='font-first-rodeo inline-flex items-center justify-center rounded-none bg-brand-sage px-6 py-3 text-white text-sm md:text-base font-medium hover:opacity-90 transition-opacity'
+                  className='font-first-rodeo inline-flex items-center justify-center rounded-none bg-brand-sage px-6 py-3 text-white text-sm md:text-base font-medium hover:opacity-90'
                 >
                   Let&apos;s build it
                 </a>
@@ -176,7 +176,7 @@ export default function WorkPage() {
                 {websiteInAWeekSamples.map(sample => (
                   <figure
                     key={sample.name}
-                    className='w-full max-w-[11.5rem] bg-[#f7f1e7] p-3 pb-6 shadow-[0_18px_36px_rgba(88,47,14,0.16)] ring-1 ring-[#e4d7c5] transition-transform duration-300 hover:scale-[1.03] sm:max-w-[13rem] lg:max-w-[14rem]'
+                    className='w-full max-w-[11.5rem] bg-[#f7f1e7] p-3 pb-6 shadow-[0_18px_36px_rgba(88,47,14,0.16)] ring-1 ring-[#e4d7c5] sm:max-w-[13rem] lg:max-w-[14rem]'
                   >
                     <div className='h-[19rem] overflow-hidden bg-white shadow-inner sm:h-[20rem] lg:h-[21rem]'>
                       <Image
@@ -207,7 +207,7 @@ export default function WorkPage() {
               See our full services below, or{' '}
               <a
                 href='/contact'
-                className='underline underline-offset-2 hover:text-desert-800 dark:hover:text-white transition-colors'
+                className='underline underline-offset-2 hover:text-desert-800 dark:hover:text-white'
               >
                 schedule a consultation
               </a>{' '}

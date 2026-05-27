@@ -51,14 +51,8 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     overflow-x: hidden;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
   }
 
   * {
@@ -124,6 +118,21 @@
     max-width: 100% !important;
     display: block !important;
   }
+}
+
+/* Disable all site animations and transitions by default. */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Preserve cursor animation for the typewriter component only. */
+.typewriter-cursor {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
 }
 
 /* Line clamp utilities */

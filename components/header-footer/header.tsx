@@ -41,13 +41,13 @@ export default function Header() {
           <nav className='hidden md:flex items-center space-x-8'>
             <Link
               href='/services'
-              className='font-first-rodeo text-base tracking-wide text-[#8C7E49] transition-colors hover:text-[#33352a]'
+              className='font-first-rodeo text-base tracking-wide text-[#8C7E49] hover:text-[#33352a]'
             >
               services
             </Link>
             <Link
               href='/contact'
-              className='font-first-rodeo text-base tracking-wide text-[#8C7E49] transition-colors hover:text-[#33352a]'
+              className='font-first-rodeo text-base tracking-wide text-[#8C7E49] hover:text-[#33352a]'
             >
               contact
             </Link>
