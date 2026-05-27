@@ -260,13 +260,13 @@ export default function ContactForm({ className }: ContactFormProps) {
     >
       <div className='max-w-8xl mx-auto'>
         <div className='grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-2'>
-          <BookingCard
+          {/* <BookingCard
             title="I'm not sure what I want, can we chat?"
             description="This is a free consultation, let's just see if we're a good fit."
             panelId='consultation-booking-panel'
             widgetClassName='hb-p-68ab7f800c8dd7002e944c41-1'
             loadingLabel='Loading consultation form...'
-          />
+          /> */}
 
           <BookingCard
             title='I need a website and I know what I want'
