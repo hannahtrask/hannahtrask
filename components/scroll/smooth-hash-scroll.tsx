@@ -3,6 +3,21 @@
 import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
+function safeMediaQueryMatch(query: string, fallback: boolean) {
+  if (
+    typeof window === 'undefined' ||
+    typeof window.matchMedia !== 'function'
+  ) {
+    return fallback
+  }
+
+  try {
+    return window.matchMedia(query).matches
+  } catch {
+    return fallback
+  }
+}
+
 function scrollToHash(lastHandledHashRef: { current: string }) {
   if (typeof window === 'undefined' || !window.location.hash) return
 
@@ -21,13 +36,24 @@ function scrollToHash(lastHandledHashRef: { current: string }) {
 
   lastHandledHashRef.current = hash
 
-  const useSmoothBehavior = !window.matchMedia('(pointer: coarse)').matches
+  const hasCoarsePointer = safeMediaQueryMatch('(pointer: coarse)', true)
+  const prefersReducedMotion = safeMediaQueryMatch(
+    '(prefers-reduced-motion: reduce)',
+    true
+  )
+  const useSmoothBehavior = !hasCoarsePointer && !prefersReducedMotion
 
   requestAnimationFrame(() => {
-    target.scrollIntoView({
-      behavior: useSmoothBehavior ? 'smooth' : 'auto',
-      block: 'start',
-    })
+    if (typeof target.scrollIntoView !== 'function') return
+
+    try {
+      target.scrollIntoView({
+        behavior: useSmoothBehavior ? 'smooth' : 'auto',
+        block: 'start',
+      })
+    } catch {
+      target.scrollIntoView()
+    }
   })
 }
 

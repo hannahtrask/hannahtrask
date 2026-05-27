@@ -2,6 +2,21 @@
 
 import { useState, useEffect } from 'react'
 
+function safeMediaQueryMatch(query: string, fallback: boolean) {
+  if (
+    typeof window === 'undefined' ||
+    typeof window.matchMedia !== 'function'
+  ) {
+    return fallback
+  }
+
+  try {
+    return window.matchMedia(query).matches
+  } catch {
+    return fallback
+  }
+}
+
 interface TypewriterProps {
   lines: string[]
   className?: string
@@ -33,10 +48,11 @@ export default function Typewriter({
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches
-    const hasCoarsePointer = window.matchMedia('(pointer: coarse)').matches
+    const prefersReducedMotion = safeMediaQueryMatch(
+      '(prefers-reduced-motion: reduce)',
+      true
+    )
+    const hasCoarsePointer = safeMediaQueryMatch('(pointer: coarse)', true)
     const isSmallViewport = window.innerWidth < 900
 
     const lite = prefersReducedMotion || hasCoarsePointer || isSmallViewport
