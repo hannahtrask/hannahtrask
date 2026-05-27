@@ -2,7 +2,7 @@ interface ContactFormProps {
   className?: string
 }
 
-function BookingCard({
+export function BookingCard({
   title,
   description,
   href,
