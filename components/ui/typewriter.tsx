@@ -2,21 +2,6 @@
 
 import { useState, useEffect } from 'react'
 
-function safeMediaQueryMatch(query: string, fallback: boolean) {
-  if (
-    typeof window === 'undefined' ||
-    typeof window.matchMedia !== 'function'
-  ) {
-    return fallback
-  }
-
-  try {
-    return window.matchMedia(query).matches
-  } catch {
-    return fallback
-  }
-}
-
 interface TypewriterProps {
   lines: string[]
   className?: string
