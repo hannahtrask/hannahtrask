@@ -38,7 +38,6 @@ export default function Typewriter({
   cursorClassName = '',
   loop = true,
 }: TypewriterProps) {
-  const [isLiteMode, setIsLiteMode] = useState(true)
   const [currentLineIndex, setCurrentLineIndex] = useState(0)
   const [currentText, setCurrentText] = useState(lines[0] ?? '')
   const [isTyping, setIsTyping] = useState(true)
@@ -56,7 +55,7 @@ export default function Typewriter({
   }, [lines])
 
   useEffect(() => {
-    if (isLiteMode || lines.length === 0) return
+    if (lines.length === 0) return
 
     const currentLine = lines[currentLineIndex]
     let timeoutId: number | null = null
@@ -101,7 +100,6 @@ export default function Typewriter({
       }
     }
   }, [
-    isLiteMode,
     currentText,
     currentLineIndex,
     isTyping,
@@ -113,16 +111,6 @@ export default function Typewriter({
     pauseDuration,
     loop,
   ])
-
-  if (isLiteMode) {
-    return (
-      <h1 className={`!font-first-rodeo ${className}`}>
-        <span className='!font-first-rodeo text-[#ecd9b9] drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]'>
-          {lines[0] ?? ''}
-        </span>
-      </h1>
-    )
-  }
 
   return (
     <h1 className={`!font-first-rodeo ${className}`}>
