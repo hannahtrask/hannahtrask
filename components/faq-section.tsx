@@ -48,7 +48,7 @@ function FAQItemComponent({ item }: { item: FAQItem }) {
     <div className='my-2 border-b border-desert-50 dark:border-desert-600 last:border-b-0'>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='w-full py-6 flex items-center justify-between text-left hover:bg-desert-200 dark:hover:bg-desert-800/50 px-4 -mx-4 rounded-lg'
+        className='w-full py-6 flex items-center justify-between text-left hover:bg-desert-200 dark:hover:bg-desert-800/50 px-4 -mx-4 rounded-lg hover:scale-[1.02] !transition-[transform,background-color] !duration-300 !ease-out'
       >
         <h3 className='pr-4 text-lg font-semibold text-white md:text-xl'>
           {item.question}
@@ -62,13 +62,19 @@ function FAQItemComponent({ item }: { item: FAQItem }) {
         </div>
       </button>
 
-      {isOpen && (
-        <div className='px-6 pb-8 pt-2 md:px-8'>
-          <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
-            {item.answer}
-          </p>
+      <div
+        className={`grid overflow-hidden !transition-[grid-template-rows,opacity] !duration-300 !ease-in-out ${
+          isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+        }`}
+      >
+        <div className='min-h-0'>
+          <div className='px-6 pb-8 pt-2 md:px-8'>
+            <p className='text-gray-700 dark:text-gray-300 leading-relaxed'>
+              {item.answer}
+            </p>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }

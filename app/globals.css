@@ -92,10 +92,33 @@
     color: #33352a;
   }
 
+  a {
+    transition: transform 200ms ease-out !important;
+    transform-origin: center;
+  }
+
+  a:hover {
+    transform: scale(1.03) !important;
+  }
+
+  a:active {
+    transform: scale(0.99) !important;
+  }
+
   button {
     @apply font-first-rodeo;
     background-color: #8799a7;
     color: #33352a;
+    transition: transform 200ms ease-out !important;
+    transform-origin: center;
+  }
+
+  button:hover {
+    transform: scale(1.03) !important;
+  }
+
+  button:active {
+    transform: scale(0.99) !important;
   }
 
   iframe {
