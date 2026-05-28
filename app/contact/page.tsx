@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Hero from '@/components/hero/hero'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
-// import Typewriter from '@/components/ui/typewriter'
+import Typewriter from '@/components/ui/typewriter'
 import {
   GitHubIcon,
   LinkedInIcon,
@@ -41,7 +41,7 @@ export default function ContactPage() {
             Contact Hannah Trask - Jackson WY Web Developer | Sagebrush Web
             Studio Inquiry
           </h1>
-          {/*
+
           <Typewriter
             lines={['get in touch', "let's work together", 'say hello']}
             className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
@@ -50,10 +50,10 @@ export default function ContactPage() {
             pauseDuration={2500}
             showCursor={true}
           />
-          */}
-          <h2 className='font-miroa text-xl sm:text-2xl md:text-3xl mb-6 text-[#ecd9b9] leading-tight px-2'>
+
+          {/* <h2 className='font-miroa text-xl sm:text-2xl md:text-3xl mb-6 text-[#ecd9b9] leading-tight px-2'>
             Get in Touch
-          </h2>
+          </h2> */}
           <p className='text-sm leading-relaxed text-[#ECD9B9]/90'>
             let&apos;s connect
           </p>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Hero from '@/components/hero/hero'
 import WorkShowcaseSection from '@/components/work/work-showcase-section'
 import { generateSEOMetadata } from '@/components/seo/seo-head'
-// import Typewriter from '@/components/ui/typewriter'
+import Typewriter from '@/components/ui/typewriter'
 import WebsiteInWeekBooking from '@/components/services/website-in-week-booking'
 import FAQSection from '@/components/faq-section'
 import athenaImage from '@/public/page-images/athena.png'
@@ -66,7 +66,7 @@ export default function WorkPage() {
             Web Design & Development Services in Jackson WY | Sagebrush Web
             Studio by Hannah Trask
           </h1>
-          {/*
+
           <Typewriter
             lines={[
               'technical consulting',
@@ -81,10 +81,10 @@ export default function WorkPage() {
             pauseDuration={2500}
             showCursor={true}
           />
-          */}
-          <h2 className='font-miroa text-xl sm:text-2xl md:text-3xl mb-6 text-[#ecd9b9] leading-tight px-2'>
+
+          {/* <h2 className='font-miroa text-xl sm:text-2xl md:text-3xl mb-6 text-[#ecd9b9] leading-tight px-2'>
             Services and Offerings
-          </h2>
+          </h2> */}
           <p className='text-sm leading-relaxed text-[#ECD9B9]/90'>
             explore what we can do for you
           </p>

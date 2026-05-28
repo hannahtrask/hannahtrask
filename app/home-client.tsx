@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import Hero from '@/components/hero/hero'
-// import Typewriter from '@/components/ui/typewriter'
+import Typewriter from '@/components/ui/typewriter'
 import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
@@ -18,13 +18,13 @@ const ContactForm = dynamic(() => import('@/components/contact/contact-form'), {
   ),
 })
 
-// const heroTypewriterLines = [
-//   'web development',
-//   'web design',
-//   'migrations',
-//   'internal applications',
-//   'technical consulting',
-// ]
+const heroTypewriterLines = [
+  'web development',
+  'web design',
+  'migrations',
+  'internal applications',
+  'technical consulting',
+]
 
 const servicesColumns = [
   [
@@ -75,7 +75,7 @@ export default function HomeClient() {
               Hannah Trask - Jackson WY Web Developer & Designer | Sagebrush
               Studio Web Development
             </h1>
-            {/*
+
             <Typewriter
               lines={heroTypewriterLines}
               className='text-lg sm:text-xl md:text-2xl mb-6 text-white leading-tight px-2'
@@ -84,10 +84,10 @@ export default function HomeClient() {
               pauseDuration={2500}
               showCursor={true}
             />
-            */}
-            <h2 className='font-miroa text-xl sm:text-2xl md:text-3xl mb-6 text-[#ecd9b9] leading-tight px-2'>
+
+            {/* <h2 className='font-miroa text-xl sm:text-2xl md:text-3xl mb-6 text-[#ecd9b9] leading-tight px-2'>
               Sagebrush Web Studio
-            </h2>
+            </h2> */}
             <p className='text-sm leading-relaxed text-[#ecd9b9]/90 mb-8'>
               web design and development based in Jackson Hole, Wyoming
             </p>
