@@ -53,9 +53,8 @@ export default function Typewriter({
       true
     )
     const hasCoarsePointer = safeMediaQueryMatch('(pointer: coarse)', true)
-    const isSmallViewport = window.innerWidth < 900
 
-    const lite = prefersReducedMotion || hasCoarsePointer || isSmallViewport
+    const lite = prefersReducedMotion || hasCoarsePointer
     setIsLiteMode(lite)
 
     if (lite) {
