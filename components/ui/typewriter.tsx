@@ -48,24 +48,6 @@ export default function Typewriter({
   useEffect(() => {
     if (typeof window === 'undefined') return
 
-    const prefersReducedMotion = safeMediaQueryMatch(
-      '(prefers-reduced-motion: reduce)',
-      true
-    )
-    const hasCoarsePointer = safeMediaQueryMatch('(pointer: coarse)', true)
-
-    const lite = prefersReducedMotion || hasCoarsePointer
-    setIsLiteMode(lite)
-
-    if (lite) {
-      setCurrentText(lines[0] ?? '')
-      setCurrentLineIndex(0)
-      setIsTyping(false)
-      setIsDeleting(false)
-      setIsPaused(false)
-      return
-    }
-
     setCurrentText('')
     setCurrentLineIndex(0)
     setIsTyping(true)
