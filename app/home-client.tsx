@@ -167,7 +167,7 @@ export default function HomeClient() {
               ))}
             </div>
             <p className='text-sm md:text-sm lg:text-md mx-auto text-desert-800 dark:text-white leading-tight pt-6'>
-              Not sure if we can help? Reach out, we probably can.
+              Not sure if I can help? Reach out.
             </p>
             {/* Mobile-only CTA button */}
             <div className='md:hidden mt-6'>
