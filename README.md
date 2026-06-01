@@ -7,11 +7,11 @@
 
 ---
 
-## 👋 About Me
+## 👋 About Us
 
-Hey there! I'm Hannah, a freelance web developer with a passion for creating beautiful, functional websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands. When I'm not coding, you'll find me rock climbing, white water rafting, or exploring the great outdoors.
+Hey there! We're Sagebrush Web Studio, with a passion for creating beautiful, functional websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands. When we're not coding, you'll find us rock climbing, white water rafting, or exploring the great outdoors.
 
-### What I Do
+### What We Do
 
 - **Specialization**: Web development for outdoor industry, e-commerce, adventure & wellness travel companies, yoga and wellness practitioners, and travel bloggers
 - **Focus Areas**: Thoughtful lifestyle brands, small e-commerce businesses, creative studios, and values-driven teams

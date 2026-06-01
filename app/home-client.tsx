@@ -140,7 +140,7 @@ export default function HomeClient() {
               WordPress, Wix
             </h2>
             <h3 className='text-lg md:text-xl lg:text-2xl font-bold text-desert-800 dark:text-white leading-tight'>
-              Some of what I do
+              Some of what we do
             </h3>
 
             <div className='w-24 h-px bg-desert-800 dark:bg-desert-600 mx-auto mt-4 mb-6'></div>
@@ -167,7 +167,7 @@ export default function HomeClient() {
               ))}
             </div>
             <p className='text-sm md:text-sm lg:text-md mx-auto text-desert-800 dark:text-white leading-tight pt-6'>
-              Not sure if I can help? Reach out.
+              Not sure if we can help? Reach out.
             </p>
             {/* Mobile-only CTA button */}
             <div className='md:hidden mt-6'>

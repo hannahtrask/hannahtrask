@@ -33,7 +33,7 @@ const websiteInAWeekSamples = [
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Work - Jackson WY Web Design Portfolio',
   description:
-    'Explore our portfolio of web design and development projects from Sagebrush Web Studio in Jackson, Wyoming. I build websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands in Jackson Hole and beyond.',
+    'Explore our portfolio of web design and development projects from Sagebrush Web Studio in Jackson, Wyoming. We build websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands in Jackson Hole and beyond.',
   keywords: [
     'Jackson WY web design portfolio',
     'Jackson Hole web developer work',
@@ -100,7 +100,7 @@ export default function WorkPage() {
             </h2>
             <div className='w-24 h-px bg-brand-sage mx-auto mb-8'></div>
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto'>
-              Web projects can feel overwhelming. I work with you one-on-one to
+              Web projects can feel overwhelming. We work with you one-on-one to
               plan, build, and improve your site with clear communication and
               recommendations tailored to your goals.
             </p>

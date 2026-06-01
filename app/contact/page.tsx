@@ -68,8 +68,8 @@ export default function ContactPage() {
             <p className='text-sm leading-relaxed text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8'>
               Based in Jackson, WY. Available for remote and on-site work.
               <br />
-              Want to talk more about what you need? Shoot me an email or fill
-              out the form below and I&apos;ll get in touch within 24-48 hours.
+              Want to talk more about what you need? Shoot us an email or fill
+              out the form below and we&apos;ll get in touch within 24-48 hours.
             </p>
 
             {/* Contact Details */}

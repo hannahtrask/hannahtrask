@@ -19,25 +19,25 @@ const faqItems: FAQItem[] = [
     id: 'platforms',
     question: 'What platforms do you work on for websites?',
     answer:
-      "Sagebrush Web Studio specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, I can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
+      "Sagebrush Web Studio specialize in Wordpress, Squarespace, Shopify, and Wix. In special cases, we can build custom websites using modern web technologies including React, Next.js, and custom HTML/CSS/JavaScript. We'll work together to choose the best tools based on your specific needs and long-term goals.",
   },
   {
     id: 'timeline',
-    question: 'How long should I expect my project to take?',
+    question: 'How long should we expect our project to take?',
     answer:
       "Project timelines vary based on complexity and scope. We'll provide detailed timelines during our initial consultation and keep you updated throughout the process.",
   },
   {
     id: 'getting-started',
-    question: 'How do I get started?',
+    question: 'How do we get started?',
     answer:
-      "The first thing you\'ll want to do is reach out through our contact form and I can schedule a time to meet up in person or virtually. You won't be charged anything until you've received a project proposal and contract and you are 100% ready to move forward! When we meet, we'll discuss your project goals, timeline, and budget to determine the best approach. After contracts are signed, you'll be asked to submit a deposit (typically 50% of the total fee) to secure your project, and we'll get started right away.",
+      "The first thing you'll want to do is reach out through our contact form and we can schedule a time to meet up in person or virtually. You won't be charged anything until you've received a project proposal and contract and you are 100% ready to move forward! When we meet, we'll discuss your project goals, timeline, and budget to determine the best approach. After contracts are signed, you'll be asked to submit a deposit (typically 50% of the total fee) to secure your project, and we'll get started right away.",
   },
   {
     id: 'why-choose-us',
-    question: 'Why should I work with SAGEBRUSH WEB STUDIO?',
+    question: 'Why should we work with SAGEBRUSH WEB STUDIO?',
     answer:
-      "Sagebrush Web Studio brings a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. Based in Jackson Hole, WY, I understand the importance of authentic storytelling, community, and building genuine connections. You'll get personalized attention, direct communication, and websites that truly reflect your brand's personality and values.",
+      "Sagebrush Web Studio brings a unique combination of technical expertise and creative vision, inspired by our connection to the wild spaces around us. Based in Jackson Hole, WY, we understand the importance of authentic storytelling, community, and building genuine connections. You'll get personalized attention, direct communication, and websites that truly reflect your brand's personality and values.",
   },
 ]
 
