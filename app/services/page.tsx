@@ -126,7 +126,7 @@ export default function WorkPage() {
                   fast.
                 </p>
                 <p className='text-sm md:text-base font-semibold text-desert-800 dark:text-white mb-8 tracking-wide'>
-                  $2000 &nbsp;|&nbsp; 1 Week &nbsp;|&nbsp; Launch-Ready
+                  $1500 &nbsp;|&nbsp; 1 Week &nbsp;|&nbsp; Launch-Ready
                 </p>
                 <a
                   href='#book-website-in-a-week'
@@ -157,7 +157,7 @@ export default function WorkPage() {
                   Investment
                 </h3>
                 <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-2'>
-                  $2000 total.
+                  $1500 total.
                 </p>
                 <p className='text-sm font-medium text-desert-800 dark:text-desert-100 leading-relaxed'>
                   No money is paid upfront. Payment is split as 50% by the date
@@ -171,12 +171,6 @@ export default function WorkPage() {
             </div>
 
             <div className='mt-12'>
-              <div className='mb-6'>
-                <p className='font-first-rodeo text-sm md:text-base font-medium text-desert-800 dark:text-desert-100'>
-                  Some recent templates:
-                </p>
-              </div>
-
               <div className='grid grid-cols-2 justify-items-center gap-4 lg:grid-cols-4'>
                 {websiteInAWeekSamples.map(sample => (
                   <figure
@@ -206,7 +200,7 @@ export default function WorkPage() {
             <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start'>
               <div className='text-center lg:text-left'>
                 <p className='font-first-rodeo text-sm uppercase tracking-[0.2em] text-brand-sage mb-3'>
-                  New Offer
+                  Our newest offering
                 </p>
                 <h2 className='text-3xl md:text-4xl font-bold text-desert-800 dark:text-white mb-4'>
                   Design Day
