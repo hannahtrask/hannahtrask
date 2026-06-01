@@ -63,8 +63,9 @@ function FAQItemComponent({ item }: { item: FAQItem }) {
       </button>
 
       <div
-        className={`grid overflow-hidden !transition-[grid-template-rows,opacity] !duration-300 !ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-          }`}
+        className={`grid overflow-hidden !transition-[grid-template-rows,opacity] !duration-300 !ease-in-out ${
+          isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+        }`}
       >
         <div className='min-h-0'>
           <div className='px-6 pb-8 pt-2 md:px-8'>
