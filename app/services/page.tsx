@@ -199,12 +199,58 @@ export default function WorkPage() {
         </div>
       </section>
 
+      {/* Design Day — highlighted */}
+      <section className='bg-white dark:bg-desert-900 py-12 md:py-16'>
+        <div className='container mx-auto px-4'>
+          <div className='max-w-5xl mx-auto rounded-2xl border-2 border-brand-sage/40 bg-gradient-to-br from-brand-sage/10 via-desert-50 to-white dark:from-brand-sage/20 dark:via-desert-900 dark:to-desert-800 p-8 md:p-10 shadow-[0_20px_50px_rgba(88,47,14,0.12)]'>
+            <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start'>
+              <div className='text-center lg:text-left'>
+                <p className='font-first-rodeo text-sm uppercase tracking-[0.2em] text-brand-sage mb-3'>
+                  New Offer
+                </p>
+                <h2 className='text-3xl md:text-4xl font-bold text-desert-800 dark:text-white mb-4'>
+                  Design Day
+                </h2>
+                <p className='text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6'>
+                  For folks who have a list of website tasks that keep getting
+                  pushed down the road. We spend one focused day getting those
+                  lingering updates over the finish line.
+                </p>
+                <p className='text-sm md:text-base font-semibold text-desert-800 dark:text-white mb-8 tracking-wide'>
+                  Flat rate at $600
+                </p>
+                <a
+                  href='/contact'
+                  className='font-first-rodeo inline-flex items-center justify-center rounded-none bg-brand-sage px-6 py-3 text-white text-sm md:text-base font-medium hover:opacity-90'
+                >
+                  Book Design Day
+                </a>
+              </div>
+
+              <div className='rounded-xl border border-desert-200 dark:border-desert-700 bg-white/80 dark:bg-desert-800/70 p-6'>
+                <h3 className='text-xl font-bold text-desert-800 dark:text-white mb-4'>
+                  What we can tackle
+                </h3>
+                <ul className='space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed'>
+                  <li>Content updates and page clean-up</li>
+                  <li>Layout and style polish</li>
+                  <li>SEO and AIO tune-ups</li>
+                  <li>Small UX and functionality fixes</li>
+                  <li>Clear next-step recommendations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Divider heading for other services */}
       <div className='bg-white dark:bg-desert-900 py-10'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-xl md:text-2xl font-bold text-desert-800 dark:text-white mb-4'>
-              Looking for something else? Here&apos;s what else Sagebrush Web Studio can do
+              Looking for something else? Here&apos;s what else Sagebrush Web
+              Studio can do
             </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
             <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed'>

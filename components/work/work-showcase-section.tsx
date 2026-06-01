@@ -15,6 +15,7 @@ interface WorkShowcaseSectionProps {
   accentColor: string
   index: number
   startingPrice?: string
+  priceLabel?: string
 }
 
 export default function WorkShowcaseSection({
@@ -30,6 +31,7 @@ export default function WorkShowcaseSection({
   accentColor,
   index,
   startingPrice,
+  priceLabel = 'Starting at',
 }: WorkShowcaseSectionProps) {
   const sectionClassName = showImage
     ? `relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] ${backgroundColor} py-20`
@@ -94,7 +96,7 @@ export default function WorkShowcaseSection({
 
               {startingPrice && (
                 <p className={`text-sm font-semibold ${textColor} mb-6`}>
-                  Starting at{' '}
+                  {priceLabel}{' '}
                   <span style={{ color: accentColor }}>{startingPrice}</span>
                 </p>
               )}
