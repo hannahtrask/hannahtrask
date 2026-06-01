@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Privacy Policy',
   description:
-    'Privacy Policy for Sagebrush Web Studio. Learn how we collect, use, and protect your personal information.',
+    'Privacy Policy for Sagebrush Web Studio. Learn how the site collects, uses, and protects your personal information.',
   url: '/privacy',
   type: 'website',
 })

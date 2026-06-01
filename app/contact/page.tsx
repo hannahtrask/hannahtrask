@@ -51,9 +51,6 @@ export default function ContactPage() {
             showCursor={true}
           />
 
-          {/* <h2 className='font-miroa text-xl sm:text-2xl md:text-3xl mb-6 text-[#ecd9b9] leading-tight px-2'>
-            Get in Touch
-          </h2> */}
           <p className='text-sm leading-relaxed text-[#ECD9B9]/90'>
             let&apos;s connect
           </p>

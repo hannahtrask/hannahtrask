@@ -33,7 +33,7 @@ const websiteInAWeekSamples = [
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Work - Jackson WY Web Design Portfolio',
   description:
-    'Explore our portfolio of web design and development projects from Sagebrush Web Studio in Jackson, Wyoming. We build websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands in Jackson Hole and beyond.',
+    'Explore our portfolio of web design and development projects from Sagebrush Web Studio in Jackson, Wyoming. I build websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands in Jackson Hole and beyond.',
   keywords: [
     'Jackson WY web design portfolio',
     'Jackson Hole web developer work',
@@ -86,7 +86,7 @@ export default function WorkPage() {
             Services and Offerings
           </h2> */}
           <p className='text-sm leading-relaxed text-[#ECD9B9]/90'>
-            explore what we can do for you
+            explore what Sagebrush Web Studio can do for you
           </p>
         </div>
       </Hero>
@@ -204,7 +204,7 @@ export default function WorkPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-xl md:text-2xl font-bold text-desert-800 dark:text-white mb-4'>
-              Looking for something else? Here&apos;s what else we do
+              Looking for something else? Here&apos;s what else Sagebrush Web Studio can do
             </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
             <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed'>

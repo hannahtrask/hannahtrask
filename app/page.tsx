@@ -5,7 +5,7 @@ import { generateSEOMetadata } from '@/components/seo/seo-head'
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Jackson WY Web Design & Development',
   description:
-    'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio. We help locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley build their online presence. Build your presence. Grow your business.',
+    'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio. I help locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley build their online presence. Build your presence. Grow your business.',
   keywords: [
     'Jackson WY web design',
     'Jackson WY web development',

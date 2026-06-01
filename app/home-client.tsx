@@ -140,7 +140,7 @@ export default function HomeClient() {
               WordPress, Wix
             </h2>
             <h3 className='text-lg md:text-xl lg:text-2xl font-bold text-desert-800 dark:text-white leading-tight'>
-              Some of what we do
+              Some of what I do
             </h3>
 
             <div className='w-24 h-px bg-desert-800 dark:bg-desert-600 mx-auto mt-4 mb-6'></div>
