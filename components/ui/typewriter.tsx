@@ -24,7 +24,7 @@ export default function Typewriter({
   loop = true,
 }: TypewriterProps) {
   const [currentLineIndex, setCurrentLineIndex] = useState(0)
-  const [currentText, setCurrentText] = useState(lines[0] ?? '')
+  const [currentText, setCurrentText] = useState('')
   const [isTyping, setIsTyping] = useState(true)
   const [isDeleting, setIsDeleting] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
@@ -70,9 +70,14 @@ export default function Typewriter({
       }
     } else if (isTyping) {
       if (currentText.length < currentLine.length) {
-        timeoutId = window.setTimeout(() => {
-          setCurrentText(currentLine.slice(0, currentText.length + 1))
-        }, typingSpeed)
+        // Show the first character instantly so typing starts right away.
+        if (currentText.length === 0) {
+          setCurrentText(currentLine.slice(0, 1))
+        } else {
+          timeoutId = window.setTimeout(() => {
+            setCurrentText(currentLine.slice(0, currentText.length + 1))
+          }, typingSpeed)
+        }
       } else {
         setIsTyping(false)
         setIsPaused(true)
