@@ -268,14 +268,6 @@ export default function WorkPage() {
             description='Everything from concept to launch. New websites, redesigns, and full builds—on WordPress, Shopify, Squarespace, or whatever works best for you.'
             startingPrice='$2,500'
             showImage={false}
-            features={[
-              'Strategy and planning',
-              'Custom design and development',
-              'On-page SEO and performance',
-              'Mobile-friendly and accessible',
-              'Content setup and training',
-              'Launch support',
-            ]}
             imageSrc='/page-images/workspace-image.jpg'
             imageAlt='Modern website development showcase'
             imagePosition='left'
@@ -291,14 +283,6 @@ export default function WorkPage() {
             description='Build or improve your online store. Full setup, customization, and optimization to sell smoothly.'
             startingPrice='$2,500'
             showImage={false}
-            features={[
-              'Store setup and theme customization',
-              'Product and collection management',
-              'Payment and shipping configuration',
-              'App integrations and automations',
-              'Conversion optimization',
-              'Ongoing maintenance',
-            ]}
             imageSrc='/hero-images/wolf.jpg'
             imageAlt='E-commerce website showcase'
             imagePosition='right'
@@ -314,14 +298,6 @@ export default function WorkPage() {
             description='Custom tools to streamline your operations. Dashboards, workflows, Zapier automations, and integrations that cut manual work.'
             startingPrice='$1,750'
             showImage={false}
-            features={[
-              'Internal dashboards and portals',
-              'Workflow automation and integrations',
-              'Form builders and data collection',
-              'API connections and custom logic',
-              'Role-based access and security',
-              'Ongoing support and updates',
-            ]}
             imageSrc='/hero-images/western-backdrop.jpg'
             imageAlt='Brand identity design showcase'
             imagePosition='left'
@@ -337,14 +313,6 @@ export default function WorkPage() {
             description="Hourly support for updates, fixes, migrations, and ongoing care. Don't want a full rebuild? This is for you."
             startingPrice='$125/hr'
             showImage={false}
-            features={[
-              'Content updates and design tweaks',
-              'Plugin and integration troubleshooting',
-              'Platform migrations and domain changes',
-              'Speed and SEO optimization',
-              'Monthly retainer options',
-              'On-demand hourly support',
-            ]}
             imageSrc='/hero-images/tetons-backdrop.jpg'
             imageAlt='Small business website showcase'
             imagePosition='right'
