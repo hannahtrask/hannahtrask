@@ -42,7 +42,7 @@ export default function Hero({
         <div className='w-full h-[120%]'>
           <Image
             src={backgroundImage}
-            alt={backgroundImageAlt}
+            alt=''
             fill
             priority={priority}
             sizes='100vw'
@@ -83,20 +83,7 @@ export default function Hero({
       {photoCredit && (
         <div className='absolute bottom-2 right-2 z-20' aria-hidden='true'>
           <span className='text-[10px] text-white/70'>
-            Photo by{' '}
-            {photoCredit.url ? (
-              <a
-                href={photoCredit.url}
-                target='_blank'
-                rel='noopener noreferrer nofollow'
-                tabIndex={-1}
-                className='text-white/70 hover:text-white/90 underline'
-              >
-                {photoCredit.name}
-              </a>
-            ) : (
-              photoCredit.name
-            )}
+            Photo by {photoCredit.name}
           </span>
         </div>
       )}
