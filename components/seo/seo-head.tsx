@@ -159,7 +159,7 @@ export function generateBusinessStructuredData() {
     url: baseUrl,
     logo: {
       '@type': 'ImageObject',
-      url: `${baseUrl}/SagebrushSubmark-01.png`,
+      url: `${baseUrl}/site-title/SagebrushSecondaryLogo-01.png`,
       width: 512,
       height: 512,
     },
