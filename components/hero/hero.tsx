@@ -25,7 +25,6 @@ interface HeroProps {
 
 export default function Hero({
   backgroundImage,
-  backgroundImageAlt,
   title,
   subtitle,
   description,
