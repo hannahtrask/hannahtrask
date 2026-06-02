@@ -68,8 +68,8 @@ export default function WorkShowcaseSection({
           {/* Text Section */}
           <div
             className={`${showImage && imagePosition === 'right'
-              ? 'lg:col-start-1 lg:row-start-1'
-              : ''
+                ? 'lg:col-start-1 lg:row-start-1'
+                : ''
               } ${showImage ? '' : 'mx-auto max-w-3xl'}`}
           >
             <div className={showImage ? 'max-w-xl' : 'max-w-none'}>
