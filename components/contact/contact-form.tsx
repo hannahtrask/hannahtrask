@@ -48,14 +48,14 @@ export default function ContactForm({ className }: ContactFormProps) {
       <div className='max-w-8xl mx-auto'>
         <div className='grid min-w-0 grid-cols-1 gap-8 lg:grid-cols-2'>
           <BookingCard
-            title="I'm not sure what I want, can we chat?"
+            title="I'm not sure, can we chat?"
             description="This is a free consultation, let's just see if we're a good fit."
             href='https://wearesagebrush.hbportal.co/public/68af6743f3408f00280384b9'
             linkLabel='Book a free consultation'
           />
 
           <BookingCard
-            title='I need a website and I know what I want'
+            title='I know what I want'
             description='Ready to move forward? Use this option if you already know you want to get started.'
             href='https://wearesagebrush.hbportal.co/public/68bdedca922e1900272c5149'
             linkLabel='Start your project'

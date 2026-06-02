@@ -99,7 +99,7 @@ export default function HomeClient() {
               href='/contact'
               className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
             >
-              work with me
+              work with us
             </Link>
             <Link
               href='/services#build-my-website-in-a-week'
@@ -132,14 +132,14 @@ export default function HomeClient() {
         </div>
 
         {/* Services Column */}
-        <div className='bg-desert-50 dark:bg-desert-900 flex-1 px-8 py-8 md:py-16 lg:py-20'>
+        <div className='bg-desert-700 dark:bg-desert-900 flex-1 px-8 py-8 md:py-16 lg:py-20'>
           <div className='max-w-lg mx-auto text-center'>
             {/* SEO-friendly hidden H2 */}
             <h2 className='sr-only'>
               Web Development Services in Jackson WY - Squarespace, Shopify,
               WordPress, Wix
             </h2>
-            <h3 className='text-lg md:text-xl lg:text-2xl font-bold text-desert-800 dark:text-white leading-tight'>
+            <h3 className='text-lg md:text-xl lg:text-2xl font-bold text-desert-100 dark:text-white leading-tight'>
               Some of what we do
             </h3>
 
@@ -150,14 +150,14 @@ export default function HomeClient() {
                 <div key={columnIndex} className='space-y-4'>
                   {column.map(item => (
                     <div key={item.title} className='flex items-start'>
-                      <span className='text-desert-600 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
+                      <span className='text-desert-50 dark:text-desert-400 mr-3 mt-1 text-base md:text-lg'>
                         •
                       </span>
                       <div>
-                        <h3 className='text-base md:text-lg font-semibold text-desert-800 dark:text-white mb-2'>
+                        <h3 className='text-base md:text-lg font-semibold text-desert-50 dark:text-white mb-2'>
                           {item.title}
                         </h3>
-                        <p className='text-desert-800 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
+                        <p className='text-desert-100 dark:text-desert-300 text-xs md:text-sm leading-relaxed'>
                           {item.description}
                         </p>
                       </div>
@@ -166,7 +166,7 @@ export default function HomeClient() {
                 </div>
               ))}
             </div>
-            <p className='text-sm md:text-sm lg:text-md mx-auto text-desert-800 dark:text-white leading-tight pt-6'>
+            <p className='text-sm md:text-sm lg:text-md mx-auto text-desert-50 dark:text-white leading-tight pt-6'>
               Not sure if we can help? Reach out.
             </p>
             {/* Mobile-only CTA button */}
@@ -175,7 +175,7 @@ export default function HomeClient() {
                 href='#contact'
                 className='font-first-rodeo inline-flex items-center justify-center w-full px-8 py-3 border-2 border-brand-sage text-brand-sage hover:bg-brand-sage hover:text-white'
               >
-                work with me
+                work with us
               </Link>
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function HomeClient() {
             href='#contact'
             className='font-first-rodeo inline-flex items-center justify-center px-10 py-3 border-2 border-brand-sage text-brand-sage bg-white dark:bg-desert-800 hover:bg-brand-sage hover:text-white shadow-md whitespace-nowrap'
           >
-            work with me
+            work with us
           </Link>
         </div>
       </div>
