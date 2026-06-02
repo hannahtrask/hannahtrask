@@ -40,6 +40,12 @@ export default function Header() {
 
           <nav className='hidden md:flex items-center space-x-8'>
             <Link
+              href='/about'
+              className='font-first-rodeo text-base tracking-wide text-[#8C7E49] hover:text-[#33352a]'
+            >
+              about
+            </Link>
+            <Link
               href='/services'
               className='font-first-rodeo text-base tracking-wide text-[#8C7E49] hover:text-[#33352a]'
             >
@@ -80,6 +86,13 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               home
+            </Link>
+            <Link
+              href='/about'
+              className='block px-4 font-first-rodeo text-base tracking-wide text-[#33352a] hover:text-[#f09664]'
+              onClick={() => setIsMenuOpen(false)}
+            >
+              about
             </Link>
             <Link
               href='/services'
