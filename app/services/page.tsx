@@ -243,8 +243,7 @@ export default function WorkPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h2 className='text-xl md:text-2xl font-bold text-desert-800 dark:text-white mb-4'>
-              Looking for something else? Here&apos;s what else Sagebrush Web
-              Studio can do
+              Looking for something else?
             </h2>
             <div className='w-24 h-px bg-desert-300 dark:bg-desert-600 mx-auto mb-6'></div>
             <p className='text-sm text-gray-700 dark:text-gray-300 leading-relaxed'>

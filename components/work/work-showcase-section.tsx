@@ -5,7 +5,6 @@ import Image from 'next/image'
 interface WorkShowcaseSectionProps {
   title: string
   description: string
-  features: string[]
   imageSrc: string
   imageAlt: string
   imagePosition: 'left' | 'right'
@@ -21,7 +20,6 @@ interface WorkShowcaseSectionProps {
 export default function WorkShowcaseSection({
   title,
   description,
-  features,
   imageSrc,
   imageAlt,
   imagePosition,
@@ -45,9 +43,8 @@ export default function WorkShowcaseSection({
     <div className={sectionClassName}>
       <div className={contentWrapperClassName}>
         <div
-          className={`grid grid-cols-1 ${showImage ? 'lg:grid-cols-2' : ''} gap-8 ${showImage ? 'lg:gap-16' : ''} items-center ${
-            imagePosition === 'right' ? 'lg:grid-flow-col-dense' : ''
-          }`}
+          className={`grid grid-cols-1 ${showImage ? 'lg:grid-cols-2' : ''} gap-8 ${showImage ? 'lg:gap-16' : ''} items-center ${imagePosition === 'right' ? 'lg:grid-flow-col-dense' : ''
+            }`}
         >
           {/* Image Section */}
           {showImage && (
@@ -70,11 +67,10 @@ export default function WorkShowcaseSection({
 
           {/* Text Section */}
           <div
-            className={`${
-              showImage && imagePosition === 'right'
+            className={`${showImage && imagePosition === 'right'
                 ? 'lg:col-start-1 lg:row-start-1'
                 : ''
-            } ${showImage ? '' : 'mx-auto max-w-3xl'}`}
+              } ${showImage ? '' : 'mx-auto max-w-3xl'}`}
           >
             <div className={showImage ? 'max-w-xl' : 'max-w-none'}>
               <h2
@@ -100,22 +96,6 @@ export default function WorkShowcaseSection({
                   <span style={{ color: accentColor }}>{startingPrice}</span>
                 </p>
               )}
-
-              <div className='space-y-4'>
-                {features.map((feature, i) => (
-                  <div key={i} className='flex items-start space-x-3'>
-                    <div
-                      className='w-2 h-2 rounded-full mt-2 flex-shrink-0'
-                      style={{ backgroundColor: accentColor }}
-                    ></div>
-                    <span
-                      className={`${textColor} opacity-85 leading-relaxed text-sm`}
-                    >
-                      {feature}
-                    </span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
