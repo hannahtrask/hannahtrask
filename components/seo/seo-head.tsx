@@ -152,12 +152,17 @@ export function generateBusinessStructuredData() {
 
   return {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': ['ProfessionalService', 'Organization'],
     name: 'Sagebrush Web Studio',
     description:
       'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio helping locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley establish a strong online presence.',
     url: baseUrl,
-    logo: `${baseUrl}/SagebrushSubmark-01.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${baseUrl}/SagebrushSubmark-01.png`,
+      width: 512,
+      height: 512,
+    },
     image: `${baseUrl}/hero-images/tetons-backdrop.jpg`,
     founder: {
       '@type': 'Person',
