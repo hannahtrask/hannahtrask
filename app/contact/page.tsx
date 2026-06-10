@@ -80,6 +80,14 @@ export default function ContactPage() {
               >
                 hello@wearesagebrush.com
               </Link>
+              <div>
+                <Link
+                  href='tel:+13072260740'
+                  className='text-desert-600 dark:text-desert-300 hover:text-desert-800 dark:hover:text-white text-lg font-medium'
+                >
+                  (307) 226-0740
+                </Link>
+              </div>
             </div>
 
             {/* Social Links */}

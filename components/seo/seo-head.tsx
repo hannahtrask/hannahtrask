@@ -239,6 +239,7 @@ export function generateBusinessStructuredData() {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
       email: 'hctrask@gmail.com',
+      telephone: '+1-307-226-0740',
     },
     sameAs: ['https://instagram.com/sagebrushwebstudio'],
   }

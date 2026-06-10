@@ -22,6 +22,12 @@ export default function Footer() {
             >
               hello@wearesagebrush.com
             </Link>
+            <Link
+              href='tel:+13072260740'
+              className='block max-w-xs text-sm font-first-rodeo text-[#ECD9B9] hover:text-[#F09664]'
+            >
+              (307) 226-0740
+            </Link>
           </div>
 
           <div className='flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-16'>

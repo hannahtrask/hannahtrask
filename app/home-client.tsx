@@ -261,6 +261,13 @@ export default function HomeClient() {
               >
                 hello@wearesagebrush.com
               </Link>{' '}
+              or{' '}
+              <Link
+                href='tel:+13072260740'
+                className='text-desert-500 dark:text-desert-200 text-sm max-w-xs hover:text-sand-100 dark:hover:text-gray-200'
+              >
+                (307) 226-0740
+              </Link>{' '}
               or fill out the form below. Typical response time is within 24
               hours.
             </p>

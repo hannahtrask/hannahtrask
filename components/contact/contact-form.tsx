@@ -69,6 +69,14 @@ export default function ContactForm({ className }: ContactFormProps) {
           >
             Prefer email? hello@wearesagebrush.com
           </a>
+          <div>
+            <a
+              href='tel:+13072260740'
+              className='inline-flex items-center justify-center px-6 py-2 text-desert-700 underline-offset-4 hover:underline dark:text-desert-200'
+            >
+              Prefer a call? (307) 226-0740
+            </a>
+          </div>
         </div>
       </div>
     </div>
