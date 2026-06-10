@@ -68,7 +68,7 @@ export default function HomeClient() {
           url: 'https://www.nicksulzer.com/',
         }}
       >
-        <div className='relative h-full flex items-center justify-center pb-28 sm:pb-24 md:pb-20'>
+        <div className='relative h-full flex items-center justify-center'>
           <div className='text-center text-white px-4 py-8 sm:px-6 md:px-8'>
             {/* SEO-friendly hidden H1 */}
             <h1 className='sr-only'>
@@ -91,22 +91,27 @@ export default function HomeClient() {
             <p className='text-sm leading-relaxed text-[#ecd9b9]/90 mb-8'>
               web design and development based in Jackson Hole, Wyoming
             </p>
-          </div>
 
-          {/* Buttons pinned to bottom of viewport */}
-          <div className='absolute bottom-4 sm:bottom-10 left-0 right-0 flex flex-col sm:flex-row items-center justify-center gap-4 px-4'>
-            <Link
-              href='/contact'
-              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
-            >
-              work with us
-            </Link>
-            <Link
-              href='/services#build-my-website-in-a-week'
-              className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
-            >
-              website in a week
-            </Link>
+            <div className='flex flex-col items-center justify-center gap-4 px-4'>
+              <Link
+                href='/contact'
+                className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
+              >
+                work with us
+              </Link>
+              <Link
+                href='/services#design-day'
+                className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
+              >
+                design day
+              </Link>
+              <Link
+                href='/services#build-my-website-in-a-week'
+                className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
+              >
+                website in a week
+              </Link>
+            </div>
           </div>
         </div>
       </Hero>
