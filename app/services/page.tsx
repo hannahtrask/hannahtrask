@@ -156,6 +156,89 @@ export default function WorkPage() {
                 </ul>
               </div>
             </div>
+
+            {/* Process accordion */}
+            <div className='mt-8 border-t border-brand-sage/20 pt-6'>
+              <details className='group'>
+                <summary className='flex cursor-pointer list-none items-center justify-between gap-2 text-sm font-semibold text-desert-800 dark:text-white select-none'>
+                  <span className='font-first-rodeo tracking-wide'>
+                    How does it work?
+                  </span>
+                  <svg
+                    className='h-4 w-4 shrink-0 text-brand-sage transition-transform duration-200 group-open:rotate-180'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M19 9l-7 7-7-7'
+                    />
+                  </svg>
+                </summary>
+
+                <div className='mt-6 grid grid-cols-1 gap-6 md:grid-cols-3 text-sm text-gray-700 dark:text-gray-300'>
+                  {/* Step 1 */}
+                  <div className='rounded-lg border border-desert-200 dark:border-desert-700 bg-white/60 dark:bg-desert-900/40 p-5'>
+                    <p className='font-first-rodeo text-xs uppercase tracking-[0.15em] text-brand-sage mb-2'>
+                      Step 1
+                    </p>
+                    <h4 className='font-bold text-desert-800 dark:text-white mb-2'>
+                      Book your Design Day
+                    </h4>
+                    <p className='leading-relaxed'>
+                      Pick a date that works for you. Once it&apos;s booked
+                      you&apos;ll receive a short questionnaire to fill out
+                      before the day begins.
+                    </p>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className='rounded-lg border border-desert-200 dark:border-desert-700 bg-white/60 dark:bg-desert-900/40 p-5'>
+                    <p className='font-first-rodeo text-xs uppercase tracking-[0.15em] text-brand-sage mb-2'>
+                      Step 2
+                    </p>
+                    <h4 className='font-bold text-desert-800 dark:text-white mb-2'>
+                      Fill out the questionnaire
+                    </h4>
+                    <p className='leading-relaxed mb-3'>
+                      Before the day starts, send over your login credentials
+                      and a brain dump of everything on your list. The
+                      questionnaire covers things like:
+                    </p>
+                    <ul className='space-y-1 text-xs leading-relaxed list-disc list-inside text-gray-600 dark:text-gray-400'>
+                      <li>
+                        Your top 3 priorities if we can&apos;t get to everything
+                      </li>
+                      <li>New copy, images, or brand files to use</li>
+                      <li>Target keywords or SEO gaps to close</li>
+                      <li>Broken forms, buttons, or integrations</li>
+                      <li>Third-party tools connected to the site</li>
+                    </ul>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className='rounded-lg border border-desert-200 dark:border-desert-700 bg-white/60 dark:bg-desert-900/40 p-5'>
+                    <p className='font-first-rodeo text-xs uppercase tracking-[0.15em] text-brand-sage mb-2'>
+                      Step 3
+                    </p>
+                    <h4 className='font-bold text-desert-800 dark:text-white mb-2'>
+                      I get it done
+                    </h4>
+                    <p className='leading-relaxed'>
+                      On the day I work through your list from top priority
+                      down. You&apos;ll need to available to answer quick
+                      questions as they come up, but no need to be by my side
+                      all day. By end of day your site is updated and
+                      you&apos;ll have clear notes on anything we flagged for
+                      later.
+                    </p>
+                  </div>
+                </div>
+              </details>
+            </div>
           </div>
         </div>
       </section>
