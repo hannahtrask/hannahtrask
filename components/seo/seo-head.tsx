@@ -44,7 +44,7 @@ export function generateSEOMetadata({
   const defaultTitle =
     'Sagebrush Web Studio - Jackson WY Web Design & Development'
   const defaultDescription =
-    'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio helping locals, creatives, and community-driven businesses in the Teton Valley establish a strong online presence while celebrating their unique story and connection to their community and environment.'
+    'Sagebrush Web Studio is a Jackson Hole-based web design and development studio helping people anywhere build a strong online presence with thoughtful websites, clear strategy, personalized support, and focused offers like Design Day and Website in a Week.'
   const defaultImage = `${baseUrl}/hero-images/tetons-backdrop.jpg`
 
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle
@@ -61,6 +61,12 @@ export function generateSEOMetadata({
     'Jackson Wyoming web developer',
     'Jackson Hole web design',
     'Jackson Hole web developer',
+    'remote web developer',
+    'web developer based in Jackson Hole',
+    'website design for clients anywhere',
+    'Design Day',
+    'Website in a Week',
+    'website sprint',
     'Teton Valley web development',
     'Sagebrush Web Studio Jackson WY',
     'web design',
@@ -155,7 +161,7 @@ export function generateBusinessStructuredData() {
     '@type': ['ProfessionalService', 'Organization'],
     name: 'Sagebrush Web Studio',
     description:
-      'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio helping locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley establish a strong online presence.',
+      'Sagebrush Web Studio is a Jackson Hole-based web design and development studio helping people anywhere build a strong online presence with thoughtful websites and personalized support.',
     url: baseUrl,
     logo: {
       '@type': 'ImageObject',

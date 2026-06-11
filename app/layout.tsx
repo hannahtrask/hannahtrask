@@ -44,12 +44,16 @@ export const metadata: Metadata = {
   ...generateSEOMetadata({
     title: 'Jackson WY Web Design & Development',
     description:
-      'Sagebrush Web Studio is a Jackson, Wyoming web design and development studio. We help locals, creatives, and community-driven businesses in Jackson Hole and the Teton Valley establish a strong online presence.',
+      'Sagebrush Web Studio is a Jackson Hole-based web design and development studio helping people anywhere build a strong online presence with thoughtful websites, personalized support, Design Day, and Website in a Week.',
     keywords: [
       'Jackson WY web design',
       'Jackson WY web development',
       'Jackson Hole web designer',
       'Jackson Hole web developer',
+      'remote web developer',
+      'web designer based in Jackson Hole',
+      'Design Day',
+      'Website in a Week',
       'Hannah Trask web developer',
       'Sagebrush Web Studio Jackson WY',
       'Wyoming web developer',

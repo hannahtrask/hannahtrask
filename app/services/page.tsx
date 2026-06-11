@@ -33,7 +33,7 @@ const websiteInAWeekSamples = [
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Work - Jackson WY Web Design Portfolio',
   description:
-    'Explore our portfolio of web design and development projects from Sagebrush Web Studio in Jackson, Wyoming. We build websites for outdoor industry businesses, e-commerce ventures, and adventure-focused brands in Jackson Hole and beyond.',
+    'Explore our web design and development services from Sagebrush Web Studio, a Jackson Hole-based studio helping people anywhere build thoughtful websites, launch faster, and grow with confidence.',
   keywords: [
     'Jackson WY web design portfolio',
     'Jackson Hole web developer work',
@@ -43,6 +43,7 @@ export const metadata: Metadata = generateSEOMetadata({
     'web development work',
     'outdoor industry websites',
     'e-commerce projects',
+    'remote web design services',
   ],
   url: '/work',
   type: 'website',

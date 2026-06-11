@@ -12,12 +12,13 @@ import {
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Contact - Sagebrush Web Studio',
   description:
-    'Get in touch with Sagebrush Web Studio for web design and development services in Jackson, Wyoming. Fill out our inquiry form or reach out directly via email.',
+    'Get in touch with Sagebrush Web Studio, a Jackson Hole-based web design and development studio helping people anywhere with thoughtful websites and personalized support.',
   keywords: [
     'contact Sagebrush Web Studio',
     'Jackson WY web designer contact',
     'Wyoming web development inquiry',
     'hire web developer Jackson Hole',
+    'remote web designer contact',
   ],
   url: '/contact',
   type: 'website',
