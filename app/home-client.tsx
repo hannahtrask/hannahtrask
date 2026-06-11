@@ -101,12 +101,14 @@ export default function HomeClient() {
               </Link>
               <Link
                 href='/services#design-day'
+                scroll={false}
                 className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
               >
                 design day
               </Link>
               <Link
                 href='/services#build-my-website-in-a-week'
+                scroll={false}
                 className='font-first-rodeo inline-flex items-center justify-center gap-2 w-64 px-8 py-3 border border-[#ecd9b9] text-[#ecd9b9] hover:bg-[#ecd9b9] hover:text-brand-sage'
               >
                 website in a week

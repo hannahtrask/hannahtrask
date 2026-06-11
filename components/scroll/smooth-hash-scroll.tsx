@@ -25,7 +25,7 @@ function scrollToHash(lastHandledHashRef: { current: string }) {
 
   try {
     target.scrollIntoView({
-      behavior: 'auto',
+      behavior: 'smooth',
       block: 'start',
     })
   } catch {
