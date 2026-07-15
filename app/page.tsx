@@ -126,7 +126,7 @@ export default function Home() {
           </p>
           <div className='mt-10 flex flex-col items-center gap-4 sm:flex-row'>
             <Link
-              href='#services'
+              href='#services-section'
               className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-graphite px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:bg-graphite/90'
             >
               View Services
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       <section
-        id='about'
+        id='services-section'
         className='relative overflow-hidden bg-sand-50 px-4 pb-28 pt-6 sm:px-6 lg:px-8'
       >
         <div className='mx-auto max-w-7xl'>
@@ -204,7 +204,7 @@ export default function Home() {
       </section>
 
       <section
-        id='services'
+        id='about-section'
         className='relative overflow-hidden bg-[#c9bea8] px-4 py-24 sm:px-6 lg:px-8'
       >
         <div className='mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center'>

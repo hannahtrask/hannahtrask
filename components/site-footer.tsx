@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const footerLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
+  { label: 'About', href: '#about-section' },
+  { label: 'Services', href: '#services-section' },
   { label: 'Contact', href: '#contact' },
 ]
 

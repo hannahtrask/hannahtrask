@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { Instagram, Mail, Phone } from 'lucide-react'
 
 const headerLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
+  { label: 'About', href: '#about-section' },
+  { label: 'Services', href: '#services-section' },
   { label: 'Contact', href: '#contact' },
 ]
 
