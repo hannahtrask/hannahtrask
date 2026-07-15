@@ -1,131 +1,33 @@
-import type React from 'react'
 import type { Metadata } from 'next'
-import Script from 'next/script'
-import { Montserrat } from 'next/font/google'
 import localFont from 'next/font/local'
-import './globals.css'
-import Header from '@/components/header-footer/header'
-import Footer from '@/components/header-footer/footer'
-import { ThemeProvider } from '@/components/theme-provider'
-import { Toaster } from 'sonner'
-import {
-  generateSEOMetadata,
-  generateBusinessStructuredData,
-} from '@/components/seo/seo-head'
-import { Analytics } from '@vercel/analytics/next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import SmoothHashScroll from '@/components/scroll/smooth-hash-scroll'
 
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-montserrat',
-})
+import './globals.css'
 
 const miroa = localFont({
-  src: '../public/fonts/Miroa.otf',
-  variable: '--font-miroa',
+    src: '../public/fonts/Miroa.otf',
+    variable: '--font-miroa',
+    display: 'swap',
 })
 
 const firstRodeo = localFont({
-  src: '../public/fonts/FirstRodeo.otf',
-  variable: '--font-first-rodeo',
+    src: '../public/fonts/FirstRodeo.otf',
+    variable: '--font-first-rodeo',
+    display: 'swap',
 })
 
-const iconMetadata: Metadata = {
-  icons: {
-    icon: '/SagebrushSubmark-01.png',
-    apple: '/SagebrushSubmark-01.png',
-  },
-}
-
 export const metadata: Metadata = {
-  ...iconMetadata,
-  ...generateSEOMetadata({
-    title: 'Jackson WY Web Design & Development',
-    description:
-      'Sagebrush Web Studio is a Jackson Hole-based web design and development studio helping people anywhere build a strong online presence with thoughtful websites, personalized support, Design Day, and Website in a Week.',
-    keywords: [
-      'Jackson WY web design',
-      'Jackson WY web development',
-      'Jackson Hole web designer',
-      'Jackson Hole web developer',
-      'remote web developer',
-      'web designer based in Jackson Hole',
-      'Design Day',
-      'Website in a Week',
-      'Hannah Trask web developer',
-      'Sagebrush Web Studio Jackson WY',
-      'Wyoming web developer',
-      'Teton Valley web design',
-      'local business websites',
-      'creative business websites',
-    ],
-    type: 'website',
-  }),
+    title: 'Sagebrush Web Studio',
+    description: 'Sagebrush Web Studio builds authentic websites for outdoor and creative brands.',
 }
 
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  const businessStructuredData = generateBusinessStructuredData()
-
-  return (
-    <html lang='en' suppressHydrationWarning>
-      <head>
-        <title>
-          Sagebrush Web Studio - Jackson WY Web Design & Development
-        </title>
-        <Script
-          type='application/ld+json'
-          id='business-structured-data'
-          strategy='beforeInteractive'
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(businessStructuredData),
-          }}
-        />
-        <Script
-          id='google-analytics-src'
-          src='https://www.googletagmanager.com/gtag/js?id=G-H27HPKYH03'
-          strategy='afterInteractive'
-        />
-        <Script
-          id='google-analytics-config'
-          strategy='afterInteractive'
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-H27HPKYH03');
-            `,
-          }}
-        />
-      </head>
-      <body
-        className={`${montserrat.variable} ${miroa.variable} ${firstRodeo.variable} min-h-screen font-montserrat`}
-      >
-        <SpeedInsights />
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='light'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <SmoothHashScroll />
-          <div className='flex flex-col min-h-screen'>
-            <Header />
-            <main className='flex-grow'>
-              {children}
-              <Analytics />
-            </main>
-            <Footer />
-          </div>
-          <Toaster position='top-center' richColors />
-        </ThemeProvider>
-      </body>
-    </html>
-  )
+    children,
+}: Readonly<{
+    children: React.ReactNode
+}>) {
+    return (
+        <html lang="en" className={`${miroa.variable} ${firstRodeo.variable}`}>
+            <body>{children}</body>
+        </html>
+    )
 }
