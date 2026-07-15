@@ -152,7 +152,7 @@ export default function Home() {
         <div className='mx-auto max-w-7xl'>
           <div className='mx-auto mb-14 max-w-4xl text-center'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-graphite/60'>
-              about / services / contact
+              services
             </p>
             <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
               So, what do we do?
@@ -209,30 +209,35 @@ export default function Home() {
       >
         <div className='mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center'>
           <div className='order-2 lg:order-1'>
-            <div className='relative mx-auto aspect-[1.1] max-w-[38rem] overflow-hidden rounded-[2rem] shadow-[0_20px_60px_rgba(61,45,28,0.22)]'>
-              <Image
-                src='/hero-images/tetons-sunlight.jpg'
-                alt='Sunlit mountain landscape'
-                fill
-                sizes='(min-width: 1024px) 40vw, 100vw'
-                className='object-cover'
-              />
-              <div className='absolute inset-0 bg-gradient-to-tr from-[#2d2317]/50 via-transparent to-transparent' />
+            <div className='mx-auto flex max-w-[38rem] flex-col items-center'>
+              <div className='relative h-56 w-56 overflow-hidden rounded-full border border-graphite/20 shadow-[0_16px_40px_rgba(61,45,28,0.24)] sm:h-64 sm:w-64'>
+                <Image
+                  src='/hannah.JPG'
+                  alt='Portrait of Hannah'
+                  fill
+                  sizes='(min-width: 640px) 16rem, 14rem'
+                  className='object-cover'
+                />
+              </div>
+              <p className='mt-5 text-center font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/70'>
+                founder / owner / designer
+              </p>
             </div>
           </div>
 
           <div className='order-1 max-w-2xl lg:order-2'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.4em] text-graphite/60'>
-              services
+              about
             </p>
             <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
-              Built to feel calm, clear, and credible from the first click.
+              hi, i&apos;m hannah.
             </h2>
             <div className='mt-8 space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
               <p>
-                Strategy defines the structure, copy gives the site a voice, and
-                design pulls the whole experience into one cohesive point of
-                view.
+                I&apos;m a web designer and developer who helps small businesses
+                and creative teams build authentic websites that feel like them.
+                Data drives the decisions, but design makes the experience feel
+                right.
               </p>
               <p>
                 The result is a site that looks intentional on day one and still
@@ -281,7 +286,7 @@ export default function Home() {
               contact
             </p>
             <h2 className='mt-4 max-w-lg font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-sand-50 sm:text-5xl'>
-              Have a web presence your proud of.
+              build a web presence you&apos;re proud of
             </h2>
             <p className='mt-5 max-w-xl text-sm leading-7 text-sand-100/75 sm:text-base'>
               In an era where most of us don&apos;t have brick and mortar
