@@ -127,15 +127,49 @@ export default function ServicesPage() {
             <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
               Website in a Week
             </h2>
+            <p className='mt-3 font-first-rodeo text-[0.8rem] uppercase tracking-[0.34em] text-graphite/68'>
+              $1,750
+            </p>
             <div className='mt-7 space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
               <p>
                 A streamlined one-week website build for businesses that need
                 momentum now. Strategy, copy direction, and design all happen in
                 one focused push.
               </p>
+              <p>You&apos;ll receive:</p>
+              <ul className='space-y-2'>
+                <li>
+                  3-5 strategic pages (Home, About, Services, Contact, FAQ)
+                </li>
+                <li>
+                  Built on Squarespace with fully responsive design across all
+                  devices
+                </li>
+                <li>
+                  SEO & AIO optimization including meta tags, schema markup,
+                  keyword optimization, and structured data for search
+                  visibility
+                </li>
+                <li>
+                  Brand-aligned design with custom styling that reflects your
+                  brand identity and values
+                </li>
+                <li>
+                  Contact integration with functional forms and email routing to
+                  your inbox
+                </li>
+                <li>
+                  Performance optimization for fast load times and seamless user
+                  experience
+                </li>
+              </ul>
+              <p className='font-first-rodeo text-[0.75rem] uppercase tracking-[0.34em] text-graphite/62'>
+                Who&apos;s it for?
+              </p>
               <p>
-                You walk away with a polished, launch-ready site and a clear
-                structure you can actually maintain.
+                Small businesses, service providers, creative professionals, and
+                entrepreneurs who need a polished web presence without the
+                months-long timeline.
               </p>
             </div>
             <Link
@@ -186,15 +220,26 @@ export default function ServicesPage() {
             <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
               Design Day
             </h2>
+            <p className='mt-3 font-first-rodeo text-[0.8rem] uppercase tracking-[0.34em] text-graphite/68'>
+              $700
+            </p>
             <div className='mt-7 space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
               <p>
                 A dedicated day to tackle your highest-impact updates: landing
                 pages, brand refreshes, conversion improvements, and design
                 cleanup.
               </p>
+              <ul className='space-y-2'>
+                <li>Content updates and page clean-up</li>
+                <li>Layout and style polish</li>
+                <li>SEO and AIO tune-ups</li>
+                <li>Small UX and functionality fixes</li>
+                <li>Clear next-step recommendations</li>
+              </ul>
               <p>
-                You get a clear scope, fast execution, and visible progress by
-                the end of the day.
+                It&apos;s basically tackling the whole todo list without an
+                extended timeline: clear scope, fast execution, and visible
+                progress by the end of the day.
               </p>
             </div>
             <Link
