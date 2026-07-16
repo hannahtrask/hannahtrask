@@ -137,7 +137,7 @@ export default function ServicesPage() {
                 one focused push.
               </p>
               <p>You&apos;ll receive:</p>
-              <ul className='space-y-2'>
+              <ul className='list-disc space-y-2 pl-5'>
                 <li>
                   3-5 strategic pages (Home, About, Services, Contact, FAQ)
                 </li>
