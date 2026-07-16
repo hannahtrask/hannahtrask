@@ -122,6 +122,22 @@ body {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .honeycomb-motion {
+    opacity: 0;
+    transform: translateY(1.1rem) scale(0.99);
+    transition:
+      transform 960ms cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 780ms ease;
+    will-change: transform, opacity;
+  }
+
+  .honeycomb-motion.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @media (max-width: 768px) {
   .honeycomb-layout {
     filter: none;

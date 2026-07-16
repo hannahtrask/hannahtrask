@@ -3,8 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, ChevronDown, Instagram, Mail } from 'lucide-react'
 
+import { HoneycombGrid } from '../components/honeycomb-grid'
+import { ParallaxHeroImage } from '../components/parallax-hero-image'
 import { SiteFooter } from '../components/site-footer'
 import { SiteHeader } from '../components/site-header'
+import { TypewriterTitle } from '../components/typewriter-title'
 
 export const metadata: Metadata = {
   title:
@@ -63,10 +66,10 @@ const serviceTiles: Array<{
     tone: 'dark',
   },
   {
-    title: 'Custom',
-    eyebrow: 'tailored build',
+    title: 'Content & Site Management',
+    eyebrow: 'management',
     description:
-      'Fully custom sites when the off-the-shelf path is not enough.',
+      'Offload the responsibility of blog posts and content updates to us.',
     tone: 'light',
   },
   {
@@ -85,52 +88,17 @@ const serviceTiles: Array<{
   },
 ]
 
-function HoneycombTile({
-  title,
-  eyebrow,
-  description,
-  tone,
-}: {
-  title: string
-  eyebrow: string
-  description: string
-  tone: 'light' | 'dark'
-}) {
-  const toneClass = tone === 'light' ? 'text-graphite' : 'text-sand-50'
-
-  return (
-    <article className='group relative w-full'>
-      <div className={`honeycomb-hex ${toneClass} group-hover:-translate-y-1`}>
-        <div
-          className={`honeycomb-hex-fill ${tone === 'light' ? 'bg-[#f6f1e7]' : 'bg-[#333520]'}`}
-        />
-        <div className='honeycomb-hex-content'>
-          <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] opacity-70'>
-            {eyebrow}
-          </p>
-          <h3 className='mt-3 font-miroa text-[1.55rem] uppercase leading-[0.9] tracking-[0.08em] sm:text-[1.95rem]'>
-            {title}
-          </h3>
-          <p className='mx-auto mt-3 max-w-[11rem] text-[0.9rem] leading-5 opacity-80'>
-            {description}
-          </p>
-        </div>
-      </div>
-    </article>
-  )
-}
-
 export default function Home() {
   return (
     <main className='bg-sand-50 text-graphite'>
       <section className='relative isolate min-h-[100svh] overflow-hidden'>
-        <Image
+        <ParallaxHeroImage
           src='/hero-images/elk-background.jpg'
           alt='Sweeping western landscape'
-          fill
           priority
           sizes='100vw'
           className='object-cover object-center'
+          speed={0.16}
         />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,245,224,0.28),_transparent_38%),linear-gradient(180deg,rgba(21,18,14,0.38)_0%,rgba(34,27,18,0.18)_38%,rgba(236,217,185,0.96)_100%)]' />
 
@@ -140,9 +108,10 @@ export default function Home() {
           <p className='font-first-rodeo text-[0.95rem] uppercase tracking-[0.4em] text-sand-50/90 sm:text-[1.05rem]'>
             build an authentic online presence
           </p>
-          <h1 className='mt-6 max-w-5xl text-balance font-miroa text-3xl uppercase leading-[0.9] tracking-[0.08em] text-sand-50 drop-shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:text-5xl lg:text-[5.75rem]'>
-            Sagebrush Web Studio
-          </h1>
+          <TypewriterTitle
+            text='Sagebrush Web Studio'
+            className='mt-6 max-w-5xl text-balance font-miroa text-3xl uppercase leading-[0.9] tracking-[0.08em] text-sand-50 drop-shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:text-5xl lg:text-[5.75rem]'
+          />
           <p className='mt-6 max-w-2xl text-pretty text-sm leading-7 text-graphite/80 sm:text-base'>
             A grounded digital home for independent brands, outdoor companies,
             and creative teams who want a site that feels clear, warm, and
@@ -188,41 +157,7 @@ export default function Home() {
           </div>
 
           <div className='mx-auto flex w-full max-w-5xl justify-center px-2 sm:px-6'>
-            <div className='honeycomb-layout relative w-full max-w-[980px]'>
-              {serviceTiles.map((tile, index) => (
-                <div
-                  key={tile.title}
-                  className={`honeycomb-pos honeycomb-pos-${index} absolute`}
-                >
-                  <HoneycombTile {...tile} />
-                </div>
-              ))}
-              <svg
-                aria-hidden='true'
-                className='absolute h-0 w-0'
-                width='0'
-                height='0'
-                xmlns='http://www.w3.org/2000/svg'
-                version='1.1'
-              >
-                <defs>
-                  <filter id='honeycomb-goo'>
-                    <feGaussianBlur
-                      in='SourceGraphic'
-                      stdDeviation='4'
-                      result='blur'
-                    />
-                    <feColorMatrix
-                      in='blur'
-                      mode='matrix'
-                      values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9'
-                      result='goo'
-                    />
-                    <feComposite in='SourceGraphic' in2='goo' operator='atop' />
-                  </filter>
-                </defs>
-              </svg>
-            </div>
+            <HoneycombGrid serviceTiles={serviceTiles} />
           </div>
         </div>
       </section>

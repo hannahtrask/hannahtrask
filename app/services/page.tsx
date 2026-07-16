@@ -3,8 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, CalendarDays, Mail } from 'lucide-react'
 
+import { ParallaxHeroImage } from '../../components/parallax-hero-image'
 import { SiteFooter } from '../../components/site-footer'
 import { SiteHeader } from '../../components/site-header'
+import { TypewriterTitle } from '../../components/typewriter-title'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -62,12 +64,12 @@ export default function ServicesPage() {
   return (
     <main className='bg-sand-50 text-graphite'>
       <section className='relative isolate min-h-[84svh] overflow-hidden'>
-        <Image
+        <ParallaxHeroImage
           src='/hero-images/western-backdrop.jpg'
           alt='Western landscape background'
-          fill
           sizes='100vw'
           className='object-cover object-center'
+          speed={0.16}
         />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,245,224,0.26),_transparent_40%),linear-gradient(180deg,rgba(21,18,14,0.44)_0%,rgba(34,27,18,0.22)_42%,rgba(236,217,185,0.96)_100%)]' />
 
@@ -77,9 +79,11 @@ export default function ServicesPage() {
           <p className='font-first-rodeo text-[0.9rem] uppercase tracking-[0.38em] text-sand-50/90'>
             services
           </p>
-          <h1 className='mt-6 max-w-5xl font-miroa text-4xl uppercase leading-[0.9] tracking-[0.08em] text-sand-50 sm:text-5xl lg:text-[5.2rem]'>
-            Build Options That Fit Your Timeline
-          </h1>
+          <TypewriterTitle
+            text='Options That Fit Your Timeline'
+            className='mt-6 max-w-5xl font-miroa text-4xl uppercase leading-[0.9] tracking-[0.08em] text-sand-50 sm:text-5xl lg:text-[5.2rem]'
+            speedMs={85}
+          />
           <p className='mt-6 max-w-3xl text-sm leading-7 text-graphite/80 sm:text-base'>
             Choose a focused sprint or a full website build. Every service is
             designed to give you a site that feels authentic, clear, and ready
