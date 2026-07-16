@@ -222,6 +222,11 @@ export default function Home() {
               <p className='mt-5 text-center font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/70'>
                 founder / owner / designer
               </p>
+              <p className='mt-4 max-w-md text-center text-sm leading-7 text-graphite/75 sm:text-base'>
+                6+ years of experience in web development and design, with a
+                background in writing and storytelling to help your presence
+                sound as strong as you look.
+              </p>
             </div>
           </div>
 
