@@ -15,7 +15,7 @@ export function SiteFooter() {
           <Link href='/' aria-label='Sagebrush Web Studio home'>
             <div className='relative h-12 w-[12.5rem] opacity-95 sm:h-14 sm:w-[15rem] md:h-14 md:w-[17rem]'>
               <Image
-                src='/site-title/SagebrushPrimaryLogo-03.png'
+                src='/site-title/SagebrushPrimaryLogo-03-optimized.png'
                 alt='Sagebrush Web Studio primary logo'
                 fill
                 sizes='(min-width: 768px) 17rem, (min-width: 640px) 15rem, 12.5rem'

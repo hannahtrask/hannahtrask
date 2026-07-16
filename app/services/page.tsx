@@ -66,7 +66,6 @@ export default function ServicesPage() {
           src='/hero-images/western-backdrop.jpg'
           alt='Western landscape background'
           fill
-          priority
           sizes='100vw'
           className='object-cover object-center'
         />
@@ -87,24 +86,24 @@ export default function ServicesPage() {
             to grow.
           </p>
 
-          <div className='mt-10 flex flex-col items-center gap-4 sm:flex-row'>
+          <div className='mt-10 flex w-full max-w-md flex-col items-center gap-4 sm:max-w-none sm:flex-row'>
             <Link
               href='#website-in-a-week'
-              className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
+              className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-graphite/30 bg-[#333520] px-6 py-3 text-center text-[0.66rem] uppercase tracking-[0.22em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] sm:w-auto sm:text-[0.72rem] sm:tracking-[0.3em]'
             >
               Website In A Week
               <ArrowUpRight className='h-4 w-4' />
             </Link>
             <Link
               href='#design-day'
-              className='inline-flex items-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50'
+              className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-center text-[0.66rem] uppercase tracking-[0.22em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50 sm:w-auto sm:text-[0.72rem] sm:tracking-[0.3em]'
             >
               Design Day
               <CalendarDays className='h-4 w-4' />
             </Link>
             <Link
               href='mailto:hello@wearesagebrush.com?subject=sagebrush%20web%20studio%20inquiry'
-              className='inline-flex items-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50'
+              className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-center text-[0.66rem] uppercase tracking-[0.22em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50 sm:w-auto sm:text-[0.72rem] sm:tracking-[0.3em]'
             >
               I need something else
               <Mail className='h-4 w-4' />

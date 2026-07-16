@@ -14,7 +14,6 @@ export default function NotFound() {
           src='/hero-images/western-backdrop.jpg'
           alt='Sweeping western landscape'
           fill
-          priority
           sizes='100vw'
           className='object-cover object-center'
         />
