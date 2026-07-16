@@ -2,9 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const footerLinks = [
-  { label: 'About', href: '#about-section' },
-  { label: 'Services', href: '#services-section' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '/#about-section' },
+  { label: 'Services', href: '/services' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export function SiteFooter() {
@@ -13,8 +13,8 @@ export function SiteFooter() {
       <div className='relative mx-auto w-full max-w-7xl border-t border-sand-50/10 pt-8'>
         <div className='flex flex-col gap-6 md:flex-row md:items-center md:justify-between'>
           <Image
-            src='/site-title/SagebrushSecondaryLogo-07.png'
-            alt='Sagebrush Web Studio secondary logo'
+            src='/site-title/SagebrushPrimaryLogo-03.png'
+            alt='Sagebrush Web Studio primary logo'
             width={170}
             height={72}
             className='h-9 w-auto opacity-95'

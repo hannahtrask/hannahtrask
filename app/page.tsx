@@ -126,15 +126,15 @@ export default function Home() {
           </p>
           <div className='mt-10 flex flex-col items-center gap-4 sm:flex-row'>
             <Link
-              href='#services-section'
-              className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-graphite px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:bg-graphite/90'
+              href='/services'
+              className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-graphite px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
             >
               View Services
               <ArrowUpRight className='h-4 w-4' />
             </Link>
             <Link
               href='#contact'
-              className='inline-flex items-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:bg-sand-50'
+              className='inline-flex items-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50'
             >
               Start a Project
               <ChevronDown className='h-4 w-4' />
@@ -273,7 +273,7 @@ export default function Home() {
 
       <section
         id='contact'
-        className='relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-graphite px-4 pt-24 pb-0 text-sand-50 sm:px-6 lg:px-8'
+        className='relative isolate flex min-h-[92svh] flex-col overflow-hidden bg-graphite px-4 pt-10 pb-0 text-sand-50 sm:px-6 lg:px-8'
       >
         <Image
           src='/hero-images/grand-teton.jpg'
@@ -285,7 +285,7 @@ export default function Home() {
         <div className='absolute inset-0 bg-[linear-gradient(180deg,rgba(35,37,29,0.58)_0%,rgba(35,37,29,0.9)_70%,rgba(23,24,19,1)_100%)]' />
         <div className='absolute inset-x-0 bottom-0 z-0 h-80 bg-[linear-gradient(0deg,rgba(23,24,19,1)_0%,rgba(23,24,19,0.96)_18%,rgba(23,24,19,0.88)_38%,rgba(23,24,19,0.68)_62%,rgba(23,24,19,0.16)_84%,rgba(23,24,19,0)_100%)]' />
 
-        <div className='relative mx-auto grid w-full max-w-7xl flex-1 gap-12 pb-24 lg:grid-cols-[0.9fr_1.1fr] lg:items-end'>
+        <div className='relative mx-auto grid w-full max-w-7xl flex-1 gap-12 pb-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-end'>
           <div>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-sand-100/80'>
               contact
@@ -307,7 +307,7 @@ export default function Home() {
             <div className='mt-8 flex flex-col gap-3 text-sm text-sand-50/90'>
               <Link
                 href='mailto:hello@wearesagebrush.com'
-                className='inline-flex w-fit items-center gap-3 rounded-full border border-sand-50/20 bg-sand-50/8 px-5 py-3 transition hover:border-sand-50/50 hover:bg-sand-50/12'
+                className='inline-flex w-fit items-center gap-3 rounded-full border border-sand-50/20 bg-sand-50/8 px-5 py-3 transition hover:border-[#8799a7] hover:bg-[#8799a7]'
               >
                 <Mail className='h-4 w-4' />
                 hello@wearesagebrush.com
@@ -316,7 +316,7 @@ export default function Home() {
                 href='https://instagram.com/sagebrushwebstudio'
                 target='_blank'
                 rel='noreferrer'
-                className='inline-flex w-fit items-center gap-3 rounded-full border border-sand-50/20 bg-sand-50/8 px-5 py-3 transition hover:border-sand-50/50 hover:bg-sand-50/12'
+                className='inline-flex w-fit items-center gap-3 rounded-full border border-sand-50/20 bg-sand-50/8 px-5 py-3 transition hover:border-[#8799a7] hover:bg-[#8799a7]'
               >
                 <Instagram className='h-4 w-4' />
                 @sagebrushwebstudio
@@ -324,7 +324,7 @@ export default function Home() {
               <Link
                 href='tel:+13072260740'
                 aria-label='Call 307 226 0740'
-                className='inline-flex w-fit items-center gap-3 rounded-full border border-sand-50/20 bg-sand-50/8 px-5 py-3 transition hover:border-sand-50/50 hover:bg-sand-50/12'
+                className='inline-flex w-fit items-center gap-3 rounded-full border border-sand-50/20 bg-sand-50/8 px-5 py-3 transition hover:border-[#8799a7] hover:bg-[#8799a7]'
               >
                 <svg
                   viewBox='0 0 24 24'

@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { Instagram, Mail, Phone } from 'lucide-react'
 
 const headerLinks = [
-  { label: 'About', href: '#about-section' },
-  { label: 'Services', href: '#services-section' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', href: '/#about-section' },
+  { label: 'Services', href: '/services' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export function SiteHeader() {
@@ -18,7 +18,7 @@ export function SiteHeader() {
             <Link
               href='tel:+13072260740'
               aria-label='Call 307 226 0740'
-              className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-sand-50 hover:bg-sand-50 hover:text-graphite'
+              className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-[#8c7e49] hover:bg-[#8c7e49] hover:text-sand-50'
             >
               <Phone className='h-4 w-4' />
             </Link>
@@ -27,14 +27,14 @@ export function SiteHeader() {
               target='_blank'
               rel='noreferrer'
               aria-label='Instagram @sagebrushwebstudio'
-              className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-sand-50 hover:bg-sand-50 hover:text-graphite'
+              className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-[#8c7e49] hover:bg-[#8c7e49] hover:text-sand-50'
             >
               <Instagram className='h-4 w-4' />
             </Link>
             <Link
               href='mailto:hello@wearesagebrush.com'
               aria-label='Email hello@wearesagebrush.com'
-              className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-sand-50 hover:bg-sand-50 hover:text-graphite'
+              className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-[#8c7e49] hover:bg-[#8c7e49] hover:text-sand-50'
             >
               <Mail className='h-4 w-4' />
             </Link>
@@ -63,7 +63,7 @@ export function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className='font-first-rodeo text-[0.75rem] uppercase tracking-[0.3em] text-sand-50/90 transition hover:text-sand-50 sm:text-[0.8rem] sm:tracking-[0.34em]'
+                className='font-first-rodeo text-[0.75rem] uppercase tracking-[0.3em] text-sand-50/90 transition hover:text-[#8c7e49] sm:text-[0.8rem] sm:tracking-[0.34em]'
               >
                 {link.label}
               </Link>
