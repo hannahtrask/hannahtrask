@@ -91,7 +91,7 @@ body {
 
 .honeycomb-hex {
   position: relative;
-  aspect-ratio: 1 / 1.02;
+  aspect-ratio: 1 / 0.96;
   transition: transform 300ms ease;
 }
 
@@ -139,7 +139,7 @@ body {
   .honeycomb-hex {
     width: min(100%, 24rem);
     margin: 0 auto;
-    aspect-ratio: 1 / 1.1;
+    aspect-ratio: 1 / 1.06;
   }
 
   .honeycomb-hex-content {

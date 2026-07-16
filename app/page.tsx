@@ -1,9 +1,33 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, ChevronDown, Instagram, Mail } from 'lucide-react'
 
 import { SiteFooter } from '../components/site-footer'
 import { SiteHeader } from '../components/site-header'
+
+export const metadata: Metadata = {
+  title:
+    'Web design and content for passionate people: outfitters, outdoor brands, and local businesses who need a site and a story, not just a template.',
+  description:
+    'Sagebrush Web Studio designs and builds authentic websites for outdoor brands, creative studios, and service businesses that want a clear and memorable online presence.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Sagebrush Web Studio',
+    description:
+      'Sagebrush Web Studio designs and builds authentic websites for outdoor brands, creative studios, and service businesses that want a clear and memorable online presence.',
+    images: ['/site-title/SagebrushSecondaryLogo-07.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sagebrush Web Studio',
+    description:
+      'Sagebrush Web Studio designs and builds authentic websites for outdoor brands, creative studios, and service businesses that want a clear and memorable online presence.',
+    images: ['/site-title/SagebrushSecondaryLogo-07.png'],
+  },
+}
 
 const serviceTiles: Array<{
   title: string
@@ -78,7 +102,7 @@ function HoneycombTile({
     <article className='group relative w-full'>
       <div className={`honeycomb-hex ${toneClass} group-hover:-translate-y-1`}>
         <div
-          className={`honeycomb-hex-fill ${tone === 'light' ? 'bg-[#f6f1e7]' : 'bg-graphite'}`}
+          className={`honeycomb-hex-fill ${tone === 'light' ? 'bg-[#f6f1e7]' : 'bg-[#333520]'}`}
         />
         <div className='honeycomb-hex-content'>
           <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] opacity-70'>
@@ -101,7 +125,7 @@ export default function Home() {
     <main className='bg-sand-50 text-graphite'>
       <section className='relative isolate min-h-[100svh] overflow-hidden'>
         <Image
-          src='/hero-images/western-backdrop.jpg'
+          src='/hero-images/elk-background.jpg'
           alt='Sweeping western landscape'
           fill
           priority
@@ -127,7 +151,7 @@ export default function Home() {
           <div className='mt-10 flex flex-col items-center gap-4 sm:flex-row'>
             <Link
               href='/services'
-              className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-graphite px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
+              className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
             >
               View Services
               <ArrowUpRight className='h-4 w-4' />
@@ -147,7 +171,7 @@ export default function Home() {
 
       <section
         id='services-section'
-        className='relative overflow-hidden bg-sand-50 px-4 pb-28 pt-6 sm:px-6 lg:px-8'
+        className='relative overflow-hidden bg-sand-50 px-4 pb-6 pt-6 sm:px-6 lg:px-8'
       >
         <div className='mx-auto max-w-7xl'>
           <div className='mx-auto mb-14 max-w-4xl text-center'>
@@ -273,7 +297,7 @@ export default function Home() {
 
       <section
         id='contact'
-        className='relative isolate flex min-h-[92svh] flex-col overflow-hidden bg-graphite px-4 pt-10 pb-0 text-sand-50 sm:px-6 lg:px-8'
+        className='relative isolate flex min-h-[92svh] flex-col overflow-hidden bg-[#333520] px-4 pt-10 pb-0 text-sand-50 sm:px-6 lg:px-8'
       >
         <Image
           src='/hero-images/grand-teton.jpg'
@@ -282,8 +306,8 @@ export default function Home() {
           sizes='100vw'
           className='object-cover object-center opacity-35'
         />
-        <div className='absolute inset-0 bg-[linear-gradient(180deg,rgba(35,37,29,0.58)_0%,rgba(35,37,29,0.9)_70%,rgba(23,24,19,1)_100%)]' />
-        <div className='absolute inset-x-0 bottom-0 z-0 h-80 bg-[linear-gradient(0deg,rgba(23,24,19,1)_0%,rgba(23,24,19,0.96)_18%,rgba(23,24,19,0.88)_38%,rgba(23,24,19,0.68)_62%,rgba(23,24,19,0.16)_84%,rgba(23,24,19,0)_100%)]' />
+        <div className='absolute inset-0 bg-[linear-gradient(180deg,rgba(35,37,29,0.54)_0%,rgba(35,37,29,0.82)_52%,rgba(23,24,19,0.96)_82%,rgba(23,24,19,1)_100%)]' />
+        <div className='absolute inset-x-0 bottom-0 z-0 h-96 bg-[linear-gradient(0deg,rgba(23,24,19,1)_0%,rgba(23,24,19,0.98)_14%,rgba(23,24,19,0.9)_30%,rgba(23,24,19,0.74)_48%,rgba(23,24,19,0.5)_66%,rgba(23,24,19,0.22)_84%,rgba(23,24,19,0)_100%)]' />
 
         <div className='relative mx-auto grid w-full max-w-7xl flex-1 gap-12 pb-20 lg:grid-cols-[0.9fr_1.1fr] lg:items-end'>
           <div>

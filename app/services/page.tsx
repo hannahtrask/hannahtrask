@@ -1,9 +1,32 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, CalendarDays, Mail } from 'lucide-react'
 
 import { SiteFooter } from '../../components/site-footer'
 import { SiteHeader } from '../../components/site-header'
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description:
+    'Explore website services from Sagebrush Web Studio, including Website in a Week, Design Day, and custom builds for brands that want a clearer online presence.',
+  alternates: {
+    canonical: '/services',
+  },
+  openGraph: {
+    title: 'Services | Sagebrush Web Studio',
+    description:
+      'Explore website services from Sagebrush Web Studio, including Website in a Week, Design Day, and custom builds for brands that want a clearer online presence.',
+    images: ['/site-title/SagebrushSecondaryLogo-07.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Services | Sagebrush Web Studio',
+    description:
+      'Explore website services from Sagebrush Web Studio, including Website in a Week, Design Day, and custom builds for brands that want a clearer online presence.',
+    images: ['/site-title/SagebrushSecondaryLogo-07.png'],
+  },
+}
 
 const coreServices = [
   {
@@ -67,7 +90,7 @@ export default function ServicesPage() {
           <div className='mt-10 flex flex-col items-center gap-4 sm:flex-row'>
             <Link
               href='#website-in-a-week'
-              className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-graphite px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
+              className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
             >
               Website In A Week
               <ArrowUpRight className='h-4 w-4' />
@@ -117,7 +140,7 @@ export default function ServicesPage() {
             </div>
             <Link
               href='https://wearesagebrush.hbportal.co/public/69bd6a27c9854d0024e71b92'
-              className='mt-8 inline-flex items-center gap-2 rounded-full border border-graphite/25 bg-graphite px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
+              className='mt-8 inline-flex items-center gap-2 rounded-full border border-graphite/25 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
             >
               book this
               <ArrowUpRight className='h-4 w-4' />
@@ -176,7 +199,7 @@ export default function ServicesPage() {
             </div>
             <Link
               href='https://wearesagebrush.hbportal.co/public/6a29cc73a447e0117de3b606'
-              className='mt-8 inline-flex items-center gap-2 rounded-full border border-graphite/25 bg-graphite px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
+              className='mt-8 inline-flex items-center gap-2 rounded-full border border-graphite/25 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
             >
               book this
               <ArrowUpRight className='h-4 w-4' />
