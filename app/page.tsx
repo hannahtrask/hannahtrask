@@ -62,7 +62,7 @@ const serviceTiles: Array<{
     title: 'Shopify',
     eyebrow: 'e-commerce',
     description:
-      'Product pages and storefronts built to feel clear and trustworthy.',
+      'Inventory management and beautiful storefronts in Liquid templating language.',
     tone: 'dark',
   },
   {
@@ -82,8 +82,7 @@ const serviceTiles: Array<{
   {
     title: 'Support',
     eyebrow: 'ongoing care',
-    description:
-      'Light updates and maintenance after launch so things stay current.',
+    description: 'Updates and maintenance after launch so things stay current.',
     tone: 'light',
   },
 ]
