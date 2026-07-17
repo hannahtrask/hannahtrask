@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowUpRight, ChevronDown, Instagram, Mail } from 'lucide-react'
 
 import { HoneycombGrid } from '../components/honeycomb-grid'
+import { ContactInquiryForm } from '../components/contact-inquiry-form'
 import { ParallaxHeroImage } from '../components/parallax-hero-image'
 import { SiteFooter } from '../components/site-footer'
 import { SiteHeader } from '../components/site-header'
@@ -150,8 +151,15 @@ export default function Home() {
               So, what do we do?
             </h2>
             <p className='mx-auto mt-5 max-w-3xl text-sm leading-7 text-graphite/72 sm:text-base'>
-              No matter where you are with budget or project, we&apos;ve got
-              you. Browse some of the offerings below.
+              Web development! Web design! Copywriting and content management!
+              SEO/AIO/GEO! Curious if I can help you? Fill out the contact form{' '}
+              <a
+                className='text-graphite/80 underline hover:text-graphite font-w-800'
+                href='#contact'
+              >
+                here
+              </a>
+              .
             </p>
           </div>
 
@@ -181,9 +189,15 @@ export default function Home() {
                 founder / owner / designer
               </p>
               <p className='mt-4 max-w-md text-center text-sm leading-7 text-graphite/75 sm:text-base'>
-                6+ years of experience in web development and design, with a
-                background in writing and storytelling to help your presence
-                sound as strong as you look.
+                I&apos;ll tell it to you straight, my degree is in English
+                writing & composition, but I also have 6+ years of experience in
+                web development and design, am a yoga teacher, writer, and
+                outdoor enthusiast (catch me on a remote river or trail running
+                around Grand Teton National Park).
+              </p>
+              <p className='mt-4 max-w-md text-center text-sm leading-7 text-graphite/75 sm:text-base'>
+                Everyone has a story (as does your business!) and I&apos; help
+                you tell yours.
               </p>
             </div>
           </div>
@@ -197,14 +211,23 @@ export default function Home() {
             </h2>
             <div className='mt-8 space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
               <p>
-                I&apos;m a web designer and developer who helps small businesses
-                and creative teams build authentic websites that feel like them.
-                Data drives the decisions, but design makes the experience feel
-                right.
+                I call Jackson, WY, my homebase (but I&apos;m from the suburbs
+                of Pennsylvania). I have over 6 years of experience in the web
+                world, and spent 3 years working remotely for a tech startup
+                based out of California. I LOVED how much I learned there, but I
+                was always missing the authentic connection I had with my
+                community and with the passionate people I worked with every
+                day. I decided to quit my job and start Sagebrush Web Studio so
+                I could use my skills and varied background to connect with real
+                people building real things. I love to see people pursuing their
+                dreams and choosing the "harder" yet more fulfilling path, and I
+                want to help.
               </p>
               <p>
-                The result is a site that looks intentional on day one and still
-                feels flexible as your business grows.
+                The result for you? A gorgeous website, a web presence that is
+                actually FOUND by search engines, and support from someone who
+                truly does care about what you&apos;re doing. The rising tide
+                raises all boats, so let&apos;s do it together.
               </p>
             </div>
             <div className='mt-10 flex flex-wrap gap-3'>
@@ -302,29 +325,14 @@ export default function Home() {
           </div>
 
           <div className='rounded-[2rem] border border-sand-50/10 bg-sand-50/8 p-6 backdrop-blur-sm sm:p-8'>
-            <div className='grid gap-6 sm:grid-cols-2'>
-              <div>
-                <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-sand-100/75'>
-                  What you get
-                </p>
-                <ul className='mt-4 space-y-3 text-sm leading-7 text-sand-50/80'>
-                  <li>Working with a real person</li>
-                  <li>Copy and messaging that feels authentic to you</li>
-                  <li>Suped up SEO/AIO/GEO so you are actually found online</li>
-                  <li>A web presence you're proud of</li>
-                </ul>
-              </div>
-              <div>
-                <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-sand-100/75'>
-                  Best fit
-                </p>
-                <ul className='mt-4 space-y-3 text-sm leading-7 text-sand-50/80'>
-                  <li>Outdoor brands</li>
-                  <li>Creative studios</li>
-                  <li>Service businesses</li>
-                  <li>Small teams with a sharp point of view</li>
-                </ul>
-              </div>
+            <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-sand-100/75'>
+              touch base with me
+            </p>
+            <p className='mt-3 text-sm leading-7 text-sand-50/80'>
+              I&apos;ll get back to you within a day or two!
+            </p>
+            <div className='mt-6'>
+              <ContactInquiryForm />
             </div>
           </div>
         </div>
