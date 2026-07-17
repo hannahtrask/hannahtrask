@@ -89,7 +89,7 @@ export function HoneycombGrid({
           style={
             animateOnScroll
               ? {
-                  transitionDelay: `${index * 130}ms`,
+                  transitionDelay: `${index * 170}ms`,
                 }
               : undefined
           }

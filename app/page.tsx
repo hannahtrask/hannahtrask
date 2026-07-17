@@ -140,10 +140,10 @@ export default function Home() {
 
       <section
         id='services-section'
-        className='relative overflow-hidden bg-sand-50 px-4 pb-6 pt-6 sm:px-6 lg:px-8'
+        className='relative overflow-hidden bg-sand-50 px-4 pb-2 pt-2 sm:px-6 lg:px-8'
       >
         <div className='mx-auto max-w-7xl'>
-          <div className='mx-auto mb-14 max-w-4xl text-center'>
+          <div className='mx-auto mb-10 max-w-4xl text-center'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-graphite/60'>
               services
             </p>
