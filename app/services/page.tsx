@@ -50,17 +50,12 @@ const coreServices = [
       'Inventory management and beautiful storefronts in Liquid templating language.',
   },
   {
-    title: 'Design Day',
-    eyebrow: 'one day sprint',
-    description:
-      'A focused work session to clear your todo list in a single day.',
-    tone: 'dark',
+    name: 'Support',
+    description: 'Updates and maintenance after launch so things stay current.',
   },
   {
-    title: 'Support',
-    eyebrow: 'ongoing care',
-    description: 'Updates and maintenance after launch so things stay current.',
-    tone: 'light',
+    name: 'Copywriting',
+    description: 'Copy and content that reflects your brand voice.',
   },
 ]
 
@@ -84,14 +79,16 @@ export default function ServicesPage() {
             services
           </p>
           <TypewriterTitle
-            text='Options That Fit Your Timeline'
+            text='see what we offer'
             className='mt-6 max-w-5xl font-miroa text-4xl uppercase leading-[0.9] tracking-[0.08em] text-sand-50 sm:text-5xl lg:text-[5.2rem]'
             speedMs={85}
           />
-          <p className='mt-6 max-w-3xl text-sm leading-7 text-graphite/80 sm:text-base'>
-            Choose a focused sprint or a full website build. Every service is
-            designed to give you a site that feels authentic, clear, and ready
-            to grow.
+
+          <p className='mt-2 max-w-3xl text-sm leading-7 text-graphite/80 sm:text-base'>
+            It&apos; hard to wrap up these services in a neat little box, as the
+            web is a complicated place so there is no one-size-fits-all
+            solution. I&apos;ve split these up into the main categories
+            I&apos;ve seen since I began working with clients.
           </p>
 
           <div className='mt-10 flex w-full max-w-md flex-col items-center justify-center gap-4 sm:max-w-none sm:flex-row'>
@@ -204,23 +201,10 @@ export default function ServicesPage() {
 
       <section
         id='design-day'
-        className='bg-[#c9bea8] px-4 py-24 sm:px-6 lg:px-8'
+        className='bg-[#c9bea8] px-4 py-16 sm:px-6 sm:py-20 lg:px-8'
       >
-        <div className='mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center'>
-          {/* <div className='order-2 lg:order-1'>
-                        <div className='relative mx-auto aspect-[1.08] w-full max-w-[34rem] overflow-hidden rounded-[2rem] shadow-[0_20px_60px_rgba(61,45,28,0.22)]'>
-                            <Image
-                                src='/page-images/horse-riding.png'
-                                alt='Rider in western landscape'
-                                fill
-                                sizes='(min-width: 1024px) 38vw, 100vw'
-                                className='object-cover'
-                            />
-                            <div className='absolute inset-0 bg-gradient-to-br from-[#2d2317]/45 via-transparent to-transparent' />
-                        </div>
-                    </div> */}
-
-          <div className='order-1 lg:order-2'>
+        <div className='mx-auto max-w-4xl'>
+          <div className='rounded-[2rem] border border-graphite/12 bg-[#d3c8b4] p-7 text-center shadow-[0_18px_45px_rgba(61,45,28,0.14)] sm:p-10'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.4em] text-graphite/60'>
               focused sprint
             </p>
@@ -230,18 +214,28 @@ export default function ServicesPage() {
             <p className='mt-3 font-first-rodeo text-[0.8rem] uppercase tracking-[0.34em] text-graphite/68'>
               $700
             </p>
-            <div className='mt-7 space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
+            <div className='mx-auto mt-7 max-w-3xl space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
               <p>
                 A dedicated day to tackle your highest-impact updates: landing
                 pages, brand refreshes, conversion improvements, and design
                 cleanup.
               </p>
-              <ul className='space-y-2'>
-                <li>Content updates and page clean-up</li>
-                <li>Layout and style polish</li>
-                <li>SEO and AIO tune-ups</li>
-                <li>Small UX and functionality fixes</li>
-                <li>Clear next-step recommendations</li>
+              <ul className='grid gap-2 text-left sm:grid-cols-2'>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
+                  Content updates and page clean-up
+                </li>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
+                  Layout and style polish
+                </li>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
+                  SEO and AIO tune-ups
+                </li>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
+                  Small UX and functionality fixes
+                </li>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2 sm:col-span-2'>
+                  Clear next-step recommendations
+                </li>
               </ul>
               <p>
                 It&apos;s basically tackling the whole todo list without an
