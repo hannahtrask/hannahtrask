@@ -51,20 +51,6 @@ const serviceTiles: Array<{
     tone: 'light',
   },
   {
-    title: 'Wix',
-    eyebrow: 'easy edits',
-    description:
-      'Simple websites built so you can update them with confidence.',
-    tone: 'dark',
-  },
-  {
-    title: 'WordPress',
-    eyebrow: 'content rich',
-    description:
-      'Flexible systems for blogs, resources, and growing libraries.',
-    tone: 'light',
-  },
-  {
     title: 'Shopify',
     eyebrow: 'e-commerce',
     description:
@@ -83,6 +69,20 @@ const serviceTiles: Array<{
     eyebrow: 'ongoing care',
     description: 'Updates and maintenance after launch so things stay current.',
     tone: 'light',
+  },
+  {
+    title: 'WordPress',
+    eyebrow: 'content rich',
+    description:
+      'Flexible systems for blogs, resources, and growing libraries.',
+    tone: 'light',
+  },
+  {
+    title: 'Wix',
+    eyebrow: 'easy edits',
+    description:
+      'Simple websites built so you can update them with confidence.',
+    tone: 'dark',
   },
 ]
 
