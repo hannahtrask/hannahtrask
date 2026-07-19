@@ -3,11 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, ChevronDown, Instagram, Mail } from 'lucide-react'
 
-import { HoneycombGrid } from '../components/honeycomb-grid'
+import { ServiceGrid } from '../components/service-grid'
 import { ParallaxHeroImage } from '../components/parallax-hero-image'
 import { SiteFooter } from '../components/site-footer'
 import { SiteHeader } from '../components/site-header'
+import { TestimonialStrip } from '../components/testimonial-strip'
 import { TypewriterTitle } from '../components/typewriter-title'
+import { testimonialsClient } from '../sanity/client'
+import { allTestimonialsQuery } from '../sanity/queries'
+import type { Testimonial } from '../sanity/types'
 
 export const metadata: Metadata = {
   title:
@@ -31,6 +35,8 @@ export const metadata: Metadata = {
     images: ['/site-title/SagebrushSecondaryLogo-07.png'],
   },
 }
+
+export const revalidate = 300
 
 const serviceTiles: Array<{
   title: string
@@ -73,13 +79,6 @@ const serviceTiles: Array<{
     tone: 'light',
   },
   {
-    title: 'Design Day',
-    eyebrow: 'one day sprint',
-    description:
-      'A focused work session to clear your todo list in a single day.',
-    tone: 'dark',
-  },
-  {
     title: 'Support',
     eyebrow: 'ongoing care',
     description: 'Updates and maintenance after launch so things stay current.',
@@ -87,7 +86,15 @@ const serviceTiles: Array<{
   },
 ]
 
-export default function Home() {
+export default async function Home() {
+  let testimonials: Testimonial[] = []
+
+  try {
+    testimonials = await testimonialsClient.fetch(allTestimonialsQuery)
+  } catch (error) {
+    console.error('Failed to fetch testimonials from Sanity:', error)
+  }
+
   return (
     <main className='bg-sand-50 text-graphite'>
       <section className='relative isolate min-h-[100svh] overflow-hidden'>
@@ -139,9 +146,9 @@ export default function Home() {
 
       <section
         id='services-section'
-        className='relative overflow-hidden bg-sand-50 px-4 pb-2 pt-2 sm:px-6 lg:px-8'
+        className='relative overflow-hidden bg-sand-50 py-24'
       >
-        <div className='mx-auto max-w-7xl'>
+        <div className='mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8'>
           <div className='mx-auto mb-10 max-w-4xl text-center'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-graphite/60'>
               services
@@ -161,12 +168,14 @@ export default function Home() {
               .
             </p>
           </div>
+        </div>
 
-          <div className='mx-auto flex w-full max-w-5xl justify-center px-2 sm:px-6'>
-            <HoneycombGrid serviceTiles={serviceTiles} />
-          </div>
+        <div className='w-screen'>
+          <ServiceGrid serviceTiles={serviceTiles} />
         </div>
       </section>
+
+      <div className='h-24 w-full bg-gradient-to-b from-sand-50 to-[#c9bea8]' />
 
       <section
         id='about-section'
@@ -250,6 +259,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TestimonialStrip testimonials={testimonials} />
 
       <section
         id='contact'
