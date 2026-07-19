@@ -13,13 +13,13 @@ const headerLinks = [
 export function SiteHeader() {
   return (
     <header className='relative z-20 w-full'>
-      <div className='mx-auto max-w-7xl px-4 pt-4 sm:px-6 lg:px-8'>
-        <div className='relative flex flex-col items-center gap-4 pt-2 md:pt-0'>
-          <div className='absolute right-0 top-0 flex items-center gap-2 text-sand-50'>
+      <div className='mx-auto max-w-7xl px-4 pt-3 sm:px-6 sm:pt-4 lg:px-8'>
+        <div className='relative flex flex-col items-center gap-3 pt-1 md:gap-4 md:pt-0'>
+          <div className='mt-1 flex items-center gap-2 text-sand-50 md:absolute md:right-0 md:top-0 md:mt-0'>
             <Link
               href='tel:+13072260740'
               aria-label='Call 307 226 0740'
-              className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-[#8c7e49] hover:bg-[#8c7e49] hover:text-sand-50'
+              className='inline-flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-[#8c7e49] hover:bg-[#8c7e49] hover:text-sand-50 md:h-11 md:w-11'
             >
               <Phone className='h-4 w-4' />
             </Link>
@@ -28,14 +28,14 @@ export function SiteHeader() {
               target='_blank'
               rel='noreferrer'
               aria-label='Instagram @sagebrushwebstudio'
-              className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-[#8c7e49] hover:bg-[#8c7e49] hover:text-sand-50'
+              className='inline-flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-[#8c7e49] hover:bg-[#8c7e49] hover:text-sand-50 md:h-11 md:w-11'
             >
               <Instagram className='h-4 w-4' />
             </Link>
             <Link
               href='mailto:hello@wearesagebrush.com'
               aria-label='Email hello@wearesagebrush.com'
-              className='inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-[#8c7e49] hover:bg-[#8c7e49] hover:text-sand-50'
+              className='inline-flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/30 bg-black/10 backdrop-blur-sm transition hover:border-[#8c7e49] hover:bg-[#8c7e49] hover:text-sand-50 md:h-11 md:w-11'
             >
               <Mail className='h-4 w-4' />
             </Link>
@@ -58,13 +58,13 @@ export function SiteHeader() {
 
           <nav
             aria-label='Primary'
-            className='flex items-center gap-6 sm:gap-8'
+            className='flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-8'
           >
             {headerLinks.map(link => (
               <Link
                 key={link.href}
                 href={link.href}
-                className='font-first-rodeo text-[0.75rem] uppercase tracking-[0.3em] text-sand-50/90 transition hover:text-[#8c7e49] sm:text-[0.8rem] sm:tracking-[0.34em]'
+                className='font-first-rodeo text-[0.68rem] uppercase tracking-[0.22em] text-sand-50/90 transition hover:text-[#8c7e49] sm:text-[0.8rem] sm:tracking-[0.34em]'
               >
                 {link.label}
               </Link>

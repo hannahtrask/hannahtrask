@@ -146,17 +146,17 @@ export default async function Home() {
 
       <section
         id='services-section'
-        className='relative overflow-hidden bg-sand-50 py-24'
+        className='relative overflow-hidden bg-sand-50 py-14 sm:py-24'
       >
-        <div className='mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8'>
-          <div className='mx-auto mb-10 max-w-4xl text-center'>
+        <div className='mx-auto max-w-7xl px-4 py-2 sm:px-6 sm:py-8 lg:px-8'>
+          <div className='mx-auto mb-7 max-w-4xl text-center sm:mb-10'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-graphite/60'>
               services
             </p>
             <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
               So, what do we do?
             </h2>
-            <p className='mx-auto mt-5 max-w-3xl text-sm leading-7 text-graphite/72 sm:text-base'>
+            <p className='mx-auto mt-4 max-w-3xl text-sm leading-7 text-graphite/72 sm:mt-5 sm:text-base'>
               Web development! Web design! Copywriting and content management!
               SEO/AIO/GEO! Curious if I can help you? Fill out the contact form{' '}
               <a
