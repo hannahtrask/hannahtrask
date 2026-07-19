@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { ArrowUpRight, ChevronDown, Instagram, Mail } from 'lucide-react'
 
 import { HoneycombGrid } from '../components/honeycomb-grid'
-import { ContactInquiryForm } from '../components/contact-inquiry-form'
 import { ParallaxHeroImage } from '../components/parallax-hero-image'
 import { SiteFooter } from '../components/site-footer'
 import { SiteHeader } from '../components/site-header'
@@ -325,14 +324,29 @@ export default function Home() {
           </div>
 
           <div className='rounded-[2rem] border border-sand-50/10 bg-sand-50/8 p-6 backdrop-blur-sm sm:p-8'>
-            <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-sand-100/75'>
-              touch base with me
-            </p>
-            <p className='mt-3 text-sm leading-7 text-sand-50/80'>
-              I&apos;ll get back to you within a day or two!
-            </p>
-            <div className='mt-6'>
-              <ContactInquiryForm />
+            <div className='grid gap-6 sm:grid-cols-2'>
+              <div>
+                <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-sand-100/75'>
+                  What you get
+                </p>
+                <ul className='mt-4 space-y-3 text-sm leading-7 text-sand-50/80'>
+                  <li>Working with a real person</li>
+                  <li>Copy and messaging that feels authentic to you</li>
+                  <li>Suped up SEO/AIO/GEO so you are actually found online</li>
+                  <li>A web presence you&apos;re proud of</li>
+                </ul>
+              </div>
+              <div>
+                <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-sand-100/75'>
+                  Best fit
+                </p>
+                <ul className='mt-4 space-y-3 text-sm leading-7 text-sand-50/80'>
+                  <li>Outdoor brands</li>
+                  <li>Creative studios</li>
+                  <li>Service businesses</li>
+                  <li>Small teams with a sharp point of view</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
