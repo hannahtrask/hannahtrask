@@ -12,29 +12,29 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#c56f53',
     icons: [
       {
-        src: '/SagebrushSubmark-01.png',
+        src: 'site-title/SagebrushSubmark-01.png',
         sizes: '512x512',
         type: 'image/png',
       },
       {
-        src: '/SagebrushSubmark-01.png',
+        src: 'site-title/SagebrushSubmark-01.png',
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: '/SagebrushSubmark-01.png',
+        src: 'site-title/SagebrushSubmark-01.png',
         sizes: '192x192',
         type: 'image/png',
         purpose: 'maskable',
       },
       {
-        src: '/SagebrushSubmark-01.png',
+        src: 'site-title/SagebrushSubmark-01.png',
         sizes: '512x512',
         type: 'image/png',
         purpose: 'maskable',
       },
       {
-        src: '/SagebrushSubmark-01.png',
+        src: 'site-title/SagebrushSubmark-01.png',
         sizes: 'any',
         type: 'image/png',
       },

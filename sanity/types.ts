@@ -4,6 +4,7 @@ export interface SanityImage {
     _ref: string
     _type: 'reference'
   }
+  alt?: string
   hotspot?: { x: number; y: number; height: number; width: number }
   caption?: string
 }
@@ -31,8 +32,11 @@ export interface CaseStudy extends CaseStudyListItem {
 
 export interface Testimonial {
   _id: string
+  name: string
+  role?: string
+  company?: string
   quote: string
-  clientName: string
-  clientOrg?: string
+  featured?: boolean
+  sortOrder?: number
   headshot?: SanityImage
 }

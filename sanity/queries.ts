@@ -35,11 +35,14 @@ export const allCaseSlugsQuery = `
 `
 
 export const allTestimonialsQuery = `
-  *[_type == "testimonial"] | order(_createdAt asc) {
+  *[_type == "testimonial"] | order(featured desc, sortOrder asc, _createdAt desc) {
     _id,
+    name,
+    role,
+    company,
     quote,
-    clientName,
-    clientOrg,
+    featured,
+    sortOrder,
     headshot
   }
 `

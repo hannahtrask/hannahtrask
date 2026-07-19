@@ -11,7 +11,7 @@ export function TestimonialStrip({ testimonials }: Props) {
   if (!testimonials?.length) return null
 
   return (
-    <section className='bg-[#c9bea8] px-4 py-16 sm:px-6 lg:px-8'>
+    <section className='bg-sand-50 px-4 py-16 sm:px-6 lg:px-8'>
       <div className='mx-auto max-w-7xl'>
         <p className='text-center font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-graphite/60'>
           from clients
@@ -30,7 +30,7 @@ export function TestimonialStrip({ testimonials }: Props) {
                   <div className='relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-graphite/15'>
                     <Image
                       src={urlFor(t.headshot).width(80).height(80).url()}
-                      alt={t.clientName}
+                      alt={t.headshot.alt ?? `Headshot of ${t.name}`}
                       fill
                       className='object-cover'
                     />
@@ -38,11 +38,11 @@ export function TestimonialStrip({ testimonials }: Props) {
                 )}
                 <div>
                   <p className='font-first-rodeo text-[0.68rem] uppercase tracking-[0.28em] text-graphite/80'>
-                    {t.clientName}
+                    {t.name}
                   </p>
-                  {t.clientOrg && (
+                  {(t.role || t.company) && (
                     <p className='mt-0.5 font-first-rodeo text-[0.62rem] uppercase tracking-[0.24em] text-graphite/50'>
-                      {t.clientOrg}
+                      {[t.role, t.company].filter(Boolean).join(' / ')}
                     </p>
                   )}
                 </div>

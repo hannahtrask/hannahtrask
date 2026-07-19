@@ -4,6 +4,7 @@ import Link from 'next/link'
 const footerLinks = [
   { label: 'About', href: '/#about-section' },
   { label: 'Services', href: '/services' },
+  { label: 'Work', href: '/work' },
   { label: 'Contact', href: '/#contact' },
 ]
 

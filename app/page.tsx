@@ -7,7 +7,11 @@ import { ServiceGrid } from '../components/service-grid'
 import { ParallaxHeroImage } from '../components/parallax-hero-image'
 import { SiteFooter } from '../components/site-footer'
 import { SiteHeader } from '../components/site-header'
+import { TestimonialStrip } from '../components/testimonial-strip'
 import { TypewriterTitle } from '../components/typewriter-title'
+import { testimonialsClient } from '../sanity/client'
+import { allTestimonialsQuery } from '../sanity/queries'
+import type { Testimonial } from '../sanity/types'
 
 export const metadata: Metadata = {
   title:
@@ -32,55 +36,65 @@ export const metadata: Metadata = {
   },
 }
 
+export const revalidate = 300
+
 const serviceTiles: Array<{
   title: string
   eyebrow: string
   description: string
   tone: 'light' | 'dark'
 }> = [
-    {
-      title: 'Squarespace',
-      eyebrow: 'website in a week',
-      description: 'Fast launches with a clean process and a polished finish.',
-      tone: 'light',
-    },
-    {
-      title: 'Wix',
-      eyebrow: 'easy edits',
-      description:
-        'Simple websites built so you can update them with confidence.',
-      tone: 'dark',
-    },
-    {
-      title: 'WordPress',
-      eyebrow: 'content rich',
-      description:
-        'Flexible systems for blogs, resources, and growing libraries.',
-      tone: 'light',
-    },
-    {
-      title: 'Shopify',
-      eyebrow: 'e-commerce',
-      description:
-        'Inventory management and beautiful storefronts in Liquid templating language.',
-      tone: 'dark',
-    },
-    {
-      title: 'Content & Site Management',
-      eyebrow: 'management',
-      description:
-        'Offload the responsibility of blog posts and content updates to us.',
-      tone: 'light',
-    },
-    {
-      title: 'Support',
-      eyebrow: 'ongoing care',
-      description: 'Updates and maintenance after launch so things stay current.',
-      tone: 'light',
-    },
-  ]
+  {
+    title: 'Squarespace',
+    eyebrow: 'website in a week',
+    description: 'Fast launches with a clean process and a polished finish.',
+    tone: 'light',
+  },
+  {
+    title: 'Wix',
+    eyebrow: 'easy edits',
+    description:
+      'Simple websites built so you can update them with confidence.',
+    tone: 'dark',
+  },
+  {
+    title: 'WordPress',
+    eyebrow: 'content rich',
+    description:
+      'Flexible systems for blogs, resources, and growing libraries.',
+    tone: 'light',
+  },
+  {
+    title: 'Shopify',
+    eyebrow: 'e-commerce',
+    description:
+      'Inventory management and beautiful storefronts in Liquid templating language.',
+    tone: 'dark',
+  },
+  {
+    title: 'Content & Site Management',
+    eyebrow: 'management',
+    description:
+      'Offload the responsibility of blog posts and content updates to us.',
+    tone: 'light',
+  },
+  {
+    title: 'Support',
+    eyebrow: 'ongoing care',
+    description: 'Updates and maintenance after launch so things stay current.',
+    tone: 'light',
+  },
+]
 
-export default function Home() {
+export default async function Home() {
+  let testimonials: Testimonial[] = []
+
+  try {
+    testimonials = await testimonialsClient.fetch(allTestimonialsQuery)
+  } catch (error) {
+    console.error('Failed to fetch testimonials from Sanity:', error)
+  }
+
   return (
     <main className='bg-sand-50 text-graphite'>
       <section className='relative isolate min-h-[100svh] overflow-hidden'>
@@ -245,6 +259,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TestimonialStrip testimonials={testimonials} />
 
       <section
         id='contact'
