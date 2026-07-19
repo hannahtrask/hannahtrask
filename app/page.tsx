@@ -97,7 +97,7 @@ export default async function Home() {
 
   return (
     <main className='bg-sand-50 text-graphite'>
-      <section className='relative isolate min-h-[100svh] overflow-hidden'>
+      <section className='relative isolate min-h-[76svh] overflow-hidden sm:min-h-[100svh]'>
         <ParallaxHeroImage
           src='/hero-images/elk-background.jpg'
           alt='Sweeping western landscape'
@@ -110,7 +110,7 @@ export default async function Home() {
 
         <SiteHeader />
 
-        <div className='relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-start px-4 pb-28 pt-32 text-center sm:px-6 sm:pt-36 lg:px-8 lg:pt-40'>
+        <div className='relative z-10 mx-auto flex min-h-[76svh] max-w-7xl flex-col items-center justify-start px-4 pb-20 pt-24 text-center sm:min-h-[100svh] sm:px-6 sm:pb-28 sm:pt-36 lg:px-8 lg:pt-40'>
           <p className='font-first-rodeo text-[0.95rem] uppercase tracking-[0.4em] text-sand-50/90 sm:text-[1.05rem]'>
             build an authentic online presence
           </p>
@@ -146,7 +146,7 @@ export default async function Home() {
 
       <section
         id='services-section'
-        className='relative overflow-hidden bg-sand-50 py-14 sm:py-24'
+        className='relative overflow-hidden bg-sand-50 py-4 sm:py-4'
       >
         <div className='mx-auto max-w-7xl px-4 py-2 sm:px-6 sm:py-8 lg:px-8'>
           <div className='mx-auto mb-7 max-w-4xl text-center sm:mb-10'>
