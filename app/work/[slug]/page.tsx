@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowUpRight, ChevronLeft } from 'lucide-react'
-import { PortableText } from '@portabletext/react'
 
 import { SiteFooter } from '../../../components/site-footer'
 import { SiteHeader } from '../../../components/site-header'
@@ -13,9 +12,54 @@ import {
   caseStudyBySlugQuery,
   allCaseSlugsQuery,
 } from '../../../sanity/queries'
-import type { CaseStudy } from '../../../sanity/types'
+import type { SanityImage } from '../../../sanity/types'
 
 export const revalidate = 60
+
+interface DesignProcessStep {
+  title: string
+  description: string
+}
+
+interface CaseStudyDetail {
+  _id: string
+  title: string
+  slug: { current: string }
+  subtitle?: string
+  clientName?: string
+  overview?: string
+  problemStatement?: string
+  solutions?: string[]
+  designProcess?: DesignProcessStep[]
+  technologies?: string[]
+  liveUrl?: string
+  projectUrl?: string
+  shortDescription?: string
+  outcomes?: string
+  scopeOfWork?: string[]
+  projectType?: string[]
+  heroImage?: SanityImage | string
+  logo?: SanityImage | string
+  images?: Array<SanityImage | string>
+  screenshots?: SanityImage[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  body?: any[]
+}
+
+function resolveImageSrc(
+  image: SanityImage | string | undefined,
+  width: number,
+  height: number,
+): string | undefined {
+  if (!image) return undefined
+  if (typeof image === 'string') return image
+  return urlFor(image).width(width).height(height).url()
+}
+
+async function getCaseStudyBySlug(slug: string): Promise<CaseStudyDetail | null> {
+  const cs = await client.fetch(caseStudyBySlugQuery, { slug })
+  return cs as CaseStudyDetail | null
+}
 
 export async function generateStaticParams() {
   const slugs: { slug: string }[] = await client.fetch(allCaseSlugsQuery)
@@ -28,65 +72,26 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const cs: CaseStudy | null = await client.fetch(caseStudyBySlugQuery, {
-    slug,
-  })
+  const cs = await getCaseStudyBySlug(slug)
   if (!cs) return {}
+
+  const previewImage =
+    resolveImageSrc(cs.heroImage, 1200, 630) ||
+    resolveImageSrc(cs.images?.[0], 1200, 630) ||
+    resolveImageSrc(cs.screenshots?.[0], 1200, 630)
+
   return {
     title: cs.title,
-    description: cs.shortDescription,
+    description: cs.shortDescription || cs.overview,
     alternates: { canonical: `/work/${cs.slug.current}` },
     openGraph: {
       title: `${cs.title} | Sagebrush Web Studio`,
-      description: cs.shortDescription,
-      images: cs.screenshots?.[0]
-        ? [urlFor(cs.screenshots[0]).width(1200).height(630).url()]
+      description: cs.shortDescription || cs.overview,
+      images: previewImage
+        ? [previewImage]
         : ['/site-title/SagebrushSecondaryLogo-07.png'],
     },
   }
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const portableTextComponents = {
-  block: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h2: ({ children }: any) => (
-      <h2 className='mt-10 font-miroa text-2xl uppercase leading-tight tracking-[0.06em] text-graphite sm:text-3xl'>
-        {children}
-      </h2>
-    ),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    h3: ({ children }: any) => (
-      <h3 className='mt-8 font-miroa text-xl uppercase leading-tight tracking-[0.06em] text-graphite'>
-        {children}
-      </h3>
-    ),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    normal: ({ children }: any) => (
-      <p className='mt-5 text-sm leading-7 text-graphite/80 sm:text-base'>
-        {children}
-      </p>
-    ),
-  },
-  marks: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    link: ({ children, value }: any) => (
-      <a
-        href={value.href}
-        target='_blank'
-        rel='noreferrer noopener'
-        className='underline decoration-graphite/30 hover:decoration-graphite'
-      >
-        {children}
-      </a>
-    ),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    strong: ({ children }: any) => (
-      <strong className='font-semibold text-graphite'>{children}</strong>
-    ),
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    em: ({ children }: any) => <em>{children}</em>,
-  },
 }
 
 export default async function CaseStudyPage({
@@ -95,17 +100,45 @@ export default async function CaseStudyPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const cs: CaseStudy | null = await client.fetch(caseStudyBySlugQuery, {
-    slug,
-  })
+  const cs = await getCaseStudyBySlug(slug)
   if (!cs) notFound()
+
+  const heroSrc =
+    resolveImageSrc(cs.heroImage, 1600, 900) ||
+    resolveImageSrc(cs.images?.[0], 1600, 900) ||
+    resolveImageSrc(cs.screenshots?.[0], 1600, 900)
+  const logoSrc = resolveImageSrc(cs.logo, 240, 240)
+  const gallery =
+    cs.images && cs.images.length > 0
+      ? cs.images
+      : (cs.screenshots ?? []).slice(1)
+  const scopeItems = cs.scopeOfWork ?? []
+  const resultsText =
+    cs.outcomes ||
+    'A stronger narrative, clearer user pathing, and a more conversion-ready web presence.'
+  const solutionPoints =
+    cs.solutions && cs.solutions.length > 0
+      ? cs.solutions
+      : cs.scopeOfWork && cs.scopeOfWork.length > 0
+        ? cs.scopeOfWork
+        : ['Strategic messaging', 'Information architecture', 'Responsive build']
 
   return (
     <main className='bg-sand-50 text-graphite'>
-      {/* Dark hero header */}
-      <section className='relative overflow-hidden bg-[#333520] px-4 pb-16 pt-0 sm:px-6 lg:px-8'>
+      <section className='relative isolate overflow-hidden bg-[#333520] px-4 pb-16 pt-0 sm:px-6 lg:px-8'>
+        {heroSrc && (
+          <Image
+            src={heroSrc}
+            alt={cs.title}
+            fill
+            priority
+            className='object-cover object-center opacity-34'
+            sizes='100vw'
+          />
+        )}
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,245,224,0.24),_transparent_42%),linear-gradient(180deg,rgba(21,18,14,0.72)_0%,rgba(34,27,18,0.84)_60%,rgba(34,27,18,0.9)_100%)]' />
         <SiteHeader />
-        <div className='relative mx-auto max-w-4xl pt-10 sm:pt-14'>
+        <div className='relative mx-auto max-w-5xl pt-10 sm:pt-14'>
           <Link
             href='/work'
             className='inline-flex items-center gap-1.5 font-first-rodeo text-[0.68rem] uppercase tracking-[0.3em] text-sand-50/55 transition hover:text-sand-50/90'
@@ -128,13 +161,29 @@ export default async function CaseStudyPage({
           <h1 className='mt-5 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-sand-50 sm:text-5xl lg:text-[3.5rem]'>
             {cs.title}
           </h1>
-          <p className='mt-3 font-first-rodeo text-[0.75rem] uppercase tracking-[0.3em] text-sand-50/55'>
-            {cs.clientName}
-          </p>
+          {(cs.clientName || cs.subtitle) && (
+            <p className='mt-3 max-w-3xl text-sm leading-7 text-sand-50/95 sm:text-base'>
+              {cs.subtitle || cs.clientName}
+            </p>
+          )}
 
-          {cs.projectUrl && (
+          {logoSrc && (
+            <div className='mt-6'>
+              <div className='relative h-16 w-16 overflow-hidden rounded-full border border-sand-50/26 bg-sand-50/10'>
+                <Image
+                  src={logoSrc}
+                  alt={`${cs.title} logo`}
+                  fill
+                  className='object-cover'
+                  sizes='4rem'
+                />
+              </div>
+            </div>
+          )}
+
+          {(cs.liveUrl || cs.projectUrl) && (
             <Link
-              href={cs.projectUrl}
+              href={cs.liveUrl || cs.projectUrl || '#'}
               target='_blank'
               rel='noreferrer'
               className='mt-8 inline-flex items-center gap-2 rounded-full border border-sand-50/25 bg-sand-50/10 px-5 py-2.5 font-first-rodeo text-[0.68rem] uppercase tracking-[0.28em] text-sand-50 transition hover:border-[#8799a7] hover:bg-[#8799a7]'
@@ -146,61 +195,109 @@ export default async function CaseStudyPage({
         </div>
       </section>
 
-      {/* Cover image — bleeds up from dark hero */}
-      {cs.screenshots?.[0] && (
-        <div className='bg-[#333520] px-4 pb-0 sm:px-6 lg:px-8'>
-          <div className='relative mx-auto max-w-4xl overflow-hidden rounded-t-[2rem] shadow-[0_-8px_40px_rgba(61,45,28,0.28)]'>
-            <Image
-              src={urlFor(cs.screenshots[0]).width(1200).height(750).url()}
-              alt={cs.screenshots[0].caption ?? cs.title}
-              width={1200}
-              height={750}
-              className='h-auto w-full object-cover'
-              priority
-            />
+      <section className='px-4 pt-12 sm:px-6 lg:px-8'>
+        <div className='mx-auto max-w-5xl'>
+          <div className='rounded-[1.6rem] border border-graphite/10 bg-[#f6f0e2] p-4 sm:p-6'>
+            <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
+              route map
+            </p>
+            <article className='rounded-[1rem] border border-[#a28b62]/30 bg-[#efe5d2] p-4'>
+              <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#6b583a]'>
+                problem
+              </p>
+              <p className='mt-2 text-sm leading-6 text-graphite/76'>
+                {cs.problemStatement || cs.shortDescription}
+              </p>
+            </article>
+
+            <div className='mx-auto my-3 h-4 border-l-2 border-dashed border-[#a28b62]/50 sm:h-5' />
+
+            <div className='grid gap-3 sm:grid-cols-[minmax(0,1fr)_2.5rem_minmax(0,1fr)] sm:items-center'>
+              <article className='rounded-[1rem] border border-[#85938f]/34 bg-[#dce5df] p-4'>
+                <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#455550]'>
+                  solution
+                </p>
+                <ul className='mt-2 space-y-2'>
+                  {solutionPoints.slice(0, 3).map(point => (
+                    <li
+                      key={point}
+                      className='flex items-start gap-2 text-sm leading-6 text-graphite/76'
+                    >
+                      <span className='mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#5c6c67]' />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+              <div className='hidden sm:flex items-center justify-center'>
+                <span className='block w-full border-t-2 border-dashed border-[#85938f]/55' />
+              </div>
+              <div className='mx-auto h-4 border-l-2 border-dashed border-[#85938f]/55 sm:hidden' />
+
+              <article className='rounded-[1rem] border border-[#7a9079]/34 bg-[#d8e4d5] p-4'>
+                <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#3e5a3c]'>
+                  results
+                </p>
+                <p className='mt-2 text-sm leading-6 text-graphite/76'>
+                  {resultsText}
+                </p>
+              </article>
+            </div>
           </div>
         </div>
-      )}
+      </section>
 
-      {/* Body + sidebar */}
       <section className='px-4 py-16 sm:px-6 lg:px-8'>
-        <div className='mx-auto grid max-w-4xl gap-10 lg:grid-cols-[1fr_17rem] lg:items-start'>
-          {/* Main content */}
+        <div className='mx-auto grid max-w-5xl gap-10 lg:grid-cols-[1fr_17rem] lg:items-start'>
           <div>
-            {cs.shortDescription && (
+            {cs.overview && (
               <p className='text-base leading-8 text-graphite/80 sm:text-lg'>
-                {cs.shortDescription}
+                {cs.overview}
               </p>
             )}
-            {cs.body?.length > 0 && (
-              <div className='mt-2'>
-                <PortableText
-                  value={cs.body}
-                  components={portableTextComponents}
-                />
+
+            {cs.designProcess && cs.designProcess.length > 0 && (
+              <div className='mt-12 rounded-[1.5rem] border border-graphite/10 bg-[#f6f1e7] p-6 sm:p-8'>
+                <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
+                  design process
+                </p>
+                <div className='mt-6 space-y-4'>
+                  {cs.designProcess.map(step => (
+                    <div key={step.title} className='relative pl-6'>
+                      <span className='absolute left-0 top-2 h-[calc(100%-0.25rem)] border-l-2 border-dashed border-graphite/20' />
+                      <span className='absolute left-0 top-1.5 h-2 w-2 -translate-x-1/2 rounded-full bg-graphite/35' />
+                      <h2 className='font-miroa text-xl uppercase leading-tight tracking-[0.06em] text-graphite'>
+                        {step.title}
+                      </h2>
+                      <p className='mt-2 text-sm leading-7 text-graphite/80 sm:text-base'>
+                        {step.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
-            {cs.outcomes && (
+
+            {resultsText && (
               <div className='mt-12 rounded-[1.5rem] border border-graphite/10 bg-[#f6f1e7] p-6 sm:p-8'>
                 <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
                   outcomes &amp; results
                 </p>
                 <p className='mt-4 text-sm leading-7 text-graphite/80 sm:text-base'>
-                  {cs.outcomes}
+                  {resultsText}
                 </p>
               </div>
             )}
           </div>
 
-          {/* Sidebar */}
           <aside className='space-y-6 lg:sticky lg:top-8'>
-            {(cs.scopeOfWork ?? []).length > 0 && (
+            {scopeItems.length > 0 && (
               <div className='rounded-[1.5rem] border border-graphite/10 bg-[#f6f1e7] p-6'>
                 <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
                   scope of work
                 </p>
                 <ul className='mt-4 space-y-2.5'>
-                  {cs.scopeOfWork.map((item, i) => (
+                  {scopeItems.map((item, i) => (
                     <li
                       key={i}
                       className='flex items-start gap-2.5 text-sm leading-6 text-graphite/80'
@@ -212,9 +309,28 @@ export default async function CaseStudyPage({
                 </ul>
               </div>
             )}
-            {cs.projectUrl && (
+
+            {(cs.technologies ?? []).length > 0 && (
+              <div className='rounded-[1.5rem] border border-graphite/10 bg-[#f6f1e7] p-6'>
+                <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
+                  technologies
+                </p>
+                <div className='mt-4 flex flex-wrap gap-2'>
+                  {cs.technologies?.map(tech => (
+                    <span
+                      key={tech}
+                      className='rounded-full border border-graphite/16 bg-sand-50/80 px-3 py-1 font-first-rodeo text-[0.58rem] uppercase tracking-[0.24em] text-graphite/60'
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {(cs.liveUrl || cs.projectUrl) && (
               <Link
-                href={cs.projectUrl}
+                href={cs.liveUrl || cs.projectUrl || '#'}
                 target='_blank'
                 rel='noreferrer'
                 className='flex items-center justify-between rounded-[1.5rem] border border-graphite/10 bg-[#f6f1e7] p-5 transition hover:border-graphite/22 hover:bg-[#ede5d5]'
@@ -228,32 +344,39 @@ export default async function CaseStudyPage({
           </aside>
         </div>
 
-        {/* Additional screenshots */}
-        {(cs.screenshots ?? []).length > 1 && (
-          <div className='mx-auto mt-16 max-w-4xl'>
+        {gallery.length > 0 && (
+          <div className='mx-auto mt-16 max-w-5xl'>
             <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/50'>
               screenshots
             </p>
             <div className='mt-6 grid gap-4 sm:grid-cols-2'>
-              {cs.screenshots.slice(1).map((shot, i) => (
-                <div
-                  key={i}
-                  className='overflow-hidden rounded-[1.25rem] border border-graphite/10'
-                >
-                  <Image
-                    src={urlFor(shot).width(800).height(500).url()}
-                    alt={shot.caption ?? `Screenshot ${i + 2}`}
-                    width={800}
-                    height={500}
-                    className='h-auto w-full object-cover'
-                  />
-                  {shot.caption && (
-                    <p className='px-4 py-2 text-[0.7rem] text-graphite/50'>
-                      {shot.caption}
-                    </p>
-                  )}
-                </div>
-              ))}
+              {gallery.map((shot, i) => {
+                const src = resolveImageSrc(shot, 800, 500)
+                if (!src) return null
+
+                const caption =
+                  typeof shot === 'string' ? undefined : shot.caption
+
+                return (
+                  <div
+                    key={`${src}-${i}`}
+                    className='overflow-hidden rounded-[1.25rem] border border-graphite/10'
+                  >
+                    <Image
+                      src={src}
+                      alt={caption || `Screenshot ${i + 1}`}
+                      width={800}
+                      height={500}
+                      className='h-auto w-full object-cover'
+                    />
+                    {caption && (
+                      <p className='px-4 py-2 text-[0.7rem] text-graphite/50'>
+                        {caption}
+                      </p>
+                    )}
+                  </div>
+                )
+              })}
             </div>
           </div>
         )}

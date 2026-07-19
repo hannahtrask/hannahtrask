@@ -14,8 +14,14 @@ export interface CaseStudyListItem {
   title: string
   slug: { current: string }
   clientName: string
+  subtitle?: string
+  overview?: string
+  problemStatement?: string
+  solutions?: string[]
   projectType: string[]
   shortDescription: string
+  scopeOfWork?: string[]
+  outcomes?: string
   featured: boolean
   coverImage?: SanityImage
   publishedAt?: string

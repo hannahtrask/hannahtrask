@@ -27,11 +27,7 @@ export const metadata: Metadata = {
 }
 
 export default async function WorkPage() {
-  const caseStudies: CaseStudyListItem[] =
-    await client.fetch(allCaseStudiesQuery)
-
-  const featured = caseStudies.find(cs => cs.featured) ?? caseStudies[0]
-  const rest = caseStudies.filter(cs => cs._id !== featured?._id)
+  const caseStudies: CaseStudyListItem[] = await client.fetch(allCaseStudiesQuery)
 
   return (
     <main className='bg-sand-50 text-graphite'>
@@ -83,117 +79,134 @@ export default async function WorkPage() {
             </div>
           ) : (
             <>
-              {/* Featured */}
-              {featured && (
-                <div className='mb-12'>
-                  <p className='mb-4 font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
-                    featured
-                  </p>
-                  <Link
-                    href={`/work/${featured.slug.current}`}
-                    className='group relative block overflow-hidden rounded-[2rem] bg-[#333520] transition hover:shadow-[0_24px_60px_rgba(61,45,28,0.26)]'
-                  >
-                    <div className='grid lg:grid-cols-2'>
-                      {featured.coverImage ? (
-                        <div className='relative aspect-[4/3] overflow-hidden lg:aspect-auto lg:min-h-[420px]'>
-                          <Image
-                            src={urlFor(featured.coverImage)
-                              .width(900)
-                              .height(600)
-                              .url()}
-                            alt={featured.title}
-                            fill
-                            className='object-cover transition duration-500 group-hover:scale-[1.02]'
-                            sizes='(min-width: 1024px) 50vw, 100vw'
-                          />
-                        </div>
-                      ) : (
-                        <div className='aspect-[4/3] bg-[#2a2d1e] lg:aspect-auto lg:min-h-[420px]' />
-                      )}
-                      <div className='flex flex-col justify-center p-8 sm:p-10 lg:p-12'>
-                        <div className='flex flex-wrap gap-2'>
-                          {(featured.projectType ?? []).map(tag => (
-                            <span
-                              key={tag}
-                              className='rounded-full border border-sand-50/20 px-3 py-1 font-first-rodeo text-[0.62rem] uppercase tracking-[0.28em] text-sand-50/70'
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        <h2 className='mt-5 font-miroa text-3xl uppercase leading-tight tracking-[0.06em] text-sand-50 sm:text-4xl'>
-                          {featured.title}
-                        </h2>
-                        <p className='mt-2 font-first-rodeo text-[0.72rem] uppercase tracking-[0.28em] text-sand-50/55'>
-                          {featured.clientName}
-                        </p>
-                        <p className='mt-5 text-sm leading-7 text-sand-50/78'>
-                          {featured.shortDescription}
-                        </p>
-                        <span className='mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-sand-50/25 bg-sand-50/10 px-5 py-2.5 font-first-rodeo text-[0.68rem] uppercase tracking-[0.28em] text-sand-50 transition group-hover:border-[#8799a7] group-hover:bg-[#8799a7]'>
-                          Read case study
-                          <ArrowUpRight className='h-3.5 w-3.5' />
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              )}
+              <div className='mb-8'>
+                <p className='font-first-rodeo text-[0.74rem] uppercase tracking-[0.34em] text-graphite/56'>
+                  case studies
+                </p>
+                <h2 className='mt-3 font-miroa text-3xl uppercase tracking-[0.08em] text-graphite sm:text-4xl'>
+                  problem to solution to results
+                </h2>
+              </div>
 
-              {/* Rest grid */}
-              {rest.length > 0 && (
-                <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-                  {rest.map(cs => (
+              <div className='space-y-8'>
+                {caseStudies.map(cs => {
+                  const problemText =
+                    cs.problemStatement ||
+                    cs.overview ||
+                    cs.shortDescription ||
+                    'The brand needed stronger positioning and a clearer digital story.'
+                  const solutionText = cs.solutions?.length
+                    ? cs.solutions.slice(0, 2).join(' + ')
+                    : cs.scopeOfWork?.length
+                      ? cs.scopeOfWork.slice(0, 2).join(' + ')
+                      : 'A focused design and development sprint aligned to business goals.'
+                  const resultsText =
+                    cs.outcomes ||
+                    'A clearer website experience and better conversion-ready structure.'
+
+                  return (
                     <Link
                       key={cs._id}
                       href={`/work/${cs.slug.current}`}
-                      className='group flex flex-col overflow-hidden rounded-[1.5rem] border border-graphite/10 bg-[#f6f1e7] transition hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(61,45,28,0.16)]'
+                      className='group block overflow-hidden rounded-[1.9rem] border border-graphite/10 bg-[#f3ecde] p-5 transition hover:-translate-y-0.5 hover:shadow-[0_18px_44px_rgba(61,45,28,0.16)] sm:p-6 lg:p-8'
                     >
-                      {cs.coverImage ? (
-                        <div className='relative aspect-[16/10] overflow-hidden'>
-                          <Image
-                            src={urlFor(cs.coverImage)
-                              .width(600)
-                              .height(375)
-                              .url()}
-                            alt={cs.title}
-                            fill
-                            className='object-cover transition duration-500 group-hover:scale-[1.03]'
-                            sizes='(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'
-                          />
+                      <div className='grid gap-6 lg:grid-cols-[1.05fr_1.4fr] lg:items-start'>
+                        <div>
+                          {cs.coverImage ? (
+                            <div className='relative aspect-[4/3] overflow-hidden rounded-[1.2rem] border border-graphite/10'>
+                              <Image
+                                src={urlFor(cs.coverImage)
+                                  .width(700)
+                                  .height(520)
+                                  .url()}
+                                alt={cs.title}
+                                fill
+                                className='object-cover transition duration-500 group-hover:scale-[1.02]'
+                                sizes='(min-width: 1024px) 30vw, 100vw'
+                              />
+                            </div>
+                          ) : (
+                            <div className='aspect-[4/3] rounded-[1.2rem] border border-graphite/10 bg-[#e2d6be]' />
+                          )}
+                          <div className='mt-4 flex flex-wrap gap-1.5'>
+                            {(cs.projectType ?? []).slice(0, 3).map(tag => (
+                              <span
+                                key={tag}
+                                className='rounded-full border border-graphite/16 bg-sand-50/70 px-2.5 py-0.5 font-first-rodeo text-[0.58rem] uppercase tracking-[0.24em] text-graphite/58'
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
                         </div>
-                      ) : (
-                        <div className='aspect-[16/10] bg-[#e8e0cf]' />
-                      )}
-                      <div className='flex flex-1 flex-col p-6'>
-                        <div className='flex flex-wrap gap-1.5'>
-                          {(cs.projectType ?? []).slice(0, 3).map(tag => (
-                            <span
-                              key={tag}
-                              className='rounded-full border border-graphite/15 px-2.5 py-0.5 font-first-rodeo text-[0.58rem] uppercase tracking-[0.24em] text-graphite/60'
-                            >
-                              {tag}
+
+                        <div>
+                          <div className='flex flex-wrap items-center gap-x-3 gap-y-2'>
+                            {cs.featured && (
+                              <span className='rounded-full border border-[#8b7651]/35 bg-[#8b7651]/10 px-3 py-1 font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#5f5136]'>
+                                featured
+                              </span>
+                            )}
+                            <span className='font-first-rodeo text-[0.66rem] uppercase tracking-[0.28em] text-graphite/52'>
+                              {cs.clientName}
                             </span>
-                          ))}
+                          </div>
+                          <h3 className='mt-2 font-miroa text-2xl uppercase leading-tight tracking-[0.06em] text-graphite sm:text-3xl'>
+                            {cs.title}
+                          </h3>
+                          {cs.subtitle && (
+                            <p className='mt-2 text-sm leading-6 text-graphite/68'>
+                              {cs.subtitle}
+                            </p>
+                          )}
+
+                          <div className='mt-6'>
+                            <article className='rounded-[1rem] border border-[#a28b62]/30 bg-[#efe5d2] p-4'>
+                              <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#6b583a]'>
+                                problem
+                              </p>
+                              <p className='mt-2 text-sm leading-6 text-graphite/76'>
+                                {problemText}
+                              </p>
+                            </article>
+
+                            <div className='mx-auto my-3 h-4 border-l-2 border-dashed border-[#a28b62]/50 sm:h-5' />
+
+                            <div className='grid gap-3 sm:grid-cols-[minmax(0,1fr)_2.5rem_minmax(0,1fr)] sm:items-center'>
+                              <article className='rounded-[1rem] border border-[#85938f]/34 bg-[#dce5df] p-4'>
+                                <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#455550]'>
+                                  solution
+                                </p>
+                                <p className='mt-2 text-sm leading-6 text-graphite/76'>
+                                  {solutionText}
+                                </p>
+                              </article>
+                              <div className='hidden sm:flex items-center justify-center'>
+                                <span className='block w-full border-t-2 border-dashed border-[#85938f]/55' />
+                              </div>
+                              <div className='sm:hidden mx-auto h-4 border-l-2 border-dashed border-[#85938f]/55' />
+
+                              <article className='rounded-[1rem] border border-[#7a9079]/34 bg-[#d8e4d5] p-4'>
+                                <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#3e5a3c]'>
+                                  results
+                                </p>
+                                <p className='mt-2 text-sm leading-6 text-graphite/76'>
+                                  {resultsText}
+                                </p>
+                              </article>
+                            </div>
+                          </div>
+
+                          <span className='mt-6 inline-flex items-center gap-2 font-first-rodeo text-[0.64rem] uppercase tracking-[0.28em] text-graphite/58 transition group-hover:text-graphite'>
+                            Open full case study
+                            <ArrowUpRight className='h-3.5 w-3.5' />
+                          </span>
                         </div>
-                        <h3 className='mt-3 font-miroa text-xl uppercase leading-tight tracking-[0.06em] text-graphite'>
-                          {cs.title}
-                        </h3>
-                        <p className='mt-1 font-first-rodeo text-[0.65rem] uppercase tracking-[0.26em] text-graphite/50'>
-                          {cs.clientName}
-                        </p>
-                        <p className='mt-3 line-clamp-3 flex-1 text-sm leading-7 text-graphite/72'>
-                          {cs.shortDescription}
-                        </p>
-                        <span className='mt-5 inline-flex items-center gap-1.5 font-first-rodeo text-[0.65rem] uppercase tracking-[0.26em] text-graphite/55 transition group-hover:text-graphite'>
-                          Read more
-                          <ArrowUpRight className='h-3 w-3' />
-                        </span>
                       </div>
                     </Link>
-                  ))}
-                </div>
-              )}
+                  )
+                })}
+              </div>
             </>
           )}
         </div>

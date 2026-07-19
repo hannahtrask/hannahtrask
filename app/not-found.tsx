@@ -31,7 +31,7 @@ export default function NotFound() {
           </h1>
           <p className='mt-6 max-w-2xl text-pretty text-sm leading-7 text-sand-100/80 sm:text-base'>
             I support some wandering, though. The page you&apos;re looking for
-            doesn&apos;t exist, but when you&apos;re ready to head home, the way
+            doesn&apos;t exist, so when you&apos;re ready to head home, the way
             is below.
           </p>
 
