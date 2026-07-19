@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, ChevronDown, Instagram, Mail } from 'lucide-react'
 
-import { HoneycombGrid } from '../components/honeycomb-grid'
+import { ServiceGrid } from '../components/service-grid'
 import { ParallaxHeroImage } from '../components/parallax-hero-image'
 import { SiteFooter } from '../components/site-footer'
 import { SiteHeader } from '../components/site-header'
@@ -38,54 +38,47 @@ const serviceTiles: Array<{
   description: string
   tone: 'light' | 'dark'
 }> = [
-  {
-    title: 'Squarespace',
-    eyebrow: 'website in a week',
-    description: 'Fast launches with a clean process and a polished finish.',
-    tone: 'light',
-  },
-  {
-    title: 'Wix',
-    eyebrow: 'easy edits',
-    description:
-      'Simple websites built so you can update them with confidence.',
-    tone: 'dark',
-  },
-  {
-    title: 'WordPress',
-    eyebrow: 'content rich',
-    description:
-      'Flexible systems for blogs, resources, and growing libraries.',
-    tone: 'light',
-  },
-  {
-    title: 'Shopify',
-    eyebrow: 'e-commerce',
-    description:
-      'Inventory management and beautiful storefronts in Liquid templating language.',
-    tone: 'dark',
-  },
-  {
-    title: 'Content & Site Management',
-    eyebrow: 'management',
-    description:
-      'Offload the responsibility of blog posts and content updates to us.',
-    tone: 'light',
-  },
-  {
-    title: 'Design Day',
-    eyebrow: 'one day sprint',
-    description:
-      'A focused work session to clear your todo list in a single day.',
-    tone: 'dark',
-  },
-  {
-    title: 'Support',
-    eyebrow: 'ongoing care',
-    description: 'Updates and maintenance after launch so things stay current.',
-    tone: 'light',
-  },
-]
+    {
+      title: 'Squarespace',
+      eyebrow: 'website in a week',
+      description: 'Fast launches with a clean process and a polished finish.',
+      tone: 'light',
+    },
+    {
+      title: 'Wix',
+      eyebrow: 'easy edits',
+      description:
+        'Simple websites built so you can update them with confidence.',
+      tone: 'dark',
+    },
+    {
+      title: 'WordPress',
+      eyebrow: 'content rich',
+      description:
+        'Flexible systems for blogs, resources, and growing libraries.',
+      tone: 'light',
+    },
+    {
+      title: 'Shopify',
+      eyebrow: 'e-commerce',
+      description:
+        'Inventory management and beautiful storefronts in Liquid templating language.',
+      tone: 'dark',
+    },
+    {
+      title: 'Content & Site Management',
+      eyebrow: 'management',
+      description:
+        'Offload the responsibility of blog posts and content updates to us.',
+      tone: 'light',
+    },
+    {
+      title: 'Support',
+      eyebrow: 'ongoing care',
+      description: 'Updates and maintenance after launch so things stay current.',
+      tone: 'light',
+    },
+  ]
 
 export default function Home() {
   return (
@@ -139,9 +132,9 @@ export default function Home() {
 
       <section
         id='services-section'
-        className='relative overflow-hidden bg-sand-50 px-4 pb-2 pt-2 sm:px-6 lg:px-8'
+        className='relative overflow-hidden bg-sand-50 py-24'
       >
-        <div className='mx-auto max-w-7xl'>
+        <div className='mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8'>
           <div className='mx-auto mb-10 max-w-4xl text-center'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-graphite/60'>
               services
@@ -161,12 +154,14 @@ export default function Home() {
               .
             </p>
           </div>
+        </div>
 
-          <div className='mx-auto flex w-full max-w-5xl justify-center px-2 sm:px-6'>
-            <HoneycombGrid serviceTiles={serviceTiles} />
-          </div>
+        <div className='w-screen'>
+          <ServiceGrid serviceTiles={serviceTiles} />
         </div>
       </section>
+
+      <div className='h-24 w-full bg-gradient-to-b from-sand-50 to-[#c9bea8]' />
 
       <section
         id='about-section'
