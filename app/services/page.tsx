@@ -106,13 +106,13 @@ export default function ServicesPage() {
               Design Day
               <CalendarDays className='h-4 w-4' />
             </Link>
-            <Link
-              href='mailto:hello@wearesagebrush.com?subject=sagebrush%20web%20studio%20inquiry'
+            <a
+              href='/#contact'
               className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-center text-[0.66rem] uppercase tracking-[0.22em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50 sm:w-auto sm:text-[0.72rem] sm:tracking-[0.3em]'
             >
               I need something else
               <Mail className='h-4 w-4' />
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -203,7 +203,7 @@ export default function ServicesPage() {
         id='design-day'
         className='bg-[#c9bea8] px-4 py-16 sm:px-6 sm:py-20 lg:px-8'
       >
-        <div className='mx-auto max-w-4xl'>
+        <div className='mx-auto grid max-w-7xl gap-6 lg:grid-cols-2'>
           <div className='rounded-[2rem] border border-graphite/12 bg-[#d3c8b4] p-7 text-center shadow-[0_18px_45px_rgba(61,45,28,0.14)] sm:p-10'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.4em] text-graphite/60'>
               focused sprint
@@ -250,6 +250,50 @@ export default function ServicesPage() {
               book this
               <ArrowUpRight className='h-4 w-4' />
             </Link>
+          </div>
+
+          <div className='rounded-[2rem] border border-graphite/12 bg-[#d3c8b4] p-7 text-center shadow-[0_18px_45px_rgba(61,45,28,0.14)] sm:p-10'>
+            <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.4em] text-graphite/60'>
+              ongoing support
+            </p>
+            <h2 className='mt-4 font-miroa text-3xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-4xl'>
+              Content & site maintenance
+            </h2>
+            <p className='mt-3 font-first-rodeo text-[0.8rem] uppercase tracking-[0.34em] text-graphite/68'>
+              retainers from $500/month
+            </p>
+            <div className='mx-auto mt-7 max-w-3xl space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
+              <p>
+                Keep your site current, polished, and trustworthy with routine
+                updates that make visitors feel confident and keep search
+                engines coming back.
+              </p>
+              <ul className='grid gap-2 text-left'>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
+                  Fresh content updates for services, offers, blogs, and
+                  announcements
+                </li>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
+                  Visual and layout maintenance so your site always looks
+                  professional
+                </li>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
+                  Ongoing SEO tune-ups: metadata, headings, internal linking,
+                  and keyword alignment
+                </li>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
+                  Monthly recommendations so your site keeps improving instead
+                  of going stale
+                </li>
+              </ul>
+            </div>
+            <a
+              href='/#contact'
+              className='mt-8 inline-flex items-center gap-2 rounded-full border border-graphite/25 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
+            >
+              ask about support
+              <ArrowUpRight className='h-4 w-4' />
+            </a>
           </div>
         </div>
       </section>
