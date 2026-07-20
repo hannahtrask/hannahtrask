@@ -20,7 +20,7 @@ export const metadata: Metadata = {
       'Sagebrush Web Studio | Web Design & Content Management in Jackson Hole, WY',
   },
   description:
-    "Websites, copy, and SEO for Jackson Hole's outdoor economy - outfitters, nonprofits, and local businesses who need a site and a story, not just a template.",
+    'Websites, copy, and SEO for small businesses in Jackson Hole and beyond - for anyone who needs a site and a story, not just a template.',
   alternates: {
     canonical: '/',
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title:
       'Sagebrush Web Studio | Web Design & Content Management in Jackson Hole, WY',
     description:
-      "Websites, copy, and SEO for Jackson Hole's outdoor economy - outfitters, nonprofits, and local businesses who need a site and a story, not just a template.",
+      'Websites, copy, and SEO for small businesses in Jackson Hole and beyond - for anyone who needs a site and a story, not just a template.',
     images: ['/site-title/SagebrushSecondaryLogo-07.png'],
   },
   twitter: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title:
       'Sagebrush Web Studio | Web Design & Content Management in Jackson Hole, WY',
     description:
-      "Websites, copy, and SEO for Jackson Hole's outdoor economy - outfitters, nonprofits, and local businesses who need a site and a story, not just a template.",
+      'Websites, copy, and SEO for small businesses in Jackson Hole and beyond - for anyone who needs a site and a story, not just a template.',
     images: ['/site-title/SagebrushSecondaryLogo-07.png'],
   },
 }
@@ -50,7 +50,7 @@ const serviceTiles: Array<{
   tone: 'light' | 'dark'
 }> = [
   {
-    title: "A site you're proud to send people",
+    title: "A site you're proud to share",
     eyebrow: 'something new',
     description:
       'New builds and full redesigns - designed, written, and launched without the months-long slog.',
@@ -71,7 +71,7 @@ const serviceTiles: Array<{
     tone: 'light',
   },
   {
-    title: 'Marketing, handled monthly',
+    title: 'Content management',
     eyebrow: 'off your plate',
     description:
       'Content, email, and social support every month - so your site and channels stay alive without you thinking about them.',

@@ -12,21 +12,21 @@ export const metadata: Metadata = {
     absolute: 'About | Sagebrush Web Studio',
   },
   description:
-    'Meet Hannah and learn the story behind Sagebrush Web Studio, a web design studio for thoughtful brands and small businesses.',
+    'Meet Hannah - web designer and writer building websites and telling stories for small businesses in Jackson Hole and beyond.',
   alternates: {
     canonical: '/about',
   },
   openGraph: {
     title: 'About | Sagebrush Web Studio',
     description:
-      'Meet Hannah and learn the story behind Sagebrush Web Studio, a web design studio for thoughtful brands and small businesses.',
+      'Meet Hannah - web designer and writer building websites and telling stories for small businesses in Jackson Hole and beyond.',
     images: ['/site-title/SagebrushSecondaryLogo-07.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About | Sagebrush Web Studio',
     description:
-      'Meet Hannah and learn the story behind Sagebrush Web Studio, a web design studio for thoughtful brands and small businesses.',
+      'Meet Hannah - web designer and writer building websites and telling stories for small businesses in Jackson Hole and beyond.',
     images: ['/site-title/SagebrushSecondaryLogo-07.png'],
   },
 }
@@ -52,13 +52,9 @@ export default function AboutPage() {
               founder / owner / designer
             </p>
             <p className='mt-4 max-w-xl text-center text-base leading-8 text-graphite/75 sm:text-lg'>
-              I have 6+ years of experience in web development and design across
-              all platforms from Shopify to Squarespace and am an outdoor
-              enthusiast (catch me on a remote river or trail running).
-            </p>
-            <p className='mt-4 max-w-xl text-center text-base leading-8 text-graphite/75 sm:text-lg'>
-              Everyone has a story (as does your business!) and I&apos;ll help
-              you tell yours.
+              Web designer, writer, and outdoor enthusiast - catch me on a
+              remote river or a trail run. Everyone has a story (your business
+              included!) and I&apos;ll help you tell yours.
             </p>
           </div>
 
@@ -84,9 +80,16 @@ export default function AboutPage() {
                 want to help.
               </p>
               <p>
-                Support from someone who truly does care about what you&apos;re
-                doing and about mission-driven work. The rising tide raises all
-                boats, and I&apos;d love to build this with you.
+                I&apos;m a writer as much as I&apos;m a designer. Before I ever
+                built a website, I was telling stories - and that&apos;s still
+                the part I care about most. Anyone can make a site look good.
+                The harder part is making it say something, in a voice that
+                actually sounds like you. That&apos;s what I do.
+              </p>
+              <p>
+                When you work with me, you get support from someone who truly
+                cares about what you&apos;re doing. The rising tide raises all
+                boats, and I&apos;d love to work with you.
               </p>
             </div>
             <div className='mt-10 flex flex-wrap justify-center gap-3'>

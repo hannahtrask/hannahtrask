@@ -93,7 +93,7 @@ export default function ServicesPage() {
             I&apos;ve seen since I began working with clients.
           </p>
 
-          <div className='mt-10 flex w-full max-w-md flex-col items-center justify-center gap-4 sm:max-w-none sm:flex-row'>
+          <div className='mt-10 flex w-full max-w-md flex-col items-center justify-center gap-4 sm:max-w-none sm:flex-row sm:flex-wrap'>
             <Link
               href='#website-in-a-week'
               className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-graphite/30 bg-[#333520] px-6 py-3 text-center text-[0.66rem] uppercase tracking-[0.22em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] sm:w-auto sm:text-[0.72rem] sm:tracking-[0.3em]'
@@ -107,6 +107,20 @@ export default function ServicesPage() {
             >
               Design Day
               <CalendarDays className='h-4 w-4' />
+            </Link>
+            <Link
+              href='#marketing-support'
+              className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-center text-[0.66rem] uppercase tracking-[0.22em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50 sm:w-auto sm:text-[0.72rem] sm:tracking-[0.3em]'
+            >
+              Marketing & Support
+              <ArrowUpRight className='h-4 w-4' />
+            </Link>
+            <Link
+              href='#full-build'
+              className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-center text-[0.66rem] uppercase tracking-[0.22em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50 sm:w-auto sm:text-[0.72rem] sm:tracking-[0.3em]'
+            >
+              Custom Builds
+              <ArrowUpRight className='h-4 w-4' />
             </Link>
             <Link
               href='/#contact'
@@ -253,7 +267,10 @@ export default function ServicesPage() {
             </Link>
           </div>
 
-          <div className='rounded-[2rem] border border-graphite/12 bg-[#d3c8b4] p-7 text-center shadow-[0_18px_45px_rgba(61,45,28,0.14)] sm:p-10'>
+          <div
+            id='marketing-support'
+            className='rounded-[2rem] border border-graphite/12 bg-[#d3c8b4] p-7 text-center shadow-[0_18px_45px_rgba(61,45,28,0.14)] sm:p-10'
+          >
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.4em] text-graphite/60'>
               every month, handled
             </p>
@@ -309,7 +326,7 @@ export default function ServicesPage() {
               Custom Websites & Redesigns
             </h2>
             <p className='mt-3 font-first-rodeo text-[0.8rem] uppercase tracking-[0.34em] text-graphite/68'>
-              starting at $3,500
+              projects typically $3,500-$12,000
             </p>
             <div className='mx-auto mt-7 max-w-3xl space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
               <p>

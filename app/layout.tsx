@@ -27,8 +27,6 @@ export const metadata: Metadata = {
     'web design',
     'web development',
     'SEO',
-    'AIO',
-    'GEO',
     'Squarespace',
     'Wix',
     'WordPress',
