@@ -32,17 +32,17 @@ function ServiceTile({
 
   return (
     <article
-      className={`group relative flex flex-col items-center justify-center p-8 transition hover:-translate-y-2 h-80 border-t-2 border-b border-l border-r border-white/60 rounded-2xl backdrop-blur-xl shadow-2xl overflow-hidden ${colorPair.bg} bg-opacity-40 ${colorPair.text}`}
+      className={`group relative mx-auto flex h-[12rem] w-full max-w-[18rem] flex-col overflow-hidden rounded-2xl border-t-2 border-b border-l border-r border-white/60 px-3 py-3 text-center shadow-2xl backdrop-blur-xl transition hover:-translate-y-2 ${colorPair.bg} bg-opacity-40 ${colorPair.text}`}
     >
       <div className='absolute inset-0 bg-gradient-to-br from-white/20 to-transparent pointer-events-none' />
-      <div className='relative z-10 flex flex-col items-center justify-center h-full'>
-        <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] opacity-70'>
+      <div className='relative z-10 mx-auto flex h-full w-full max-w-[14.5rem] flex-col items-center justify-center text-center'>
+        <p className='w-full text-center font-first-rodeo text-[0.66rem] uppercase tracking-[0.3em] opacity-70'>
           {eyebrow}
         </p>
-        <h3 className='mt-4 font-miroa text-[1.55rem] uppercase leading-[0.9] tracking-[0.08em] text-center sm:text-[1.95rem]'>
+        <h3 className='mt-2 w-full text-center font-miroa text-[1.2rem] uppercase leading-[0.94] tracking-[0.06em] sm:text-[1.4rem]'>
           {title}
         </h3>
-        <p className='mt-4 text-[0.9rem] leading-5 opacity-80 text-center max-w-xs'>
+        <p className='mt-2 w-full text-center text-[0.78rem] leading-[1.28] opacity-80'>
           {description}
         </p>
       </div>
@@ -92,7 +92,7 @@ export function ServiceGrid({ serviceTiles }: { serviceTiles: ServiceTile[] }) {
   return (
     <div
       ref={containerRef}
-      className='grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3 pb-16'
+      className='mx-auto grid w-full max-w-6xl gap-8 pb-10 sm:grid-cols-2 lg:grid-cols-3'
     >
       {serviceTiles.map((tile, index) => (
         <div

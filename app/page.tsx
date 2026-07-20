@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight, ChevronDown, Instagram, Mail } from 'lucide-react'
+import { ArrowUpRight, ChevronDown, Instagram, Mail, Sun } from 'lucide-react'
 
 import { ServiceGrid } from '../components/service-grid'
 import { ParallaxHeroImage } from '../components/parallax-hero-image'
+import { ContactForm } from '../components/contact-form'
 import { SiteFooter } from '../components/site-footer'
 import { SiteHeader } from '../components/site-header'
 import { TestimonialStrip } from '../components/testimonial-strip'
@@ -44,47 +45,47 @@ const serviceTiles: Array<{
   description: string
   tone: 'light' | 'dark'
 }> = [
-  {
-    title: 'Squarespace',
-    eyebrow: 'website in a week',
-    description: 'Fast launches with a clean process and a polished finish.',
-    tone: 'light',
-  },
-  {
-    title: 'Shopify',
-    eyebrow: 'e-commerce',
-    description:
-      'Inventory management and beautiful storefronts in Liquid templating language.',
-    tone: 'dark',
-  },
-  {
-    title: 'Content & Site Management',
-    eyebrow: 'management',
-    description:
-      'Offload the responsibility of blog posts and content updates to us.',
-    tone: 'light',
-  },
-  {
-    title: 'Support',
-    eyebrow: 'ongoing care',
-    description: 'Updates and maintenance after launch so things stay current.',
-    tone: 'light',
-  },
-  {
-    title: 'WordPress',
-    eyebrow: 'content rich',
-    description:
-      'Flexible systems for blogs, resources, and growing libraries.',
-    tone: 'light',
-  },
-  {
-    title: 'Wix',
-    eyebrow: 'easy edits',
-    description:
-      'Simple websites built so you can update them with confidence.',
-    tone: 'dark',
-  },
-]
+    {
+      title: 'Squarespace',
+      eyebrow: 'website in a week',
+      description: 'Fast launches with a clean process and a polished finish.',
+      tone: 'light',
+    },
+    {
+      title: 'Shopify',
+      eyebrow: 'e-commerce',
+      description:
+        'Inventory management and beautiful storefronts in Liquid templating language.',
+      tone: 'dark',
+    },
+    {
+      title: 'Content & Site Management',
+      eyebrow: 'management',
+      description:
+        'Offload the responsibility of blog posts and content updates to us.',
+      tone: 'light',
+    },
+    {
+      title: 'Support',
+      eyebrow: 'ongoing care',
+      description: 'Updates and maintenance after launch so things stay current.',
+      tone: 'light',
+    },
+    {
+      title: 'WordPress',
+      eyebrow: 'content rich',
+      description:
+        'Flexible systems for blogs, resources, and growing libraries.',
+      tone: 'light',
+    },
+    {
+      title: 'Wix',
+      eyebrow: 'easy edits',
+      description:
+        'Simple websites built so you can update them with confidence.',
+      tone: 'dark',
+    },
+  ]
 
 export default async function Home() {
   let testimonials: Testimonial[] = []
@@ -144,6 +145,56 @@ export default async function Home() {
         <div className='absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-sand-50 via-sand-50/90 to-transparent' />
       </section>
 
+      <section className='relative overflow-hidden bg-sand-50 px-4 pb-8 pt-10 sm:px-6 sm:pt-14 lg:px-8'>
+        <div className='mx-auto max-w-7xl'>
+          <div className='grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start'>
+            <div>
+              <h2 className='mt-4 max-w-2xl font-miroa text-3xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-4xl'>
+                Any of this sound familiar?
+              </h2>
+              <ul className='mt-6 grid gap-4 sm:grid-cols-2'>
+                {[
+                  'You wince a little every time you have to send someone your website link.',
+                  'Your site looked pretty good in 2019, but now it feels old.',
+                  'People search for what you do, land on a competitor, and choose them because their site feels stronger.',
+                  'Updating your site is such a pain that everything has just stayed the same for way too long.',
+                  'Your website was never really the priority. It was just something you needed to check off the list.',
+                ].map(item => (
+                  <li key={item} className='flex items-start gap-3'>
+                    <Sun
+                      className='mt-1 h-4 w-4 shrink-0 text-[#8b7651]'
+                      aria-hidden='true'
+                    />
+                    <p className='text-sm leading-6 text-graphite/80'>{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <aside className='rounded-[1.5rem] border border-[#8b7651]/35 bg-[#efe3cd] p-6 shadow-[0_14px_36px_rgba(92,70,39,0.16)] sm:p-8'>
+              <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.32em] text-[#5f5136]'>
+                you&apos;re in the right place
+              </p>
+              <p className='mt-4 text-sm leading-7 text-graphite/82 sm:text-base'>
+                I build and update sites for outdoor brands, guides, nonprofits,
+                and small businesses who are great at what they do and tired of
+                having a website that doesn&apos;t show it.
+              </p>
+              <div className='mt-6 h-px w-full bg-[#8b7651]/35' />
+              <p className='mt-6 font-first-rodeo text-[0.66rem] uppercase tracking-[0.3em] text-[#5f5136]'>
+                what&apos;s in it for you?
+              </p>
+              <p className='mt-3 text-sm leading-7 text-graphite/80'>
+                You&apos;ll end up with a website you&apos;re proud to share,
+                fully up to date, easily found by search engines, and a web
+                presence that earns trust before you ever even talk to a client
+                or customer.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
       <section
         id='services-section'
         className='relative overflow-hidden bg-sand-50 py-4 sm:py-4'
@@ -170,9 +221,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className='w-screen'>
-          <ServiceGrid serviceTiles={serviceTiles} />
-        </div>
+        <ServiceGrid serviceTiles={serviceTiles} />
       </section>
 
       <div className='h-24 w-full bg-gradient-to-b from-sand-50 to-[#c9bea8]' />
@@ -197,14 +246,13 @@ export default async function Home() {
                 founder / owner / designer
               </p>
               <p className='mt-4 max-w-md text-center text-sm leading-7 text-graphite/75 sm:text-base'>
-                I&apos;ll tell it to you straight, my degree is in English
-                writing & composition, but I also have 6+ years of experience in
-                web development and design, am a yoga teacher, writer, and
-                outdoor enthusiast (catch me on a remote river or trail running
-                around Grand Teton National Park).
+                I have 6+ years of experience in web development and design
+                across all platforms from Shopify to Squarespace and am an
+                outdoor enthusiast (catch me on a remote river or trail
+                running).
               </p>
               <p className='mt-4 max-w-md text-center text-sm leading-7 text-graphite/75 sm:text-base'>
-                Everyone has a story (as does your business!) and I&apos; help
+                Everyone has a story (as does your business!) and I&apos;ll help
                 you tell yours.
               </p>
             </div>
@@ -222,20 +270,19 @@ export default async function Home() {
                 I call Jackson, WY, my homebase (but I&apos;m from the suburbs
                 of Pennsylvania). I have over 6 years of experience in the web
                 world, and spent 3 years working remotely for a tech startup
-                based out of California. I LOVED how much I learned there, but I
-                was always missing the authentic connection I had with my
-                community and with the passionate people I worked with every
-                day. I decided to quit my job and start Sagebrush Web Studio so
-                I could use my skills and varied background to connect with real
-                people building real things. I love to see people pursuing their
-                dreams and choosing the "harder" yet more fulfilling path, and I
+                based out of California. I LOVED how much I learned, but I was
+                missing the connection I had with my community.
+              </p>
+              <p>
+                I quit my job to start Sagebrush Web Studio to connect with
+                passionate people and organizations. I love to see people
+                pursuing their dreams and choosing a more fulfilling path, and I
                 want to help.
               </p>
               <p>
-                The result for you? A gorgeous website, a web presence that is
-                actually FOUND by search engines, and support from someone who
-                truly does care about what you&apos;re doing. The rising tide
-                raises all boats, so let&apos;s do it together.
+                Support from someone who truly does care about what you&apos;re
+                doing and about mission-driven work. The rising tide raises all
+                boats, so let&apos;s do it together.
               </p>
             </div>
             <div className='mt-10 flex flex-wrap gap-3'>
@@ -282,7 +329,7 @@ export default async function Home() {
               contact
             </p>
             <h2 className='mt-4 max-w-lg font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-sand-50 sm:text-5xl'>
-              build a web presence you&apos;re proud of
+              get in touch
             </h2>
             <p className='mt-5 max-w-xl text-sm leading-7 text-sand-100/75 sm:text-base'>
               In an era where most of us don&apos;t have brick and mortar
@@ -335,29 +382,18 @@ export default async function Home() {
           </div>
 
           <div className='rounded-[2rem] border border-sand-50/10 bg-sand-50/8 p-6 backdrop-blur-sm sm:p-8'>
-            <div className='grid gap-6 sm:grid-cols-2'>
-              <div>
-                <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-sand-100/75'>
-                  What you get
-                </p>
-                <ul className='mt-4 space-y-3 text-sm leading-7 text-sand-50/80'>
-                  <li>Working with a real person</li>
-                  <li>Copy and messaging that feels authentic to you</li>
-                  <li>Suped up SEO/AIO/GEO so you are actually found online</li>
-                  <li>A web presence you&apos;re proud of</li>
-                </ul>
-              </div>
-              <div>
-                <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-sand-100/75'>
-                  Best fit
-                </p>
-                <ul className='mt-4 space-y-3 text-sm leading-7 text-sand-50/80'>
-                  <li>Outdoor brands</li>
-                  <li>Creative studios</li>
-                  <li>Service businesses</li>
-                  <li>Small teams with a sharp point of view</li>
-                </ul>
-              </div>
+            <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-sand-100/75'>
+              get in touch
+            </p>
+            <h3 className='mt-3 max-w-lg font-miroa text-3xl uppercase leading-tight tracking-[0.08em] text-sand-50'>
+              want to chat?
+            </h3>
+            <p className='mt-3 max-w-xl text-sm leading-7 text-sand-100/75'>
+              Send me a note.
+            </p>
+
+            <div className='mt-6'>
+              <ContactForm />
             </div>
           </div>
         </div>

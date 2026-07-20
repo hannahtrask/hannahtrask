@@ -27,7 +27,8 @@ export const metadata: Metadata = {
 }
 
 export default async function WorkPage() {
-  const caseStudies: CaseStudyListItem[] = await client.fetch(allCaseStudiesQuery)
+  const caseStudies: CaseStudyListItem[] =
+    await client.fetch(allCaseStudiesQuery)
 
   return (
     <main className='bg-sand-50 text-graphite'>

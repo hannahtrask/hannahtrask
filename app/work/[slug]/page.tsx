@@ -49,14 +49,16 @@ interface CaseStudyDetail {
 function resolveImageSrc(
   image: SanityImage | string | undefined,
   width: number,
-  height: number,
+  height: number
 ): string | undefined {
   if (!image) return undefined
   if (typeof image === 'string') return image
   return urlFor(image).width(width).height(height).url()
 }
 
-async function getCaseStudyBySlug(slug: string): Promise<CaseStudyDetail | null> {
+async function getCaseStudyBySlug(
+  slug: string
+): Promise<CaseStudyDetail | null> {
   const cs = await client.fetch(caseStudyBySlugQuery, { slug })
   return cs as CaseStudyDetail | null
 }
@@ -121,7 +123,11 @@ export default async function CaseStudyPage({
       ? cs.solutions
       : cs.scopeOfWork && cs.scopeOfWork.length > 0
         ? cs.scopeOfWork
-        : ['Strategic messaging', 'Information architecture', 'Responsive build']
+        : [
+            'Strategic messaging',
+            'Information architecture',
+            'Responsive build',
+          ]
 
   return (
     <main className='bg-sand-50 text-graphite'>

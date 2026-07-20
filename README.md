@@ -73,6 +73,7 @@ Hey there! We're Sagebrush Web Studio, with a passion for creating beautiful, fu
 ### Email & Communication
 
 - **Sonner** – Beautiful toast notifications with custom styling
+- **Resend** – Contact form delivery for project inquiries
 
 ### Theming & Accessibility
 
@@ -93,6 +94,22 @@ Hey there! We're Sagebrush Web Studio, with a passion for creating beautiful, fu
 - **Next.js Build System** – Optimized production builds
 - **Image Optimization** – Next.js Image component with custom configuration
 - **TypeScript Compiler** – Type checking and compilation
+
+---
+
+## Contact Form Configuration
+
+Set these variables in `.env.local` (or in your hosting provider environment settings):
+
+```bash
+RESEND_API_KEY=your_resend_api_key
+RESEND_TO_EMAIL=hello@wearesagebrush.com
+RESEND_FROM_EMAIL=onboarding@resend.dev
+```
+
+- `RESEND_API_KEY`: API key from your Resend account
+- `RESEND_TO_EMAIL`: inbox that receives website inquiries
+- `RESEND_FROM_EMAIL`: sender address for outgoing messages (must be valid in Resend)
 
 ### Animation Features
 
