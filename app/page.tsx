@@ -119,7 +119,7 @@ export default async function Home() {
             text='Sagebrush Web Studio'
             className='mt-6 max-w-5xl text-balance font-miroa text-3xl uppercase leading-[0.9] tracking-[0.08em] text-sand-50 drop-shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:text-5xl lg:text-[5.75rem]'
           />
-          <p className='mt-6 max-w-2xl text-pretty text-sm leading-7 text-graphite/80 sm:text-base'>
+          <p className='mt-6 max-w-2xl text-pretty text-base leading-8 text-graphite/80 sm:text-lg'>
             A grounded digital home for independent brands, outdoor companies,
             and creative teams who want a site that feels clear, warm, and
             unmistakably theirs.
@@ -198,7 +198,7 @@ export default async function Home() {
         id='services-section'
         className='relative overflow-hidden bg-sand-50 py-4 sm:py-4'
       >
-        <div className='mx-auto max-w-7xl px-4 py-2 sm:px-6 sm:py-8 lg:px-8'>
+        <div className='mx-auto max-w-7xl px-4 pb-6 sm:px-6 sm:py-8 lg:px-8'>
           <div className='mx-auto mb-7 max-w-4xl text-center sm:mb-10'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-graphite/60'>
               services
@@ -206,7 +206,7 @@ export default async function Home() {
             <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
               So, what do we do?
             </h2>
-            <p className='mx-auto mt-4 max-w-3xl text-sm leading-7 text-graphite/72 sm:mt-5 sm:text-base'>
+            <p className='mx-auto mt-4 max-w-3xl text-base leading-8 text-graphite/72 sm:mt-5 sm:text-lg'>
               Web development! Web design! Copywriting and content management!
               SEO/AIO/GEO! Curious if I can help you? Fill out the contact form{' '}
               <a
@@ -221,89 +221,6 @@ export default async function Home() {
         </div>
 
         <ServiceGrid serviceTiles={serviceTiles} />
-      </section>
-
-      <div className='h-24 w-full bg-gradient-to-b from-sand-50 to-[#c9bea8]' />
-
-      <section
-        id='about-section'
-        className='relative overflow-hidden bg-[#c9bea8] px-4 py-24 sm:px-6 lg:px-8'
-      >
-        <div className='mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center'>
-          <div className='order-2 lg:order-1'>
-            <div className='mx-auto flex max-w-[38rem] flex-col items-center'>
-              <div className='relative h-56 w-56 overflow-hidden rounded-full border border-graphite/20 shadow-[0_16px_40px_rgba(61,45,28,0.24)] sm:h-64 sm:w-64'>
-                <Image
-                  src='/hannah.JPG'
-                  alt='Portrait of Hannah'
-                  fill
-                  sizes='(min-width: 640px) 16rem, 14rem'
-                  className='object-cover'
-                />
-              </div>
-              <p className='mt-5 text-center font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/70'>
-                founder / owner / designer
-              </p>
-              <p className='mt-4 max-w-md text-center text-sm leading-7 text-graphite/75 sm:text-base'>
-                I have 6+ years of experience in web development and design
-                across all platforms from Shopify to Squarespace and am an
-                outdoor enthusiast (catch me on a remote river or trail
-                running).
-              </p>
-              <p className='mt-4 max-w-md text-center text-sm leading-7 text-graphite/75 sm:text-base'>
-                Everyone has a story (as does your business!) and I&apos;ll help
-                you tell yours.
-              </p>
-            </div>
-          </div>
-
-          <div className='order-1 max-w-2xl lg:order-2'>
-            <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.4em] text-graphite/60'>
-              about
-            </p>
-            <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
-              hi, i&apos;m hannah.
-            </h2>
-            <div className='mt-8 space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
-              <p>
-                I call Jackson, WY, my homebase (but I&apos;m from the suburbs
-                of Pennsylvania). I have over 6 years of experience in the web
-                world, and spent 3 years working remotely for a tech startup
-                based out of California. I LOVED how much I learned, but I was
-                missing the connection I had with my community.
-              </p>
-              <p>
-                I quit my job to start Sagebrush Web Studio to connect with
-                passionate people and organizations. I love to see people
-                pursuing their dreams and choosing a more fulfilling path, and I
-                want to help.
-              </p>
-              <p>
-                Support from someone who truly does care about what you&apos;re
-                doing and about mission-driven work. The rising tide raises all
-                boats, so let&apos;s do it together.
-              </p>
-            </div>
-            <div className='mt-10 flex flex-wrap gap-3'>
-              {[
-                'Squarespace',
-                'Wix',
-                'WordPress',
-                'Shopify',
-                'Custom',
-                'Design Day',
-                'Support',
-              ].map(item => (
-                <span
-                  key={item}
-                  className='rounded-full border border-graphite/15 bg-sand-50/60 px-4 py-2 text-[0.7rem] uppercase tracking-[0.28em] text-graphite/80'
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       <TestimonialStrip testimonials={testimonials} />
@@ -330,18 +247,18 @@ export default async function Home() {
             <h2 className='mt-4 max-w-lg font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-sand-50 sm:text-5xl'>
               get in touch
             </h2>
-            <p className='mt-5 max-w-xl text-sm leading-7 text-sand-100/75 sm:text-base'>
+            <p className='mt-5 max-w-xl text-base leading-8 text-sand-100/75 sm:text-lg'>
               In an era where most of us don&apos;t have brick and mortar
               storefronts, your website is SO important. It&apos;s the first
               impression for your business, and it should feel like you.
             </p>
-            <p className='mt-5 max-w-xl text-sm leading-7 text-sand-100/75 sm:text-base'>
+            <p className='mt-5 max-w-xl text-base leading-8 text-sand-100/75 sm:text-lg'>
               I build websites that feel authentic, clear, and trustworthy. If
               you&apos;re ready to get started, reach out and we can talk about
               your project.
             </p>
 
-            <div className='mt-8 flex flex-col gap-3 text-sm text-sand-50/90'>
+            <div className='mt-8 flex flex-col gap-3 text-base text-sand-50/90'>
               <Link
                 href='mailto:hello@wearesagebrush.com'
                 className='inline-flex w-fit items-center gap-3 rounded-full border border-sand-50/20 bg-sand-50/8 px-5 py-3 transition hover:border-[#8799a7] hover:bg-[#8799a7]'
@@ -387,7 +304,7 @@ export default async function Home() {
             <h3 className='mt-3 max-w-lg font-miroa text-3xl uppercase leading-tight tracking-[0.08em] text-sand-50'>
               want to chat?
             </h3>
-            <p className='mt-3 max-w-xl text-sm leading-7 text-sand-100/75'>
+            <p className='mt-3 max-w-xl text-base leading-8 text-sand-100/75'>
               Send me a note.
             </p>
 

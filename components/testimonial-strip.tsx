@@ -11,7 +11,7 @@ export function TestimonialStrip({ testimonials }: Props) {
   if (!testimonials?.length) return null
 
   return (
-    <section className='bg-sand-50 px-4 py-16 sm:px-6 lg:px-8'>
+    <section className='bg-brand-sand px-4 py-16 sm:px-6 lg:px-8'>
       <div className='mx-auto max-w-7xl'>
         <p className='text-center font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-graphite/60'>
           from clients
