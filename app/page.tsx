@@ -147,7 +147,7 @@ export default async function Home() {
 
       <section className='relative overflow-hidden bg-sand-50 px-4 pb-24 pt-10 sm:px-6 sm:pt-14 lg:px-8'>
         <div className='mx-auto max-w-7xl'>
-          <div className='grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start'>
+          <div className='mx-auto max-w-3xl'>
             <div>
               <h2 className='mt-4 max-w-2xl font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
                 Any of this sound familiar?
@@ -169,27 +169,24 @@ export default async function Home() {
                   </li>
                 ))}
               </ul>
+              <aside className='relative mx-auto mt-12 flex h-[19rem] w-[19rem] items-center justify-center rounded-full border border-[#8b7651]/35 bg-[radial-gradient(circle_at_top,_rgba(255,248,238,0.92),_rgba(239,227,205,0.96)_58%,_rgba(221,203,173,0.96)_100%)] p-8 text-center shadow-[0_18px_48px_rgba(92,70,39,0.18)] sm:h-[21rem] sm:w-[21rem] sm:p-10'>
+                <div className='pointer-events-none absolute -left-7 top-9 h-3 w-3 rounded-full bg-[#8b7651]/70 shadow-[0_0_0_8px_rgba(139,118,81,0.1)]' />
+                <div className='pointer-events-none absolute left-4 top-14 h-16 border-l-2 border-dotted border-[#8b7651]/45' />
+                <div className='pointer-events-none absolute -right-8 bottom-12 h-4 w-4 rounded-full border border-[#8b7651]/35 bg-sand-50' />
+                <div className='pointer-events-none absolute right-5 bottom-16 h-20 border-r-2 border-dotted border-[#8b7651]/40' />
+                <div className='pointer-events-none absolute inset-4 rounded-full border border-dashed border-[#8b7651]/25' />
+                <div className='relative z-10 max-w-[14rem]'>
+                  <p className='font-first-rodeo text-[0.82rem] uppercase tracking-[0.32em] text-[#5f5136]'>
+                    you&apos;re in the right place
+                  </p>
+                  <p className='mt-4 text-base leading-7 text-graphite/82 sm:text-lg sm:leading-8'>
+                    I build and update sites for small businesses who are great
+                    at what they do and tired of having a website that
+                    doesn&apos;t show it.
+                  </p>
+                </div>
+              </aside>
             </div>
-
-            <aside className='rounded-[1.5rem] border border-[#8b7651]/35 bg-[#efe3cd] p-6 shadow-[0_14px_36px_rgba(92,70,39,0.16)] sm:p-8'>
-              <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.32em] text-[#5f5136]'>
-                you&apos;re in the right place
-              </p>
-              <p className='mt-4 text-base leading-7 text-graphite/82 sm:text-lg sm:leading-8'>
-                I build and update sites for small businesses who are great at
-                what they do and tired of having a website that doesn&apos;t
-                show it.
-              </p>
-              <div className='mt-6 h-px w-full bg-[#8b7651]/35' />
-              <p className='mt-6 font-first-rodeo text-[0.74rem] uppercase tracking-[0.3em] text-[#5f5136]'>
-                what&apos;s in it for you?
-              </p>
-              <p className='mt-3 text-base leading-7 text-graphite/80 sm:text-lg sm:leading-8'>
-                A website you&apos;re proud to share, fully up to date, found by
-                search engines, and trustworthy before you ever even talk to a
-                client or customer.
-              </p>
-            </aside>
           </div>
         </div>
       </section>
