@@ -176,19 +176,18 @@ export default async function Home() {
                 you&apos;re in the right place
               </p>
               <p className='mt-4 text-sm leading-7 text-graphite/82 sm:text-base'>
-                I build and update sites for outdoor brands, guides, nonprofits,
-                and small businesses who are great at what they do and tired of
-                having a website that doesn&apos;t show it.
+                I build and update sites for small businesses who are great at
+                what they do and tired of having a website that doesn&apos;t
+                show it.
               </p>
               <div className='mt-6 h-px w-full bg-[#8b7651]/35' />
               <p className='mt-6 font-first-rodeo text-[0.66rem] uppercase tracking-[0.3em] text-[#5f5136]'>
                 what&apos;s in it for you?
               </p>
               <p className='mt-3 text-sm leading-7 text-graphite/80'>
-                You&apos;ll end up with a website you&apos;re proud to share,
-                fully up to date, easily found by search engines, and a web
-                presence that earns trust before you ever even talk to a client
-                or customer.
+                A website you&apos;re proud to share, fully up to date, found by
+                search engines, and trustworthy before you ever even talk to a
+                client or customer.
               </p>
             </aside>
           </div>
