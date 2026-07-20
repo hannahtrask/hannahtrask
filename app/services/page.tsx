@@ -152,9 +152,8 @@ export default function ServicesPage() {
                   devices
                 </li>
                 <li>
-                  SEO & AIO optimization including meta tags, schema markup,
-                  keyword optimization, and structured data for search
-                  visibility
+                  SEO optimization including meta tags, schema markup, keyword
+                  optimization, and structured data for search visibility
                 </li>
                 <li>
                   Brand-aligned design with custom styling that reflects your
@@ -230,7 +229,7 @@ export default function ServicesPage() {
                   Layout and style polish
                 </li>
                 <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
-                  SEO and AIO tune-ups
+                  SEO tune-ups
                 </li>
                 <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
                   Small UX and functionality fixes

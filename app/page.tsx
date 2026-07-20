@@ -49,47 +49,35 @@ const serviceTiles: Array<{
   description: string
   tone: 'light' | 'dark'
 }> = [
-  {
-    title: 'Squarespace',
-    eyebrow: 'website in a week',
-    description: 'Fast launches with a clean process and a polished finish.',
-    tone: 'light',
-  },
-  {
-    title: 'Shopify',
-    eyebrow: 'e-commerce',
-    description:
-      'Inventory management and beautiful storefronts in Liquid templating language.',
-    tone: 'dark',
-  },
-  {
-    title: 'Content & Site Management',
-    eyebrow: 'management',
-    description:
-      'Offload the responsibility of blog posts and content updates to me.',
-    tone: 'light',
-  },
-  {
-    title: 'Support',
-    eyebrow: 'ongoing care',
-    description: 'Updates and maintenance after launch so things stay current.',
-    tone: 'light',
-  },
-  {
-    title: 'WordPress',
-    eyebrow: 'content rich',
-    description:
-      'Flexible systems for blogs, resources, and growing libraries.',
-    tone: 'light',
-  },
-  {
-    title: 'Wix',
-    eyebrow: 'easy edits',
-    description:
-      'Simple websites built so you can update them with confidence.',
-    tone: 'dark',
-  },
-]
+    {
+      title: "A site you're proud to send people",
+      eyebrow: 'something new',
+      description:
+        'New builds and full redesigns - designed, written, and launched without the months-long slog.',
+      tone: 'light',
+    },
+    {
+      title: "Fix what's bugging you",
+      eyebrow: 'quick wins',
+      description:
+        'Design Day tackles your whole website to-do list in one focused day.',
+      tone: 'dark',
+    },
+    {
+      title: 'Show up in search',
+      eyebrow: 'get found',
+      description:
+        'SEO that gets you in front of the people already looking for what you do.',
+      tone: 'light',
+    },
+    {
+      title: 'Marketing, handled monthly',
+      eyebrow: 'off your plate',
+      description:
+        'Content, email, and social support on retainer - so your site and channels stay alive without you thinking about them.',
+      tone: 'dark',
+    },
+  ]
 
 export default async function Home() {
   let testimonials: Testimonial[] = []
@@ -115,34 +103,36 @@ export default async function Home() {
 
         <SiteHeader />
 
-        <div className='relative z-10 mx-auto flex min-h-[76svh] max-w-7xl flex-col items-center justify-start px-4 pb-20 pt-24 text-center sm:min-h-[100svh] sm:px-6 sm:pb-28 sm:pt-36 lg:px-8 lg:pt-40'>
-          <p className='font-first-rodeo text-[0.95rem] uppercase tracking-[0.4em] text-sand-50/90 sm:text-[1.05rem]'>
-            build an authentic online presence
-          </p>
-          <TypewriterTitle
-            text='Sagebrush Web Studio'
-            className='mt-6 max-w-5xl text-balance font-miroa text-3xl uppercase leading-[0.9] tracking-[0.08em] text-sand-50 drop-shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:text-5xl lg:text-[5.75rem]'
-          />
-          <p className='mt-6 max-w-2xl text-pretty text-base leading-8 text-graphite/80 sm:text-lg'>
-            A grounded digital home for independent brands, outdoor companies,
-            and creative teams who want a site that feels clear, warm, and
-            unmistakably theirs.
-          </p>
-          <div className='mt-10 flex flex-col items-center gap-4 sm:flex-row'>
-            <Link
-              href='/services'
-              className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
-            >
-              View Services
-              <ArrowUpRight className='h-4 w-4' />
-            </Link>
-            <Link
-              href='#contact'
-              className='inline-flex items-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50'
-            >
-              Start a Project
-              <ChevronDown className='h-4 w-4' />
-            </Link>
+        <div className='relative z-10 mx-auto flex min-h-[76svh] max-w-7xl flex-col justify-start px-4 pb-20 pt-24 sm:min-h-[100svh] sm:px-6 sm:pb-28 sm:pt-36 lg:px-8 lg:pt-40'>
+          <div className='mx-auto flex w-full max-w-5xl flex-col items-center text-center'>
+            <p className='font-first-rodeo text-[0.95rem] uppercase tracking-[0.4em] text-sand-50/90 sm:text-[1.05rem]'>
+              build an authentic online presence
+            </p>
+            <TypewriterTitle
+              text='Sagebrush Web Studio'
+              className='mx-auto mt-6 w-full text-balance font-miroa text-3xl uppercase leading-[0.9] tracking-[0.08em] text-sand-50 drop-shadow-[0_10px_30px_rgba(0,0,0,0.2)] sm:text-5xl lg:text-[5.75rem]'
+            />
+            <p className='mx-auto mt-6 max-w-2xl text-pretty text-base leading-8 text-graphite/80 sm:text-lg'>
+              A grounded digital home for independent brands, outdoor companies,
+              and creative teams who want a site that feels clear, warm, and
+              unmistakably theirs.
+            </p>
+            <div className='mt-10 flex flex-col items-center gap-4 sm:flex-row'>
+              <Link
+                href='/services'
+                className='inline-flex items-center gap-2 rounded-full border border-graphite/30 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
+              >
+                View Services
+                <ArrowUpRight className='h-4 w-4' />
+              </Link>
+              <Link
+                href='#contact'
+                className='inline-flex items-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50'
+              >
+                Start a Project
+                <ChevronDown className='h-4 w-4' />
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -204,19 +194,9 @@ export default async function Home() {
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.38em] text-graphite/60'>
               services
             </p>
-            <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
-              So, what do I do?
-            </h2>
             <p className='mx-auto mt-4 max-w-3xl text-base leading-8 text-graphite/72 sm:mt-5 sm:text-lg'>
-              Web development! Web design! Copywriting and content management!
-              SEO/AIO/GEO! Curious if I can help you? Fill out the contact form{' '}
-              <a
-                className='text-graphite/80 underline hover:text-graphite font-w-800'
-                href='#contact'
-              >
-                here
-              </a>
-              .
+              Websites, words, and the marketing that makes them work.
+              Here&apos;s what that looks like:
             </p>
           </div>
         </div>
@@ -255,7 +235,7 @@ export default async function Home() {
             </p>
             <p className='mt-5 max-w-xl text-base leading-8 text-sand-100/75 sm:text-lg'>
               I build websites that feel authentic, clear, and trustworthy. If
-              you&apos;re ready to get started, reach out and I can talk about
+              you&apos;re ready to get started, reach out and we can talk about
               your project.
             </p>
 
