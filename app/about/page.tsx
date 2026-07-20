@@ -8,7 +8,9 @@ import { SiteFooter } from '../../components/site-footer'
 import { SiteHeader } from '../../components/site-header'
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: {
+    absolute: 'About | Sagebrush Web Studio',
+  },
   description:
     'Meet Hannah and learn the story behind Sagebrush Web Studio, a web design studio for thoughtful brands and small businesses.',
   alternates: {
@@ -84,7 +86,7 @@ export default function AboutPage() {
               <p>
                 Support from someone who truly does care about what you&apos;re
                 doing and about mission-driven work. The rising tide raises all
-                boats, so let&apos;s do it together.
+                boats, and I&apos;d love to build this with you.
               </p>
             </div>
             <div className='mt-10 flex flex-wrap justify-center gap-3'>
@@ -132,13 +134,13 @@ export default function AboutPage() {
               get in touch
             </h2>
             <p className='mt-5 max-w-xl text-base leading-8 text-sand-100/75 sm:text-lg'>
-              In an era where most of us don&apos;t have brick and mortar
+              In an era where most people don&apos;t have brick and mortar
               storefronts, your website is SO important. It&apos;s the first
               impression for your business, and it should feel like you.
             </p>
             <p className='mt-5 max-w-xl text-base leading-8 text-sand-100/75 sm:text-lg'>
               I build websites that feel authentic, clear, and trustworthy. If
-              you&apos;re ready to get started, reach out and we can talk about
+              you&apos;re ready to get started, reach out and I can talk about
               your project.
             </p>
 

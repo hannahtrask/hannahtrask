@@ -15,24 +15,28 @@ import { allTestimonialsQuery } from '../sanity/queries'
 import type { Testimonial } from '../sanity/types'
 
 export const metadata: Metadata = {
-  title:
-    'Web design and content for passionate people: outfitters, outdoor brands, and local businesses who need a site and a story, not just a template.',
+  title: {
+    absolute:
+      'Sagebrush Web Studio | Web Design & Content Management in Jackson Hole, WY',
+  },
   description:
-    'Sagebrush Web Studio designs and builds authentic websites for outdoor brands, creative studios, and service businesses that want a clear and memorable online presence.',
+    "Websites, copy, and SEO for Jackson Hole's outdoor economy - outfitters, nonprofits, and local businesses who need a site and a story, not just a template.",
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Sagebrush Web Studio',
+    title:
+      'Sagebrush Web Studio | Web Design & Content Management in Jackson Hole, WY',
     description:
-      'Sagebrush Web Studio designs and builds authentic websites for outdoor brands, creative studios, and service businesses that want a clear and memorable online presence.',
+      "Websites, copy, and SEO for Jackson Hole's outdoor economy - outfitters, nonprofits, and local businesses who need a site and a story, not just a template.",
     images: ['/site-title/SagebrushSecondaryLogo-07.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sagebrush Web Studio',
+    title:
+      'Sagebrush Web Studio | Web Design & Content Management in Jackson Hole, WY',
     description:
-      'Sagebrush Web Studio designs and builds authentic websites for outdoor brands, creative studios, and service businesses that want a clear and memorable online presence.',
+      "Websites, copy, and SEO for Jackson Hole's outdoor economy - outfitters, nonprofits, and local businesses who need a site and a story, not just a template.",
     images: ['/site-title/SagebrushSecondaryLogo-07.png'],
   },
 }
@@ -62,7 +66,7 @@ const serviceTiles: Array<{
     title: 'Content & Site Management',
     eyebrow: 'management',
     description:
-      'Offload the responsibility of blog posts and content updates to us.',
+      'Offload the responsibility of blog posts and content updates to me.',
     tone: 'light',
   },
   {
@@ -201,7 +205,7 @@ export default async function Home() {
               services
             </p>
             <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
-              So, what do we do?
+              So, what do I do?
             </h2>
             <p className='mx-auto mt-4 max-w-3xl text-base leading-8 text-graphite/72 sm:mt-5 sm:text-lg'>
               Web development! Web design! Copywriting and content management!
@@ -245,13 +249,13 @@ export default async function Home() {
               get in touch
             </h2>
             <p className='mt-5 max-w-xl text-base leading-8 text-sand-100/75 sm:text-lg'>
-              In an era where most of us don&apos;t have brick and mortar
+              In an era where most people don&apos;t have brick and mortar
               storefronts, your website is SO important. It&apos;s the first
               impression for your business, and it should feel like you.
             </p>
             <p className='mt-5 max-w-xl text-base leading-8 text-sand-100/75 sm:text-lg'>
               I build websites that feel authentic, clear, and trustworthy. If
-              you&apos;re ready to get started, reach out and we can talk about
+              you&apos;re ready to get started, reach out and I can talk about
               your project.
             </p>
 

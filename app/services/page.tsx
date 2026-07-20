@@ -9,7 +9,9 @@ import { SiteHeader } from '../../components/site-header'
 import { TypewriterTitle } from '../../components/typewriter-title'
 
 export const metadata: Metadata = {
-  title: 'Services',
+  title: {
+    absolute: 'Services | Sagebrush Web Studio',
+  },
   description:
     'Explore website services from Sagebrush Web Studio, including Website in a Week, Design Day, and custom builds for brands that want a clearer online presence.',
   alternates: {
@@ -79,14 +81,14 @@ export default function ServicesPage() {
             services
           </p>
           <TypewriterTitle
-            text='see what we offer'
+            text='see what I offer'
             className='mt-6 max-w-5xl font-miroa text-4xl uppercase leading-[0.9] tracking-[0.08em] text-sand-50 sm:text-5xl lg:text-[5.2rem]'
             speedMs={85}
           />
 
           <p className='mt-2 max-w-3xl text-sm leading-7 text-graphite/80 sm:text-base'>
-            It&apos; hard to wrap up these services in a neat little box, as the
-            web is a complicated place so there is no one-size-fits-all
+            It&apos;s hard to wrap up these services in a neat little box, as
+            the web is a complicated place so there is no one-size-fits-all
             solution. I&apos;ve split these up into the main categories
             I&apos;ve seen since I began working with clients.
           </p>

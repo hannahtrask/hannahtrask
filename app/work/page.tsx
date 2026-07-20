@@ -15,11 +15,19 @@ import type { CaseStudyListItem } from '../../sanity/types'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Work',
+  title: {
+    absolute: 'Work | Sagebrush Web Studio',
+  },
   description:
     'Case studies and past projects from Sagebrush Web Studio — custom builds, nonprofit redesigns, and full-scope web projects.',
   alternates: { canonical: '/work' },
   openGraph: {
+    title: 'Work | Sagebrush Web Studio',
+    description: 'Case studies and past projects from Sagebrush Web Studio.',
+    images: ['/site-title/SagebrushSecondaryLogo-07.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
     title: 'Work | Sagebrush Web Studio',
     description: 'Case studies and past projects from Sagebrush Web Studio.',
     images: ['/site-title/SagebrushSecondaryLogo-07.png'],

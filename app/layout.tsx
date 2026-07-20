@@ -83,6 +83,31 @@ export const metadata: Metadata = {
   },
 }
 
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Sagebrush Web Studio',
+  url: 'https://wearesagebrush.com',
+  email: 'hello@wearesagebrush.com',
+  telephone: '+1-307-226-0740',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Jackson',
+    addressRegion: 'WY',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Jackson Hole',
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Teton County, WY',
+    },
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -90,7 +115,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={`${miroa.variable} ${firstRodeo.variable}`}>
-      <body>{children}</body>
+      <body>
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        {children}
+      </body>
     </html>
   )
 }
