@@ -11,7 +11,7 @@ const initialState: SubmitState = { status: 'idle' }
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitState, setSubmitState] = useState<SubmitState>(initialState)
+  const [, setSubmitState] = useState<SubmitState>(initialState)
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
