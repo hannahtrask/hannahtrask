@@ -145,46 +145,46 @@ export default async function Home() {
         <div className='absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-sand-50 via-sand-50/90 to-transparent' />
       </section>
 
-      <section className='relative overflow-hidden bg-sand-50 px-4 pb-8 pt-10 sm:px-6 sm:pt-14 lg:px-8'>
+      <section className='relative overflow-hidden bg-sand-50 px-4 pb-24 pt-10 sm:px-6 sm:pt-14 lg:px-8'>
         <div className='mx-auto max-w-7xl'>
           <div className='grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start'>
             <div>
-              <h2 className='mt-4 max-w-2xl font-miroa text-3xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-4xl'>
+              <h2 className='mt-4 max-w-2xl font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
                 Any of this sound familiar?
               </h2>
-              <ul className='mt-6 grid gap-4 sm:grid-cols-2'>
+              <ul className='mt-6 grid gap-4'>
                 {[
                   'You wince a little every time you have to send someone your website link.',
-                  'Your site looked pretty good ... in 2019.',
                   'People search for what you do, land on a competitor, and choose them because their site looks better.',
                   'Updating your site is an afterthought and has stayed the same for way too long.',
-                  'Your website was never really the priority. It was just something you needed to check off the list.',
                 ].map(item => (
                   <li key={item} className='flex items-start gap-3'>
                     <Sun
                       className='mt-1 h-4 w-4 shrink-0 text-[#8b7651]'
                       aria-hidden='true'
                     />
-                    <p className='text-sm leading-6 text-graphite/80'>{item}</p>
+                    <p className='text-base leading-7 text-graphite/80 sm:text-lg sm:leading-8'>
+                      {item}
+                    </p>
                   </li>
                 ))}
               </ul>
             </div>
 
             <aside className='rounded-[1.5rem] border border-[#8b7651]/35 bg-[#efe3cd] p-6 shadow-[0_14px_36px_rgba(92,70,39,0.16)] sm:p-8'>
-              <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.32em] text-[#5f5136]'>
+              <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.32em] text-[#5f5136]'>
                 you&apos;re in the right place
               </p>
-              <p className='mt-4 text-sm leading-7 text-graphite/82 sm:text-base'>
+              <p className='mt-4 text-base leading-7 text-graphite/82 sm:text-lg sm:leading-8'>
                 I build and update sites for small businesses who are great at
                 what they do and tired of having a website that doesn&apos;t
                 show it.
               </p>
               <div className='mt-6 h-px w-full bg-[#8b7651]/35' />
-              <p className='mt-6 font-first-rodeo text-[0.66rem] uppercase tracking-[0.3em] text-[#5f5136]'>
+              <p className='mt-6 font-first-rodeo text-[0.74rem] uppercase tracking-[0.3em] text-[#5f5136]'>
                 what&apos;s in it for you?
               </p>
-              <p className='mt-3 text-sm leading-7 text-graphite/80'>
+              <p className='mt-3 text-base leading-7 text-graphite/80 sm:text-lg sm:leading-8'>
                 A website you&apos;re proud to share, fully up to date, found by
                 search engines, and trustworthy before you ever even talk to a
                 client or customer.
