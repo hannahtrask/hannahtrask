@@ -45,47 +45,47 @@ const serviceTiles: Array<{
   description: string
   tone: 'light' | 'dark'
 }> = [
-    {
-      title: 'Squarespace',
-      eyebrow: 'website in a week',
-      description: 'Fast launches with a clean process and a polished finish.',
-      tone: 'light',
-    },
-    {
-      title: 'Shopify',
-      eyebrow: 'e-commerce',
-      description:
-        'Inventory management and beautiful storefronts in Liquid templating language.',
-      tone: 'dark',
-    },
-    {
-      title: 'Content & Site Management',
-      eyebrow: 'management',
-      description:
-        'Offload the responsibility of blog posts and content updates to us.',
-      tone: 'light',
-    },
-    {
-      title: 'Support',
-      eyebrow: 'ongoing care',
-      description: 'Updates and maintenance after launch so things stay current.',
-      tone: 'light',
-    },
-    {
-      title: 'WordPress',
-      eyebrow: 'content rich',
-      description:
-        'Flexible systems for blogs, resources, and growing libraries.',
-      tone: 'light',
-    },
-    {
-      title: 'Wix',
-      eyebrow: 'easy edits',
-      description:
-        'Simple websites built so you can update them with confidence.',
-      tone: 'dark',
-    },
-  ]
+  {
+    title: 'Squarespace',
+    eyebrow: 'website in a week',
+    description: 'Fast launches with a clean process and a polished finish.',
+    tone: 'light',
+  },
+  {
+    title: 'Shopify',
+    eyebrow: 'e-commerce',
+    description:
+      'Inventory management and beautiful storefronts in Liquid templating language.',
+    tone: 'dark',
+  },
+  {
+    title: 'Content & Site Management',
+    eyebrow: 'management',
+    description:
+      'Offload the responsibility of blog posts and content updates to us.',
+    tone: 'light',
+  },
+  {
+    title: 'Support',
+    eyebrow: 'ongoing care',
+    description: 'Updates and maintenance after launch so things stay current.',
+    tone: 'light',
+  },
+  {
+    title: 'WordPress',
+    eyebrow: 'content rich',
+    description:
+      'Flexible systems for blogs, resources, and growing libraries.',
+    tone: 'light',
+  },
+  {
+    title: 'Wix',
+    eyebrow: 'easy edits',
+    description:
+      'Simple websites built so you can update them with confidence.',
+    tone: 'dark',
+  },
+]
 
 export default async function Home() {
   let testimonials: Testimonial[] = []
