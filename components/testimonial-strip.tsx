@@ -12,14 +12,15 @@ interface Props {
 }
 
 export function TestimonialStrip({ testimonials }: Props) {
-  if (!testimonials?.length) return null
-
   const visibleCount = 2
-  const maxStartIndex = Math.max(0, testimonials.length - visibleCount)
+  const testimonialCount = testimonials?.length ?? 0
+  const maxStartIndex = Math.max(0, testimonialCount - visibleCount)
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const isAtStart = currentIndex === 0
   const isAtEnd = currentIndex >= maxStartIndex
+
+  if (!testimonialCount) return null
 
   const goPrev = () => {
     setCurrentIndex(prev => (prev > 0 ? prev - 1 : prev))
