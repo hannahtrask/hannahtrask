@@ -255,10 +255,10 @@ export default function ServicesPage() {
 
           <div className='rounded-[2rem] border border-graphite/12 bg-[#d3c8b4] p-7 text-center shadow-[0_18px_45px_rgba(61,45,28,0.14)] sm:p-10'>
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.4em] text-graphite/60'>
-              ongoing support
+              every month, handled
             </p>
             <h2 className='mt-4 font-miroa text-3xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-4xl'>
-              Content & site maintenance
+              Marketing & Site Support
             </h2>
             <p className='mt-3 font-first-rodeo text-[0.8rem] uppercase tracking-[0.34em] text-graphite/68'>
               retainers from $500/month
@@ -271,20 +271,21 @@ export default function ServicesPage() {
               </p>
               <ul className='grid gap-2 text-left'>
                 <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
-                  Fresh content updates for services, offers, blogs, and
+                  Fresh content for your site - services, offers, blogs,
                   announcements
                 </li>
                 <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
-                  Visual and layout maintenance so your site always looks
-                  professional
+                  Email campaigns and newsletters that actually sound like you
                 </li>
                 <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
-                  Ongoing SEO tune-ups: metadata, headings, internal linking,
-                  and keyword alignment
+                  Social content support so your channels don&apos;t go quiet
                 </li>
                 <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
-                  Monthly recommendations so your site keeps improving instead
-                  of going stale
+                  Ongoing SEO upkeep: metadata, internal linking, keyword
+                  alignment
+                </li>
+                <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
+                  A monthly rundown of what&apos;s working and what&apos;s next
                 </li>
               </ul>
             </div>
@@ -293,6 +294,36 @@ export default function ServicesPage() {
               className='mt-8 inline-flex items-center gap-2 rounded-full border border-graphite/25 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
             >
               ask about support
+              <ArrowUpRight className='h-4 w-4' />
+            </Link>
+          </div>
+
+          <div
+            id='full-build'
+            className='rounded-[2rem] border border-graphite/12 bg-[#d3c8b4] p-7 text-center shadow-[0_18px_45px_rgba(61,45,28,0.14)] sm:p-10 lg:col-span-2'
+          >
+            <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.4em] text-graphite/60'>
+              the full build
+            </p>
+            <h2 className='mt-4 font-miroa text-4xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-5xl'>
+              Custom Websites & Redesigns
+            </h2>
+            <p className='mt-3 font-first-rodeo text-[0.8rem] uppercase tracking-[0.34em] text-graphite/68'>
+              starting at $3,500
+            </p>
+            <div className='mx-auto mt-7 max-w-3xl space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
+              <p>
+                For established businesses and organizations ready for the real
+                deal: full redesigns, custom builds, and sites with a lot of
+                moving parts. Strategy, design, development, copy, and SEO from
+                start to finish. This is my favorite kind of project.
+              </p>
+            </div>
+            <Link
+              href='/#contact'
+              className='mt-8 inline-flex items-center gap-2 rounded-full border border-graphite/25 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
+            >
+              start a conversation
               <ArrowUpRight className='h-4 w-4' />
             </Link>
           </div>

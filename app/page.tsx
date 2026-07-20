@@ -49,35 +49,35 @@ const serviceTiles: Array<{
   description: string
   tone: 'light' | 'dark'
 }> = [
-    {
-      title: "A site you're proud to send people",
-      eyebrow: 'something new',
-      description:
-        'New builds and full redesigns - designed, written, and launched without the months-long slog.',
-      tone: 'light',
-    },
-    {
-      title: "Fix what's bugging you",
-      eyebrow: 'quick wins',
-      description:
-        'Design Day tackles your whole website to-do list in one focused day.',
-      tone: 'dark',
-    },
-    {
-      title: 'Show up in search',
-      eyebrow: 'get found',
-      description:
-        'SEO that gets you in front of the people already looking for what you do.',
-      tone: 'light',
-    },
-    {
-      title: 'Marketing, handled monthly',
-      eyebrow: 'off your plate',
-      description:
-        'Content, email, and social support on retainer - so your site and channels stay alive without you thinking about them.',
-      tone: 'dark',
-    },
-  ]
+  {
+    title: "A site you're proud to send people",
+    eyebrow: 'something new',
+    description:
+      'New builds and full redesigns - designed, written, and launched without the months-long slog.',
+    tone: 'light',
+  },
+  {
+    title: "Fix what's bugging you",
+    eyebrow: 'quick wins',
+    description:
+      'Design Day tackles your whole website to-do list in one focused day.',
+    tone: 'dark',
+  },
+  {
+    title: 'Show up in search',
+    eyebrow: 'get found',
+    description:
+      'SEO that gets you in front of the people already looking for what you do.',
+    tone: 'light',
+  },
+  {
+    title: 'Marketing, handled monthly',
+    eyebrow: 'off your plate',
+    description:
+      'Content, email, and social support every month - so your site and channels stay alive without you thinking about them.',
+    tone: 'dark',
+  },
+]
 
 export default async function Home() {
   let testimonials: Testimonial[] = []

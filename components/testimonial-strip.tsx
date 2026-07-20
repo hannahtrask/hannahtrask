@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import Image from 'next/image'
 import { useState } from 'react'
@@ -61,13 +61,12 @@ export function TestimonialStrip({ testimonials }: Props) {
         <div className='mx-auto mt-10 w-full max-w-3xl max-w-full overflow-hidden'>
           <div
             className='flex w-full transition-transform duration-500 ease-out'
-            style={{ transform: `translateX(-${currentIndex * (100 / visibleCount)}%)` }}
+            style={{
+              transform: `translateX(-${currentIndex * (100 / visibleCount)}%)`,
+            }}
           >
             {testimonials.map(t => (
-              <div
-                key={t._id}
-                className='w-1/2 shrink-0 px-1'
-              >
+              <div key={t._id} className='w-1/2 shrink-0 px-1'>
                 <article className='flex min-h-[17.5rem] flex-col gap-5 rounded-[1.5rem] border border-graphite/12 bg-sand-50/60 p-6 shadow-sm sm:min-h-[16rem]'>
                   <p className='flex-1 text-sm leading-7 text-graphite/82'>
                     &ldquo;{t.quote}&rdquo;
