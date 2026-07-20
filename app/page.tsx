@@ -155,9 +155,9 @@ export default async function Home() {
               <ul className='mt-6 grid gap-4 sm:grid-cols-2'>
                 {[
                   'You wince a little every time you have to send someone your website link.',
-                  'Your site looked pretty good in 2019, but now it feels old.',
-                  'People search for what you do, land on a competitor, and choose them because their site feels stronger.',
-                  'Updating your site is such a pain that everything has just stayed the same for way too long.',
+                  'Your site looked pretty good ... in 2019.',
+                  'People search for what you do, land on a competitor, and choose them because their site looks better.',
+                  'Updating your site is an afterthought and has stayed the same for way too long.',
                   'Your website was never really the priority. It was just something you needed to check off the list.',
                 ].map(item => (
                   <li key={item} className='flex items-start gap-3'>
