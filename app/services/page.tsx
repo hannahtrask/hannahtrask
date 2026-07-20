@@ -106,13 +106,13 @@ export default function ServicesPage() {
               Design Day
               <CalendarDays className='h-4 w-4' />
             </Link>
-            <a
+            <Link
               href='/#contact'
               className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-center text-[0.66rem] uppercase tracking-[0.22em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50 sm:w-auto sm:text-[0.72rem] sm:tracking-[0.3em]'
             >
               I need something else
               <Mail className='h-4 w-4' />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -287,13 +287,13 @@ export default function ServicesPage() {
                 </li>
               </ul>
             </div>
-            <a
+            <Link
               href='/#contact'
               className='mt-8 inline-flex items-center gap-2 rounded-full border border-graphite/25 bg-[#333520] px-6 py-3 text-[0.72rem] uppercase tracking-[0.3em] text-sand-50 transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7]'
             >
               ask about support
               <ArrowUpRight className='h-4 w-4' />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
