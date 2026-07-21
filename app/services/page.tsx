@@ -109,10 +109,10 @@ export default function ServicesPage() {
               <CalendarDays className='h-4 w-4' />
             </Link>
             <Link
-              href='#marketing-support'
+              href='#content-support'
               className='inline-flex w-full items-center justify-center gap-2 rounded-full border border-graphite/20 bg-sand-50/55 px-6 py-3 text-center text-[0.66rem] uppercase tracking-[0.22em] text-graphite backdrop-blur-sm transition hover:-translate-y-0.5 hover:border-[#8799a7] hover:bg-[#8799a7] hover:text-sand-50 sm:w-auto sm:text-[0.72rem] sm:tracking-[0.3em]'
             >
-              Marketing & Support
+              Content & Support
               <ArrowUpRight className='h-4 w-4' />
             </Link>
             <Link
@@ -268,14 +268,14 @@ export default function ServicesPage() {
           </div>
 
           <div
-            id='marketing-support'
+            id='content-support'
             className='rounded-[2rem] border border-graphite/12 bg-[#d3c8b4] p-7 text-center shadow-[0_18px_45px_rgba(61,45,28,0.14)] sm:p-10'
           >
             <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.4em] text-graphite/60'>
               every month, handled
             </p>
             <h2 className='mt-4 font-miroa text-3xl uppercase leading-tight tracking-[0.08em] text-graphite sm:text-4xl'>
-              Marketing & Site Support
+              Content & Site Support
             </h2>
             <p className='mt-3 font-first-rodeo text-[0.8rem] uppercase tracking-[0.34em] text-graphite/68'>
               retainers from $500/month
