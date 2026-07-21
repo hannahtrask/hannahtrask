@@ -195,8 +195,7 @@ export default async function Home() {
               services
             </p>
             <p className='mx-auto mt-4 max-w-3xl text-base leading-8 text-graphite/72 sm:mt-5 sm:text-lg'>
-              Websites, words, and the marketing that makes them work.
-              Here&apos;s what that looks like:
+              Websites, words, and the combination that makes them work.
             </p>
           </div>
         </div>
