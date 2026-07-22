@@ -282,9 +282,9 @@ export default function ServicesPage() {
             </p>
             <div className='mx-auto mt-7 max-w-3xl space-y-5 text-sm leading-7 text-graphite/78 sm:text-base'>
               <p>
-                Keep your site current, polished, and trustworthy with routine
-                updates that make visitors feel confident and keep search
-                engines coming back.
+                Keep your web presence current, polished, and trustworthy with
+                routine updates that make visitors feel confident and keep
+                search engines coming back.
               </p>
               <ul className='grid gap-2 text-left'>
                 <li className='rounded-xl border border-graphite/10 bg-sand-50/45 px-4 py-2'>
