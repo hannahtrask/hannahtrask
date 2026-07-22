@@ -23,7 +23,7 @@ export interface CaseStudyListItem {
   scopeOfWork?: string[]
   outcomes?: string
   featured: boolean
-  coverImage?: SanityImage
+  heroImage?: SanityImage
   publishedAt?: string
 }
 

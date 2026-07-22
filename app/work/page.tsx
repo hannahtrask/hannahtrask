@@ -121,10 +121,10 @@ export default async function WorkPage() {
                     >
                       <div className='grid gap-6 lg:grid-cols-[1.05fr_1.4fr] lg:items-start'>
                         <div>
-                          {cs.coverImage ? (
+                          {cs.heroImage ? (
                             <div className='relative aspect-[4/3] overflow-hidden rounded-[1.2rem] border border-graphite/10'>
                               <Image
-                                src={urlFor(cs.coverImage)
+                                src={urlFor(cs.heroImage)
                                   .width(700)
                                   .height(520)
                                   .url()}

@@ -13,7 +13,7 @@ export const allCaseStudiesQuery = `
     scopeOfWork,
     outcomes,
     featured,
-    "coverImage": screenshots[0],
+    heroImage,
     publishedAt
   }
 `
