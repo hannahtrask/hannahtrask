@@ -205,11 +205,11 @@ export default async function CaseStudyPage({
         <div className='mx-auto max-w-5xl'>
           <div className='rounded-[1.6rem] border border-graphite/10 bg-[#f6f0e2] p-4 sm:p-6'>
             <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
-              route map
+              client story
             </p>
             <article className='rounded-[1rem] border border-[#a28b62]/30 bg-[#efe5d2] p-4'>
               <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#6b583a]'>
-                problem
+                the issue
               </p>
               <p className='mt-2 text-sm leading-6 text-graphite/76'>
                 {cs.problemStatement || cs.shortDescription}

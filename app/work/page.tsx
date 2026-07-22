@@ -93,7 +93,7 @@ export default async function WorkPage() {
                   case studies
                 </p>
                 <h2 className='mt-3 font-miroa text-3xl uppercase tracking-[0.08em] text-graphite sm:text-4xl'>
-                  problem to solution to results
+                  starting from a need, resulting in a solution and results
                 </h2>
               </div>
 
