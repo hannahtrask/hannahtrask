@@ -168,7 +168,7 @@ export default async function CaseStudyPage({
             {cs.title}
           </h1>
           {(cs.clientName || cs.subtitle) && (
-            <p className='mt-3 max-w-3xl text-sm leading-7 text-sand-50/95 sm:text-base'>
+            <p className='mt-3 max-w-3xl text-md leading-7 text-sand-50/95 sm:text-base'>
               {cs.subtitle || cs.clientName}
             </p>
           )}
@@ -204,14 +204,14 @@ export default async function CaseStudyPage({
       <section className='px-4 pt-12 sm:px-6 lg:px-8'>
         <div className='mx-auto max-w-5xl'>
           <div className='rounded-[1.6rem] border border-graphite/10 bg-[#f6f0e2] p-4 sm:p-6'>
-            <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
+            <p className='font-first-rodeo text-[0.78rem] uppercase tracking-[0.34em] text-graphite/55 pb-6'>
               client story
             </p>
             <article className='rounded-[1rem] border border-[#a28b62]/30 bg-[#efe5d2] p-4'>
-              <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#6b583a]'>
+              <p className='font-first-rodeo text-[0.78rem] uppercase tracking-[0.28em] text-[#6b583a]'>
                 the issue
               </p>
-              <p className='mt-2 text-sm leading-6 text-graphite/76'>
+              <p className='mt-2 text-lg leading-6 text-graphite/76'>
                 {cs.problemStatement || cs.shortDescription}
               </p>
             </article>
@@ -220,14 +220,14 @@ export default async function CaseStudyPage({
 
             <div className='grid gap-3 sm:grid-cols-[minmax(0,1fr)_2.5rem_minmax(0,1fr)] sm:items-center'>
               <article className='rounded-[1rem] border border-[#85938f]/34 bg-[#dce5df] p-4'>
-                <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#455550]'>
+                <p className='font-first-rodeo text-[0.78rem] uppercase tracking-[0.28em] text-[#455550]'>
                   solution
                 </p>
                 <ul className='mt-2 space-y-2'>
                   {solutionPoints.slice(0, 3).map(point => (
                     <li
                       key={point}
-                      className='flex items-start gap-2 text-sm leading-6 text-graphite/76'
+                      className='flex items-start gap-2 text-md leading-6 text-graphite/76'
                     >
                       <span className='mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#5c6c67]' />
                       {point}
@@ -241,10 +241,10 @@ export default async function CaseStudyPage({
               <div className='mx-auto h-4 border-l-2 border-dashed border-[#85938f]/55 sm:hidden' />
 
               <article className='rounded-[1rem] border border-[#7a9079]/34 bg-[#d8e4d5] p-4'>
-                <p className='font-first-rodeo text-[0.58rem] uppercase tracking-[0.28em] text-[#3e5a3c]'>
+                <p className='font-first-rodeo text-[0.78rem] uppercase tracking-[0.28em] text-[#3e5a3c]'>
                   results
                 </p>
-                <p className='mt-2 text-sm leading-6 text-graphite/76'>
+                <p className='mt-2 text-md leading-6 text-graphite/76'>
                   {resultsText}
                 </p>
               </article>
@@ -264,7 +264,7 @@ export default async function CaseStudyPage({
 
             {cs.designProcess && cs.designProcess.length > 0 && (
               <div className='mt-12 rounded-[1.5rem] border border-graphite/10 bg-[#f6f1e7] p-6 sm:p-8'>
-                <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
+                <p className='font-first-rodeo text-[0.8rem] uppercase tracking-[0.34em] text-graphite/55'>
                   design process
                 </p>
                 <div className='mt-6 space-y-4'>
@@ -275,7 +275,7 @@ export default async function CaseStudyPage({
                       <h2 className='font-miroa text-xl uppercase leading-tight tracking-[0.06em] text-graphite'>
                         {step.title}
                       </h2>
-                      <p className='mt-2 text-sm leading-7 text-graphite/80 sm:text-base'>
+                      <p className='mt-2 text-md leading-7 text-graphite/80 sm:text-base'>
                         {step.description}
                       </p>
                     </div>
@@ -287,9 +287,9 @@ export default async function CaseStudyPage({
             {resultsText && (
               <div className='mt-12 rounded-[1.5rem] border border-graphite/10 bg-[#f6f1e7] p-6 sm:p-8'>
                 <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/55'>
-                  outcomes &amp; results
+                  the outcome
                 </p>
-                <p className='mt-4 text-sm leading-7 text-graphite/80 sm:text-base'>
+                <p className='mt-4 text-lg leading-7 text-graphite/80'>
                   {resultsText}
                 </p>
               </div>
@@ -306,7 +306,7 @@ export default async function CaseStudyPage({
                   {scopeItems.map((item, i) => (
                     <li
                       key={i}
-                      className='flex items-start gap-2.5 text-sm leading-6 text-graphite/80'
+                      className='flex items-start gap-2.5 text-md leading-6 text-graphite/80'
                     >
                       <span className='mt-2.5 h-1 w-1 shrink-0 rounded-full bg-graphite/35' />
                       {item}
@@ -325,7 +325,7 @@ export default async function CaseStudyPage({
                   {cs.technologies?.map(tech => (
                     <span
                       key={tech}
-                      className='rounded-full border border-graphite/16 bg-sand-50/80 px-3 py-1 font-first-rodeo text-[0.58rem] uppercase tracking-[0.24em] text-graphite/60'
+                      className='rounded-full border border-graphite/16 bg-sand-50/80 px-3 py-1 font-first-rodeo text-[0.78rem] uppercase tracking-[0.24em] text-graphite/60'
                     >
                       {tech}
                     </span>
@@ -352,9 +352,6 @@ export default async function CaseStudyPage({
 
         {gallery.length > 0 && (
           <div className='mx-auto mt-16 max-w-5xl'>
-            <p className='font-first-rodeo text-[0.72rem] uppercase tracking-[0.34em] text-graphite/50'>
-              screenshots
-            </p>
             <div className='mt-6 grid gap-4 sm:grid-cols-2'>
               {gallery.map((shot, i) => {
                 const src = resolveImageSrc(shot, 800, 500)

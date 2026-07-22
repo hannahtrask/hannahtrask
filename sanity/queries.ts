@@ -13,7 +13,7 @@ export const allCaseStudiesQuery = `
     scopeOfWork,
     outcomes,
     featured,
-    heroImage,
+    "cardImage": coalesce(screenshots[0], images[0]),
     publishedAt
   }
 `
